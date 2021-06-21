@@ -1,6 +1,6 @@
 package stig;
 
-public abstract class STIG {
+public abstract class Requirement {
     abstract public String findingID();
 
     abstract public String version();

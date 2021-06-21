@@ -1,10 +1,10 @@
 package patterns;
 
-import stig.STIG;
+import stig.*;
 import java.util.*;
 import java.io.*;
 
-public abstract class AuditPolicyRequirement extends STIG implements CheckableRequirement, EnforcableRequirement {
+public abstract class AuditPolicyRequirement extends CheckableEnforceableRequirement {
     static class AuditPol {
         static private String sanitizeArgument(String arg) {
             if (arg != null && arg.contains(" "))

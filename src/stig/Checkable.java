@@ -1,6 +1,6 @@
-package patterns;
+package stig;
 
-public interface CheckableRequirement {
+public interface Checkable {
     static enum CheckStatus {
         PASS, FAIL, INCOMPLETE
     };

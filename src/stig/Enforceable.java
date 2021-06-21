@@ -1,6 +1,6 @@
-package patterns;
+package stig;
 
-public interface EnforcableRequirement {
+public interface Enforceable {
     static enum EnforcementStatus {
         SUCCESS, FAILURE, INCOMPLETE
     };
