@@ -1,14 +1,13 @@
-## Getting Started
+# VeriDevOps Patterns - FAGOR examples
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This repository contains Java implementation of Requirement as Code concept, where requirement are provided by Fagor Electrodoméstico, S. Coop.
 
-## Folder Structure
+## Why Java?
 
-The workspace contains two folders by default, where:
+No specific reason. The core idea of this implementation is to capture the object oriented nature of requirements in the FAGOR case. Any other language supporting object oriented programming would be just fine.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+However, it is worth noting that c++/C# would perhaps be a better choice here since requirements are written for Windows and win32 API would come in handy.
 
-## Dependency Management
+## Documentation
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+Work in progress...
