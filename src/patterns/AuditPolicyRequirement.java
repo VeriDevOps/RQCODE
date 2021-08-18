@@ -4,7 +4,15 @@ import stig.*;
 import java.util.*;
 import java.io.*;
 
+/**
+ * Instances of this class are requirements related to Windows 10 audit policies. Instances of this utilize auditpol.exe
+ * to perform checking and enforcing; that is, they fork auditpol.exe manipulate its input and output. It would be ideal
+ * to perform checking and enforcing through Win32 API calls instead, but for the time being this approach works.
+ */
 public abstract class AuditPolicyRequirement extends CheckableEnforceableRequirement {
+    /**
+     * This class acts as a driver to auditpol.exe; its members correspond to the command line use of auditpol.exe.
+     */
     static class AuditPol {
         static private String sanitizeArgument(String arg) {
             if (arg != null && arg.contains(" "))
@@ -12,6 +20,14 @@ public abstract class AuditPolicyRequirement extends CheckableEnforceableRequire
             return arg;
         }
 
+        /**
+         * An interface to auditpol get subcommand. See https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/auditpol-get.
+         * @param user refer to the link above
+         * @param category refer to the link above
+         * @param subcategory refer to the link above
+         * @return a parsing of the CSV output of auditpol get
+         * @throws Exception in case auditpol.exe returns an error
+         */
         static public List<Map<String, String>> get(String user, String category, String subcategory) throws Exception {
 
             String auditPolCommand = "auditpol /get";
@@ -50,6 +66,18 @@ public abstract class AuditPolicyRequirement extends CheckableEnforceableRequire
             return ret;
         }
 
+        /**
+         * An interface to auditpol set subcommand. See https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/auditpol-set.
+         * @param user refer to the link above
+         * @param include refer to the link above
+         * @param exclude refer to the link above
+         * @param category refer to the link above
+         * @param subcategory refer to the link above
+         * @param success refer to the link above
+         * @param failure refer to the link above
+         * @throws IOException In case the auditpol process could not be forked
+         * @throws InterruptedException In case the auditpol process was interrupted
+         */
         static public void set(String user, String include, String exclude, String category, String subcategory,
                 String success, String failure) throws IOException, InterruptedException {
             String auditPolCommand = "auditpol /set";
@@ -74,14 +102,34 @@ public abstract class AuditPolicyRequirement extends CheckableEnforceableRequire
         }
     }
 
+    /**
+     *
+     * @return the category parameter for auditpol.exe.
+     */
     abstract protected String getCategory();
 
+    /**
+     *
+     * @return the subcategory parameter for auditpol.exe.
+     */
     abstract protected String getSubcategory();
 
+    /**
+     *
+     * @return the include parameter for auditpol.exe.
+     */
     abstract protected String getInclusionSetting();
 
+    /**
+     *
+     * @return the success parameter for auditpol.exe.
+     */
     abstract protected String getSuccess();
 
+    /**
+     *
+     * @return the failure parameter for auditpol.exe.
+     */
     abstract protected String getFailure();
 
     @Override
