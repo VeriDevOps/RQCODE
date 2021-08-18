@@ -1,5 +1,9 @@
 package stig;
 
+/**
+ * This class is a direct mapping of the structure of STIG findings as presented in stigviewer.com. All the member
+ * names are self-explanatory.
+ */
 public abstract class Requirement {
     abstract public String findingID();
 
@@ -25,6 +29,11 @@ public abstract class Requirement {
 
     abstract public String fixText();
 
+    /**
+     * A crude parsing of the finding (requirement) specification into a document. Hopefully in the future we would
+     * parse it as HTML.
+     * @return a string representation of the requirement
+     */
     public String toString() {
         return
         "Overview:\n" + 
