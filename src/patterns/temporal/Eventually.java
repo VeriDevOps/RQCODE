@@ -24,4 +24,10 @@ public class Eventually implements MonitoringLoop {
     public String TCTL() {
         return "AF (P)";
     }
+
+    @Override
+    public String toString() {
+        return "P always eventually holds, where P is:\n\n\t\t" +
+                p.toString().replaceAll("\n", "\n\t\t");
+    }
 }
