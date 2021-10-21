@@ -6,14 +6,10 @@ import stig.Checkable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GlobalUniversalityTimed  extends GlobalUniversality {
-    public GlobalUniversalityTimed(Checkable p) {
+public class GlobalUniversalityTimed extends GlobalUniversality {
+    public GlobalUniversalityTimed(Checkable p, int boundary) {
         super(p);
-    }
-
-    @Override
-    public boolean timed() {
-        return true;
+        this.boundary = boundary;
     }
 
     @Override
@@ -25,13 +21,19 @@ public class GlobalUniversalityTimed  extends GlobalUniversality {
             return "";
         }
         return
-                "Globally, it is always the case that P holds for at least " + boundary() +
+                "Globally, it is always the case that P holds for at least " + this.boundary +
                 " seconds (" + patternURL.toString() + "), where P is:\n\n\t\t" +
                         p.toString().replaceAll("\n", "\n\t\t");
     }
 
     @Override
     public String TCTL () {
-        return "AG <=" + boundary() + " (P)";
+        String pStr;
+        if (p instanceof MonitoringLoop) {
+            pStr = ((MonitoringLoop) p).TCTL();
+        } else {
+            pStr = p.getClass().getSimpleName();
+        }
+        return "AG >=" + this.boundary + " (" + pStr + ")";
     }
 }

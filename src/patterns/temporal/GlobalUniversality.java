@@ -5,7 +5,7 @@ import stig.Checkable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GlobalUniversality implements MonitoringLoop {
+public class GlobalUniversality extends MonitoringLoop {
     public GlobalUniversality(Checkable p) {
         this.p = p;
     }
@@ -31,7 +31,13 @@ public class GlobalUniversality implements MonitoringLoop {
     }
 
     public String TCTL () {
-        return "AG (P)";
+        String pStr;
+        if (p instanceof MonitoringLoop) {
+            pStr = ((MonitoringLoop) p).TCTL();
+        } else {
+            pStr = p.getClass().getSimpleName();
+        }
+        return "AG (" + pStr + ")";
     }
 
 }

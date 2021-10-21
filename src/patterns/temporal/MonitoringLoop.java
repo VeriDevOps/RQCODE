@@ -2,57 +2,41 @@ package patterns.temporal;
 
 import stig.Checkable;
 
-public interface MonitoringLoop extends Checkable {
+public abstract class MonitoringLoop implements Checkable {
 
-    String TCTL ();
-
-    default int boundary() {
-        return Integer.MAX_VALUE;
-    }
-
-    default int timeUnit() {
-        return 1000;
-    }
-
-    default boolean invariant() {
-        return true;
-    }
-
-    default boolean precondition() {
-        return true;
-    }
-
-    default boolean postcondition() {
-        return true;
-    }
-
-    default boolean exitCondition() {
-        return false;
-    }
-
-    default boolean timed() { return false; }
-
-    private int variant(int i) {
-        if (timed()) {
+    final private int variant(int i) {
+        if (boundary > 0) {
             return i - 1;
         }
         return i;
     }
 
-    default Checkable.CheckStatus check() {
+    protected int boundary;
+
+    protected int sleepMilliseconds() { return 1000; }
+
+    protected boolean invariant() { return true; }
+
+    protected boolean precondition() { return true; }
+
+    protected boolean postcondition() { return true; }
+
+    protected boolean exitCondition() { return false; }
+
+    public Checkable.CheckStatus check() {
         while(!precondition()) {
             try {
-                Thread.sleep (timeUnit());
+                Thread.sleep (sleepMilliseconds());
             } catch (InterruptedException e) {
                 return Checkable.CheckStatus.INCOMPLETE;
             }
         }
-        for (int i = boundary(); i > 0 && !exitCondition(); i = variant(i)) {
+        for (int i = boundary; i > 0 && !exitCondition(); i = variant(i)) {
             if (!invariant()) {
                 return Checkable.CheckStatus.FAIL;
             }
             try {
-                Thread.sleep (timeUnit());
+                Thread.sleep (sleepMilliseconds());
             } catch (InterruptedException e) {
                 return Checkable.CheckStatus.INCOMPLETE;
             }
@@ -63,4 +47,5 @@ public interface MonitoringLoop extends Checkable {
         return Checkable.CheckStatus.PASS;
     }
 
+    abstract public String TCTL();
 }

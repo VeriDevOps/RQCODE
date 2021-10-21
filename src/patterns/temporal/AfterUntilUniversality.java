@@ -5,7 +5,7 @@ import stig.Checkable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AfterUntilUniversality implements MonitoringLoop {
+public class AfterUntilUniversality extends MonitoringLoop {
     private Checkable q, p, r;
 
     public AfterUntilUniversality(Checkable q, Checkable p, Checkable r) {
@@ -40,14 +40,30 @@ public class AfterUntilUniversality implements MonitoringLoop {
         return
                 "After Q, it is always the case that P holds until R holds (" + patternURL.toString() + "), where Q is:\n\n\t\t" +
                         q.toString().replaceAll("\n", "\n\t\t") +
-                "and P is:\n\n\t\t:" +
+                "\nand P is:\n\n\t\t:" +
                         p.toString().replaceAll("\n", "\n\t\t") +
-                "and R is:\n\n\t\t:" +
+                "\nand R is:\n\n\t\t:" +
                         r.toString().replaceAll("\n", "\n\t\t");
     }
 
     @Override
     public String TCTL() {
-        return "AG(Q ==> !E[!R U (!P & !R)])";
+        String qStr, rStr, pStr;
+        if (q instanceof MonitoringLoop) {
+            qStr = ((MonitoringLoop) q).TCTL();
+        } else {
+            qStr = q.getClass().getSimpleName();
+        }
+        if (r instanceof MonitoringLoop) {
+            rStr = ((MonitoringLoop) r).TCTL();
+        } else {
+            rStr = r.getClass().getSimpleName();
+        }
+        if (p instanceof MonitoringLoop) {
+            pStr = ((MonitoringLoop) p).TCTL();
+        } else {
+            pStr = p.getClass().getSimpleName();
+        }
+        return "AG((" + qStr + "==> !E[!(" + rStr + ") U (!(" + pStr +") & !(" + rStr + "))])";
     }
 }

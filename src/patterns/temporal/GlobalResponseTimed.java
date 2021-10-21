@@ -5,12 +5,13 @@ import stig.Checkable;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GlobalResponse implements MonitoringLoop {
+public class GlobalResponseTimed extends MonitoringLoop {
     private Checkable s, r;
 
-    public GlobalResponse(Checkable s, Checkable r) {
+    public GlobalResponseTimed(Checkable s, Checkable r, int boundary) {
         this.s = s;
         this.r = r;
+        this.boundary = boundary;
     }
 
     @Override
@@ -29,11 +30,6 @@ public class GlobalResponse implements MonitoringLoop {
     }
 
     @Override
-    public boolean timed() {
-        return true;
-    }
-
-    @Override
     public String toString() {
         URL patternURL;
         try {
@@ -42,15 +38,26 @@ public class GlobalResponse implements MonitoringLoop {
             return "";
         }
         return
-                "Globally, it is always the case that if S holds, the R will eventually hold within " + boundary() +
+                "Globally, it is always the case that if S holds, the R will eventually hold within " + boundary +
                 " seconds (" + patternURL.toString() + "), where S is:\n\n\t\t" +
                         s.toString().replaceAll("\n", "\n\t\t") +
-                "and R is:\n\n\t\t:" +
+                "\nand R is:\n\n\t\t:" +
                         r.toString().replaceAll("\n", "\n\t\t");
     }
 
     @Override
     public String TCTL() {
-        return "AG(S ==> AF <= " + boundary() + " (R))";
+        String sStr, rStr;
+        if (s instanceof MonitoringLoop) {
+            sStr = ((MonitoringLoop) s).TCTL();
+        } else {
+            sStr = s.getClass().getSimpleName();
+        }
+        if (r instanceof MonitoringLoop) {
+            rStr = ((MonitoringLoop) r).TCTL();
+        } else {
+            rStr = r.getClass().getSimpleName();
+        }
+        return "AG((" + sStr + ") ==> (AF <= " + boundary + " (" + rStr + ")))";
     }
 }
