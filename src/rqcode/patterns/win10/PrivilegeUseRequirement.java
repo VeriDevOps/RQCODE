@@ -1,4 +1,4 @@
-package patterns;
+package rqcode.patterns.win10;
 
 abstract public class PrivilegeUseRequirement extends AuditPolicyRequirement {
     @Override

@@ -1,6 +1,6 @@
 package patterns.temporal;
 
-import stig.Checkable;
+import rqcode.concepts.Checkable;
 
 import java.net.MalformedURLException;
 import java.net.URL;

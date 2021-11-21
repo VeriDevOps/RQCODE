@@ -1,8 +1,9 @@
-package patterns;
+package rqcode.patterns.win10;
 
-import stig.*;
 import java.util.*;
 import java.io.*;
+import rqcode.concepts.CheckableEnforceableRequirement;
+
 
 /**
  * Instances of this class are requirements related to Windows 10 audit policies. Instances of this utilize auditpol.exe
@@ -131,6 +132,7 @@ public abstract class AuditPolicyRequirement extends CheckableEnforceableRequire
      * @return the failure parameter for auditpol.exe.
      */
     abstract protected String getFailure();
+
 
     @Override
     public CheckStatus check() {

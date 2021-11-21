@@ -1,4 +1,6 @@
-package patterns;
+package rqcode.stigs.win10;
+
+import rqcode.patterns.win10.LogonRequirement;
 
 public class V_63467 extends LogonRequirement {
     @Override

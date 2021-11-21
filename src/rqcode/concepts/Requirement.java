@@ -1,4 +1,4 @@
-package stig;
+package rqcode.concepts;
 
 /**
  * This class is a direct mapping of the structure of STIG findings as presented in stigviewer.com. All the member

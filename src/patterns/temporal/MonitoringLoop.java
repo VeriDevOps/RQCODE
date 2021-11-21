@@ -1,6 +1,6 @@
 package patterns.temporal;
 
-import stig.Checkable;
+import rqcode.concepts.Checkable;
 
 public abstract class MonitoringLoop implements Checkable {
 

@@ -1,7 +1,6 @@
 package patterns.temporal;
 
-import patterns.temporal.GlobalUniversality;
-import stig.Checkable;
+import rqcode.concepts.Checkable;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,4 +1,6 @@
-package patterns;
+package rqcode.stigs.win10;
+
+import rqcode.patterns.win10.SensitivePrivilegeUseRequirement;
 
 public class V_63487 extends SensitivePrivilegeUseRequirement {
     @Override

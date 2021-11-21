@@ -1,4 +1,6 @@
-package patterns;
+package rqcode.stigs.win10;
+
+import rqcode.patterns.win10.UserAccountManagementRequirement;
 
 public class V_63449 extends UserAccountManagementRequirement {
     @Override

@@ -1,9 +1,7 @@
-import patterns.V_63467;
+import rqcode.stigs.win10.V_63467;
 import patterns.temporal.GlobalResponseTimed;
-import patterns.temporal.GlobalUniversality;
 import patterns.temporal.GlobalUniversalityTimed;
-import patterns.V_63449;
-import stig.Checkable;
+import rqcode.stigs.win10.V_63449;
 
 public class Main {
     public static void main(String[] args) {

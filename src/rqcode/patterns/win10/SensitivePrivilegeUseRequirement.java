@@ -1,4 +1,4 @@
-package patterns;
+package rqcode.patterns.win10;
 
 abstract public class SensitivePrivilegeUseRequirement extends PrivilegeUseRequirement {
     @Override

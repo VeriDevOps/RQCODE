@@ -1,4 +1,4 @@
-package stig;
+package rqcode.concepts;
 
 /**
  * Implementations of this interface are requirements that can enforced on the hosting environment programmatically
