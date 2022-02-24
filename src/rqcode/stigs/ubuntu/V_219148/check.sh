@@ -3,6 +3,6 @@
 value_to_test=`grep –i password /boot/efi/EFI/grub.cfg | cut -d' ' -f1`
 if [ $value_to_test == 'password_pbkdf2' ]
 then
-    return 0
+    exit 0
 fi
-return -1
+exit -1
