@@ -13,7 +13,7 @@ https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219163; https://github.com/anaumchev/VDO-Patterns/commit/f80fe13400f0c0b7c0c72149983432628145e403; says nothing about commented lines and multiple definitions
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219164; https://github.com/anaumchev/VDO-Patterns/commit/7db47bc2cfb017e619cc7a89ec63ba8524197d30
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219165; low severity
-https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219166; 
+https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219166; https://github.com/anaumchev/VDO-Patterns/commit/7604f7c7b96ce72c0b7501ae3fa63a7f97d7b753
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219167
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219168
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219169
