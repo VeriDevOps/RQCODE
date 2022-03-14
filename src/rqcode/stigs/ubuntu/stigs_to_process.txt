@@ -143,7 +143,7 @@ https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219314
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219317
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219318; https://github.com/anaumchev/VDO-Patterns/commit/22aa052c83949fda25484e12d7caf10770a3bc1e
-https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219319
+https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219319; https://github.com/anaumchev/VDO-Patterns/commit/1ca8ad1b0116e0a45c54f6d6c4efcb5062b6b55b
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219320
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219323
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219327
@@ -158,7 +158,7 @@ https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219339
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219340
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219342
-https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219343
+https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219343; https://github.com/anaumchev/VDO-Patterns/commit/adb0579b3e2302659b8a2fe490f1962d5a6a7051
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219344
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219346
 https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-233780
