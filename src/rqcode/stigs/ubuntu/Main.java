@@ -5,12 +5,11 @@ import rqcode.stigs.ubuntu.V_219158.V_219158;
 import rqcode.stigs.ubuntu.V_219161.V_219161;
 import rqcode.stigs.ubuntu.V_219177.V_219177;
 import rqcode.stigs.ubuntu.V_219304.V_219304;
+import rqcode.stigs.ubuntu.V_219318.V_219318;
 
 
 public class Main {
     public static void main(String[] args) {
-        Package testCheck = new Package("asdf", true);
-        System.out.println(testCheck.check().toString());
         V_219157 v_219157 = new V_219157();
         System.out.println(v_219157.toString());
         System.out.println(v_219157.check());
@@ -26,5 +25,8 @@ public class Main {
         V_219304 v_219304 = new V_219304();
         System.out.println(v_219304);       
         System.out.println(v_219304.check());  
+        V_219318 v_219318 = new V_219318();
+        System.out.println(v_219318);       
+        System.out.println(v_219318.check()); 
     }
 }
