@@ -7,3 +7,4 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must initiate session audits at system startup.

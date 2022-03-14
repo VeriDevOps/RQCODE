@@ -6,3 +6,4 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must have an application firewall installed in order to control remote access methods.

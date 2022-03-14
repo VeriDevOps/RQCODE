@@ -6,3 +6,4 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must not have the rsh-server package installed.

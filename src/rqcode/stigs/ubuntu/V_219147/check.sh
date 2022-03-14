@@ -6,3 +6,5 @@ then
     exit -1
 fi
 exit 0
+# Ubuntu operating systems booted with a BIOS
+# must require authentication upon booting into single-user and maintenance modes.

@@ -11,3 +11,4 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must enforce a delay of at least 4 seconds between logon prompts following a failed logon attempt.

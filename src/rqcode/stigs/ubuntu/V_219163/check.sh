@@ -6,3 +6,5 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must be configured such that Pluggable Authentication Module (PAM)
+# prohibits the use of cached authentications after one day.

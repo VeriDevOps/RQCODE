@@ -16,3 +16,5 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must be configured so that three consecutive invalid logon attempts by a user
+# automatically locks the account until released by an administrator.

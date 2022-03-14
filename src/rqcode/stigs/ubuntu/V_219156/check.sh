@@ -11,3 +11,5 @@ then
     exit -1
 fi
 exit 0
+# The Ubuntu operating system must be configured so that #Advance package Tool (APT)
+# removes all software components after updated versions have been installed.
