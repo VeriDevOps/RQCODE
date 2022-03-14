@@ -1,4 +1,4 @@
-package patterns.temporal;
+package rqcode.patterns.temporal;
 
 import rqcode.concepts.Checkable;
 
