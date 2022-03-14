@@ -33,4 +33,14 @@ public class Package implements Checkable {
         }        
         return CheckStatus.PASS;
     }
+
+    public String toString() {
+        String ret = "";
+        ret += "The Ubuntu operating system must ";
+        if (!_mustBeInstalled) {
+            ret += "not ";
+        }
+        ret += "have the " + _name + " package installed.";
+        return ret;
+    }
 }
