@@ -7,6 +7,7 @@ import rqcode.stigs.ubuntu.V_219177.V_219177;
 import rqcode.stigs.ubuntu.V_219304.V_219304;
 import rqcode.stigs.ubuntu.V_219318.V_219318;
 import rqcode.stigs.ubuntu.V_219319.V_219319;
+import rqcode.stigs.ubuntu.V_219343.V_219343;
 
 
 public class Main {
@@ -32,5 +33,8 @@ public class Main {
         V_219319 v_219319 = new V_219319();
         System.out.println(v_219319);       
         System.out.println(v_219319.check()); 
+        V_219343 v_219343 = new V_219343();
+        System.out.println(v_219343);       
+        System.out.println(v_219343.check());
     }
 }
