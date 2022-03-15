@@ -1,9 +1,11 @@
 package rqcode.stigs.ubuntu;
 
 import rqcode.concepts.Checkable;
+import rqcode.concepts.Enforceable;
+
 import java.io.*;
 
-public class Package implements Checkable {
+public class Package implements Checkable, Enforceable {
     private String _name;
     private boolean _mustBeInstalled;
     public Package (String name, boolean mustBeInstalled) {
@@ -42,5 +44,23 @@ public class Package implements Checkable {
         }
         ret += "have the " + _name + " package installed.";
         return ret;
+    }
+
+    public EnforcementStatus enforce() {
+        Process process = null;    
+        var action = _mustBeInstalled ? "install " : "remove ";
+        try {
+            process = Runtime.getRuntime().exec("sudo apt-get " + action + _name);
+        } catch (IOException ioException) {
+            System.out.println(ioException.getMessage());
+            return EnforcementStatus.INCOMPLETE;
+        }
+        try {
+            process.waitFor();
+        } catch (InterruptedException interruptedException) {
+            System.out.println(interruptedException.getMessage());
+            return EnforcementStatus.INCOMPLETE;
+        }        
+        return EnforcementStatus.SUCCESS;
     }
 }
