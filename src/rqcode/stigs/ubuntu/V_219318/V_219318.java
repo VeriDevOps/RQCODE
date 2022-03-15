@@ -1,10 +1,10 @@
 package rqcode.stigs.ubuntu.V_219318;
 
 import rqcode.concepts.Checkable;
-import rqcode.stigs.ubuntu.Package;
+import rqcode.stigs.ubuntu.UbuntuPackagePattern;
 
 public class V_219318 implements Checkable {
-    private Package _package = new Package("libpam-pkcs11", true);
+    private UbuntuPackagePattern _package = new UbuntuPackagePattern("libpam-pkcs11", true);
 
     public CheckStatus check() {
         return _package.check();

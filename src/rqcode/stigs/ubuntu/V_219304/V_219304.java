@@ -1,10 +1,10 @@
 package rqcode.stigs.ubuntu.V_219304;
 
 import rqcode.concepts.Checkable;
-import rqcode.stigs.ubuntu.Package;
+import rqcode.stigs.ubuntu.UbuntuPackagePattern;
 
 public class V_219304 implements Checkable {
-    private Package _package = new Package("vlock", true);
+    private UbuntuPackagePattern _package = new UbuntuPackagePattern("vlock", true);
 
     public CheckStatus check() {
         return _package.check();

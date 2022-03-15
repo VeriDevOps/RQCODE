@@ -1,10 +1,10 @@
 package rqcode.stigs.ubuntu.V_219161;
 
 import rqcode.concepts.Checkable;
-import rqcode.stigs.ubuntu.Package;
+import rqcode.stigs.ubuntu.UbuntuPackagePattern;
 
 public class V_219161 implements Checkable {
-    private Package _package = new Package("ufw", true);
+    private UbuntuPackagePattern _package = new UbuntuPackagePattern("ufw", true);
 
     public CheckStatus check() {
         return _package.check();

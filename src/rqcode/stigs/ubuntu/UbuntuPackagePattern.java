@@ -5,10 +5,10 @@ import rqcode.concepts.Enforceable;
 
 import java.io.*;
 
-public class Package implements Checkable, Enforceable {
+public class UbuntuPackagePattern implements Checkable, Enforceable {
     private String _name;
     private boolean _mustBeInstalled;
-    public Package (String name, boolean mustBeInstalled) {
+    public UbuntuPackagePattern (String name, boolean mustBeInstalled) {
         _name = name;
         _mustBeInstalled = mustBeInstalled;
     }
