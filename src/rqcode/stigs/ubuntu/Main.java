@@ -1,5 +1,6 @@
 package rqcode.stigs.ubuntu;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import rqcode.stigs.ubuntu.V_219157.V_219157;
 import rqcode.stigs.ubuntu.V_219158.V_219158;
 import rqcode.stigs.ubuntu.V_219161.V_219161;
@@ -9,8 +10,12 @@ import rqcode.stigs.ubuntu.V_219318.V_219318;
 import rqcode.stigs.ubuntu.V_219319.V_219319;
 import rqcode.stigs.ubuntu.V_219343.V_219343;
 
-
+/**
+ * Example of instantiation of the RQCODE for UBUNTU STIGs.
+ */
+@objid ("f720fa7e-166b-4933-a5ac-c989ff39b309")
 public class Main {
+    @objid ("7008f9d2-f6ff-4c58-bafb-5e47a3ffc6b9")
     public static void main(String[] args) {
         V_219157 v_219157 = new V_219157();
         System.out.println(v_219157.toString());
@@ -37,4 +42,5 @@ public class Main {
         System.out.println(v_219343);       
         System.out.println(v_219343.check());
     }
+
 }

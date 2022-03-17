@@ -1,16 +1,26 @@
 package rqcode.stigs.win10;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import rqcode.concepts.CheckableEnforceableRequirement;
-import rqcode.stigs.win10.V_63447;
-import rqcode.stigs.win10.V_63449;
-import rqcode.stigs.win10.V_63463;
-import rqcode.stigs.win10.V_63467;
 
+/**
+ * This is example of the instantiation of the Win 10 STIG requirements.
+ */
+@objid ("838c1d01-3219-4ada-993c-85a2e8e0edd6")
 public class Windows10SecurityTechnicalImplementationGuide {
+    @objid ("c8bf7551-de18-43d4-aeaa-890ff5761756")
     public static final CheckableEnforceableRequirement v_63447 = new V_63447();
+
+    @objid ("c9d87472-caf7-495e-88db-5b0f03852579")
     public static final CheckableEnforceableRequirement v_63779 = new V_63449();
+
+    @objid ("e483dd1b-dea1-469f-a0eb-26d65f9d1ef8")
     public static final CheckableEnforceableRequirement v_63463 = new V_63463();
+
+    @objid ("0c2efefa-59ae-412d-a5d8-66f6b90e4b3c")
     public static final CheckableEnforceableRequirement v_63467 = new V_63467();
+
+    @objid ("816ff883-0fa7-4dc4-a2d0-55b39f91116a")
     public static CheckableEnforceableRequirement[] allSTIGs() {
         CheckableEnforceableRequirement[] retArr = {
             v_63447,
@@ -20,4 +30,5 @@ public class Windows10SecurityTechnicalImplementationGuide {
         };
         return retArr;
     }
+
 }
