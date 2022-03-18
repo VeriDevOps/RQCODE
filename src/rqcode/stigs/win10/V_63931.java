@@ -28,7 +28,7 @@ public class V_63931 extends UserAccountManagementRequirement {
 
     @Override
     public String findingID() {
-        return "V_63931";
+        return "V-63931";
     }
 
     @Override

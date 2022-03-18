@@ -1,6 +1,6 @@
 package patterns;
 
-public class V_63851 extends UserAccountManagementRequirement {
+public class V_63843 extends UserAccountManagementRequirement {
     @Override
     protected String getFailure() {
         return null;
@@ -18,7 +18,7 @@ public class V_63851 extends UserAccountManagementRequirement {
 
     @Override
     public String checkTextCode() {
-        return "C-81367r1_chk";
+        return "C-64593r1_chk";
     }
 
     @Override
@@ -28,7 +28,7 @@ public class V_63851 extends UserAccountManagementRequirement {
 
     @Override
     public String findingID() {
-        return "V-63851";
+        return "V-63843";
     }
 
     @Override
