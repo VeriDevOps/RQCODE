@@ -20,13 +20,25 @@ public class Windows10SecurityTechnicalImplementationGuide {
     @objid ("0c2efefa-59ae-412d-a5d8-66f6b90e4b3c")
     public static final CheckableEnforceableRequirement v_63467 = new V_63467();
 
+    public static final CheckableEnforceableRequirement v_63843 = new V_63843();
+
+    public static final CheckableEnforceableRequirement v_63851 = new V_63851();
+
+    public static final CheckableEnforceableRequirement v_63863 = new V_63863();
+
+    public static final CheckableEnforceableRequirement v_63931 = new V_63931();
+
     @objid ("816ff883-0fa7-4dc4-a2d0-55b39f91116a")
     public static CheckableEnforceableRequirement[] allSTIGs() {
         CheckableEnforceableRequirement[] retArr = {
             v_63447,
             v_63779,
             v_63467,
-            v_63779
+            v_63779,
+            v_63843,
+            v_63851,
+            v_63863,
+            v_63931
         };
         return retArr;
     }

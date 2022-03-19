@@ -1,4 +1,4 @@
-package patterns;
+package rqcode.patterns.win10;
 
 abstract public class UserRightsAssignRequirement extends LocalPolicyRequirement {
     @Override
