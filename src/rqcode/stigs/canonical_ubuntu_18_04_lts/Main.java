@@ -1,14 +1,14 @@
-package rqcode.stigs.ubuntu;
+package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import rqcode.stigs.ubuntu.V_219157.V_219157;
-import rqcode.stigs.ubuntu.V_219158.V_219158;
-import rqcode.stigs.ubuntu.V_219161.V_219161;
-import rqcode.stigs.ubuntu.V_219177.V_219177;
-import rqcode.stigs.ubuntu.V_219304.V_219304;
-import rqcode.stigs.ubuntu.V_219318.V_219318;
-import rqcode.stigs.ubuntu.V_219319.V_219319;
-import rqcode.stigs.ubuntu.V_219343.V_219343;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219157.V_219157;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219158.V_219158;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219161.V_219161;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219177.V_219177;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219304.V_219304;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219318.V_219318;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219319.V_219319;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219343.V_219343;
 
 /**
  * Example of instantiation of the RQCODE for UBUNTU STIGs.

@@ -1,4 +1,4 @@
-package rqcode.stigs.ubuntu;
+package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
 import rqcode.concepts.Checkable;
 

@@ -1,9 +1,8 @@
-package rqcode.stigs.ubuntu.V_219177;
+package rqcode.stigs.canonical_ubuntu_18_04_lts.V_219177;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import rqcode.concepts.Checkable;
-import rqcode.concepts.Checkable.CheckStatus;
-import rqcode.stigs.ubuntu.UbuntuPackagePattern;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
 
 /**
  * Passwords need to be protected at all times, and encryption is the standard method for protecting passwords. If passwords are not encrypted, they can be plainly read (i.e., clear text) and easily compromised.

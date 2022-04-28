@@ -1,9 +1,8 @@
-package rqcode.stigs.ubuntu.V_219319;
+package rqcode.stigs.canonical_ubuntu_18_04_lts.V_219319;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import rqcode.concepts.Checkable;
-import rqcode.concepts.Checkable.CheckStatus;
-import rqcode.stigs.ubuntu.UbuntuPackagePattern;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
 
 /**
  * The use of PIV credentials facilitates standardization and reduces the risk of unauthorized access. DoD has mandated the use of the CAC to support identity management and personal authentication for systems covered under Homeland Security Presidential Directive (HSPD) 12, as well as making the CAC a primary component of layered protection for national security systems.
