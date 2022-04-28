@@ -4,9 +4,7 @@ import java.io.*;
 import java.util.*;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import rqcode.concepts.Checkable.CheckStatus;
 import rqcode.concepts.CheckableEnforceableRequirement;
-import rqcode.concepts.Enforceable.EnforcementStatus;
 
 /**
  * Instances of this class are requirements related to Windows 10 audit policies. Instances of this utilize auditpol.exe to perform checking and enforcing; that is, they fork auditpol.exe manipulate its input and output. It would be ideal to perform checking and enforcing through Win32 API calls instead, but for the time being this approach works.
