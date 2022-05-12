@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserRightsAssignRequirement;
+        import rqcode.patterns.win10.UserRightsAssignRequirement;
 
-public class V_63843 extends UserRightsAssignRequirement {
+public class V_63703 extends UserRightsAssignRequirement {
     @Override
     protected String getFailure() {
         return null;
@@ -20,7 +20,7 @@ public class V_63843 extends UserRightsAssignRequirement {
 
     @Override
     public String checkTextCode() {
-        return "C-64593r1_chk";
+        return "C-64451r1_chk";
     }
 
     @Override
@@ -30,12 +30,12 @@ public class V_63843 extends UserRightsAssignRequirement {
 
     @Override
     public String findingID() {
-        return "V-63843";
+        return "V-63703";
     }
 
     @Override
     public String fixTextCode() {
-        return "F-88439r1_fix";
+        return "F-69629r1_fix";
     }
 
     @Override
@@ -45,7 +45,7 @@ public class V_63843 extends UserRightsAssignRequirement {
 
     @Override
     public String ruleID() {
-        return "SV-78341r2_rule";
+        return "SV-78193r1_rule";
     }
 
     @Override
@@ -60,7 +60,6 @@ public class V_63843 extends UserRightsAssignRequirement {
 
     @Override
     public String version() {
-        return "WN10-UR-000025";
+        return "WN10-SO-000100";
     }
 }
-

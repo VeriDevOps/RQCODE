@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserAccountManagementRequirement;
+import rqcode.patterns.win10.UserRightsAssignRequirement;
 
-public class V_63851 extends UserAccountManagementRequirement {
+public class V_63851 extends UserRightsAssignRequirement {
     @Override
     protected String getFailure() {
         return null;
