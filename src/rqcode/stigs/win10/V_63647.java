@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserRightsAssignRequirement;
+import rqcode.patterns.win10.UserAccountManagementRequirement;
 
-public class V_63851 extends UserRightsAssignRequirement {
+public class V_63851 extends UserAccountManagementRequirement {
     @Override
     protected String getFailure() {
         return null;
@@ -63,4 +63,3 @@ public class V_63851 extends UserRightsAssignRequirement {
         return "WN10-UR-000025";
     }
 }
-
