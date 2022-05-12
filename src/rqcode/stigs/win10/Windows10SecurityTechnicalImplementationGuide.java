@@ -28,6 +28,10 @@ public class Windows10SecurityTechnicalImplementationGuide {
 
     public static final CheckableEnforceableRequirement v_63931 = new V_63931();
 
+    public static final CheckableEnforceableRequirement v_63647 = new V_63647 ();
+
+    public static final CheckableEnforceableRequirement v_63703 = new V_63703 ();
+
     @objid ("816ff883-0fa7-4dc4-a2d0-55b39f91116a")
     public static CheckableEnforceableRequirement[] allSTIGs() {
         CheckableEnforceableRequirement[] retArr = {
@@ -38,7 +42,9 @@ public class Windows10SecurityTechnicalImplementationGuide {
             v_63843,
             v_63851,
             v_63863,
-            v_63931
+            v_63931,
+            v_63647,
+            V_63703
         };
         return retArr;
     }
