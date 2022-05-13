@@ -1,5 +1,5 @@
 
-# Description of implemented STIGS  
+# Description of implemented STIGs
 
 * **v-63447**	
 
