@@ -43,11 +43,14 @@ Computer Configuration	Windows Settings	 Security Settings	Local Policies	User R
 Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"""Modify firmware environment values"" to only include the following groups or accounts:
 
 Administrators"		Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Modify firmware environment values" user right can change hardware configuration environment variables. This could result in hardware failures or a DoS.
-v-63851	Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"""Allow log on locally"" to only include the following groups or accounts:
+
+* **v-63851**	Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"""Allow log on locally"" to only include the following groups or accounts:
 
 Administrators
 Users"		Inappropriate granting of user rights can provide system, administrative, and other high-level capabilities. Accounts with the "Allow log on locally" user right can log on interactively to a system.
 
 * **v-63843**
+
+
 
 Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"Access Credential Manager as a trusted caller" to be defined but containing no entries (blank).		Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Access Credential Manager as a trusted caller" user right may be able to retrieve the credentials of other accounts from Credential Manager.
