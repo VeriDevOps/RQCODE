@@ -1,6 +1,6 @@
-# VeriDevOps Patterns - FAGOR examples
+# VeriDevOps RQCODE Patterns
 
-This repository contains Java implementation of Requirement as Code concept, where requirements are provided by Fagor Electrodoméstico, S. Coop.
+This repository contains Java implementation of Requirement as Code concept, where requirements were intiated based on suggestions provided by Fagor Electrodoméstico, S. Coop.
 
 ## Why Java?
 
