@@ -28,11 +28,18 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.softeam.modelio</groupId>
+      <groupId>org.modelio</groupId>
       <artifactId>javadesigner</artifactId>
-      <version>3.0.0</version>
-  </dependency>
+      <version>2.2.0</version>
+    </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+    <id>modelio</id>
+    <url>https://repository.modelio.org</url>
+    </repository>
+  </repositories>
 
 
 
