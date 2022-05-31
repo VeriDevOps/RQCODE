@@ -1,7 +1,5 @@
-package test.java;
-
-import main.java.rqcode.concepts.Checkable;
-import main.java.rqcode.stigs.win10.Windows10SecurityTechnicalImplementationGuide;
+import rqcode.concepts.Checkable;
+import rqcode.stigs.win10.Windows10SecurityTechnicalImplementationGuide;
 
 public class SimpleTest {
 

@@ -1,6 +1,6 @@
-package main.java.rqcode.stigs.canonical_ubuntu_18_04_lts;
+package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
-import main.java.rqcode.concepts.Checkable;
+import rqcode.concepts.Checkable;
 
 public abstract class Finding implements Checkable {
     protected Checkable _checkable;

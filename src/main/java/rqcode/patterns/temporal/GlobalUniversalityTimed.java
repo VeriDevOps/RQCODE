@@ -1,10 +1,10 @@
-package main.java.rqcode.patterns.temporal;
+package rqcode.patterns.temporal;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import main.java.rqcode.concepts.Checkable;
+import rqcode.concepts.Checkable;
 
 /**
  * Temporal requirements pattern:

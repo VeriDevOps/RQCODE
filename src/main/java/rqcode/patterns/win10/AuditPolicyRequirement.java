@@ -1,11 +1,16 @@
-package main.java.rqcode.patterns.win10;
+package rqcode.patterns.win10;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import main.java.rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.concepts.CheckableEnforceableRequirement;
 
 /**
  * Instances of this class are requirements related to Windows 10 audit policies. Instances of this utilize auditpol.exe to perform checking and enforcing; that is, they fork auditpol.exe manipulate its input and output. It would be ideal to perform checking and enforcing through Win32 API calls instead, but for the time being this approach works.

@@ -1,4 +1,4 @@
-package main.java.rqcode.patterns.win10;
+package rqcode.patterns.win10;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import main.java.rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.concepts.CheckableEnforceableRequirement;
 
 public abstract class LocalPolicyRequirement extends CheckableEnforceableRequirement {
     static class LocalPol {

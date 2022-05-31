@@ -1,9 +1,9 @@
-package main.java.rqcode.stigs.canonical_ubuntu_18_04_lts.V_219157;
+package rqcode.stigs.canonical_ubuntu_18_04_lts.V_219157;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import main.java.rqcode.concepts.Checkable;
-import main.java.rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
+import rqcode.concepts.Checkable;
+import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
 
 /**
  * Removing the Network Information Service (NIS) package decreases the risk of the accidental (or intentional) activation of NIS or NIS+ services.

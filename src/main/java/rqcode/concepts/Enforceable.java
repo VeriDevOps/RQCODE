@@ -1,4 +1,4 @@
-package main.java.rqcode.concepts;
+package rqcode.concepts;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 

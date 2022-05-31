@@ -1,5 +1,5 @@
 
-package main.java.rqcode.patterns.win10;
+package rqcode.patterns.win10;
 
 abstract public class SecurityOptions extends LocalPolicyRequirement {
     @Override

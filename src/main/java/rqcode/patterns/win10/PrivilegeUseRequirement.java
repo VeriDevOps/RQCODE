@@ -1,4 +1,4 @@
-package main.java.rqcode.patterns.win10;
+package rqcode.patterns.win10;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 

@@ -1,8 +1,8 @@
-package main.java.rqcode.patterns.temporal;
+package rqcode.patterns.temporal;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import main.java.rqcode.concepts.Checkable;
+import rqcode.concepts.Checkable;
 
 /**
  * Temporal requirements pattern:

@@ -1,10 +1,11 @@
-package main.java.rqcode.stigs.canonical_ubuntu_18_04_lts;
+package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
-import java.io.*;
+import java.io.IOException;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import main.java.rqcode.concepts.Checkable;
-import main.java.rqcode.concepts.Enforceable;
+import rqcode.concepts.Checkable;
+import rqcode.concepts.Enforceable;
 
 /**
  * RQCODE security requirements pattern from STIGS repository.

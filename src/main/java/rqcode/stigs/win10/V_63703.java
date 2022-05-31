@@ -1,6 +1,6 @@
-package main.java.rqcode.stigs.win10;
+package rqcode.stigs.win10;
 
-        import main.java.rqcode.patterns.win10.UserRightsAssignRequirement;
+        import rqcode.patterns.win10.UserRightsAssignRequirement;
 
 public class V_63703 extends UserRightsAssignRequirement {
     @Override

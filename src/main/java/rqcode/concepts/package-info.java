@@ -1,4 +1,4 @@
 /**
  * Contains the major RQCODE concepts.
  */
-package main.java.rqcode.concepts;
+package rqcode.concepts;

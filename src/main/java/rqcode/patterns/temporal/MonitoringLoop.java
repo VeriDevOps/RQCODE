@@ -1,8 +1,8 @@
-package main.java.rqcode.patterns.temporal;
+package rqcode.patterns.temporal;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import main.java.rqcode.concepts.Checkable;
+import rqcode.concepts.Checkable;
 
 /**
  * This is the monitoring service that periodically checks the temporal properties.
@@ -46,7 +46,7 @@ public abstract class MonitoringLoop implements Checkable {
     }
 
     @objid ("1df654c2-80c7-437e-ae12-95f0169805d3")
-    public main.java.rqcode.concepts.Checkable.CheckStatus check() {
+    public rqcode.concepts.Checkable.CheckStatus check() {
         while(!precondition()) {
             try {
                 Thread.sleep (sleepMilliseconds());
