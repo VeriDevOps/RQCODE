@@ -1,6 +1,6 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=VeriDevOps_RQCODE&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=VeriDevOps_RQCODE)
 
-# VeriDevOps RQCODE Patterns
+# VeriDevOps RQCODE Patterns.
 
 This repository contains Java implementation of Requirement as Code concept, where requirements were intiated based on suggestions provided by Fagor Electrodoméstico, S. Coop.
 
