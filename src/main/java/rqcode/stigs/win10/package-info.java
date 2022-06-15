@@ -1,4 +1,4 @@
 /**
  * <Enter note text here>
  */
-package stigs.win10;
+package rqcode.stigs.win10;
