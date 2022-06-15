@@ -62,7 +62,7 @@ public class UbuntuPackagePattern implements Checkable, Enforceable {
     @objid ("3a6ff243-728e-49ac-b147-1906f1799bba")
     public EnforcementStatus enforce() {
         Process process = null;    
-        var action = _mustBeInstalled ? "install " : "remove ";
+        String action = _mustBeInstalled ? "install " : "remove ";
         try {
             process = Runtime.getRuntime().exec("sudo apt-get " + action + _name);
         } catch (IOException ioException) {
