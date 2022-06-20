@@ -62,5 +62,29 @@ public class V_63647 extends UserRightsAssignRequirement {
     public String version() {
         return "WN10-SO-000045";
     }
+
+    @Override
+    protected String getSubcategory() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String description() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String checkText() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String fixText() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
 
