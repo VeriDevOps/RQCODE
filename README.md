@@ -1,58 +1,39 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=VeriDevOps_RQCODE&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=VeriDevOps_RQCODE)
 
-# VeriDevOps RQCODE Patterns.
+# About the repository
 
-This repository contains Java implementation of Requirement as Code concept, where requirements were intiated based on suggestions provided by Fagor Electrodoméstico, S. Coop.
+The RQCODE repository contains security requirement idioms represented as Java code.
+The purpose of this is twofold:
+1. Rigorously checking whether a given system meets a given security requirement.
+2. Programmatically enforcing a given requirement on a given system.
 
-## Why Java?
+RQCODE requirements that can be checked implement the Checkable interface.
+RQCODE requirements that can be enforced implement the Enforceable interface.
 
-No specific reason. The core idea of this implementation is to capture the object oriented nature of requirements in the FAGOR case. Any other language supporting object oriented programming would be just as fine.
+# Temporal patterns
 
-However, it is worth noting that c++/C# would perhaps be a better choice here since requirements are written for Windows and win32 API would come in handy.
+Classes located under the src/main/java/rqcode/patterns/temporal directory implement some of the idiomatic temporal specification patterns (https://matthewbdwyer.github.io/psp/patterns.html), as well as their timed versions.
+These classes only implement the Checkable interface.
+Temporal specification patterns are generic -- for example, the ``always globally P'' pattern does not specify what P is.
+Replacement of P with a meaningful property turns the pattern into a requirement.
+The RQCODE classes representing the temporal patterns have constructors that expect formal arguments implementing the Checkable interface.
+These arguments are objects that encode meaningful properties, such as P in the above example.
+In particular, these objects may be instantiated from other RQCODE temporal patterns, for all these patterns implement the Checkable interface.
 
-## Description of implemented STIGS  
+# STIGs
 
-* **v-63447**	
+STIG stands for ``Security Technical Implementation Guid'' (https://www.stigviewer.com/stigs).
+Each STIG is collection of security findings for a given software system (for example, for APACHE Server 2.0 for Unix https://www.stigviewer.com/stig/apache_server_2.0unix/).
+Each finding includes:
+- A human-friendly explanation why this finding represents a security problem.
+- Technical steps required to identify the finding.
+- Technical steps required to fix the finding. 
 
-Computer Configuration	Windows Settings	 Security Settings	Advanced Audit Policy Configuration.	System Audit Policies 	Account Management	Audit User Account Management" with "Failure" selected	Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
+The problem with the original collection of STIGs is that the technical steps take the form of non-runnable natural language.
+RQCODE classes under the src/main/java/rqcode/stigs directory implement STIG findings in an executable and reusable form.
+Each RQCODE STIG finding class implements at least the Checkable interface, which makes it usable in combination with the temporal patterns.
+Some finding classes also implement the Enforceable interface, which makes them usable for fixing the identified finding right after the identification.
 
-* **v-63449**	
+# Examples
 
-Computer Configuration	Windows Settings	 Security Settings	Advanced Audit Policy Configuration.	System Audit Policies 	Account Management	 "Audit User Account Management" with "Success" selected	Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
-
-* **v-63463**	
-
-Computer Configuration	Windows Settings	 Security Settings	Advanced Audit Policy Configuration.	System Audit Policies 	Logon/Logoff	"Audit Logon" with "Failure" selected.	Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. Logon records user logons. If this is an interactive logon, it is recorded on the local system. If it is to a network share, it is recorded on the system accessed
-
-* **v-63467**	
-
-Computer Configuration	Windows Settings	 Security Settings	Advanced Audit Policy Configuration.	System Audit Policies 	Logon/Logoff	 "Audit Logon" with "Success" selected	Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. Logon records user logons. If this is an interactive logon, it is recorded on the local system. If it is to a network share, it is recorded on the system accessed
-
-* **v-63647**	
-
-Computer Configuration	Windows Settings	 Security Settings	Local Policies	Security Options	"Domain member: Digitally sign secure channel data (when possible)" to "Enabled".		Requests sent on the secure channel are authenticated, and sensitive information (such as passwords) is encrypted, but the channel is not integrity checked. If this policy is enabled, outgoing secure channel traffic will be signed.
-
-* **v-63703**	
-
-Computer Configuration	Windows Settings	 Security Settings	Local Policies	Security Options	"Microsoft network client: Digitally sign communications (always)" to "Enabled".		The server message block (SMB) protocol provides the basis for many network operations. Digitally signed SMB packets aid in preventing man-in-the-middle attacks. If this policy is enabled, the SMB client will only communicate with an SMB server that performs SMB packet signing.
-
-* **v-63863**	
-
-Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"Create permanent shared objects" to be defined but containing no entries (blank).		Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Create permanent shared objects" user right could expose sensitive data by creating shared objects.
-
-* **v-63931**	
-
-Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"""Modify firmware environment values"" to only include the following groups or accounts:
-
-Administrators"		Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Modify firmware environment values" user right can change hardware configuration environment variables. This could result in hardware failures or a DoS.
-
-* **v-63851**	Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"""Allow log on locally"" to only include the following groups or accounts:
-
-Administrators
-Users"		Inappropriate granting of user rights can provide system, administrative, and other high-level capabilities. Accounts with the "Allow log on locally" user right can log on interactively to a system.
-
-* **v-63843**
-
-
-
-Computer Configuration	Windows Settings	 Security Settings	Local Policies	User Rights Assignment	"Access Credential Manager as a trusted caller" to be defined but containing no entries (blank).		Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Access Credential Manager as a trusted caller" user right may be able to retrieve the credentials of other accounts from Credential Manager.
+Main classes inside the repository contain runnable tests illustrating how the RQCODE patterns can be used in practice. 
