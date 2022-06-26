@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserRightsAssignRequirement;
+import rqcode.patterns.win10.SecurityOptions;
 
-public class V_63647 extends UserRightsAssignRequirement {
+public class V_63647 extends SecurityOptions {
     @Override
     protected String getFailure() {
         return null;
@@ -10,7 +10,7 @@ public class V_63647 extends UserRightsAssignRequirement {
 
     @Override
     protected String getInclusionSetting() {
-        return "Success";
+        return "Domain member: Digitally sign secure channel data (when possible)";
     }
 
     @Override
@@ -64,27 +64,18 @@ public class V_63647 extends UserRightsAssignRequirement {
     }
 
     @Override
-    protected String getSubcategory() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
     public String description() {
-        // TODO Auto-generated method stub
-        return null;
+        return "Requests sent on the secure channel are authenticated, and sensitive information (such as passwords) is encrypted, but the channel is not integrity checked. If this policy is enabled, outgoing secure channel traffic will be signed.";
     }
 
     @Override
-    public String checkText() {
-        // TODO Auto-generated method stub
-        return null;
+    public String getValueName() {
+        return "SignSecureChannel";
     }
 
     @Override
-    public String fixText() {
-        // TODO Auto-generated method stub
-        return null;
+    public String getPathFolder() {
+        return "Netlogon";
     }
 }
 

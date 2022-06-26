@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserRightsAssignRequirement;
+import rqcode.patterns.win10.AvailableUserRightsAssignRequirement;
 
-public class V_63851 extends UserRightsAssignRequirement {
+public class V_63851 extends AvailableUserRightsAssignRequirement {
     @Override
     protected String getFailure() {
         return null;
@@ -10,7 +10,7 @@ public class V_63851 extends UserRightsAssignRequirement {
 
     @Override
     protected String getInclusionSetting() {
-        return "Success";
+        return "Allow log on locally";
     }
 
     @Override
@@ -61,6 +61,17 @@ public class V_63851 extends UserRightsAssignRequirement {
     @Override
     public String version() {
         return "WN10-UR-000025";
+    }
+
+    @Override
+    public String description() {
+        return "Inappropriate granting of user rights can provide system, administrative, and other high-level capabilities. Accounts with the \"Allow log on locally\" user right can log on interactively to a system.";
+    }
+
+    @Override
+    public String getRights() {
+        return "Administrators\n" +
+                "Users";
     }
 }
 

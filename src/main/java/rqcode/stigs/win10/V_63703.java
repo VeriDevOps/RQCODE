@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-        import rqcode.patterns.win10.UserRightsAssignRequirement;
+import rqcode.patterns.win10.SecurityOptions;
 
-public class V_63703 extends UserRightsAssignRequirement {
+public class V_63703 extends SecurityOptions {
     @Override
     protected String getFailure() {
         return null;
@@ -10,7 +10,7 @@ public class V_63703 extends UserRightsAssignRequirement {
 
     @Override
     protected String getInclusionSetting() {
-        return "Success";
+        return "Microsoft network client: Digitally sign communications (always)";
     }
 
     @Override
@@ -61,5 +61,20 @@ public class V_63703 extends UserRightsAssignRequirement {
     @Override
     public String version() {
         return "WN10-SO-000100";
+    }
+
+    @Override
+    public String description() {
+        return "The server message block (SMB) protocol provides the basis for many network operations. Digitally signed SMB packets aid in preventing man-in-the-middle attacks. If this policy is enabled, the SMB client will only communicate with an SMB server that performs SMB packet signing.";
+    }
+
+    @Override
+    public String getValueName() {
+        return "RequireSecuritySignature";
+    }
+
+    @Override
+    public String getPathFolder() {
+        return "LanmanWorkstation";
     }
 }
