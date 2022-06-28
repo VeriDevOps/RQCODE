@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserRightsAssignRequirement;
+import rqcode.patterns.win10.NoUserRightsAssignRequirement;
 
-public class V_63863 extends UserRightsAssignRequirement {
+public class V_63863 extends NoUserRightsAssignRequirement {
     @Override
     protected String getFailure() {
         return null;
@@ -10,7 +10,7 @@ public class V_63863 extends UserRightsAssignRequirement {
 
     @Override
     protected String getInclusionSetting() {
-        return "Success";
+        return "Create permanent shared objects";
     }
 
     @Override
@@ -61,6 +61,11 @@ public class V_63863 extends UserRightsAssignRequirement {
     @Override
     public String version() {
         return "WN10-UR-000055";
+    }
+
+    @Override
+    public String description() {
+        return "Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the \"Create permanent shared objects\" user right could expose sensitive data by creating shared objects.";
     }
 }
 

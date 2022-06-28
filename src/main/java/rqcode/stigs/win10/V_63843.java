@@ -1,8 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.UserRightsAssignRequirement;
+import rqcode.patterns.win10.NoUserRightsAssignRequirement;
 
-public class V_63843 extends UserRightsAssignRequirement {
+public class V_63843 extends NoUserRightsAssignRequirement {
     @Override
     protected String getFailure() {
         return null;
@@ -10,7 +10,7 @@ public class V_63843 extends UserRightsAssignRequirement {
 
     @Override
     protected String getInclusionSetting() {
-        return "Success";
+        return "Access Credential Manager as a trusted caller";
     }
 
     @Override
@@ -61,6 +61,11 @@ public class V_63843 extends UserRightsAssignRequirement {
     @Override
     public String version() {
         return "WN10-UR-000025";
+    }
+
+    @Override
+    public String description() {
+        return "Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the \"Access Credential Manager as a trusted caller\" user right may be able to retrieve the credentials of other accounts from Credential Manager.";
     }
 }
 
