@@ -1,23 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.SecurityOptions;
+import rqcode.patterns.win10.SystemRegEditRequirement;
 
-public class V_63703 extends SecurityOptions {
-    @Override
-    protected String getFailure() {
-        return null;
-    }
-
-    @Override
-    protected String getInclusionSetting() {
-        return "Microsoft network client: Digitally sign communications (always)";
-    }
-
-    @Override
-    protected String getSuccess() {
-        return "enable";
-    }
-
+public class V_63703 extends SystemRegEditRequirement {
     @Override
     public String checkTextCode() {
         return "C-64451r1_chk";
@@ -74,7 +59,12 @@ public class V_63703 extends SecurityOptions {
     }
 
     @Override
-    public String getPathFolder() {
-        return "LanmanWorkstation";
+    protected String getRegistryPath() {
+        return "\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\";
+    }
+
+    @Override
+    protected String getOption() {
+        return "Microsoft network client: Digitally sign communications (always)";
     }
 }
