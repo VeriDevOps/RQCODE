@@ -1,23 +1,8 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.SecurityOptions;
+import rqcode.patterns.win10.SystemRegEditRequirement;
 
-public class V_63647 extends SecurityOptions {
-    @Override
-    protected String getFailure() {
-        return null;
-    }
-
-    @Override
-    protected String getInclusionSetting() {
-        return "Domain member: Digitally sign secure channel data (when possible)";
-    }
-
-    @Override
-    protected String getSuccess() {
-        return "enable";
-    }
-
+public class V_63647 extends SystemRegEditRequirement {
     @Override
     public String checkTextCode() {
         return "C-64397r1_chk";
@@ -74,8 +59,13 @@ public class V_63647 extends SecurityOptions {
     }
 
     @Override
-    public String getPathFolder() {
-        return "Netlogon";
+    protected String getRegistryPath() {
+        return "\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters\\";
+    }
+
+    @Override
+    protected String getOption() {
+        return "Domain member: Digitally sign secure channel data (when possible)";
     }
 }
 
