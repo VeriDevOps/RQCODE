@@ -5,7 +5,7 @@ import rqcode.patterns.win10.Win10ExploitProtectionRequirement;
 public class V_77103 extends Win10ExploitProtectionRequirement {
     @Override
     public String checkTextCode() {
-        return "C-77241r8_chk";
+        return "C-79587r1_chk";
     }
 
     @Override
@@ -15,12 +15,12 @@ public class V_77103 extends Win10ExploitProtectionRequirement {
 
     @Override
     public String findingID() {
-        return "V-77189";
+        return "V-77103";
     }
 
     @Override
     public String fixTextCode() {
-        return "F-84325r4_fix";
+        return "F-86725r2_fix";
     }
 
     @Override
@@ -30,7 +30,7 @@ public class V_77103 extends Win10ExploitProtectionRequirement {
 
     @Override
     public String ruleID() {
-        return "SV-91885r2_rule";
+        return "SV-91799r3_rule";
     }
 
     @Override
@@ -45,7 +45,7 @@ public class V_77103 extends Win10ExploitProtectionRequirement {
 
     @Override
     public String version() {
-        return "WN10-EP-000070";
+        return "WN10-EP-000060";
     }
 
     @Override
