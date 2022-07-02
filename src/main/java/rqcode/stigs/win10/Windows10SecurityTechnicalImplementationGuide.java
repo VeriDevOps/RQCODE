@@ -38,12 +38,14 @@ public class Windows10SecurityTechnicalImplementationGuide {
     public static final CheckableEnforceableRequirement v_63709 = new V_63709 ();
 
     public static final CheckableEnforceableRequirement v_63423 = new V_63423 ();
-
     public static final CheckableEnforceableRequirement v_63427 = new V_63427 ();
-
     public static final CheckableEnforceableRequirement v_63405 = new V_63405 ();
-
     public static final CheckableEnforceableRequirement v_63409 = new V_63409 ();
+
+    public static final CheckableEnforceableRequirement v_77091 = new V_77091 ();
+    public static final CheckableEnforceableRequirement v_77095 = new V_77095 ();
+    public static final CheckableEnforceableRequirement v_77103 = new V_77103 ();
+    public static final CheckableEnforceableRequirement v_77189 = new V_77189 ();
 
     @objid ("816ff883-0fa7-4dc4-a2d0-55b39f91116a")
     public static CheckableEnforceableRequirement[] allSTIGs() {
@@ -59,7 +61,15 @@ public class Windows10SecurityTechnicalImplementationGuide {
             v_63647,
             v_63703,
             v_63321,
-            v_63709
+            v_63423,
+            v_63427,
+            v_63405,
+            v_63409,
+            v_63709,
+            v_77091,
+            v_77095,
+            v_77103,
+            v_77189,
         };
         return retArr;
     }
