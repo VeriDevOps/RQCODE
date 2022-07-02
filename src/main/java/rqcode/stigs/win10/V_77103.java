@@ -54,16 +54,6 @@ public class V_77103 extends Win10ExploitProtectionRequirement {
     }
 
     @Override
-    protected String getInclusionSetting() {
-        return "Use a common set of exploit protection settings";
-    }
-
-    @Override
-    protected String getOption() {
-        return "Enabled";
-    }
-
-    @Override
     protected Integer getCommandKey() {
         return 2;
     }
