@@ -22,11 +22,8 @@ public class Windows10SecurityTechnicalImplementationGuide {
     public static final CheckableEnforceableRequirement v_63467 = new V_63467();
 
     public static final CheckableEnforceableRequirement v_63843 = new V_63843();
-
-    public static final CheckableEnforceableRequirement v_63851 = new V_63851();
-
     public static final CheckableEnforceableRequirement v_63863 = new V_63863();
-
+    public static final CheckableEnforceableRequirement v_63851 = new V_63851();
     public static final CheckableEnforceableRequirement v_63931 = new V_63931();
 
     public static final CheckableEnforceableRequirement v_63647 = new V_63647 ();

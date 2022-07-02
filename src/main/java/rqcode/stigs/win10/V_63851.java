@@ -4,21 +4,6 @@ import rqcode.patterns.win10.AvailableUserRightsAssignRequirement;
 
 public class V_63851 extends AvailableUserRightsAssignRequirement {
     @Override
-    protected String getFailure() {
-        return null;
-    }
-
-    @Override
-    protected String getInclusionSetting() {
-        return "Allow log on locally";
-    }
-
-    @Override
-    protected String getSuccess() {
-        return "enable";
-    }
-
-    @Override
     public String checkTextCode() {
         return "C-81367r1_chk";
     }
@@ -69,9 +54,25 @@ public class V_63851 extends AvailableUserRightsAssignRequirement {
     }
 
     @Override
-    public String getRights() {
+    protected String getOption() {
+        return "Allow log on locally";
+    }
+
+    @Override
+    public String getInclusionSetting() {
         return "Administrators\n" +
                 "Users";
+    }
+
+    @Override
+    protected String getListAccountPrivilege() {
+        return "SeInteractiveLogonRight";
+    }
+
+    @Override
+    protected String getGrantUserRights() {
+        return "Grant-UserRight 'S-1-5-32-544'" + getListAccountPrivilege() +
+                "\nGrant-UserRight 'S-1-5-32-545'" + getListAccountPrivilege();
     }
 }
 

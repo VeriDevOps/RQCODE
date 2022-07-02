@@ -4,21 +4,6 @@ import rqcode.patterns.win10.AvailableUserRightsAssignRequirement;
 
 public class V_63931 extends AvailableUserRightsAssignRequirement {
     @Override
-    protected String getFailure() {
-        return null;
-    }
-
-    @Override
-    protected String getInclusionSetting() {
-        return "Modify firmware environment values";
-    }
-
-    @Override
-    protected String getSuccess() {
-        return "enable";
-    }
-
-    @Override
     public String checkTextCode() {
         return "C-64681r1_chk";
     }
@@ -69,8 +54,23 @@ public class V_63931 extends AvailableUserRightsAssignRequirement {
     }
 
     @Override
-    public String getRights() {
+    protected String getInclusionSetting() {
         return "Administrators";
+    }
+
+    @Override
+    public String getOption() {
+        return "Modify firmware environment values";
+    }
+
+    @Override
+    protected String getListAccountPrivilege() {
+        return "SeInteractiveLogonRight";
+    }
+
+    @Override
+    protected String getGrantUserRights() {
+        return "Grant-UserRight 'S-1-5-32-544' " + getListAccountPrivilege();
     }
 }
 
