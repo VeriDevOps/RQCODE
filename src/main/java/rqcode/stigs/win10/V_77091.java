@@ -55,7 +55,7 @@ public class V_77091 extends Win10ExploitProtectionRequirement {
 
     @Override
     protected Integer getCommandKey() {
-        return 2;
+        return 1;
     }
 
     @Override
