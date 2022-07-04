@@ -1,5 +1,7 @@
 # STIG Hierarchy
 
+STIG viewer document link: https://www.stigviewer.com/stig/windows_10/2020-06-15/
+
 * The following hierarchy of patterns, categories and classes wee implemented
 
 ![image](https://user-images.githubusercontent.com/5621696/177218572-420a739c-5b33-4df4-9a4f-80594324a186.png)
@@ -8,18 +10,35 @@
 
 **Registry Edit pattern**
 
-This pattern covers 4 STIGs: 63647, 63321, 63703, 63709. 
-This group of STIGs has 4 chnaging values in CheckText module: Registry Path, Value name, Value Type, and Value. Example of STIG # V_63647:
+This pattern covers 4 STIGs: **V-63647, V-63321, V-63703, V-63709**. 
+This group of STIGs has 4 chnaging values in _CheckText_ module: Registry Path, Value name, Value Type, and Value. The pic, below is tha example of STIG # V_63647:
 
 ![image](https://user-images.githubusercontent.com/5621696/177219420-c4f13d61-6166-48e4-bbea-ca9160880dea.png)
 
+
+In RegistryEditRequirement these changing values were implemented through methods:
 
     protected abstract String getRegistryPath();
     protected abstract String getValueName();
     protected abstract String getValueType();
     protected abstract String getValue();
 
-
+   Registry Hive and Resitry Root do not change, thus they were implemented as strings
+   
+    private static final String REGISTRY_HIVE = "HKEY_LOCAL_MACHINE";
+    private static final String REGISTRY_ROOT = "HKLM:";
+    
+    
+    Conditions for PowerShell scripts is implemeted in class:
+    
+    private static final String COMMAND_BODY 
+    
+    In order to check the conditions of STIG we run class to request PowerShell script:
+    
+    Process regEditProcess = Runtime.getRuntime().exec(regEditCommand);
+    
+    Depending on results of regEditProcess, CheckStatus check() method return either Success or Failure.
+   
 # Description of  STIGs
 
 * **v-63447**	
