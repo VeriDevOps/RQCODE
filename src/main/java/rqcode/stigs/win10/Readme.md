@@ -1,15 +1,31 @@
-# TODO Explain patterns and STIGs categories
+# STIG Hierarchy
 
-* add categories
-* add links to STIGVIEWER
+* The following hierarchy of patterns, categories and classes wee implemented
 
-![image](https://user-images.githubusercontent.com/2123188/176204960-1eb199f1-99b6-4660-a4dc-6c64628c6b08.png)
+![image](https://user-images.githubusercontent.com/5621696/177218572-420a739c-5b33-4df4-9a4f-80594324a186.png)
 
-# Description of implemented STIGs
+#STIG categories and patterns
+
+**Registry Edit pattern**
+
+This pattern covers 4 STIGs: 63647, 63321, 63703, 63709. 
+This group of STIGs has 4 chnaging values in CheckText module: Registry Path, Value name, Value Type, and Value. Example of STIG # V_63647:
+
+![image](https://user-images.githubusercontent.com/5621696/177219420-c4f13d61-6166-48e4-bbea-ca9160880dea.png)
+
+
+    protected abstract String getRegistryPath();
+    protected abstract String getValueName();
+    protected abstract String getValueType();
+    protected abstract String getValue();
+
+
+# Description of  STIGs
 
 * **v-63447**	
 
 Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
+
 * **v-63449**	
 
 Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
