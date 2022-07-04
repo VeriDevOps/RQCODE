@@ -4,21 +4,6 @@ import rqcode.patterns.win10.NoUserRightsAssignRequirement;
 
 public class V_63863 extends NoUserRightsAssignRequirement {
     @Override
-    protected String getFailure() {
-        return null;
-    }
-
-    @Override
-    protected String getInclusionSetting() {
-        return "Create permanent shared objects";
-    }
-
-    @Override
-    protected String getSuccess() {
-        return "enable";
-    }
-
-    @Override
     public String checkTextCode() {
         return "C-64613r1_chk";
     }
@@ -66,6 +51,16 @@ public class V_63863 extends NoUserRightsAssignRequirement {
     @Override
     public String description() {
         return "Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the \"Create permanent shared objects\" user right could expose sensitive data by creating shared objects.";
+    }
+
+    @Override
+    protected String getOption() {
+        return "Create permanent shared objects";
+    }
+
+    @Override
+    protected String getListAccountPrivilege() {
+        return "SeCreatePermanentPrivilege";
     }
 }
 

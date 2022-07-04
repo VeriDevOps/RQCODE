@@ -4,21 +4,6 @@ import rqcode.patterns.win10.NoUserRightsAssignRequirement;
 
 public class V_63843 extends NoUserRightsAssignRequirement {
     @Override
-    protected String getFailure() {
-        return null;
-    }
-
-    @Override
-    protected String getInclusionSetting() {
-        return "Access Credential Manager as a trusted caller";
-    }
-
-    @Override
-    protected String getSuccess() {
-        return "enable";
-    }
-
-    @Override
     public String checkTextCode() {
         return "C-64593r1_chk";
     }
@@ -66,6 +51,16 @@ public class V_63843 extends NoUserRightsAssignRequirement {
     @Override
     public String description() {
         return "Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the \"Access Credential Manager as a trusted caller\" user right may be able to retrieve the credentials of other accounts from Credential Manager.";
+    }
+
+    @Override
+    protected String getOption() {
+        return "Access Credential Manager as a trusted caller";
+    }
+
+    @Override
+    protected String getListAccountPrivilege() {
+        return "SeTrustedCredManAccessPrivilege";
     }
 }
 
