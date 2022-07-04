@@ -29,9 +29,9 @@ In RegistryEditRequirement these changing values were implemented through method
     private static final String REGISTRY_ROOT = "HKLM:";
     
     
-    Conditions for PowerShell scripts is implemeted in class:
+    Conditions for PowerShell scripts is implemeted in the class:
     
-    private static final String COMMAND_BODY 
+    private static final String COMMAND_BODY; 
     
     In order to check the conditions of STIG we run class to request PowerShell script:
     
