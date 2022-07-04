@@ -2,7 +2,7 @@
 
 STIG viewer document link: https://www.stigviewer.com/stig/windows_10/2020-06-15/
 
-* The following hierarchy of patterns, categories and classes wee implemented
+* The following diagram represents hierarchy of patterns, categories and classes:
 
 ![image](https://user-images.githubusercontent.com/5621696/177218572-420a739c-5b33-4df4-9a4f-80594324a186.png)
 
@@ -11,7 +11,7 @@ STIG viewer document link: https://www.stigviewer.com/stig/windows_10/2020-06-15
 # **Overall description of the approach**
 
 ## STIGs
-Each STIG concsit of the following sections:
+Each STIG consists of the following sections:
 ### Overview 
 
 ![image](https://user-images.githubusercontent.com/5621696/177222197-b6b73925-72ad-498e-aae8-774cc36baeff.png)
@@ -21,15 +21,14 @@ Each STIG concsit of the following sections:
 ![image](https://user-images.githubusercontent.com/5621696/177222158-47ea6780-1dd4-4b8b-ac17-f1d31b6623cd.png)
 
 ## Patterns
-Each pattern verifies the Details of the STIG. If **Chck Text** inputs are correct, it runs PowerShell Script.
-Also each pattern verifies **Fix Text**. It includes common parameters that does not change and changeable paramenets with value. 
+Each Pattern verifies the Details of the STIG. If **Check Text** inputs are correct, Pattern runs PowerShell Script.
+Also, each pattern verifies **Fix Text**. It includes mutual parameters that do not change and changeable parameters with value. 
 
 ![image](https://user-images.githubusercontent.com/5621696/177222817-c67412a9-0ff3-415e-a67d-14cb4e3fafc4.png)
 
 In the pic. _"Microsoft network client: Digitally sign communications (always)"_ is a changeable parameter and _Enabled_ is a value.
 
 For that purpose, changeable parameter through getOption() and Value through getInclusionSetting().  
-
 
 
 #STIG categories and patterns
