@@ -21,6 +21,21 @@ Each STIG consists of the following sections:
 ![image](https://user-images.githubusercontent.com/5621696/177222158-47ea6780-1dd4-4b8b-ac17-f1d31b6623cd.png)
 
 ## Patterns
+FAGOR document presented 5 group of policies: <br/>
+    - Audit policy <br/>
+    - Registry edit <br/>
+    - Security policy <br/>
+    - Process mitigation <br/>
+    - User rights
+    
+Patterns were implemented for For each Policy with corresponding name as Java abstract classes:
+    - AuditPolicyRequirement <br/>
+    - RegistryEditRequirement <br/>
+    - SecurityPolicyRequirement <br/>
+    - ProcessMitigationRequirement <br/>
+    - UserRightsRequirement <br/>
+
+
 Each Pattern verifies the Details of the STIG. If **Check Text** inputs are correct, Pattern runs PowerShell Script.
 Also, each pattern verifies **Fix Text**. It includes mutual parameters that do not change and changeable parameters with value. 
 
@@ -47,14 +62,8 @@ In RegistryEditRequirement these changing values were implemented through method
     protected abstract String getValueName();
     protected abstract String getValueType();
     protected abstract String getValue();
-
-   Registry Hive and Resitry Root do not change, thus they were implemented as strings
-   
-    private static final String REGISTRY_HIVE = "HKEY_LOCAL_MACHINE";
-    private static final String REGISTRY_ROOT = "HKLM:";
     
-    
-    Conditions for PowerShell scripts is implemeted in the class:
+    Conditions for PowerShell scripts are implemeted in the class:
     
     private static final String COMMAND_BODY; 
     
@@ -68,46 +77,52 @@ In RegistryEditRequirement these changing values were implemented through method
 
 
     protected abstract String getInclusionSetting();
-
+    
+   **Security Policy Pattern**
    
-# Description of  STIGs
+   This pattern covers 4 STIGs: **V-63427, V-63423, V-63409, V-63405**. 
+   
+ Conditions of PowerShell scripts for these 4 STIGs V-63427 and V-63423, V-63409, V-63405 different. <br/>
+ 
+ V-63427 PowerShell script condition:
+ 
+![image](https://user-images.githubusercontent.com/5621696/177430616-1265c731-1c0b-402c-b9dd-53d6d98bc40a.png)
 
-* **v-63447**	
+V-63423, V-63409, V-63405 PoweShell script conditions (highlighted changing value):
 
-Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
+![image](https://user-images.githubusercontent.com/5621696/177430724-b96c2a8a-8f2a-4602-b117-6fa2d5ed322e.png)
 
-* **v-63449**	
+ 
+ These conditions were implemented through HashMap functions. 
+ 
+ COMMAND_TEMPLATE_MAP = new HashMap<>();
+       
+ And depending on conditions it returns *1* for V-63423, V-63409, V-63405 and *2* in V-63427. 
+ 
+ ![image](https://user-images.githubusercontent.com/5621696/177431131-fb12512a-40b4-4ec2-823f-c5daeadb2195.png)
 
-Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
+ This Funciton is callsed in classes V-63423, V-63409, V-63405:
+ 
+    protected Integer getCommandKey() {
+        return 1;
+    }
+   
+   
+   and class V-63427:
+   
+    protected Integer getCommandKey() {
+        return 2;
+    }
+   
+    **Process Mitigation Pattern**
+   
+  
+   This pattern covers 4 STIGs: **V-77091, V-77095, V-77103, V-77189**. 
+   
+   The same function HashMap was implemented for meeting PowerShell conditions as in Security Policy Pattern
+   
+    **User Rights Pattern**
 
-* **v-63463**	
-
-Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. Logon records user logons. If this is an interactive logon, it is recorded on the local system. If it is to a network share, it is recorded on the system accessed
-
-* **v-63467**	
-
-Requests sent on the secure channel are authenticated, and sensitive information (such as passwords) is encrypted, but the channel is not integrity checked. If this policy is enabled, outgoing secure channel traffic will be signed.
-
-* **v-63647**	
-
-Requests sent on the secure channel are authenticated, and sensitive information (such as passwords) is encrypted, but the channel is not integrity checked. If this policy is enabled, outgoing secure channel traffic will be signed.
-
-* **v-63703**	
-
-The server message block (SMB) protocol provides the basis for many network operations. Digitally signed SMB packets aid in preventing man-in-the-middle attacks. If this policy is enabled, the SMB client will only communicate with an SMB server that performs SMB packet signing.
-
-* **v-63863**	
-
-Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Create permanent shared objects" user right could expose sensitive data by creating shared objects.
-
-* **v-63931**	
-
-Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Modify firmware environment values" user right can change hardware configuration environment variables. This could result in hardware failures or a DoS.
-
-* **v-63851**	
-
-Inappropriate granting of user rights can provide system, administrative, and other high-level capabilities. Accounts with the "Allow log on locally" user right can log on interactively to a system.
-
-* **v-63843**
-
-Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Access Credential Manager as a trusted caller" user right may be able to retrieve the credentials of other accounts from Credential Manager.
+   This pattern covers 4 STIGs: **V-63931, V-63851, V-63863, V-63843**. 
+   
+   The implementation of PowerShell conditions is the same as in *Registry Edit* pattern. 
