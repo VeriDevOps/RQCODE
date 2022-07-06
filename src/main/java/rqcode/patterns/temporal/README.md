@@ -1,4 +1,27 @@
-## Example of a temporal RQCODE requirement
+# Temporal and real-time security requirement patterns
+
+Requirements often take forms more complicated than simple checks of a system snapshot.
+In the extreme case they take the form of temporal properties with real time deadlines.
+Sometimes these properties look so tricky in timed temporal logics that only an expert can deal with them.
+Also, such properties too often fall into a limited set of specification patterns.
+
+## Global universality pattern and its timed version
+
+The global universality pattern takes the following form: *"Globally, it is always the case that P holds."*
+Its timed version sets the minimal time period during which the desired property should be observed: *"Globally, it is always the case that P holds for at least T time units."*
+This and other universality patterns are available in different notations [online](https://people.cs.ksu.edu/~dwyer/SPAT/universality.html).
+
+## Global real time response pattern (timed)
+
+The global real time response pattern takes the following form: *"Globally, it is always the case that if P holds, the S eventually holds within T time units."*
+This and other response patterns are available [online](https://matthewbdwyer.github.io/psp/patterns/response.html).
+
+## After-until universality pattern and its timed version
+
+The after-until universality pattern takes the following form: *"After Q, it is always the case case that P holds until R holds."*
+Its timed version depends on two deadlines: *"After Q holds for T time units, it is always the case that P holds until R holds for at most T1 time units."*
+
+# Example of a temporal RQCODE requirement
 
 In the context of the VeriDevOps project we were given a case study to verify the application of STIG rules for Industrial PC running Windows 10 operating system.
 In this section we will see an example of applying the RQCODE patterns.
