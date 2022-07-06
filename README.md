@@ -20,7 +20,7 @@ The RQCODE classes representing the temporal patterns have constructors that exp
 These arguments are objects that encode meaningful properties, such as P in the above example.
 In particular, these objects may be instantiated from other RQCODE temporal patterns, for all these patterns implement the Checkable interface.
 
-For a detailed example, please read the corresponding [README](https://github.com/VeriDevOps/RQCODE/blob/master/src/main/java/rqcode/patterns/temporal/README.md).
+For a detailed example, please read the corresponding [documentation](https://github.com/VeriDevOps/RQCODE/blob/master/src/main/java/rqcode/patterns/temporal#readme).
 
 # STIGs
 
@@ -53,4 +53,4 @@ The leaves of the tree correspond to actual STIG rules. The abstract classes enc
 - check(), which performs conformance-checking of the target system against the rule;
 - enforce(), which enforces conformance of the target system against the rule.
 
-For more details, please read the corresponding [documentation](https://github.com/VeriDevOps/RQCODE/tree/master/src/main/java/rqcode/stigs/win10).
+For more details, please read the corresponding [documentation](https://github.com/VeriDevOps/RQCODE/tree/master/src/main/java/rqcode/stigs/win10#readme).
