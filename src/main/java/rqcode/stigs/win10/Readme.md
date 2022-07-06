@@ -48,7 +48,7 @@ For that purpose, changeable parameter through getOption() and Value through get
 
 #STIG categories and patterns
 
-**Registry Edit pattern**
+### **Registry Edit pattern**
 
 This pattern covers 4 STIGs: **V-63647, V-63321, V-63703, V-63709**. 
 This group of STIGs has 4 chnaging values in _CheckText_ module: Registry Path, Value name, Value Type, and Value. The pic, below is tha example of STIG # V_63647:
@@ -78,7 +78,7 @@ In RegistryEditRequirement these changing values were implemented through method
 
     protected abstract String getInclusionSetting();
     
-   **Security Policy Pattern**
+   ### **Security Policy Pattern**
    
    This pattern covers 4 STIGs: **V-63427, V-63423, V-63409, V-63405**. 
    
@@ -114,14 +114,14 @@ V-63423, V-63409, V-63405 PoweShell script conditions (highlighted changing valu
         return 2;
     }
    
-    **Process Mitigation Pattern**
+### **Process Mitigation Pattern**
    
   
    This pattern covers 4 STIGs: **V-77091, V-77095, V-77103, V-77189**. 
    
    The same function HashMap was implemented for meeting PowerShell conditions as in Security Policy Pattern
    
-    **User Rights Pattern**
+### **User Rights Pattern**
 
    This pattern covers 4 STIGs: **V-63931, V-63851, V-63863, V-63843**. 
    
@@ -214,11 +214,11 @@ V-63423, V-63409, V-63405 PoweShell script conditions (highlighted changing valu
 
 ## User Rights
 
-* **v-63863**	Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Create permanent shared objects" user right could expose sensitive data by creating shared objects.
+* **v-63863** <br/>	Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Create permanent shared objects" user right could expose sensitive data by creating shared objects.
 
 ![image](https://user-images.githubusercontent.com/5621696/177656189-c2140214-70f1-4745-a132-66b5f57b77fb.png)
 
-* **v-63931**	Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Modify firmware environment values" user right can change hardware configuration environment variables. This could result in hardware failures or a DoS.
+* **v-63931** <br/>	Inappropriate granting of user rights can provide system, administrative, and other high level capabilities. Accounts with the "Modify firmware environment values" user right can change hardware configuration environment variables. This could result in hardware failures or a DoS.
 
 ![image](https://user-images.githubusercontent.com/5621696/177656280-7cb595e9-5f2d-4b2a-ad5a-aaa98e5b0780.png)
 
