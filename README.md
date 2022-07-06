@@ -36,7 +36,7 @@ RQCODE classes under the src/main/java/rqcode/stigs directory implement STIG fin
 Each RQCODE STIG finding class implements at least the Checkable interface, which makes it usable in combination with the temporal patterns.
 Some finding classes also implement the Enforceable interface, which makes them usable for fixing the identified finding right after the identification.
 
-# Windows 10 STIG Rules as RQCODE style requirements
+# Example: Windows 10 STIG Rules as RQCODE style requirements
 
 To demonstrate the approach we will illustrate it with an example of specific STIG rules for systems run by the Windows 10 operating system.
 These rules are provided in the Windows 10 Security Technical Implementation Guide.
@@ -53,4 +53,4 @@ The leaves of the tree correspond to actual STIG rules. The abstract classes enc
 - check(), which performs conformance-checking of the target system against the rule;
 - enforce(), which enforces conformance of the target system against the rule.
 
-
+For more details, please read the corresponding [documentation](https://github.com/VeriDevOps/RQCODE/tree/master/src/main/java/rqcode/stigs/win10).
