@@ -21,6 +21,129 @@ This and other response patterns are available [online](https://matthewbdwyer.gi
 The after-until universality pattern takes the following form: *"After Q, it is always the case case that P holds until R holds."*
 Its timed version depends on two deadlines: *"After Q holds for T time units, it is always the case that P holds until R holds for at most T1 time units."*
 
+# RQCODE implementation of security requirement patterns
+
+When applying the RQCODE approach to the [Temporal and real-time security requirement patterns](#temporal-and-real-time-security-requirement-patterns), we wanted to take advantage of the already implemented STIG rules.
+In particular, we wanted the checks inside the STIGs implementations to be reusable as the properties the temporal patterns talk about.
+
+## Checkable interface
+
+All RQCODE implementations of the STIG rules implement `Checkable` interface that offers a method returning the result of checking the target system against the corresponding rule:
+```java
+public interface Checkable {
+    enum CheckStatus {
+        PASS, FAIL, INCOMPLETE
+    }
+
+    CheckStatus check();
+}
+```
+
+## Abstract monitoring loop
+To check a temporal real time property means to monitor the target system over some period to see if it meets the desired property. This is why all RQCODE implementations of these patterns are descendants of `MonitoringLoop` class that implements the `Checkable` interface:
+```java
+public abstract class MonitoringLoop implements Checkable {
+    protected int boundary = 0;
+    final private int variant(int i) {
+        if (boundary > 0) { return i - 1; }
+        return i;
+    }
+    protected int sleepMilliseconds() { return 1000; }
+    protected boolean invariant() { return true; }
+    protected boolean precondition() { return true; }
+    protected boolean postcondition() { return true; }
+    protected boolean exitCondition() { return false; }
+    final public Checkable.CheckStatus check() {
+        while(!precondition()) {
+            try {
+                Thread.sleep (sleepMilliseconds());
+            } catch (InterruptedException e) {
+                return Checkable.CheckStatus.INCOMPLETE;
+            }
+        }
+        for (int i = boundary; i >= 0 && !exitCondition(); i = variant(i)) {
+            if (!invariant()) {
+                return Checkable.CheckStatus.FAIL;
+            }
+            try {
+                Thread.sleep (sleepMilliseconds());
+            } catch (InterruptedException e) {
+                return Checkable.CheckStatus.INCOMPLETE;
+            }
+        }
+        if(!postcondition()) {
+            return Checkable.CheckStatus.FAIL;
+        }
+        return Checkable.CheckStatus.PASS;
+    }
+
+    abstract public String TCTL();
+
+}
+```
+The `check()` method contains the monitoring loop itself. Its implementation cannot be redefined but is expressed in terms of conceptual methods that can be redefined in descendant classes:
+- `boundary` limits the number of time units to execute the loop; `0` means no bound;
+- `sleepMilliseconds()` controls the length of a time unit in milliseconds;
+- `invariant()` must hold on every step of the loop;
+- the loop waits for `precondition()` to hold before it start checking desired properties;
+- `postcondition()` is checked after the loop terminates;
+- `exitCondition()` specifies the exit condition of the loop.
+Security requirements may not only be monitored but also model checked. The `TCTL()` abstract method of the `MonitoringLoop` class forces concrete classes to implement TCTL representation of the pattern. The `variant(int i)` method implements bounded (un)execution of the monitoring loop: if the value of boundary is 0 then variant returns the value of its argument unchanged; otherwise, it returns the decremented value of the argument. If the input value does not change, the `i >= 0` part of the continuation condition of the loop will remain true forever, and the loop will only exit if `exitCondition()` becomes true.
+
+## Example: Global Universality pattern
+
+The following class implements the Global Universality pattern: 
+```java
+public class GlobalUniversality extends MonitoringLoop {
+```
+The class contains a `Checkable` field `p` that captures the condition expected to hold forever:
+```java
+public GlobalUniversality(Checkable p) {
+    this.p = p;
+}
+protected Checkable p;
+```
+The class overrides the `invariant()` method so that it only returns true if `p` passes the check:
+```java
+@Override
+public boolean invariant() {
+    return (p.check() == CheckStatus.PASS);
+}
+```
+This `check()` method of `MonitoringLoop` will repeatedly check this condition inside the loop.
+
+This is how the TCTL representation of the pattern is constructed:
+```java
+public String TCTL() {
+    String pStr;
+    if (p instanceof MonitoringLoop) {
+        pStr = ((MonitoringLoop) p).TCTL();
+    } else {
+        pStr = p.getClass().getSimpleName();
+    }
+    return "AG (" + pStr + ")";
+}
+```
+If `p` itself implements `MonitoringLoop`, we embed its TCTL representation into the generic TCTL scheme of the pattern; otherwise, we embed the name of the dynamic type of `p`. 
+
+We do not discuss how the textual representation is computed inside the `toString()` method because its implementation is straightforward.
+
+## Timed versions of existing patterns
+
+The timed version of the global universality pattern extends the non-timed version:
+```java
+public class GlobalUniversalityTimed extends GlobalUniversality {
+```
+We update the constructor so that it can also bound the execution of the monitoring loop:
+```java
+public GlobalUniversalityTimed(Checkable p, int boundary) {
+    super(p);
+    this.boundary = boundary;
+}
+```
+The `TCTL()` and `toString()` methods are updated accordingly in a straightforward way.
+
+
 # Example of a temporal RQCODE requirement
 
 In the context of the VeriDevOps project we were given a case study to verify the application of STIG rules for Industrial PC running Windows 10 operating system.
