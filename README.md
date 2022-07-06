@@ -54,3 +54,16 @@ The leaves of the tree correspond to actual STIG rules. The abstract classes enc
 - toString(), which prints out the textual representation of the STIG rule;
 - check(), which performs conformance-checking of the target system against the rule;
 - enforce(), which enforces conformance of the target system against the rule.
+
+## Example of a temporal RQCODE requirement
+
+In the context of the VeriDevOps project we were given a case study to verify the application of STIG rules for Industrial PC running Windows 10 operating system.
+In this section we will see an example of applying the RQCODE patterns.
+The example combines the temporal patterns with STIG patterns to monitor it continuously.
+
+The following line creates an object from the RQCODE class implementing the [V_63449 STIG rule](https://www.stigviewer.com/stig/windows_10/2016-06-08/finding/V-63449):
+```java
+V_63449 v_63449 = new V_63449();
+```
+We then can construct a timed global universality RQCODE requirement from v_63349 since this rule should be permanently enforced:
+
