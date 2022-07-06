@@ -20,6 +20,8 @@ The RQCODE classes representing the temporal patterns have constructors that exp
 These arguments are objects that encode meaningful properties, such as P in the above example.
 In particular, these objects may be instantiated from other RQCODE temporal patterns, for all these patterns implement the Checkable interface.
 
+For a detailed example, please read the corresponding [README](https://github.com/VeriDevOps/RQCODE/blob/master/src/main/java/rqcode/patterns/temporal/README.md).
+
 # STIGs
 
 STIG stands for ``Security Technical Implementation Guid'' (https://www.stigviewer.com/stigs).
@@ -34,11 +36,7 @@ RQCODE classes under the src/main/java/rqcode/stigs directory implement STIG fin
 Each RQCODE STIG finding class implements at least the Checkable interface, which makes it usable in combination with the temporal patterns.
 Some finding classes also implement the Enforceable interface, which makes them usable for fixing the identified finding right after the identification.
 
-# Examples
-
-Main classes inside the repository contain runnable tests illustrating how the RQCODE patterns can be used in practice.
-
-## Windows 10 STIG Rules as RQCODE style requirements
+# Windows 10 STIG Rules as RQCODE style requirements
 
 To demonstrate the approach we will illustrate it with an example of specific STIG rules for systems run by the Windows 10 operating system.
 These rules are provided in the Windows 10 Security Technical Implementation Guide.
