@@ -36,4 +36,21 @@ Some finding classes also implement the Enforceable interface, which makes them 
 
 # Examples
 
-Main classes inside the repository contain runnable tests illustrating how the RQCODE patterns can be used in practice. 
+Main classes inside the repository contain runnable tests illustrating how the RQCODE patterns can be used in practice.
+
+## Windows 10 STIG Rules as RQCODE style requirements
+
+To demonstrate the approach we will illustrate it with an example of specific STIG rules for systems run by the Windows 10 operating system.
+These rules are provided in the Windows 10 Security Technical Implementation Guide.
+For many systems, STIG rules come scripts for verifying the conformance and enforcing the rules.
+For Windows 10, PowerShell scripts exist that check conformance of systems to these rules.
+For some rules, such checks are complemented with scripts that enforce conformance to the respective rules.
+
+We had analyzed the STIG rules for Windows 10 and found subgroups of rules that look very similar - both in their textual descriptions and in the PowerShell scripts (where applicable) that check and enforce conformance to these rules.
+This is bad, because a decision to modify one rule from such a subgroup would require synchronizing the change with all the similar rules, and this process is prone to errors.
+We decided to apply the object-oriented software construction process to remove the repetition. The below class tree depicts a subset of the resulting collection of classes:
+![image10](https://user-images.githubusercontent.com/6912490/177565254-151cd3f3-a8bb-415a-833e-bb61a0264177.png)
+The leaves of the tree correspond to actual STIG rules. The abstract classes encode the commonalities shared by their descendant classes. Each class implementing a STIG rule features up to three public methods:
+- toString(), which prints out the textual representation of the STIG rule;
+- check(), which performs conformance-checking of the target system against the rule;
+- enforce(), which enforces conformance of the target system against the rule.
