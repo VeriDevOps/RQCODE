@@ -2,6 +2,14 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.AccountLockoutPolicy;
 
+/**
+ * The account lockout feature, when enabled, prevents brute-force password attacks on the system.
+ * This parameter specifies the amount of time that an account will remain locked after the specified number of failed logon attempts.
+ * A value of 0 will require an administrator to unlock the account.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63405
+ */
+
 public class V_63405 extends AccountLockoutPolicy {
     @Override
     public String checkTextCode() {
