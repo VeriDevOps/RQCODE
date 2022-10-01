@@ -2,6 +2,15 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.Win10ExploitProtectionRequirement;
 
+/**
+ * Exploit protection in Windows 10 enables mitigations against potential threats at the system and application level.
+ * Several mitigations, including "Validate heap integrity", are enabled by default at the system level.
+ * "Validate heap integrity" terminates a process when heap corruption is detected.
+ * If this is turned off, Windows 10 may be subject to various exploits.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2019-01-04/finding/V-77103
+ */
+
 public class V_77103 extends Win10ExploitProtectionRequirement {
     @Override
     public String checkTextCode() {
