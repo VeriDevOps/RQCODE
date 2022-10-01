@@ -2,6 +2,13 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.PasswordPolicy;
 
+/**
+ *The use of complex passwords increases their strength against guessing and brute-force attacks.
+ * This setting configures the system to verify that newly created passwords conform to the Windows password complexity policy.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63427
+ */
+
 public class V_63427 extends PasswordPolicy {
     @Override
     public String checkTextCode() {
