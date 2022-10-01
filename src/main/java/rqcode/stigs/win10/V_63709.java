@@ -2,6 +2,13 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.SoftwareRegEditRequirement;
 
+/**
+ * Passwords save locally for re-use when browsing may be subject to compromise.
+ * Disabling the Edge password manager will prevent this for the browser.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63709
+ */
+
 public class V_63709 extends SoftwareRegEditRequirement {
     @Override
     public String checkTextCode() {
