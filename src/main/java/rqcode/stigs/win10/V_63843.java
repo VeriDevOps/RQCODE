@@ -2,6 +2,13 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.NoUserRightsAssignRequirement;
 
+/**
+ * Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.
+ * Accounts with the "Access Credential Manager as a trusted caller" user right may be able to retrieve the credentials of other accounts from Credential Manager.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63843
+ */
+
 public class V_63843 extends NoUserRightsAssignRequirement {
     @Override
     public String checkTextCode() {
