@@ -2,6 +2,14 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.AvailableUserRightsAssignRequirement;
 
+/**
+ * Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.
+ * Accounts with the "Modify firmware environment values" user right can change hardware configuration environment variables.
+ * This could result in hardware failures or a DoS.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63931
+ */
+
 public class V_63931 extends AvailableUserRightsAssignRequirement {
     @Override
     public String checkTextCode() {
