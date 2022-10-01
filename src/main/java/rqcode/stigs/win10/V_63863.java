@@ -2,6 +2,13 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.NoUserRightsAssignRequirement;
 
+/**
+ * Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.
+ * Accounts with the "Create permanent shared objects" user right could expose sensitive data by creating shared objects.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63863
+ */
+
 public class V_63863 extends NoUserRightsAssignRequirement {
     @Override
     public String checkTextCode() {
