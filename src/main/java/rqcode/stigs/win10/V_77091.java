@@ -2,6 +2,15 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.Win10ExploitProtectionRequirement;
 
+/**
+ * Exploit protection in Windows 10 enables mitigations against potential threats at the system and application level.
+ * Several mitigations, including "Data Execution Prevention (DEP)", are enabled by default at the system level.
+ * DEP prevents code from being run from data-only memory pages.
+ * If this is turned off, Windows 10 may be subject to various exploits.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2019-01-04/finding/V-77091
+ */
+
 public class V_77091 extends Win10ExploitProtectionRequirement {
     @Override
     public String checkTextCode() {
