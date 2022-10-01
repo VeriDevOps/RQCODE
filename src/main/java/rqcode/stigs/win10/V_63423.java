@@ -2,6 +2,12 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.PasswordPolicy;
 
+/**
+ *Information systems not protected with strong password schemes (including passwords of minimum length) provide the opportunity for anyone to crack the password, thus gaining access to the system and compromising the device, information, or the local network.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63423
+ */
+
 public class V_63423 extends PasswordPolicy {
     @Override
     public String checkTextCode() {
