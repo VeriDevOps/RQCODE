@@ -126,7 +126,7 @@ public abstract class ProcessMitigationRequirement extends CheckableEnforceableR
         private static String getCommandStatus(String statusType, String statusName) {
             if (statusType.equals("DEP"))
                 return statusType;
-            else if (statusType.equals("ALSR"))
+            else if (statusType.equals("ASLR"))
                 return statusName + statusType;
             else return statusName;
         }
