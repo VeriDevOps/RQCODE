@@ -33,7 +33,11 @@ public abstract class SecurityPolicyRequirement extends CheckableEnforceableRequ
                 "    }\n" +
                 "    Remove-Item C:\\Test.cfg -Force\n");
         COMMAND_TEMPLATE_MAP.put(2, "secedit /export /cfg c:\\temp\\secpol.cfg\n" +
-                "    (Get-Content C:\\temp\\secpol.cfg) -Replace \"PasswordComplexity = 0\",\"PasswordComplexity = 1\" | Out-File C:\\temp\\secpol.cfg\n" +
+                "    (Get-Content C:\\temp\\secpol.cfg) -Replace \"PasswordComplexity = 1\",\"PasswordComplexity = 0\" | Out-File C:\\temp\\secpol.cfg\n" +
+                "    secedit /configure /db c:\\windows\\security\\local.sdb /cfg c:\\temp\\secpol.cfg /areas SECURITYPOLICY\n" +
+                "    Remove-Item C:\\temp\\secpol.cfg -Force -confirm:$false\n");
+        COMMAND_TEMPLATE_MAP.put(3, "secedit /export /cfg c:\\temp\\secpol.cfg\n" +
+                "    (Get-Content C:\\temp\\secpol.cfg) -Replace \"PasswordReversibleEncryption = 1\",\"PasswordReversibleEncryption = 0\" | Out-File C:\\temp\\secpol.cfg\n" +
                 "    secedit /configure /db c:\\windows\\security\\local.sdb /cfg c:\\temp\\secpol.cfg /areas SECURITYPOLICY\n" +
                 "    Remove-Item C:\\temp\\secpol.cfg -Force -confirm:$false\n");
     }

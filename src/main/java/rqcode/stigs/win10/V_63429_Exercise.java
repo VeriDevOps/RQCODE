@@ -82,7 +82,7 @@ public class V_63429_Exercise extends PasswordPolicy {
 
     @Override
     protected Integer getCommandKey() {
-        return 2;
+        return 3;
     }
 
     @Override
