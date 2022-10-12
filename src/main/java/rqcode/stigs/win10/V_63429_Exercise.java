@@ -3,16 +3,15 @@ package rqcode.stigs.win10;
         import rqcode.patterns.win10.PasswordPolicy;
 
 /**
- *The use of complex passwords increases their strength against guessing and brute-force attacks.
- * This setting configures the system to verify that newly created passwords conform to the Windows password complexity policy.
+ *Storing passwords using reversible encryption is essentially the same as storing clear-text versions of the passwords. For this reason, this policy must never be enabled..
  *
- * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63427
+ * https://www.stigviewer.com/stig/windows_10/2019-01-04/finding/V-63429
  */
 
 public class V_63429_Exercise extends PasswordPolicy {
     @Override
     public String checkTextCode() {
-        return "C-64175r1_chk";
+        return "C-64177r1_chk";
     }
 
     @Override
@@ -22,12 +21,12 @@ public class V_63429_Exercise extends PasswordPolicy {
 
     @Override
     public String findingID() {
-        return "V-63427";
+        return "V-63429";
     }
 
     @Override
     public String fixTextCode() {
-        return "F-69355r1_fix";
+        return "F-69357r1_fix";
     }
 
     @Override
@@ -37,7 +36,7 @@ public class V_63429_Exercise extends PasswordPolicy {
 
     @Override
     public String ruleID() {
-        return "SV-77917r1_rule";
+        return "SV-77919r1_rule";
     }
 
     @Override
@@ -47,17 +46,17 @@ public class V_63429_Exercise extends PasswordPolicy {
 
     @Override
     public String severity() {
-        return "Medium";
+        return "High";
     }
 
     @Override
     public String version() {
-        return "WN10-AC-000040";
+        return "WN10-AC-000045";
     }
 
     @Override
     public String description() {
-        return "The use of complex passwords increases their strength against guessing and brute-force attacks. This setting configures the system to verify that newly created passwords conform to the Windows password complexity policy.";
+        return "Storing passwords using reversible encryption is essentially the same as storing clear-text versions of the passwords. For this reason, this policy must never be enabled.";
     }
 
     @Override
@@ -73,12 +72,12 @@ public class V_63429_Exercise extends PasswordPolicy {
 
     @Override
     protected String getInclusionSetting() {
-        return "Enabled";
+        return "Disabled";
     }
 
     @Override
     protected String getOption() {
-        return "Password must meet complexity requirements";
+        return "Store passwords using reversible encryption";
     }
 
     @Override
@@ -88,6 +87,6 @@ public class V_63429_Exercise extends PasswordPolicy {
 
     @Override
     protected String getValueType() {
-        return "PasswordComplexity";
+        return "PasswordReversibleEncryption";
     }
 }
