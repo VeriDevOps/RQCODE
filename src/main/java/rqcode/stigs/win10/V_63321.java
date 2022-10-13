@@ -2,6 +2,12 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.SoftwareRegEditRequirement;
 
+/**
+ * Installation options for applications are typically controlled by administrators. This setting prevents users from changing installation options that may bypass security features.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63321
+ */
+
 public class V_63321 extends SoftwareRegEditRequirement {
     @Override
     public String checkTextCode() {

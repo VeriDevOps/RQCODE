@@ -44,7 +44,7 @@ public abstract class Requirement {
     public abstract String fixText();
 
     /**
-     * A crude parsing of the finding (requirement) specification into a document. Hopefully in the future we would parse it as HTML.
+     * A crude parsing of the finding (requirement) specification into a document.
      * @return a string representation of the requirement
      */
     @objid ("f54ccddd-2dce-458f-8936-7f935c38ed83")

@@ -2,6 +2,13 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.SystemRegEditRequirement;
 
+/**
+ * Requests sent on the secure channel are authenticated, and sensitive information (such as passwords) is encrypted, but the channel is not integrity checked.
+ * If this policy is enabled, outgoing secure channel traffic will be signed.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63647
+ */
+
 public class V_63647 extends SystemRegEditRequirement {
     @Override
     public String checkTextCode() {

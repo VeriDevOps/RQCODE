@@ -2,6 +2,13 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.AcrobatExploitProtectionRequirement;
 
+/**
+ * Exploit protection in Windows 10 provides a means of enabling additional mitigations against potential threats at the system and application level.
+ * Without these additional application protections, Windows 10 may be subject to various exploits.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2019-01-04/finding/V-77189
+ */
+
 public class V_77189 extends AcrobatExploitProtectionRequirement {
     @Override
     public String checkTextCode() {

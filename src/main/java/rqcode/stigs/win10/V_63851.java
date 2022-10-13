@@ -2,6 +2,14 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.AvailableUserRightsAssignRequirement;
 
+/**
+ * Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.
+ * Accounts with the "Allow log on locally" user right can log on interactively to a system.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63851
+ */
+
+
 public class V_63851 extends AvailableUserRightsAssignRequirement {
     @Override
     public String checkTextCode() {

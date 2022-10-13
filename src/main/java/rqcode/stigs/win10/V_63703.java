@@ -2,6 +2,14 @@ package rqcode.stigs.win10;
 
 import rqcode.patterns.win10.SystemRegEditRequirement;
 
+/**
+ * The server message block (SMB) protocol provides the basis for many network operations.
+ * Digitally signed SMB packets aid in preventing man-in-the-middle attacks.
+ * If this policy is enabled, the SMB client will only communicate with an SMB server that performs SMB packet signing.
+ *
+ * https://www.stigviewer.com/stig/windows_10/2016-10-28/finding/V-63703
+ */
+
 public class V_63703 extends SystemRegEditRequirement {
     @Override
     public String checkTextCode() {
