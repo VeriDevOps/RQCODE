@@ -28,7 +28,7 @@ public class UbuntuPackagePattern implements Checkable, Enforceable {
     public CheckStatus check() {
         Process process = null;    
         try {
-            process = Runtime.getRuntime().exec(System.getProperty("user.dir") + "/src/rqcode/stigs/ubuntu/package.sh " + _name);
+            process = Runtime.getRuntime().exec(System.getProperty("user.dir") + "/src/main/java/rqcode/stigs/canonical_ubuntu_18_04_lts/package.sh " + _name);
         } catch (IOException ioException) {
             System.out.println(ioException.getMessage());
             return CheckStatus.INCOMPLETE;
