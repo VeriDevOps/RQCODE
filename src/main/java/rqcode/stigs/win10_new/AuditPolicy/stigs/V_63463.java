@@ -8,7 +8,10 @@ import static rqcode.stigs.win10_new.AuditPolicy.AuditPolicyConst.AUDIT_POLICY_S
 
 public class V_63463 extends AuditPolicyPattern {
     private final AuditPolicyScriptPattern pattern =
-            new AuditPolicyScriptPattern(AUDIT_POLICY_SCRIPT_PATTERN, "{0CCE9216-69AE-11D9-BED3-505054503030}", "failure", "enable");
+            new AuditPolicyScriptPattern(AUDIT_POLICY_SCRIPT_PATTERN, 
+            "{0CCE9216-69AE-11D9-BED3-505054503030}", 
+            "failure", 
+            "enable");
 
 
     @Override
