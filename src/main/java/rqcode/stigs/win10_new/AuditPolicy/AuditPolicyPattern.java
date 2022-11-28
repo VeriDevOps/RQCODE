@@ -4,10 +4,7 @@ import rqcode.patterns.win10_new.STIGPattern;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.nio.charset.StandardCharsets;
 
 public abstract class AuditPolicyPattern implements STIGPattern {
 
@@ -16,30 +13,25 @@ public abstract class AuditPolicyPattern implements STIGPattern {
         String settingName = pattern().getSettingName();
         String settingValue = pattern().getSettingValue();
 
-        String script = pattern().prepareScript();
+        String script = pattern().prepareCheckScript();
 
-        List<Map<String, String>> auditPolicy;
+        boolean auditPolicyCheck;
         try {
-            auditPolicy = checkProcess(script);
+            auditPolicyCheck = checkProcess(script, settingName, settingValue);
         } catch (Exception e) {
             e.printStackTrace();
             return CheckStatus.INCOMPLETE;
         }
 
-        if (auditPolicy.isEmpty())
+        if (auditPolicyCheck)
+            return CheckStatus.PASS;
+        else
             return CheckStatus.FAIL;
-
-        for (Map<String, String> entry : auditPolicy) {
-            if (entry.get("Subcategory").equals(settingName)
-                    && entry.get("Inclusion Setting").contains(settingValue))
-                return CheckStatus.PASS;
-        }
-        return CheckStatus.FAIL;
     }
 
     @Override
     public EnforcementStatus enforce() {
-        String script = pattern().prepareScript();
+        String script = pattern().prepareEnforceScript();
 
         try {
             Process process = Runtime.getRuntime().exec(script);
@@ -52,31 +44,20 @@ public abstract class AuditPolicyPattern implements STIGPattern {
     }
 
     @Override
-    public List<Map<String, String>> checkProcess(String script) throws Exception {
+    public boolean checkProcess(String script, String settingName, String settingValue) throws Exception {
         Process auditPol = Runtime.getRuntime().exec(script);
-        BufferedReader auditPolOutputReader = new BufferedReader(new InputStreamReader(auditPol.getInputStream()));
+        BufferedReader auditPolOutputReader = new BufferedReader(new InputStreamReader(auditPol.getInputStream(), StandardCharsets.UTF_8));
 
-        List<String> rawAuditPolicy = new LinkedList<String>();
-        for (String inputLine = auditPolOutputReader.readLine(); inputLine != null; inputLine = auditPolOutputReader
-                .readLine()) {
-            if (!inputLine.trim().isEmpty())
-                rawAuditPolicy.add(inputLine);
+        StringBuilder processOutput = new StringBuilder();
+        String inputLine;
+
+        while ((inputLine = auditPolOutputReader.readLine()) != null) {
+            processOutput.append(inputLine + System.lineSeparator());
         }
-        int auditPolExitStatus = auditPol.waitFor();
-        if (auditPolExitStatus != 0)
-            throw new Exception(String.format("auditpol returned %d", auditPolExitStatus));
 
-        String[] auditPolHeaders = rawAuditPolicy.get(0).split(",", -1);
-        List<Map<String, String>> ret = new LinkedList<Map<String, String>>();
-        for (String line : rawAuditPolicy.subList(1, rawAuditPolicy.size())) {
-            String[] auditPolLineFields = line.split(",", -1);
-            assert auditPolHeaders.length == auditPolLineFields.length;
+        String result = processOutput.toString();
+        boolean flag = settingValue.equals("enable");
 
-            Map<String, String> auditPolEntry = new HashMap<String, String>();
-            for (int i = 0; i < auditPolHeaders.length; ++i)
-                auditPolEntry.put(auditPolHeaders[i], auditPolLineFields[i]);
-            ret.add(auditPolEntry);
-        }
-        return ret;
+        return result.contains(settingName) && flag;
     }
 }
