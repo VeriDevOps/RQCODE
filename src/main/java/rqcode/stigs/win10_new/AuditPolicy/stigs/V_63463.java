@@ -11,7 +11,7 @@ public class V_63463 extends AuditPolicyPattern {
     private final AuditPolicyScriptPattern pattern =
             new AuditPolicyScriptPattern(AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
                     AUDIT_POLICY_SCRIPT_PATTERN_CHECK,
-                    "{0CCE9216-69AE-11D9-BED3-505054503030}",
+                    "{0CCE9215-69AE-11D9-BED3-505054503030}",
                     "failure",
                     "enable");
 

@@ -46,7 +46,7 @@ public abstract class AuditPolicyPattern implements STIGPattern {
     @Override
     public boolean checkProcess(String script, String settingName, String settingValue) throws Exception {
         Process auditPol = Runtime.getRuntime().exec(script);
-        BufferedReader auditPolOutputReader = new BufferedReader(new InputStreamReader(auditPol.getInputStream(), StandardCharsets.UTF_8));
+        BufferedReader auditPolOutputReader = new BufferedReader(new InputStreamReader(auditPol.getInputStream()));
 
         StringBuilder processOutput = new StringBuilder();
         String inputLine;
@@ -55,7 +55,7 @@ public abstract class AuditPolicyPattern implements STIGPattern {
             processOutput.append(inputLine + System.lineSeparator());
         }
 
-        String result = processOutput.toString();
+        String result = processOutput.toString().toLowerCase();
         boolean flag = settingValue.equals("enable");
 
         return result.contains(settingName) && flag;
