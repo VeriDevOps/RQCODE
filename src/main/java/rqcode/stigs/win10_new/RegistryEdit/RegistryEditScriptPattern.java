@@ -18,7 +18,12 @@ public class RegistryEditScriptPattern implements STIGScriptPattern {
     }
 
     @Override
-    public String prepareScript() {
+    public String prepareEnforceScript() {
+        return String.format(scriptBody, registryPath, name, type, value);
+    }
+
+    @Override
+    public String prepareCheckScript() {
         return String.format(scriptBody, registryPath, name, type, value);
     }
 
