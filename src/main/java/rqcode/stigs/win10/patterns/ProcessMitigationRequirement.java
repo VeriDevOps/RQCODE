@@ -1,6 +1,5 @@
 package rqcode.stigs.win10.patterns;
 
-import rqcode.concepts.CheckableEnforceableRequirement;
 import rqcode.stigs.STIG;
 
 import java.io.BufferedReader;

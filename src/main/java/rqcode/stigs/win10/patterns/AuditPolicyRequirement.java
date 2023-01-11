@@ -10,7 +10,6 @@ import java.util.Map;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import rqcode.concepts.CheckableEnforceableRequirement;
 import rqcode.stigs.STIG;
 
 /**
