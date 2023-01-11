@@ -4,7 +4,7 @@ import rqcode.concepts.Requirement;
 
 /**
  * This class is an example of an RQCODE requirement.
- * (REQ2) Clock seconds are between 0 and 59.
+ * (REQ2) Clock seconds must be between 0 and 59.
  * 
  * Adapted from
  * https://www.sciencedirect.com/science/article/abs/pii/S1477842416301981
@@ -12,7 +12,7 @@ import rqcode.concepts.Requirement;
 public class BoundaryRequirement extends Requirement {
 
     public BoundaryRequirement() {
-        super("Clock seconds are between 0 and 59.");
+        super("Clock seconds must be between 0 and 59.");
     }
 
     @Override

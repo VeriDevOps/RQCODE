@@ -17,11 +17,11 @@ public class TickRequirement extends Requirement {
 
     @Override
     public CheckStatus check() {
-        if (Clock.seconds == 59) {
-            if (Clock.tick() > 59) return CheckStatus.FAIL;                
-        }
-        if ((Clock.seconds + 1) != Clock.tick()) return CheckStatus.FAIL;
-            
-        return CheckStatus.PASS;
-    }    
+        if (Clock.seconds < 59)
+            return ((Clock.seconds + 1) == Clock.tick()) ? 
+            CheckStatus.PASS : CheckStatus.FAIL;
+        
+        return ((Clock.seconds + 1) != Clock.tick()) ? 
+            CheckStatus.PASS : CheckStatus.FAIL;
+    }
 }
