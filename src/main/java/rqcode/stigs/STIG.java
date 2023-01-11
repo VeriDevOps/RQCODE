@@ -1,14 +1,14 @@
 package rqcode.stigs;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.concepts.Enforceable;
+import rqcode.concepts.Requirement;
 
 /**
  * This class is a direct mapping of the structure of STIG findings as presented in stigviewer.com. All the member names are self-explanatory.
  */
 @objid ("301d7b51-4cb1-48dc-8a0f-5601312b461c")
-public abstract class STIG extends CheckableEnforceableRequirement{
+public abstract class STIG extends Requirement implements Enforceable{
     @objid ("971cdff3-a556-43b2-a8d4-97bdd6fe07cf")
     public abstract String findingID();
 
