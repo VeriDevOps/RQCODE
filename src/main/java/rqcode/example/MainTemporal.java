@@ -4,7 +4,7 @@ import rqcode.temporal_patterns.GlobalUniversalityTimed;
 
 public class MainTemporal {
     public static void main(String[] args) {
-        SecondsRequirement sr = new SecondsRequirement();
+        TickRequirement sr = new TickRequirement();
         /**
          * timed seconds requirement to hold 10 seconds
          */

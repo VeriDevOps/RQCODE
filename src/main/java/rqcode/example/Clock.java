@@ -13,11 +13,13 @@ public class Clock {
     /**
      * increment clock seconds by 1 at each tick
      */
-    public static void tick(){
-        if (seconds<60) {
+    public static int tick(){
+        if (seconds<59) {
             seconds++;
         } else {
             seconds = 0;
         }
+
+        return seconds;
     }
 }
