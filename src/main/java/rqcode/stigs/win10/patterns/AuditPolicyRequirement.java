@@ -11,12 +11,13 @@ import java.util.Map;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 import rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.stigs.STIG;
 
 /**
  * Instances of this class are requirements related to Windows 10 audit policies. Instances of this utilize auditpol.exe to perform checking and enforcing; that is, they fork auditpol.exe manipulate its input and output. It would be ideal to perform checking and enforcing through Win32 API calls instead, but for the time being this approach works.
  */
 @objid ("586a40f7-59f2-467f-be28-581b0d530766")
-public abstract class AuditPolicyRequirement extends CheckableEnforceableRequirement {
+public abstract class AuditPolicyRequirement extends STIG {
     /**
      * @return the category parameter for auditpol.exe.
      */

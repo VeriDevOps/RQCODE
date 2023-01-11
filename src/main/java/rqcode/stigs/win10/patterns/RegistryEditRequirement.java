@@ -2,6 +2,7 @@ package rqcode.stigs.win10.patterns;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.stigs.STIG;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class RegistryEditRequirement extends CheckableEnforceableRequirement {
+public abstract class RegistryEditRequirement extends STIG {
     private static final String REGISTRY_HIVE = "HKEY_LOCAL_MACHINE";
     private static final String REGISTRY_ROOT = "HKLM:";
     private static final String COMMAND_BODY =

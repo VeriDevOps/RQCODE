@@ -1,6 +1,7 @@
 package rqcode.stigs.win10.patterns;
 
 import rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.stigs.STIG;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class ProcessMitigationRequirement extends CheckableEnforceableRequirement {
+public abstract class ProcessMitigationRequirement extends STIG {
     public static final String CHECK_TEXT_TEMPLATE = "This is NA prior to v1709 of Windows 10.\n" +
             "\n" +
             "This is applicable to unclassified systems, for other systems this is NA.";

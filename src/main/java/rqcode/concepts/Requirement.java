@@ -1,6 +1,4 @@
-package rqcode.example;
-
-import rqcode.concepts.Checkable;
+package rqcode.concepts;
 
 public abstract class Requirement implements Checkable{
 
@@ -8,6 +6,9 @@ public abstract class Requirement implements Checkable{
      * Requirement statement in textual format
      */
     private String statement;
+
+    public Requirement() {
+    }
 
     public Requirement(String statement) {
         this.statement = statement;

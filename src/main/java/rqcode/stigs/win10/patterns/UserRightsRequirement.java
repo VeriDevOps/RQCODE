@@ -1,6 +1,7 @@
 package rqcode.stigs.win10.patterns;
 
 import rqcode.concepts.CheckableEnforceableRequirement;
+import rqcode.stigs.STIG;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class UserRightsRequirement extends CheckableEnforceableRequirement {
+public abstract class UserRightsRequirement extends STIG {
     public static final String CHECK_TEXT_TEMPLATE = "Verify the effective setting in Local Group Policy Editor.\n" +
             "\n" +
             "Run \"gpedit.msc\".\n" +
