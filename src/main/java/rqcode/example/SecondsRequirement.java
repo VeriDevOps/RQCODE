@@ -1,5 +1,7 @@
 package rqcode.example;
 
+import rqcode.concepts.Requirement;
+
 /**
  * This class is an example of an RQCODE requirement. 
  * It represents the requirement that the clock seconds must be between 0 and 59.
