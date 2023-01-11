@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.Win10ExploitProtectionRequirement;
+import rqcode.stigs.win10.patterns.Win10ExploitProtectionRequirement;
 
 /**
  * Exploit protection in Windows 10 enables mitigations against potential threats at the system and application level.

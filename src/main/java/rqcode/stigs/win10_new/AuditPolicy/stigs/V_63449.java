@@ -1,8 +1,8 @@
 package rqcode.stigs.win10_new.AuditPolicy.stigs;
 
-import rqcode.patterns.win10_new.STIGScriptPattern;
 import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyPattern;
 import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 import static rqcode.stigs.win10_new.AuditPolicy.AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK;
 import static rqcode.stigs.win10_new.AuditPolicy.AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE;

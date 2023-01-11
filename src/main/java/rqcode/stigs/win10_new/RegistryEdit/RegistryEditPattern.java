@@ -1,7 +1,7 @@
 package rqcode.stigs.win10_new.RegistryEdit;
 
-import rqcode.patterns.win10_new.STIGPattern;
-import rqcode.patterns.win10_new.STIGScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 public class RegistryEditPattern implements STIGPattern {
 

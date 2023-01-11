@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.SystemRegEditRequirement;
+import rqcode.stigs.win10.patterns.SystemRegEditRequirement;
 
 /**
  * Requests sent on the secure channel are authenticated, and sensitive information (such as passwords) is encrypted, but the channel is not integrity checked.

@@ -1,10 +1,10 @@
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import rqcode.patterns.temporal.GlobalResponseTimed;
-import rqcode.patterns.temporal.GlobalUniversalityTimed;
 import rqcode.stigs.win10.V_63449;
 import rqcode.stigs.win10.V_63467;
+import rqcode.temporal_patterns.GlobalResponseTimed;
+import rqcode.temporal_patterns.GlobalUniversalityTimed;
 
 @objid ("0246ff65-342a-4bc3-bc46-4d5acfa86b02")
 public class Main {

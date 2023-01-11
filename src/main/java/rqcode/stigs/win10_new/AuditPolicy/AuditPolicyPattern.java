@@ -1,10 +1,10 @@
 package rqcode.stigs.win10_new.AuditPolicy;
 
-import rqcode.patterns.win10_new.STIGPattern;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+
+import rqcode.stigs.win10_new.patterns.STIGPattern;
 
 public abstract class AuditPolicyPattern implements STIGPattern {
 

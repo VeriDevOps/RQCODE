@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.SoftwareRegEditRequirement;
+import rqcode.stigs.win10.patterns.SoftwareRegEditRequirement;
 
 /**
  * Installation options for applications are typically controlled by administrators. This setting prevents users from changing installation options that may bypass security features.

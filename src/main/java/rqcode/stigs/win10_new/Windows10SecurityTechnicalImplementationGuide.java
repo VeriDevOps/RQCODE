@@ -1,10 +1,10 @@
 package rqcode.stigs.win10_new;
 
-import rqcode.patterns.win10_new.STIGPattern;
 import rqcode.stigs.win10_new.AuditPolicy.stigs.V_63447;
 import rqcode.stigs.win10_new.AuditPolicy.stigs.V_63449;
 import rqcode.stigs.win10_new.AuditPolicy.stigs.V_63463;
 import rqcode.stigs.win10_new.AuditPolicy.stigs.V_63467;
+import rqcode.stigs.win10_new.patterns.STIGPattern;
 
 public class Windows10SecurityTechnicalImplementationGuide {
     public static final STIGPattern v_63447 = new V_63447();

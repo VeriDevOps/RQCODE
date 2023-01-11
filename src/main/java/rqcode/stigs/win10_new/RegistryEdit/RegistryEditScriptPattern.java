@@ -1,6 +1,6 @@
 package rqcode.stigs.win10_new.RegistryEdit;
 
-import rqcode.patterns.win10_new.STIGScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 public class RegistryEditScriptPattern implements STIGScriptPattern {
     private String scriptBody;

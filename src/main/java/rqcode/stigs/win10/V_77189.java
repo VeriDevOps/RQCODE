@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.AcrobatExploitProtectionRequirement;
+import rqcode.stigs.win10.patterns.AcrobatExploitProtectionRequirement;
 
 /**
  * Exploit protection in Windows 10 provides a means of enabling additional mitigations against potential threats at the system and application level.

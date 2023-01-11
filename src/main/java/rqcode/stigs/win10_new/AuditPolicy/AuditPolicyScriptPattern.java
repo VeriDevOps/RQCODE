@@ -1,6 +1,6 @@
 package rqcode.stigs.win10_new.AuditPolicy;
 
-import rqcode.patterns.win10_new.STIGScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 public class AuditPolicyScriptPattern implements STIGScriptPattern {
     private String scriptEnforceBody;
