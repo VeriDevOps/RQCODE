@@ -6,7 +6,7 @@ public class Main {
         Clock.tick();
         
         TickRequirement sr = new TickRequirement();
-        BetterTickRequirement btr = new BetterTickRequirement();
+        BoundaryRequirement btr = new BoundaryRequirement();
 
         System.out.println(sr + "\n Check status: "+sr.check());
 
