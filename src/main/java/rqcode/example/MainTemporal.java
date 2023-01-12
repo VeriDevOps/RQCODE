@@ -1,15 +1,12 @@
 package rqcode.example;
 
-import rqcode.temporal_patterns.GlobalUniversalityTimed;
-
 public class MainTemporal {
     public static void main(String[] args) {
-        TickRequirement sr = new TickRequirement();
         /**
-         * timed seconds requirement to hold 10 seconds
+         * The tick increment requirement is to hold for 10 seconds
          */
-        GlobalUniversalityTimed tsr = new GlobalUniversalityTimed(sr, 10);
+        TimedTickRequirement ttr = new TimedTickRequirement();
 
-        System.out.println (tsr + "\nCheck status:"+tsr.check());     
+        System.out.println (ttr + "\nCheck status:"+ttr.check());     
     }
 }
