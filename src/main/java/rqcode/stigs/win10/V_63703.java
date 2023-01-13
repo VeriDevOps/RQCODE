@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.SystemRegEditRequirement;
+import rqcode.stigs.win10.patterns.SystemRegEditRequirement;
 
 /**
  * The server message block (SMB) protocol provides the basis for many network operations.

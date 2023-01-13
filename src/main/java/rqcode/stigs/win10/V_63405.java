@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.AccountLockoutPolicy;
+import rqcode.stigs.win10.patterns.AccountLockoutPolicy;
 
 /**
  * The account lockout feature, when enabled, prevents brute-force password attacks on the system.

@@ -4,14 +4,14 @@ import java.io.IOException;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import rqcode.concepts.Checkable;
 import rqcode.concepts.Enforceable;
+import rqcode.concepts.Requirement;
 
 /**
  * RQCODE security requirements pattern from STIGS repository.
  */
 @objid ("46ddfebe-b479-43d7-ac66-6355059584da")
-public class UbuntuPackagePattern implements Checkable, Enforceable {
+public class UbuntuPackagePattern extends Requirement implements Enforceable {
     @objid ("7f9bfdfd-c0d4-46be-bec9-5a9c48d8d881")
     private String _name;
 
@@ -22,6 +22,8 @@ public class UbuntuPackagePattern implements Checkable, Enforceable {
     public  UbuntuPackagePattern(String name, boolean mustBeInstalled) {
         _name = name;
         _mustBeInstalled = mustBeInstalled;
+
+        setStatement(this.toString());
     }
 
     @objid ("9c558a4a-041d-44a6-a0a5-91dd7ea10eb2")

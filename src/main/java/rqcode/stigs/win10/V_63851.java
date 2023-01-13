@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.AvailableUserRightsAssignRequirement;
+import rqcode.stigs.win10.patterns.AvailableUserRightsAssignRequirement;
 
 /**
  * Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.

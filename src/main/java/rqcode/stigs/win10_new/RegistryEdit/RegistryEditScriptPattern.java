@@ -1,6 +1,6 @@
 package rqcode.stigs.win10_new.RegistryEdit;
 
-import rqcode.patterns.win10_new.STIGScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 public class RegistryEditScriptPattern implements STIGScriptPattern {
     private String scriptBody;
@@ -18,7 +18,12 @@ public class RegistryEditScriptPattern implements STIGScriptPattern {
     }
 
     @Override
-    public String prepareScript() {
+    public String prepareEnforceScript() {
+        return String.format(scriptBody, registryPath, name, type, value);
+    }
+
+    @Override
+    public String prepareCheckScript() {
         return String.format(scriptBody, registryPath, name, type, value);
     }
 

@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.SoftwareRegEditRequirement;
+import rqcode.stigs.win10.patterns.SoftwareRegEditRequirement;
 
 /**
  * Passwords save locally for re-use when browsing may be subject to compromise.

@@ -1,12 +1,9 @@
 package rqcode.stigs.win10_new.RegistryEdit;
 
-import rqcode.patterns.win10_new.STIGPattern;
-import rqcode.patterns.win10_new.STIGScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
-import java.util.List;
-import java.util.Map;
-
-public class RegistryEditPattern implements STIGPattern{
+public class RegistryEditPattern implements STIGPattern {
 
     @Override
     public CheckStatus check() {
@@ -24,7 +21,7 @@ public class RegistryEditPattern implements STIGPattern{
     }
 
     @Override
-    public List<Map<String, String>> checkProcess(String script) throws Exception {
-        return null;
+    public boolean checkProcess(String script, String settingName, String settingValue) throws Exception {
+        return true;
     }
 }

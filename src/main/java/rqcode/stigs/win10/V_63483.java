@@ -2,7 +2,7 @@ package rqcode.stigs.win10;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import rqcode.patterns.win10.SensitivePrivilegeUseRequirement;
+import rqcode.stigs.win10.patterns.SensitivePrivilegeUseRequirement;
 
 /**
  * Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior. Sensitive Privilege Use records events related to use of sensitive privileges, such as "Act as part of the operating system" or "Debug programs".

@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import rqcode.patterns.win10.PasswordPolicy;
+import rqcode.stigs.win10.patterns.PasswordPolicy;
 
 /**
  *The use of complex passwords increases their strength against guessing and brute-force attacks.

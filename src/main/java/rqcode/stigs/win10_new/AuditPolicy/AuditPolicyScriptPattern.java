@@ -1,23 +1,30 @@
 package rqcode.stigs.win10_new.AuditPolicy;
 
-import rqcode.patterns.win10_new.STIGScriptPattern;
+import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 public class AuditPolicyScriptPattern implements STIGScriptPattern {
-    private String scriptBody;
+    private String scriptEnforceBody;
+    private String scriptCheckBody;
     private String code;
     private String settingName;
     private String settingValue;
 
-    public AuditPolicyScriptPattern(String scriptBody, String code, String settingName, String settingValue) {
-        this.scriptBody = scriptBody;
+    public AuditPolicyScriptPattern(String scriptEnforceBody, String scriptCheckBody,String code, String settingName, String settingValue) {
+        this.scriptEnforceBody = scriptEnforceBody;
+        this.scriptCheckBody = scriptCheckBody;
         this.code = code;
         this.settingName = settingName;
         this.settingValue = settingValue;
     }
 
     @Override
-    public String prepareScript() {
-        return String.format(scriptBody, code, settingName, settingValue);
+    public String prepareEnforceScript() {
+        return String.format(scriptEnforceBody, code, settingName, settingValue);
+    }
+
+    @Override
+    public String prepareCheckScript() {
+        return String.format(scriptCheckBody, code);
     }
 
     @Override
