@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.stigs.win10.patterns.LogonRequirement;
 

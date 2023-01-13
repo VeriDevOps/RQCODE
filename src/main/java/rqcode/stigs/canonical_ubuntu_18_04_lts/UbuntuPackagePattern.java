@@ -2,7 +2,7 @@ package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
 import java.io.IOException;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.concepts.Enforceable;
 import rqcode.concepts.Requirement;

@@ -1,6 +1,6 @@
 package rqcode.concepts;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 /**
  * Implementations of this interface are requirements that can enforced on the hosting environment programmatically through the enforce function.

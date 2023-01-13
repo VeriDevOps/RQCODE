@@ -1,6 +1,6 @@
 package rqcode.stigs.canonical_ubuntu_18_04_lts.V_219319;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.concepts.Checkable;
 import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;

@@ -1,6 +1,6 @@
 package rqcode.stigs.win10;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.temporal_patterns.GlobalResponseTimed;
 import rqcode.temporal_patterns.GlobalUniversalityTimed;

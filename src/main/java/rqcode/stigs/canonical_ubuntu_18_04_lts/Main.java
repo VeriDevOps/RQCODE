@@ -1,6 +1,6 @@
 package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219157.V_219157;
 import rqcode.stigs.canonical_ubuntu_18_04_lts.V_219158.V_219158;

@@ -1,6 +1,6 @@
 package rqcode.temporal_patterns;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.concepts.Checkable;
 

@@ -1,6 +1,6 @@
 package rqcode.stigs.win10.patterns;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import rqcode.stigs.STIG;
 
 import java.io.BufferedReader;

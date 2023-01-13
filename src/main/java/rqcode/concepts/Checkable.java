@@ -1,6 +1,6 @@
 package rqcode.concepts;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 /**
  * Implementations of this interface are requirements that can be checked programmatically through the check function.

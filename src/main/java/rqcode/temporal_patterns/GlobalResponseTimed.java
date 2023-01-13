@@ -2,7 +2,7 @@ package rqcode.temporal_patterns;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 
 import rqcode.concepts.Checkable;
 
