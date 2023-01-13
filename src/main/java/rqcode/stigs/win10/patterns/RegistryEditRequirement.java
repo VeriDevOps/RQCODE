@@ -102,7 +102,7 @@ public abstract class RegistryEditRequirement extends STIG {
                     + String.format("\n$value = %s\n", sanitizeArgument(value));
         }
 
-        @objid("3b9d83f6-1bcc-4356-acae-5461ed28692c")
+
         private static String sanitizeArgument(String arg) {
             if (arg != null && arg.contains(" "))
                 arg = String.format("\"%s\"", arg);
