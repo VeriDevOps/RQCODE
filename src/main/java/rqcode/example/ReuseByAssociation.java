@@ -9,15 +9,18 @@ import rqcode.concepts.Requirement;
 
 public class ReuseByAssociation extends Requirement {
 
+    TickRequirement tr;
+    BoundaryRequirement br;
+
     public ReuseByAssociation()  {
         super("The Clock must satisfy the tick increment (REQ1) and seconds boundary (REQ2) requirements.");
+        tr = new TickRequirement();
+        br = new BoundaryRequirement();
     }
 
     @Override
     public CheckStatus check() {
-        TickRequirement tr = new TickRequirement();
         if (tr.check()== CheckStatus.FAIL) return CheckStatus.FAIL;
-        BoundaryRequirement br = new BoundaryRequirement();
         if (br.check()== CheckStatus.FAIL) return CheckStatus.FAIL;
         return CheckStatus.PASS;
     }
