@@ -10,17 +10,17 @@ import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
  * 
  * https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219304
  */
-@objid ("f978b0a3-6ca5-46fd-bb68-c2a793f0907b")
+
 public class V_219304 implements Checkable {
-    @objid ("94deadb5-8b99-40f1-ac2c-aba68af9112a")
+    
     private UbuntuPackagePattern _package = new UbuntuPackagePattern("vlock", true);
 
-    @objid ("0300a697-27d1-4b67-8b91-6e48da29fea8")
+    
     public CheckStatus check() {
         return _package.check();
     }
 
-    @objid ("a48c6807-75b5-4d7a-8814-67e5de67053b")
+    
     public String toString() {
         return _package.toString();
     }

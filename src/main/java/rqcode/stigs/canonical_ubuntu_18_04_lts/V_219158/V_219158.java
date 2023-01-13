@@ -10,17 +10,17 @@ import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
  * 
  * https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219158
  */
-@objid ("1c36845a-46fd-4930-b75d-c557d73819f7")
+
 public class V_219158 implements Checkable {
-    @objid ("f28bbb9a-eb78-470d-848a-6f602e13c9b3")
+    
     private UbuntuPackagePattern _package = new UbuntuPackagePattern("rsh-server", false);
 
-    @objid ("eb20c4c7-511a-4c36-b4b6-91888c9212a9")
+    
     public CheckStatus check() {
         return _package.check();
     }
 
-    @objid ("2e9c8eeb-aac4-44d4-a2c7-64eef1b0c7c8")
+    
     public String toString() {
         return _package.toString();
     }

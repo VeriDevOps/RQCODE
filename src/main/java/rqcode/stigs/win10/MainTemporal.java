@@ -5,9 +5,9 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import rqcode.temporal_patterns.GlobalResponseTimed;
 import rqcode.temporal_patterns.GlobalUniversalityTimed;
 
-@objid ("0246ff65-342a-4bc3-bc46-4d5acfa86b02")
+
 public class MainTemporal {
-    @objid ("2d10f699-25fa-4cad-9f0a-6878681e9529")
+    
     public static void main(String[] args) {
         V_63449 v_63449 = new V_63449();
         GlobalUniversalityTimed globalUniversality_V_63449 = new GlobalUniversalityTimed(v_63449, Integer.MAX_VALUE);

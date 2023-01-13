@@ -8,18 +8,18 @@ import rqcode.stigs.STIG;
 /**
  * This is example of the instantiation of the Win 10 STIG requirements.
  */
-@objid ("838c1d01-3219-4ada-993c-85a2e8e0edd6")
+
 public class Windows10SecurityTechnicalImplementationGuide {
-    @objid ("c8bf7551-de18-43d4-aeaa-890ff5761756")
+    
     public static final STIG v_63447 = new V_63447();
 
-    @objid ("c9d87472-caf7-495e-88db-5b0f03852579")
+    
     public static final STIG v_63779 = new V_63449();
 
-    @objid ("e483dd1b-dea1-469f-a0eb-26d65f9d1ef8")
+    
     public static final STIG v_63463 = new V_63463();
 
-    @objid ("0c2efefa-59ae-412d-a5d8-66f6b90e4b3c")
+    
     public static final STIG v_63467 = new V_63467();
 
     public static final STIG v_63843 = new V_63843();
@@ -39,7 +39,7 @@ public class Windows10SecurityTechnicalImplementationGuide {
     public static final STIG v_77103 = new V_77103 ();
     public static final STIG v_77189 = new V_77189 ();
 
-    @objid ("816ff883-0fa7-4dc4-a2d0-55b39f91116a")
+    
     public static STIG[] allSTIGs() {
         STIG[] retArr = {
             v_63447,
