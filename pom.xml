@@ -48,7 +48,7 @@
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to
       parent pom) -->
       <plugins>
-        <!-- clean lifecycle, see
+        <!--  lifecycle, see
         https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
@@ -85,8 +85,8 @@
         <plugin>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.7.1</version>
-        </plugin>
-    mvn     <plugin>
+        </plugin> 
+        <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
@@ -103,6 +103,7 @@
               </goals>
             </execution>
           </executions>
+          <!-- Specific for plant UML Doclet -->
           <configuration>
             <doclet>nl.talsmasoftware.umldoclet.UMLDoclet</doclet>
             <docletArtifact>

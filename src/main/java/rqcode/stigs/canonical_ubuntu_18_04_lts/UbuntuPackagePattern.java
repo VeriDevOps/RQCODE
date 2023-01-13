@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import rqcode.concepts.Checkable;
 import rqcode.concepts.Enforceable;
 import rqcode.concepts.Requirement;
 
