@@ -1,5 +1,8 @@
 package rqcode.concepts;
 
+/**
+ * The RQCODE requirement class.
+ */
 public abstract class Requirement implements Checkable{
 
     /**
