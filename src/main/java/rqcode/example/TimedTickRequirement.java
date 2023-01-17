@@ -11,7 +11,7 @@ public class TimedTickRequirement extends Requirement {
     GlobalUniversalityTimed ttr;
 
     public TimedTickRequirement() {
-        TickRequirement tr = new TickRequirement();
+        TickIncrementRequirement tr = new TickIncrementRequirement();
         ttr = new GlobalUniversalityTimed(tr, 10);
         setStatement(ttr.toString());
     }

@@ -9,9 +9,9 @@ import rqcode.concepts.Requirement;
  * Adapted from
  * https://www.sciencedirect.com/science/article/abs/pii/S1477842416301981
  */
-public class TickRequirement extends Requirement {
+public class TickIncrementRequirement extends Requirement {
 
-    public TickRequirement() {
+    public TickIncrementRequirement() {
         super("A clock tick increments current second if it is smaller than 59");
     }
 

@@ -9,9 +9,9 @@ import rqcode.concepts.Requirement;
  * Adapted from
  * https://www.sciencedirect.com/science/article/abs/pii/S1477842416301981
  */
-public class BoundaryRequirement extends Requirement {
+public class TickBoundaryRequirement extends Requirement {
 
-    public BoundaryRequirement() {
+    public TickBoundaryRequirement() {
         super("Clock seconds must be between 0 and 59.");
     }
 

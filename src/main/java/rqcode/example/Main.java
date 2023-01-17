@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Clock.tick();
         
-        TickRequirement sr = new TickRequirement();
-        BoundaryRequirement btr = new BoundaryRequirement();
+        TickIncrementRequirement sr = new TickIncrementRequirement();
+        TickBoundaryRequirement btr = new TickBoundaryRequirement();
 
         System.out.println(sr + "\n Check status: "+sr.check());
 

@@ -5,8 +5,8 @@ package rqcode.example;
  * 
  */
 
-public class ReuseByInheritance extends TickRequirement {
-    public ReuseByInheritance() {
+public class DerivedTickBoundaryRequirement extends TickIncrementRequirement {
+    public DerivedTickBoundaryRequirement() {
         super.setStatement(super.getStatement() +"\nIn addition, Clock seconds value must be between 0 and 59.");
     }
 

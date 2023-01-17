@@ -7,15 +7,15 @@ import rqcode.concepts.Requirement;
  * 
  */
 
-public class ReuseByAssociation extends Requirement {
+public class CombinedTickRequirement extends Requirement {
 
-    TickRequirement tr;
-    BoundaryRequirement br;
+    TickIncrementRequirement tr;
+    TickBoundaryRequirement br;
 
-    public ReuseByAssociation()  {
+    public CombinedTickRequirement()  {
         super("The Clock must satisfy the tick increment (REQ1) and seconds boundary (REQ2) requirements.");
-        tr = new TickRequirement();
-        br = new BoundaryRequirement();
+        tr = new TickIncrementRequirement();
+        br = new TickBoundaryRequirement();
     }
 
     @Override
