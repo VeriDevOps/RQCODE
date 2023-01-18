@@ -15,14 +15,10 @@ public interface Enforceable {
     EnforcementStatus enforce();
 
     
-    public enum EnforcementStatus {
-        
-        SUCCESS,
-        
-        FAILURE,
-        
+    public enum EnforcementStatus {        
+        SUCCESS,        
+        FAILURE,        
         INCOMPLETE;
-
     }
 
 }
