@@ -11,7 +11,6 @@ import rqcode.concepts.Checkable;
 public abstract class MonitoringLoop implements Checkable {
     
     protected int boundary;
-
     
     private final int variant(int i) {
         if (boundary > 0) {
@@ -19,17 +18,14 @@ public abstract class MonitoringLoop implements Checkable {
         }
         return i;
     }
-
     
     protected int sleepMilliseconds() {
         return 1000;
     }
-
     
     protected boolean invariant() {
         return true;
     }
-
     
     protected boolean precondition() {
         return true;

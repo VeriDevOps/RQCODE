@@ -14,35 +14,29 @@ import rqcode.concepts.Checkable;
 public class GlobalResponseTimed extends MonitoringLoop {
     
     private Checkable s;
-
     
     private Checkable r;
-
     
     public  GlobalResponseTimed(Checkable s, Checkable r, int boundary) {
         this.s = s;
         this.r = r;
         this.boundary = boundary;
     }
-
     
     @Override
     public boolean precondition() {
         return (s.check() == CheckStatus.PASS);
     }
-
     
     @Override
     public boolean postcondition() {
         return (r.check() == CheckStatus.PASS);
     }
-
     
     @Override
     public boolean exitCondition() {
         return (r.check() == CheckStatus.PASS);
     }
-
     
     @Override
     public String toString() {
