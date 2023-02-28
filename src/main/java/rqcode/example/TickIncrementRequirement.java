@@ -21,7 +21,6 @@ public class TickIncrementRequirement extends Requirement {
             return ((Clock.seconds + 1) == Clock.tick()) ? 
             CheckStatus.PASS : CheckStatus.FAIL;
         
-        return ((Clock.seconds + 1) != Clock.tick()) ? 
-            CheckStatus.PASS : CheckStatus.FAIL;
+        return CheckStatus.INCOMPLETE;
     }
 }

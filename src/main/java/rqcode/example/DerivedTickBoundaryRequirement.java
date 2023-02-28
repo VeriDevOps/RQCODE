@@ -12,9 +12,10 @@ public class DerivedTickBoundaryRequirement extends TickIncrementRequirement {
 
     @Override
     public CheckStatus check() {
-        if (super.check()==CheckStatus.FAIL) return CheckStatus.FAIL;
+
         if (Clock.seconds > 59) return CheckStatus.FAIL;
-        if (Clock.seconds < 0) return CheckStatus.FAIL;            
-        return CheckStatus.PASS;
+        if (Clock.seconds < 0) return CheckStatus.FAIL;
+
+        return super.check();
     }
 }
