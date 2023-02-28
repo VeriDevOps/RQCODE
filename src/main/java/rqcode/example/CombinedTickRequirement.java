@@ -8,20 +8,16 @@ import rqcode.concepts.Requirement;
  */
 
 public class CombinedTickRequirement extends Requirement {
-
     TickIncrementRequirement tr;
     TickBoundaryRequirement br;
-
     public CombinedTickRequirement()  {
         super("The Clock must satisfy the tick increment (REQ1) and seconds boundary (REQ2) requirements.");
         tr = new TickIncrementRequirement();
         br = new TickBoundaryRequirement();
     }
-
     @Override
     public CheckStatus check() {
-        if (tr.check()== CheckStatus.FAIL) return CheckStatus.FAIL;
         if (br.check()== CheckStatus.FAIL) return CheckStatus.FAIL;
-        return CheckStatus.PASS;
+        return tr.check();
     }
 }
