@@ -1,14 +1,13 @@
 package rqcode.temporal_patterns;
 
-
-
 import rqcode.concepts.Checkable;
+import rqcode.concepts.Requirement;
 
 /**
  * This is the monitoring service that periodically checks the temporal properties.
  */
 
-public abstract class MonitoringLoop implements Checkable {
+public abstract class MonitoringLoop extends Requirement {
     
     protected int boundary;
     

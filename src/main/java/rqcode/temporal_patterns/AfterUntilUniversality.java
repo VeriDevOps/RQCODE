@@ -26,6 +26,8 @@ public class AfterUntilUniversality extends MonitoringLoop {
         this.q = q;
         this.p = p;
         this.r = r;
+
+        this.setStatement(this.toString());
     }
 
     

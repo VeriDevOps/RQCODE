@@ -16,6 +16,8 @@ public class Eventually extends MonitoringLoop {
     
     public  Eventually(Checkable p) {
         this.p = p;
+
+        this.setStatement(this.toString());
     }
 
     

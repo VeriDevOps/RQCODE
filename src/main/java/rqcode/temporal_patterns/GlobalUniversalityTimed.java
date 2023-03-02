@@ -16,6 +16,8 @@ public class GlobalUniversalityTimed extends GlobalUniversality {
     public  GlobalUniversalityTimed(Checkable p, int boundary) {
         super(p);
         this.boundary = boundary;
+        
+        this.setStatement(this.toString());
     }
 
     

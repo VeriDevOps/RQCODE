@@ -21,6 +21,8 @@ public class GlobalResponseTimed extends MonitoringLoop {
         this.s = s;
         this.r = r;
         this.boundary = boundary;
+
+        this.setStatement(this.toString());
     }
     
     @Override

@@ -18,6 +18,8 @@ public class GlobalUniversality extends MonitoringLoop {
     
     public  GlobalUniversality(Checkable p) {
         this.p = p;
+
+        this.setStatement(this.toString());
     }
 
     

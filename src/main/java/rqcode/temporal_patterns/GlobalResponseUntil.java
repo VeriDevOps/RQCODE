@@ -26,6 +26,8 @@ public class GlobalResponseUntil extends MonitoringLoop {
         this.p = p;
         this.q = q;
         this.r = r;
+
+        this.setStatement(this.toString());
     }
 
     
