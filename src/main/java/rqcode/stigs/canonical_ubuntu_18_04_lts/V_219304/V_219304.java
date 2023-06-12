@@ -12,18 +12,9 @@ import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
  * https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219304
  */
 
-public class V_219304 implements Checkable {
-    
-    private UbuntuPackagePattern _package = new UbuntuPackagePattern("vlock", true);
+public class V_219304 extends UbuntuPackagePattern {
 
-    
-    public CheckStatus check() {
-        return _package.check();
+    public V_219304() {
+        super("vlock", true);
     }
-
-    
-    public String toString() {
-        return _package.toString();
-    }
-
 }
