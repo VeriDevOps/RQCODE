@@ -8,4 +8,7 @@ public interface STIGScriptPattern {
     public String getSettingName();
 
     public String getSettingValue();
+
+    public String getSettingValueType();
+
 }
