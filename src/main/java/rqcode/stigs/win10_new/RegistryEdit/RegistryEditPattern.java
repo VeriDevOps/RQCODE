@@ -7,15 +7,16 @@ public class RegistryEditPattern implements STIGPattern {
 
     @Override
     public CheckStatus check() {
+        String settingRegistryPath = pattern().getRegistryPath();
         String settingName = pattern().getSettingName();
         String settingValue = pattern().getSettingValue();
         String settingValueType = pattern().getSettingValueType();
 
         String script = pattern().prepareCheckScript();
 
-        boolean auditPolicyCheck;
+        boolean registryEditCheck;
         try {
-            auditPolicyCheck = checkProcess(script, settingName, settingValue);
+            registryEditCheck = checkProcess(script, RegistryPath, settingName, settingValue);
         } catch (Exception e) {
             e.printStackTrace();
             return CheckStatus.INCOMPLETE;

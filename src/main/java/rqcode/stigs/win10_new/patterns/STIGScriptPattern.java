@@ -11,4 +11,6 @@ public interface STIGScriptPattern {
 
     public String getSettingValueType();
 
+    public String getRegistryPath();
+
 }
