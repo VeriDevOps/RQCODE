@@ -64,9 +64,9 @@ public class UbuntuPackagePattern extends Requirement implements Enforceable {
     
     public EnforcementStatus enforce() {
         Process process = null;    
-        String action = _mustBeInstalled ? "install " : "remove ";
+        String action = _mustBeInstalled ? "install -y " : "remove -y ";
         try {
-            process = Runtime.getRuntime().exec("sudo apt-get " + action + _name);
+            process = Runtime.getRuntime().exec("apt-get " + action + _name);
         } catch (IOException ioException) {
             System.out.println(ioException.getMessage());
             return EnforcementStatus.INCOMPLETE;
