@@ -12,4 +12,8 @@ public class RegistryEditConst {
             "    else{\n" +
             "        New-ItemProperty -Path $registryPath -Name $name -PropertyType $type -Value $value -Force\n";
 
+    public static final String REGISTRY_EDIT_SCRIPT_PATTERN_CHECK = "";
+
+
+
 }

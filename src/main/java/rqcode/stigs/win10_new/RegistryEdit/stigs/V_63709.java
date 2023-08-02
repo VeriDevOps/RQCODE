@@ -7,7 +7,8 @@ import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 public class V_63709 extends RegistryEditPattern {
     private final RegistryEditScriptPattern pattern =
-            new RegistryEditScriptPattern(RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN, 
+            new RegistryEditScriptPattern(RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN,
+            RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK,
             "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main", 
             "FormSuggest Passwords", 
             "DWORD", 
