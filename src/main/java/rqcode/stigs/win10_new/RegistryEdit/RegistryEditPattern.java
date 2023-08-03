@@ -1,45 +1,13 @@
 package rqcode.stigs.win10_new.RegistryEdit;
 
 import rqcode.stigs.win10_new.patterns.STIGPattern;
-import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
-public class RegistryEditPattern implements STIGPattern {
+import java.util.Map;
 
-    @Override
-    public CheckStatus check() {
-        String settingRegistryPath = pattern().getRegistryPath();
-        String settingName = pattern().getSettingName();
-        String settingValue = pattern().getSettingValue();
-        String settingValueType = pattern().getSettingValueType();
-
-        String script = pattern().prepareCheckScript();
-
-        boolean registryEditCheck;
-        try {
-            registryEditCheck = checkProcess(script, RegistryPath, settingName, settingValue);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return CheckStatus.INCOMPLETE;
-        }
-
-        if (auditPolicyCheck)
-            return CheckStatus.PASS;
-        else
-            return CheckStatus.FAIL;
-    }
+public class RegistryEditPattern extends STIGPattern {
 
     @Override
-    public EnforcementStatus enforce() {
-        return null;
-    }
-
-    @Override
-    public STIGScriptPattern pattern() {
-        return null;
-    }
-
-    @Override
-    public boolean checkProcess(String script, String settingName, String settingValue) throws Exception {
-        return true;
+    public boolean checkProcess(String script, Map<String, String> settingValues) throws Exception {
+        return false;
     }
 }
