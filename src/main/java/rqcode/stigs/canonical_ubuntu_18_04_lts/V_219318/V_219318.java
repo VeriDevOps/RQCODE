@@ -11,18 +11,9 @@ import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
  * https://www.stigviewer.com/stig/canonical_ubuntu_18.04_lts/2021-06-16/finding/V-219318
  */
 
-public class V_219318 implements Checkable {
-    
-    private UbuntuPackagePattern _package = new UbuntuPackagePattern("libpam-pkcs11", true);
+public class V_219318 extends UbuntuPackagePattern {
 
-    
-    public CheckStatus check() {
-        return _package.check();
+    public V_219318() {
+        super("libpam-pkcs11", true);
     }
-
-    
-    public String toString() {
-        return _package.toString();
-    }
-
 }

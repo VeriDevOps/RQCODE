@@ -18,9 +18,4 @@ public class V_63647 extends RegistryEditPattern {
     public STIGScriptPattern pattern() {
         return pattern;
     }
-
-
-
-
-
 }
