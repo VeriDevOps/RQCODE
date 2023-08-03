@@ -11,7 +11,6 @@ public class V_63703 extends RegistryEditPattern {
             new RegistryEditScriptPattern(
                     RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
                     Map.of(
-                            "", "",
                             "", ""
                     ),
                     Map.of(
