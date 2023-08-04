@@ -11,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class RegistryEditRequirement extends STIG {
+public abstract class  RegistryEditRequirement extends STIG {
     private static final String REGISTRY_HIVE = "HKEY_LOCAL_MACHINE";
     private static final String REGISTRY_ROOT = "HKLM:";
     private static final String COMMAND_BODY =

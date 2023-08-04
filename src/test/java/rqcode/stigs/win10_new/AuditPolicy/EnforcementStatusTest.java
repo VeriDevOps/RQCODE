@@ -1,5 +1,4 @@
 package rqcode.stigs.win10_new.AuditPolicy;
-
 import org.junit.Test;
 import rqcode.concepts.Enforceable;
 
@@ -20,3 +19,4 @@ public class EnforcementStatusTest {
     }
 
 }
+

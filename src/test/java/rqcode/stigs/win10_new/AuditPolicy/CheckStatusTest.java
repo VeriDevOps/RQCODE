@@ -24,3 +24,4 @@ public class CheckStatusTest {
         assertEquals("Expected CheckStatus to be INCOMPLETE", status, Checkable.CheckStatus.INCOMPLETE);
     }
 }
+

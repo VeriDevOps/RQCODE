@@ -1,16 +1,34 @@
 package rqcode.stigs.win10_new.patterns;
 
-public interface STIGScriptPattern {
-    public String prepareEnforceScript();
+import java.util.Map;
 
-    public String prepareCheckScript();
+public abstract class STIGScriptPattern {
 
-    public String getSettingName();
+    private final String checkScript;
+    private final String enforceScript;
+    private final Map<String, String> checkValues;
+    private final Map<String, String> enforceValues;
 
-    public String getSettingValue();
+    public STIGScriptPattern(String checkScript, String enforceScript, Map<String, String> checkValues, Map<String, String> enforceValues) {
+        this.checkScript = checkScript;
+        this.enforceScript = enforceScript;
+        this.checkValues = checkValues;
+        this.enforceValues = enforceValues;
+    }
 
-    public String getSettingValueType();
+    public String prepareEnforceScript() {
+        return STIGScriptUtils.format(enforceScript, enforceValues);
+    }
 
-    public String getRegistryPath();
+    public String prepareCheckScript() {
+        return STIGScriptUtils.format(checkScript, checkValues);
+    }
 
+    public Map<String, String> getEnforceValues() {
+        return enforceValues;
+    }
+
+    public Map<String, String> getCheckValues() {
+        return checkValues;
+    }
 }
