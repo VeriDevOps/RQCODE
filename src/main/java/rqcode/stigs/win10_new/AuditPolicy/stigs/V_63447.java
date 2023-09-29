@@ -7,6 +7,8 @@ import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 import java.util.Map;
 
+//The system must be configured to audit Account Management - User Account Management failures.
+
 public class V_63447 extends AuditPolicyPattern {
     private final STIGScriptPattern policyScriptPattern =
             new AuditPolicyScriptPattern(
