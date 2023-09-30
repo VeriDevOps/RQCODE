@@ -15,6 +15,7 @@ public class V_63469 extends AuditPolicyPattern {
                     AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
                     Map.of(
                             "guid", "{0CCE921B-69AE-11D9-BED3-505054503030}",
+                            "path", "c:\Audit.Policy.cfg"
                             "checkValue", "success",
                             "val_status1", "acierto",
                             "val_status2", "success"
