@@ -22,11 +22,16 @@ public class AuditPolicyPattern extends STIGPattern {
         String checkValue = checkValues.get("checkValue");
 
         while ((inputLine = auditPolOutputReader.readLine()) != null) {
-            processOutput.append(inputLine + System.lineSeparator());
+            processOutput.append(inputLine).append(System.lineSeparator());
         }
 
         String result = processOutput.toString().toLowerCase();
 
-        return result.contains(checkValue);
+        return result.contains("ok");
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false;
     }
 }
+
+

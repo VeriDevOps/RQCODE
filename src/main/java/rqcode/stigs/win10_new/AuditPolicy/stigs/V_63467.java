@@ -7,6 +7,8 @@ import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
 
 import java.util.Map;
 
+//The system must be configured to audit Logon/Logoff - Logon successes.
+
 public class V_63467 extends AuditPolicyPattern {
     private final STIGScriptPattern policyScriptPattern =
             new AuditPolicyScriptPattern(
