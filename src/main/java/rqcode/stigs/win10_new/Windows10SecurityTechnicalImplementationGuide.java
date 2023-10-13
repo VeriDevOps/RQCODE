@@ -12,25 +12,30 @@ public class Windows10SecurityTechnicalImplementationGuide {
     public static final STIGPattern v_63449 = new V_63449();
     public static final STIGPattern v_63463 = new V_63463();
     public static final STIGPattern v_63467 = new V_63467();
-    public static final STIGPattern v_63709 = new V_63709();
+
+    public static final STIGPattern v_63469 = new V_63469();
+
+    /*
+        public static final STIGPattern v_63709 = new V_63709();
 
     public static final STIGPattern v_63703 = new V_63703();
 
     public static final STIGPattern v_63321 = new V_63321();
 
     public static final STIGPattern v_63647 = new V_63647();
-
-    public static final STIGPattern v_63469 = new V_63469();
+     */
 
     public static void main(String[] args) {
         System.out.println(v_63447.check());
         System.out.println(v_63449.check());
         System.out.println(v_63463.check());
         System.out.println(v_63467.check());
-        System.out.println(v_63709.check());
+        System.out.println(v_63469.check());
+        /*
+          System.out.println(v_63709.check());
         System.out.println(v_63703.check());
         System.out.println(v_63321.check());
         System.out.println(v_63647.check());
-        System.out.println(v_63469.check());
+         */
     }
 }
