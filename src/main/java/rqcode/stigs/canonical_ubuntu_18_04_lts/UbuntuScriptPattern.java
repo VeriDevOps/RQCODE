@@ -9,7 +9,7 @@ import rqcode.concepts.Requirement;
  * RQCODE security requirements pattern with executable shell script attached
  */
 
-public class UbuntuScriptPattern extends Requirement implements Checkable {
+public class UbuntuScriptPattern extends Requirement {
     
     private String _name;
     private String _script;
