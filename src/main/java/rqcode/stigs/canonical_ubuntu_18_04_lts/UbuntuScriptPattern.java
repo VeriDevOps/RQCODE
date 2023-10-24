@@ -2,7 +2,6 @@ package rqcode.stigs.canonical_ubuntu_18_04_lts;
 
 import java.io.IOException;
 
-import rqcode.concepts.Checkable;
 import rqcode.concepts.Requirement;
 
 /**
