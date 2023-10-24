@@ -1,3 +1,5 @@
+package rqcode.stigs.win10_new.AuditPolicy.stigs;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
