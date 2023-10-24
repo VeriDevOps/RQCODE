@@ -1,3 +1,5 @@
+package rqcode.stigs.win10_new.UI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
