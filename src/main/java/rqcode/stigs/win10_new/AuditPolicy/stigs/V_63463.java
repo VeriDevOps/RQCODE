@@ -19,7 +19,7 @@ public class V_63463 extends AuditPolicyPattern {
                     ),
                     Map.of(
                             "guid", "{0CCE9215-69AE-11D9-BED3-505054503030}",
-                            "parameter", "failure",
+                            "checkValue", "failure",
                             "value", "enable"));
 
     public V_63463() {
