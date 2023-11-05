@@ -3,6 +3,9 @@ package rqcode.stigs.win10_new.patterns;
 import rqcode.concepts.Checkable;
 import rqcode.concepts.Enforceable;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public abstract class STIGPattern implements Checkable, Enforceable {
@@ -44,7 +47,22 @@ public abstract class STIGPattern implements Checkable, Enforceable {
             return CheckStatus.FAIL;
     }
 
-    public abstract boolean checkProcess(String script, Map<String, String> settingValues) throws Exception;
+    public boolean checkProcess(String script, Map<String, String> settingValues) throws Exception {
+        Process process = Runtime.getRuntime().exec(script);
+
+        BufferedReader outputReader = new BufferedReader(new InputStreamReader(process.getInputStream(), StandardCharsets.UTF_8));
+
+        StringBuilder processOutput = new StringBuilder();
+        String inputLine;
+
+        while ((inputLine = outputReader.readLine()) != null) {
+            processOutput.append(inputLine + System.lineSeparator());
+        }
+
+        String result = processOutput.toString();
+
+        return result.contains("OK");
+    };
 
     public STIGScriptPattern getPattern() {
         return pattern;

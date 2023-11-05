@@ -1,0 +1,43 @@
+package rqcode.stigs.win10_new.AuditPolicy;
+
+import com.fasterxml.jackson.annotation.JsonRawValue;
+import com.fasterxml.jackson.annotation.JsonRootName;
+
+public class RegEditTemplate {
+    private String id;
+    private String attr;
+    private String path;
+    private String result_value;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getAttr() {
+        return attr;
+    }
+
+    public void setAttr(String attr) {
+        this.attr = attr;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getResult_value() {
+        return result_value;
+    }
+
+    public void setResult_value(String result_value) {
+        this.result_value = result_value;
+    }
+}

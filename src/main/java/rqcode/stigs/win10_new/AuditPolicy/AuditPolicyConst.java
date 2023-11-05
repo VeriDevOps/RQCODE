@@ -6,13 +6,3 @@ public class AuditPolicyConst {
 
 }
 
-/*
-> \"%(path)\"\n" +
-            "$var1 = Get-Content \"%(path)\" | Select-String  $subcat_es,$subcat_eng\n" +
-            "$var2 = $var1.Line.Replace(\" \", \"\")\n" +
-            "$var2 = $var2.ToLower()\n" +
-
-            "if ($var2 -like \"%(val_status1)\" -or $var2 -like \"%(val_status2)\") {\n" +
-            "result = \"OK\"" +
-            "}";
- */

@@ -1,4 +1,4 @@
-package rqcode.stigs.win10_new.AuditPolicy.stigs;
+package rqcode.stigs.win10_new.AuditPolicy.stigs.forparser;
 
 import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyConst;
 import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyPattern;

@@ -6,22 +6,22 @@ import rqcode.stigs.win10_new.RegistryEdit.RegistryEditScriptPattern;
 
 import java.util.Map;
 
-public class V_63321 extends RegistryEditPattern {
+public class V_220844 extends RegistryEditPattern {
     private final RegistryEditScriptPattern policyScriptPattern =
             new RegistryEditScriptPattern(
                     RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
                     Map.of(
-                            "path", "",
-                            "attr", "",
-                            "result_value", ""
+                            "path", "\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter\\",
+                            "attr", "EnabledV9",
+                            "result_value", "0x00000001 (1)"
                     ),
                     Map.of(
-                            "path", "",
-                            "attr", "",
-                            "result_value", ""));
+                            "path", "\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter\\",
+                            "attr", "EnabledV9",
+                            "result_value", "0x00000001 (1)"));
 
 
-    public V_63321() {
+    public V_220844() {
         pattern = this.policyScriptPattern;
     }
 

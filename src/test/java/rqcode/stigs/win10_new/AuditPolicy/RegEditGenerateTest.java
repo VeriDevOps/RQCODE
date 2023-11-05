@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-public class AuditPolicyGenerateTest {
+public class RegEditGenerateTest {
 
     @Test
     public void generateAuditPolicies() throws IOException {
@@ -34,26 +34,26 @@ public class AuditPolicyGenerateTest {
 
         velocityEngine.init(props);
 
-        String content = Files.readString(Path.of("src/test/resources/templates/auditPol/auditpol.json"), StandardCharsets.UTF_8);
-        List<AuditPolTemplate> auditPolTemplates = new ArrayList<>();
+        String content = Files.readString(Path.of("src/test/resources/templates/regEdit/regedit.json"), StandardCharsets.UTF_8);
+        List<RegEditTemplate> regEditTemplates = new ArrayList<>();
 
-        auditPolTemplates = Arrays.asList(mapper.readValue(content, AuditPolTemplate[].class));
+        regEditTemplates = Arrays.asList(mapper.readValue(content, RegEditTemplate[].class));
 
         // Load the template
-        Template template = velocityEngine.getTemplate("templates/auditPol/AuditPolTemplate.vm");
+        Template template = velocityEngine.getTemplate("templates/regEdit/RegEditTemplate.vm");
 
-        for (AuditPolTemplate auditPolTemplate : auditPolTemplates) {
+        for (RegEditTemplate regEditTemplate : regEditTemplates) {
             VelocityContext context = new VelocityContext();
-            context.put("id", auditPolTemplate.getId());
-            context.put("guid", auditPolTemplate.getGuid());
-            context.put("parameter", auditPolTemplate.getParameter());
-            context.put("value", auditPolTemplate.getValue());
+            context.put("id", regEditTemplate.getId());
+            context.put("path", regEditTemplate.getPath());
+            context.put("attr", regEditTemplate.getAttr());
+            context.put("result_value", regEditTemplate.getResult_value());
 
             // Generate the Java code
             StringWriter writer = new StringWriter();
             template.merge(context, writer);
 
-            Files.write( Paths.get("src/main/java/rqcode/stigs/win10_new/AuditPolicy/stigs/" + auditPolTemplate.getId() + ".java"), writer.toString().getBytes());
+            Files.write( Paths.get("src/main/java/rqcode/stigs/win10_new/RegistryEdit/stigs/" + regEditTemplate.getId() + ".java"), writer.toString().getBytes());
         }
     }
 }

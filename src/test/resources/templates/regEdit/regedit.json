@@ -1,0 +1,273 @@
+[
+  {
+    "id": "V_220844",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter\\\\",
+    "attr": "EnabledV9",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220849",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services\\\\",
+    "attr": "fDisableCdm",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220848",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services\\\\",
+    "attr": "DisablePasswordSaving",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220826",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\AppCompat\\\\",
+    "attr": "DisableInventory",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220926",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters\\\\",
+    "attr": "EnablePlainTextPassword",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220832",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\CredUI\\\\",
+    "attr": "EnumerateAdministrators",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220872",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CloudContent\\\\",
+    "attr": "DisableThirdPartySuggestions",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220870",
+    "path": "\\\\Software\\\\Policies\\\\Microsoft\\\\Windows\\\\System",
+    "attr": "AllowDomainPINLogon",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220871",
+    "path": "\\\\Software\\\\Policies\\\\Microsoft\\\\WindowsInkWorkspace",
+    "attr": "AllowWindowsInkWorkspace",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220818",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos\\\\Parameters\\\\",
+    "attr": "DevicePKInitEnabled",
+    "result_value": "1 (or if the attr does not exist)"
+  },
+  {
+    "id": "V_220819",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System\\\\",
+    "attr": "DontDisplayNetworkSelectionUI",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220800",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\SecurityProviders\\\\Wdigest\\\\",
+    "attr": "UseLogonCredential",
+    "result_value": "0x00000000 (0)"
+  },
+  {
+    "id": "V_220910",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\",
+    "attr": "LimitBlankPasswordUse",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220913",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\",
+    "attr": "SCENoApplyLegacyAuditPolicy",
+    "result_value": "1"
+  },
+  {
+    "id": "V_250318",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\Transcription\\\\",
+    "attr": "EnableTranscripting",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220940",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0\\\\",
+    "attr": "NTLMMinClientSec",
+    "result_value": "0x20080000 (537395200)"
+  },
+  {
+    "id": "V_220941",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0\\\\",
+    "attr": "NTLMMinServerSec",
+    "result_value": "0x20080000 (537395200)"
+  },
+  {
+    "id": "V_220861",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "attr": "NoReadingPane",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220863",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client\\\\",
+    "attr": "AllowUnencryptedTraffic",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220862",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client\\\\",
+    "attr": "AllowBasic",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220865",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "attr": "AllowBasic",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220916",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters\\\\",
+    "attr": "SignSecureChannel",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220955",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Attachments\\\\",
+    "attr": "SaveZoneInformation",
+    "result_value": "0x00000002 (2) (or if the attr does not exist)"
+  },
+  {
+    "id": "V_220954",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\PushNotifications\\\\",
+    "attr": "NoToastApplicationNotificationOnLockScreen",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220951",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "attr": "EnableVirtualization",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220950",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "attr": "EnableLUA",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220814",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Group Policy\\\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}",
+    "attr": "NoGPOListChanges",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220815",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers\\\\",
+    "attr": "DisableWebPnPDownload",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220816",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer\\\\",
+    "attr": "NoWebServices",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220817",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers\\\\",
+    "attr": "DisableHTTPPrinting",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220868",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client\\\\",
+    "attr": "AllowDigest",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220947",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "attr": "ConsentPromptBehaviorUser",
+    "result_value": "0"
+  },
+  {
+    "id": "V_220944",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "attr": "FilterAdministratorToken",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220945",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "attr": "ConsentPromptBehaviorAdmin",
+    "result_value": "2 (Prompt for consent on the secure desktop)"
+  },
+  {
+    "id": "V_220827",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Explorer\\\\",
+    "attr": "NoAutoplayfornonVolume",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220860",
+    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\ScriptBlockLogging\\\\",
+    "attr": "EnableScriptBlockLogging",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220948",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "attr": "EnableInstallerDetection",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220942",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\FIPSAlgorithmPolicy\\\\",
+    "attr": "Enabled",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220949",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "attr": "EnableSecureUIAPaths",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220809",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Audit\\\\",
+    "attr": "ProcessCreationIncludeCmdLine_Enabled",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220808",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\WcmSvc\\\\wifinetworkmanager\\\\config\\\\",
+    "attr": "AutoConnectAllowedOEM",
+    "result_value": "0x00000000 (0)"
+  },
+  {
+    "id": "V_220920",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "attr": "InactivityTimeoutSecs",
+    "result_value": "0x00000384 (900) (or less, excluding '0' which is effectively disabled)"
+  },
+  {
+    "id": "V_220925",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters\\\\",
+    "attr": "RequireSecuritySignature",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220927",
+    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer\\\\Parameters\\\\",
+    "attr": "RequireSecuritySignature",
+    "result_value": "1"
+  },
+  {
+    "id": "V_220829",
+    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\policies\\\\Explorer\\\\",
+    "attr": "NoDriveTypeAutoRun",
+    "result_value": "0x000000ff (255)"
+  }
+]
+

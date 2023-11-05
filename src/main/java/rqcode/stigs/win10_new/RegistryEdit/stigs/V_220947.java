@@ -6,22 +6,22 @@ import rqcode.stigs.win10_new.RegistryEdit.RegistryEditScriptPattern;
 
 import java.util.Map;
 
-public class V_220920 extends RegistryEditPattern {
+public class V_220947 extends RegistryEditPattern {
     private final RegistryEditScriptPattern policyScriptPattern =
             new RegistryEditScriptPattern(
                     RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
                     Map.of(
                             "path", "\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\",
-                            "attr", "InactivityTimeoutSecs",
-                            "result_value", "0x00000384 (900) (or less, excluding '0' which is effectively disabled)"
+                            "attr", "ConsentPromptBehaviorUser",
+                            "result_value", "0"
                     ),
                     Map.of(
                             "path", "\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\",
-                            "attr", "InactivityTimeoutSecs",
-                            "result_value", "0x00000384 (900) (or less, excluding '0' which is effectively disabled)"));
+                            "attr", "ConsentPromptBehaviorUser",
+                            "result_value", "0"));
 
 
-    public V_220920() {
+    public V_220947() {
         pattern = this.policyScriptPattern;
     }
 

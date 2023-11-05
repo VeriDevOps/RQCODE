@@ -6,22 +6,22 @@ import rqcode.stigs.win10_new.RegistryEdit.RegistryEditScriptPattern;
 
 import java.util.Map;
 
-public class V_63321 extends RegistryEditPattern {
+public class V_220868 extends RegistryEditPattern {
     private final RegistryEditScriptPattern policyScriptPattern =
             new RegistryEditScriptPattern(
                     RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
                     Map.of(
-                            "path", "",
-                            "attr", "",
-                            "result_value", ""
+                            "path", "\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client\\",
+                            "attr", "AllowDigest",
+                            "result_value", "0"
                     ),
                     Map.of(
-                            "path", "",
-                            "attr", "",
-                            "result_value", ""));
+                            "path", "\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client\\",
+                            "attr", "AllowDigest",
+                            "result_value", "0"));
 
 
-    public V_63321() {
+    public V_220868() {
         pattern = this.policyScriptPattern;
     }
 

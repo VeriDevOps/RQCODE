@@ -1,4 +1,4 @@
-package rqcode.stigs.win10_new.AuditPolicy.stigs;
+package rqcode.stigs.win10_new.AuditPolicy.stigs.forparser;
 
 import java.io.BufferedReader;
 import java.io.File;
