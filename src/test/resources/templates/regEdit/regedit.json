@@ -1,273 +1,744 @@
 [
   {
+    "id": "V_220830",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Biometrics\\\\FacialFeatures",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Biometrics",
+    "attr": "EnhancedAntiSpoofing",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220831",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CloudContent",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DisableWindowsConsumerFeatures",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220932",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer",
+    "attr": "RestrictNullSessAccess",
+    "result_value": 1
+  },
+  {
+    "id": "V_220931",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "EveryoneIncludesAnonymous",
+    "result_value": 0
+  },
+  {
+    "id": "V_220930",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "RestrictAnonymous",
+    "result_value": 1
+  },
+  {
+    "id": "V_220937",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "NoLMHash",
+    "result_value": 1
+  },
+  {
+    "id": "V_220936",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos\\\\Parameters",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos",
+    "attr": "SupportedEncryptionTypes",
+    "result_value": "0x7ffffff8 (2147483640)"
+  },
+  {
+    "id": "V_220935",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA\\\\pku2u",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA",
+    "attr": "AllowOnlineID",
+    "result_value": 0
+  },
+  {
+    "id": "V_220934",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA\\\\MSV1_0",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA",
+    "attr": "allownullsessionfallback",
+    "result_value": 0
+  },
+  {
+    "id": "V_220939",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LDAP",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services",
+    "attr": "LDAPClientIntegrity",
+    "result_value": 1
+  },
+  {
+    "id": "V_220938",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "LmCompatibilityLevel",
+    "result_value": 5
+  },
+  {
+    "id": "V_220779",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog\\\\Application",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog",
+    "attr": "MaxSize",
+    "result_value": "0x00008000 (32768) (or greater)"
+  },
+  {
+    "id": "V_220824",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Rpc",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "RestrictRemoteClients",
+    "result_value": 1
+  },
+  {
+    "id": "V_220821",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings\\\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings",
+    "attr": "DCSettingIndex",
+    "result_value": 1
+  },
+  {
+    "id": "V_220820",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "EnumerateLocalUsers",
+    "result_value": 0
+  },
+  {
+    "id": "V_220823",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fAllowToGetHelp",
+    "result_value": 0
+  },
+  {
+    "id": "V_220822",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings\\\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings",
+    "attr": "ACSettingIndex",
+    "result_value": 1
+  },
+  {
+    "id": "V_220828",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "NoAutorun",
+    "result_value": 1
+  },
+  {
+    "id": "V_220902",
+    "path": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows\\\\Kernel DMA Protectio",
+    "path_short": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DeviceEnumerationPolicy",
+    "result_value": 0
+  },
+  {
+    "id": "V_220780",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog\\\\Security",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog",
+    "attr": "MaxSize",
+    "result_value": "0x000fa000 (1024000) "
+  },
+  {
+    "id": "V_220781",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog",
+    "attr": "MaxSize",
+    "result_value": "0x00008000 (32768)"
+  },
+  {
+    "id": "V_220839",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "PreXPSP2ShellProtocolBehavior",
+    "result_value": 0
+  },
+  {
+    "id": "V_220919",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "RequireStrongKey",
+    "result_value": 1
+  },
+  {
+    "id": "V_220727",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager\\\\kernel",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager",
+    "attr": "DisableExceptionChainValidation",
+    "result_value": "0x00000000 (0)"
+  },
+  {
+    "id": "V_220915",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "SealSecureChannel",
+    "result_value": 1
+  },
+  {
+    "id": "V_220914",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "RequireSignOrSeal",
+    "result_value": 1
+  },
+  {
+    "id": "V_220850",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fPromptForPassword",
+    "result_value": 1
+  },
+  {
+    "id": "V_220851",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fEncryptRPCTraffic",
+    "result_value": 1
+  },
+  {
+    "id": "V_220852",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "MinEncryptionLevel",
+    "result_value": 3
+  },
+  {
+    "id": "V_220853",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer\\\\Feeds",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer",
+    "attr": "DisableEnclosureDownload",
+    "result_value": 1
+  },
+  {
+    "id": "V_220854",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer\\\\Feeds",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer",
+    "attr": "AllowBasicAuthInClear",
+    "result_value": 0
+  },
+  {
+    "id": "V_220855",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Windows Search",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowIndexingEncryptedStoresOrItems",
+    "result_value": 0
+  },
+  {
+    "id": "V_220856",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Installer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "EnableUserControl",
+    "result_value": 0
+  },
+  {
+    "id": "V_220857",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Installer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AlwaysInstallElevated",
+    "result_value": 0
+  },
+  {
+    "id": "V_220858",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Installer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "SafeForScripting",
+    "result_value": 0
+  },
+  {
+    "id": "V_220859",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "DisableAutomaticRestartSignOn",
+    "result_value": 1
+  },
+  {
+    "id": "V_220866",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "AllowUnencryptedTraffic",
+    "result_value": 0
+  },
+  {
+    "id": "V_220792",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Personalization",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NoLockScreenCamera",
+    "result_value": 1
+  },
+  {
+    "id": "V_220797",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip",
+    "attr": "EnableICMPRedirect",
+    "result_value": 0
+  },
+  {
+    "id": "V_220796",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip",
+    "attr": "DisableIPSourceRouting",
+    "result_value": 2
+  },
+  {
+    "id": "V_220795",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip6\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip6",
+    "attr": "DisableIpSourceRouting",
+    "result_value": 2
+  },
+  {
+    "id": "V_220794",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Personalization",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NoLockScreenSlideshow",
+    "result_value": 1
+  },
+  {
+    "id": "V_220799",
+    "path": "HKLM:SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "LocalAccountTokenFilterPolicy",
+    "result_value": "0x00000000 (0)"
+  },
+  {
+    "id": "V_220798",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netbt\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netbt",
+    "attr": "NoattrReleaseOnDemand",
+    "result_value": 1
+  },
+  {
+    "id": "V_220731",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\mrxsmb10",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services",
+    "attr": "Start",
+    "result_value": "0x00000004 (4)"
+  },
+  {
+    "id": "V_220730",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer",
+    "attr": "SMB1",
+    "result_value": "0x00000000 (0)"
+  },
+  {
+    "id": "V_220842",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\Internet Settings",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "PreventCertErrorOverrides",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220841",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "PreventOverrideAppRepUnknown",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220840",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "PreventOverride",
+    "result_value": "0x00000001 (1)"
+  },
+  {
+    "id": "V_220847",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\PassportForWork\\\\PINComplexity",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\PassportForWork",
+    "attr": "MinimumPINLength",
+    "result_value": 6
+  },
+  {
+    "id": "V_220846",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\PassportForWork",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft",
+    "attr": "RequireSecurityDevice",
+    "result_value": 1
+  },
+  {
+    "id": "V_220845",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\GameDVR",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowGameDVR",
+    "result_value": "0x00000000 (0)"
+  },
+  {
     "id": "V_220844",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
     "attr": "EnabledV9",
     "result_value": "0x00000001 (1)"
   },
   {
     "id": "V_220849",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
     "attr": "fDisableCdm",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220848",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
     "attr": "DisablePasswordSaving",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220826",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\AppCompat\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\AppCompat",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
     "attr": "DisableInventory",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220926",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation",
     "attr": "EnablePlainTextPassword",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220832",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\CredUI\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\CredUI",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "EnumerateAdministrators",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220872",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CloudContent\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CloudContent",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
     "attr": "DisableThirdPartySuggestions",
     "result_value": "0x00000001 (1)"
   },
   {
     "id": "V_220870",
-    "path": "\\\\Software\\\\Policies\\\\Microsoft\\\\Windows\\\\System",
-    "attr": "AllowDomainPINLogon",
-    "result_value": "0"
+    "path": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows\\\\Syste",
+    "path_short": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowDomainPINLogon\n \n result_value data",
+    "result_value": 0
   },
   {
     "id": "V_220871",
-    "path": "\\\\Software\\\\Policies\\\\Microsoft\\\\WindowsInkWorkspace",
-    "attr": "AllowWindowsInkWorkspace",
-    "result_value": "1"
+    "path": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\WindowsInkWorkspac",
+    "path_short": "HKLM:\\\\Software\\\\Policies\\\\Microsoft",
+    "attr": "AllowWindowsInkWorkspace\n \n result_value data",
+    "result_value": 1
   },
   {
     "id": "V_220818",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos\\\\Parameters\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos\\\\Parameters",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos",
     "attr": "DevicePKInitEnabled",
-    "result_value": "1 (or if the attr does not exist)"
+    "result_value": 1
   },
   {
     "id": "V_220819",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
     "attr": "DontDisplayNetworkSelectionUI",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220800",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\SecurityProviders\\\\Wdigest\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\SecurityProviders\\\\Wdigest",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\SecurityProviders",
     "attr": "UseLogonCredential",
     "result_value": "0x00000000 (0)"
   },
   {
     "id": "V_220910",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
     "attr": "LimitBlankPasswordUse",
-    "result_value": "1"
+    "result_value": 1
+  },
+  {
+    "id": "V_220810",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CredentialsDelegation",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowProtectedCreds",
+    "result_value": "0x00000001 (1)"
   },
   {
     "id": "V_220913",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
     "attr": "SCENoApplyLegacyAuditPolicy",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_250318",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\Transcription\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\Transcription",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell",
     "attr": "EnableTranscripting",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220940",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
     "attr": "NTLMMinClientSec",
     "result_value": "0x20080000 (537395200)"
   },
   {
     "id": "V_220941",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
     "attr": "NTLMMinServerSec",
     "result_value": "0x20080000 (537395200)"
   },
   {
     "id": "V_220861",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explore",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "NoReadingPane",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220863",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
     "attr": "AllowUnencryptedTraffic",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220862",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
     "attr": "AllowBasic",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220865",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
     "attr": "AllowBasic",
-    "result_value": "0"
+    "result_value": 0
+  },
+  {
+    "id": "V_220917",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "DisablePasswordChange",
+    "result_value": 0
   },
   {
     "id": "V_220916",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
     "attr": "SignSecureChannel",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220955",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Attachments\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Attachments",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "SaveZoneInformation",
-    "result_value": "0x00000002 (2) (or if the attr does not exist)"
+    "result_value": "0x00000002 (2)"
   },
   {
     "id": "V_220954",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\PushNotifications\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\PushNotifications",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CurrentVersion",
     "attr": "NoToastApplicationNotificationOnLockScreen",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220951",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "EnableVirtualization",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220950",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "EnableLUA",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220814",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Group Policy\\\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Group Policy\\\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Group Policy",
     "attr": "NoGPOListChanges",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220815",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
     "attr": "DisableWebPnPDownload",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220816",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "NoWebServices",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220817",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
     "attr": "DisableHTTPPrinting",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220868",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
     "attr": "AllowDigest",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220947",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "ConsentPromptBehaviorUser",
-    "result_value": "0"
+    "result_value": 0
   },
   {
     "id": "V_220944",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "FilterAdministratorToken",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220945",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "ConsentPromptBehaviorAdmin",
-    "result_value": "2 (Prompt for consent on the secure desktop)"
+    "result_value": 2
   },
   {
     "id": "V_220827",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Explorer\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
     "attr": "NoAutoplayfornonVolume",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220860",
-    "path": "\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\ScriptBlockLogging\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\ScriptBlockLogging",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell",
     "attr": "EnableScriptBlockLogging",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220948",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "EnableInstallerDetection",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220942",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\FIPSAlgorithmPolicy\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\FIPSAlgorithmPolicy",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
     "attr": "Enabled",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220949",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "EnableSecureUIAPaths",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220809",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Audit\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Audit",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
     "attr": "ProcessCreationIncludeCmdLine_Enabled",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220808",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\WcmSvc\\\\wifinetworkmanager\\\\config\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\WcmSvc\\\\wifinetworkmanager\\\\config",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\WcmSvc\\\\wifinetworkmanager",
     "attr": "AutoConnectAllowedOEM",
     "result_value": "0x00000000 (0)"
   },
   {
+    "id": "V_220807",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc\\\\GroupPolicy",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc",
+    "attr": "fBlockNonDomain",
+    "result_value": 1
+  },
+  {
+    "id": "V_220806",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc\\\\GroupPolicy",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc",
+    "attr": "fMinimizeConnections",
+    "result_value": 1
+  },
+  {
+    "id": "V_220803",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Network Connections",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NC_ShowSharedAccessUI",
+    "result_value": "0x00000000 (0)"
+  },
+  {
+    "id": "V_220802",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\LanmanWorkstation",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowInsecureGuestAuth",
+    "result_value": "0x00000000 (0)"
+  },
+  {
     "id": "V_220920",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
     "attr": "InactivityTimeoutSecs",
-    "result_value": "0x00000384 (900) (or less, excluding '0' which is effectively disabled)"
+    "result_value": "0x00000384 (900)"
   },
   {
     "id": "V_220925",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation",
     "attr": "RequireSecuritySignature",
-    "result_value": "1"
+    "result_value": 1
   },
   {
     "id": "V_220927",
-    "path": "\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer\\\\Parameters\\\\",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer",
     "attr": "RequireSecuritySignature",
-    "result_value": "1"
+    "result_value": 1
+  },
+  {
+    "id": "V_220929",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "RestrictAnonymousSAM",
+    "result_value": 1
+  },
+  {
+    "id": "V_220943",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager\\\\",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager",
+    "attr": "ProtectionMode",
+    "result_value": 1
+  },
+  {
+    "id": "V_220867",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "DisableRunAs",
+    "result_value": 1
   },
   {
     "id": "V_220829",
-    "path": "\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\policies\\\\Explorer\\\\",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\policies",
     "attr": "NoDriveTypeAutoRun",
     "result_value": "0x000000ff (255)"
   }
 ]
-

@@ -12,12 +12,15 @@ private final STIGScriptPattern policyScriptPattern =
 new AuditPolicyScriptPattern(
 AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
 Map.of(
+"id", "$id",
 "guid", "$guid",
-"checkValue", "$parameter"
+"subcat_es", "$subcat_es",
+"subcat_eng", "$subcat_eng",
 ),
 Map.of(
+"id", "$id",
 "guid", "$guid",
-"checkValue", "$parameter",
+"parameter", "$parameter",
 "value", "$value"));
 
 public $id() {
