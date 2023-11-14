@@ -15,7 +15,7 @@ Map.of(
 "id", "$id",
 "guid", "$guid",
 "subcat_es", "$subcat_es",
-"subcat_eng", "$subcat_eng",
+"subcat_eng", "$subcat_eng"
 ),
 Map.of(
 "id", "$id",

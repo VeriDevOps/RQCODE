@@ -72,6 +72,14 @@
         "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}"
     },
     {
+        "id": "V_220751",
+        "parameter": "Failure",
+        "subcat_eng": "failure",
+        "subcat_es": "errores",
+        "value": "enable",
+        "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}"
+    },
+    {
         "id": "V_220752",
         "parameter": "Success",
         "subcat_eng": "success",

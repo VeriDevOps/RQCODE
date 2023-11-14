@@ -1,8 +1,5 @@
 package rqcode.stigs.win10_new.AuditPolicy;
 
-import com.fasterxml.jackson.annotation.JsonRawValue;
-import com.fasterxml.jackson.annotation.JsonRootName;
-
 public class RegEditTemplate {
     private String id;
     private String attr;

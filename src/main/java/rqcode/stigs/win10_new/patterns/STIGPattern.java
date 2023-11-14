@@ -2,10 +2,8 @@ package rqcode.stigs.win10_new.patterns;
 
 import rqcode.concepts.Checkable;
 import rqcode.concepts.Enforceable;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import com.profesorfalken.jpowershell.PowerShell;
+import com.profesorfalken.jpowershell.PowerShellResponse;
 import java.util.Map;
 
 public abstract class STIGPattern implements Checkable, Enforceable {
@@ -48,19 +46,8 @@ public abstract class STIGPattern implements Checkable, Enforceable {
     }
 
     public boolean checkProcess(String script, Map<String, String> settingValues) throws Exception {
-        Process process = Runtime.getRuntime().exec(script);
-
-        BufferedReader outputReader = new BufferedReader(new InputStreamReader(process.getInputStream(), StandardCharsets.UTF_8));
-
-        StringBuilder processOutput = new StringBuilder();
-        String inputLine;
-
-        while ((inputLine = outputReader.readLine()) != null) {
-            processOutput.append(inputLine + System.lineSeparator());
-        }
-
-        String result = processOutput.toString();
-
+        PowerShellResponse def = PowerShell.executeSingleCommand(script);
+        String result = def.getCommandOutput();
         return result.contains("OK");
     };
 
