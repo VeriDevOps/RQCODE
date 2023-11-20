@@ -13,7 +13,8 @@ public class V_220941 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0",
                             "attr", "NTLMMinServerSec",
-                            "result_value", "0x20080000 (537395200)"
+                            "result_value", "0x20080000 (537395200)",
+                            "id", "V_220941"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0",

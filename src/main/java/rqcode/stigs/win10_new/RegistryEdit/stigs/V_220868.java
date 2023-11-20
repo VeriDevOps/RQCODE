@@ -13,7 +13,8 @@ public class V_220868 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client",
                             "attr", "AllowDigest",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220868"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client",

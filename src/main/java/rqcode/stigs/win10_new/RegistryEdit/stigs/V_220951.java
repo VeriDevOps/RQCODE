@@ -13,7 +13,8 @@ public class V_220951 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "EnableVirtualization",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220951"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",

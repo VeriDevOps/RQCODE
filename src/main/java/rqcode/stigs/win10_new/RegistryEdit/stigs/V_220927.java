@@ -13,7 +13,8 @@ public class V_220927 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanManServer\\Parameters",
                             "attr", "RequireSecuritySignature",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220927"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanManServer\\Parameters",

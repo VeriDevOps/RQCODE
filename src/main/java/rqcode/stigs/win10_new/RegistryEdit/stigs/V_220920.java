@@ -13,7 +13,8 @@ public class V_220920 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "InactivityTimeoutSecs",
-                            "result_value", "0x00000384 (900)"
+                            "result_value", "0x00000384 (900)",
+                            "id", "V_220920"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",

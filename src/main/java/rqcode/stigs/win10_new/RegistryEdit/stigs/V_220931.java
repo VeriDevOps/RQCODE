@@ -13,7 +13,8 @@ public class V_220931 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "EveryoneIncludesAnonymous",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220931"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",

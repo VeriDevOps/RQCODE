@@ -13,7 +13,8 @@ public class V_220799 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "LocalAccountTokenFilterPolicy",
-                            "result_value", "0x00000000 (0)"
+                            "result_value", "0x00000000 (0)",
+                            "id", "V_220799"
                     ),
                     Map.of(
                             "path", "HKLM:SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",

@@ -13,7 +13,8 @@ public class V_220867 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service",
                             "attr", "DisableRunAs",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220867"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service",

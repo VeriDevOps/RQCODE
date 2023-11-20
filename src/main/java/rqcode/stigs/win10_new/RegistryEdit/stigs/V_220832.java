@@ -13,7 +13,8 @@ public class V_220832 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\CredUI",
                             "attr", "EnumerateAdministrators",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220832"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\CredUI",

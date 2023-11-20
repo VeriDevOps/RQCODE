@@ -13,7 +13,8 @@ public class V_220797 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",
                             "attr", "EnableICMPRedirect",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220797"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",

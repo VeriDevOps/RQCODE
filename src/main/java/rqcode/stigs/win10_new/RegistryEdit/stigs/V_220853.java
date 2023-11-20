@@ -13,7 +13,8 @@ public class V_220853 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\Feeds",
                             "attr", "DisableEnclosureDownload",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220853"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\Feeds",

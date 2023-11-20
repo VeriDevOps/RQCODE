@@ -13,7 +13,8 @@ public class V_220798 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netbt\\Parameters",
                             "attr", "NoattrReleaseOnDemand",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220798"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netbt\\Parameters",

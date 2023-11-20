@@ -13,7 +13,8 @@ public class V_220955 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments",
                             "attr", "SaveZoneInformation",
-                            "result_value", "0x00000002 (2)"
+                            "result_value", "0x00000002 (2)",
+                            "id", "V_220955"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments",

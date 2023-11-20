@@ -13,7 +13,8 @@ public class V_220847 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity",
                             "attr", "MinimumPINLength",
-                            "result_value", "6"
+                            "result_value", "6",
+                            "id", "V_220847"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity",

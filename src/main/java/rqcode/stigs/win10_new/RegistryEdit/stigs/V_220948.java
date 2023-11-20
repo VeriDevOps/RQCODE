@@ -13,7 +13,8 @@ public class V_220948 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "EnableInstallerDetection",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220948"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",

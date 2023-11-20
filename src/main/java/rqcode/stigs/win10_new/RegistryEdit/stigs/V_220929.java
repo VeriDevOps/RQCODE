@@ -13,7 +13,8 @@ public class V_220929 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "RestrictAnonymousSAM",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220929"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",

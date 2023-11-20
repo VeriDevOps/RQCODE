@@ -13,7 +13,8 @@ public class V_220814 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",
                             "attr", "NoGPOListChanges",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220814"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",

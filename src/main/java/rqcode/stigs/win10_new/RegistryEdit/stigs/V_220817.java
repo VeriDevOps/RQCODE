@@ -13,7 +13,8 @@ public class V_220817 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers",
                             "attr", "DisableHTTPPrinting",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220817"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers",

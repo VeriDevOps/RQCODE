@@ -13,7 +13,8 @@ public class V_220845 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\GameDVR",
                             "attr", "AllowGameDVR",
-                            "result_value", "0x00000000 (0)"
+                            "result_value", "0x00000000 (0)",
+                            "id", "V_220845"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\GameDVR",

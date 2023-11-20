@@ -13,7 +13,8 @@ public class V_220852 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "attr", "MinEncryptionLevel",
-                            "result_value", "3"
+                            "result_value", "3",
+                            "id", "V_220852"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",

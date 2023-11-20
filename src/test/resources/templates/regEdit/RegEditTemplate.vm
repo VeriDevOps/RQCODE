@@ -13,7 +13,8 @@ public class $id extends RegistryEditPattern {
                     Map.of(
                             "path", "$path",
                             "attr", "$attr",
-                            "result_value", "$result_value"
+                            "result_value", "$result_value",
+                            "id", "$id"
                     ),
                     Map.of(
                             "path", "$path",

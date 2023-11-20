@@ -13,7 +13,8 @@ public class V_220816 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
                             "attr", "NoWebServices",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220816"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",

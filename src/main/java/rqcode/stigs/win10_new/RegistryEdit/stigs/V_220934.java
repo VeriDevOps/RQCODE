@@ -13,7 +13,8 @@ public class V_220934 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA\\MSV1_0",
                             "attr", "allownullsessionfallback",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220934"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA\\MSV1_0",

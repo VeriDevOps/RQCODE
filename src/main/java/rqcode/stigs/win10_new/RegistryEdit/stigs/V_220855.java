@@ -13,7 +13,8 @@ public class V_220855 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search",
                             "attr", "AllowIndexingEncryptedStoresOrItems",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220855"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search",

@@ -3,6 +3,7 @@ package rqcode.stigs.win10_new.patterns;
 import rqcode.concepts.Checkable;
 import rqcode.concepts.Enforceable;
 import com.profesorfalken.jpowershell.PowerShell;
+import com.profesorfalken.jpowershell.PowerShellNotAvailableException;
 import com.profesorfalken.jpowershell.PowerShellResponse;
 import java.util.Map;
 
@@ -15,13 +16,13 @@ public abstract class STIGPattern implements Checkable, Enforceable {
     public EnforcementStatus enforce() {
         String script = pattern.prepareEnforceScript();
 
-        try {
-            Process process = Runtime.getRuntime().exec(script);
-            process.waitFor();
-        } catch (Exception e) {
-            e.printStackTrace();
+        try (PowerShell powerShell = PowerShell.openSession()) {        
+            PowerShellResponse response = powerShell.executeCommand(script);
+            response.getCommandOutput();
+        } catch(PowerShellNotAvailableException ex) {
             return EnforcementStatus.FAILURE;
-        }
+        } 
+
         return EnforcementStatus.SUCCESS;
     }
 
@@ -46,9 +47,13 @@ public abstract class STIGPattern implements Checkable, Enforceable {
     }
 
     public boolean checkProcess(String script, Map<String, String> settingValues) throws Exception {
-        PowerShellResponse def = PowerShell.executeSingleCommand(script);
-        String result = def.getCommandOutput();
-        return result.contains("OK");
+        try (PowerShell powerShell = PowerShell.openSession()) {        
+            PowerShellResponse response = powerShell.executeCommand(script);
+            String result = response.getCommandOutput();
+            return result.contains("OK");
+        } catch(PowerShellNotAvailableException ex) {
+            return false;  
+        } 
     };
 
     public STIGScriptPattern getPattern() {

@@ -13,7 +13,8 @@ public class V_250318 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\Transcription",
                             "attr", "EnableTranscripting",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_250318"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\Transcription",

@@ -13,7 +13,8 @@ public class V_220806 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WcmSvc\\GroupPolicy",
                             "attr", "fMinimizeConnections",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220806"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WcmSvc\\GroupPolicy",

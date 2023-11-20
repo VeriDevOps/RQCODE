@@ -13,7 +13,8 @@ public class V_220839 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
                             "attr", "PreXPSP2ShellProtocolBehavior",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220839"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",

@@ -13,7 +13,8 @@ public class V_220942 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\FIPSAlgorithmPolicy",
                             "attr", "Enabled",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220942"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\FIPSAlgorithmPolicy",

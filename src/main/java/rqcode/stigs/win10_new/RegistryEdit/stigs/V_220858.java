@@ -13,7 +13,8 @@ public class V_220858 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",
                             "attr", "SafeForScripting",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220858"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",

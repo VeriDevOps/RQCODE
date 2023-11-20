@@ -13,7 +13,8 @@ public class V_220823 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "attr", "fAllowToGetHelp",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220823"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",

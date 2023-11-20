@@ -13,7 +13,8 @@ public class V_220860 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging",
                             "attr", "EnableScriptBlockLogging",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220860"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging",

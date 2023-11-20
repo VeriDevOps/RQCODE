@@ -13,7 +13,8 @@ public class V_220794 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization",
                             "attr", "NoLockScreenSlideshow",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220794"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization",

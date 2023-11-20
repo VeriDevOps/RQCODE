@@ -13,7 +13,8 @@ public class V_220945 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "ConsentPromptBehaviorAdmin",
-                            "result_value", "2"
+                            "result_value", "2",
+                            "id", "V_220945"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",

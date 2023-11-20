@@ -13,7 +13,8 @@ public class V_220829 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer",
                             "attr", "NoDriveTypeAutoRun",
-                            "result_value", "0x000000ff (255)"
+                            "result_value", "0x000000ff (255)",
+                            "id", "V_220829"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer",

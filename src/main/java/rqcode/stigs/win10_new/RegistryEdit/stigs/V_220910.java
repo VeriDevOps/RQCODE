@@ -13,7 +13,8 @@ public class V_220910 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "LimitBlankPasswordUse",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220910"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",

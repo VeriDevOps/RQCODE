@@ -13,7 +13,8 @@ public class V_220819 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",
                             "attr", "DontDisplayNetworkSelectionUI",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220819"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",

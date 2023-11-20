@@ -13,7 +13,8 @@ public class V_220943 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\",
                             "attr", "ProtectionMode",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220943"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\",

@@ -13,7 +13,8 @@ public class V_220802 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\LanmanWorkstation",
                             "attr", "AllowInsecureGuestAuth",
-                            "result_value", "0x00000000 (0)"
+                            "result_value", "0x00000000 (0)",
+                            "id", "V_220802"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\LanmanWorkstation",

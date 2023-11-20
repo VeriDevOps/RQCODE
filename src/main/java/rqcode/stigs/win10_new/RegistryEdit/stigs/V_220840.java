@@ -13,7 +13,8 @@ public class V_220840 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter",
                             "attr", "PreventOverride",
-                            "result_value", "0x00000001 (1)"
+                            "result_value", "0x00000001 (1)",
+                            "id", "V_220840"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter",

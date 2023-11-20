@@ -13,7 +13,8 @@ public class V_220810 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CredentialsDelegation",
                             "attr", "AllowProtectedCreds",
-                            "result_value", "0x00000001 (1)"
+                            "result_value", "0x00000001 (1)",
+                            "id", "V_220810"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CredentialsDelegation",

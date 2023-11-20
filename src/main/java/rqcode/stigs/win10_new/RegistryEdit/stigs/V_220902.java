@@ -13,7 +13,8 @@ public class V_220902 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protectio",
                             "attr", "DeviceEnumerationPolicy",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220902"
                     ),
                     Map.of(
                             "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protectio",

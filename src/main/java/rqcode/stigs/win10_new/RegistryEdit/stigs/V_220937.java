@@ -13,7 +13,8 @@ public class V_220937 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "NoLMHash",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220937"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",

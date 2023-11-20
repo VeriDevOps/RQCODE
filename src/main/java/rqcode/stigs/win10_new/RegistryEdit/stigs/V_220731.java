@@ -13,7 +13,8 @@ public class V_220731 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\mrxsmb10",
                             "attr", "Start",
-                            "result_value", "0x00000004 (4)"
+                            "result_value", "0x00000004 (4)",
+                            "id", "V_220731"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\mrxsmb10",

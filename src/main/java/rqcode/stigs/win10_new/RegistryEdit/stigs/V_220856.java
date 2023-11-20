@@ -13,7 +13,8 @@ public class V_220856 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",
                             "attr", "EnableUserControl",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220856"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",

@@ -13,7 +13,8 @@ public class V_220861 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explore",
                             "attr", "NoReadingPane",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220861"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explore",

@@ -13,7 +13,8 @@ public class V_220851 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "attr", "fEncryptRPCTraffic",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220851"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",

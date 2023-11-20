@@ -13,7 +13,8 @@ public class V_220796 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",
                             "attr", "DisableIPSourceRouting",
-                            "result_value", "2"
+                            "result_value", "2",
+                            "id", "V_220796"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",

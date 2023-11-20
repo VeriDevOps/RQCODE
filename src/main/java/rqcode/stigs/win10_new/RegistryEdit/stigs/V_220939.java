@@ -13,7 +13,8 @@ public class V_220939 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LDAP",
                             "attr", "LDAPClientIntegrity",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220939"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LDAP",

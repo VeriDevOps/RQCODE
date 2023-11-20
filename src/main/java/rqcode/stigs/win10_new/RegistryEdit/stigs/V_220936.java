@@ -13,7 +13,8 @@ public class V_220936 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",
                             "attr", "SupportedEncryptionTypes",
-                            "result_value", "0x7ffffff8 (2147483640)"
+                            "result_value", "0x7ffffff8 (2147483640)",
+                            "id", "V_220936"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",

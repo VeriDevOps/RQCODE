@@ -13,7 +13,8 @@ public class V_220913 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "SCENoApplyLegacyAuditPolicy",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220913"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",

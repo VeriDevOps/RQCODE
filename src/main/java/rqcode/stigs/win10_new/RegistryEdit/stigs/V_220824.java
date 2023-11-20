@@ -13,7 +13,8 @@ public class V_220824 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Rpc",
                             "attr", "RestrictRemoteClients",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220824"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Rpc",

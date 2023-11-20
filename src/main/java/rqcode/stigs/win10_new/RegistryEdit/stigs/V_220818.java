@@ -13,7 +13,8 @@ public class V_220818 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",
                             "attr", "DevicePKInitEnabled",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220818"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",

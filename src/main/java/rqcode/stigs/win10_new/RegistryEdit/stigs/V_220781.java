@@ -13,7 +13,8 @@ public class V_220781 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog\\System",
                             "attr", "MaxSize",
-                            "result_value", "0x00008000 (32768)"
+                            "result_value", "0x00008000 (32768)",
+                            "id", "V_220781"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog\\System",

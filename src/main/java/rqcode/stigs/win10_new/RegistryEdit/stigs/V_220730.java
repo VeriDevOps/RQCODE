@@ -13,7 +13,8 @@ public class V_220730 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
                             "attr", "SMB1",
-                            "result_value", "0x00000000 (0)"
+                            "result_value", "0x00000000 (0)",
+                            "id", "V_220730"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters",

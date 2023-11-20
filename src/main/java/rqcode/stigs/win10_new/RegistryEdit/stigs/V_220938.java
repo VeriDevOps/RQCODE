@@ -13,7 +13,8 @@ public class V_220938 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "LmCompatibilityLevel",
-                            "result_value", "5"
+                            "result_value", "5",
+                            "id", "V_220938"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",

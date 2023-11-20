@@ -13,7 +13,8 @@ public class V_220954 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications",
                             "attr", "NoToastApplicationNotificationOnLockScreen",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220954"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications",

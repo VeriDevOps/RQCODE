@@ -13,7 +13,8 @@ public class V_220917 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "attr", "DisablePasswordChange",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220917"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",

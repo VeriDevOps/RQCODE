@@ -13,7 +13,8 @@ public class V_220809 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Audit",
                             "attr", "ProcessCreationIncludeCmdLine_Enabled",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220809"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Audit",

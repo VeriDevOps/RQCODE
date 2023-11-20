@@ -13,7 +13,8 @@ public class V_220935 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA\\pku2u",
                             "attr", "AllowOnlineID",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220935"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA\\pku2u",

@@ -13,7 +13,8 @@ public class V_220826 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat",
                             "attr", "DisableInventory",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220826"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat",

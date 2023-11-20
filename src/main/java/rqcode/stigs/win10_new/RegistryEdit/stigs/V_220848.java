@@ -13,7 +13,8 @@ public class V_220848 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "attr", "DisablePasswordSaving",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220848"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",

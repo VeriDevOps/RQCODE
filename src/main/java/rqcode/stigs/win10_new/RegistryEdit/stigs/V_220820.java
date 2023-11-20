@@ -13,7 +13,8 @@ public class V_220820 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",
                             "attr", "EnumerateLocalUsers",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220820"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",

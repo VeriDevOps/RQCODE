@@ -13,7 +13,8 @@ public class V_220872 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent",
                             "attr", "DisableThirdPartySuggestions",
-                            "result_value", "0x00000001 (1)"
+                            "result_value", "0x00000001 (1)",
+                            "id", "V_220872"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent",

@@ -13,7 +13,8 @@ public class V_220800 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\Wdigest",
                             "attr", "UseLogonCredential",
-                            "result_value", "0x00000000 (0)"
+                            "result_value", "0x00000000 (0)",
+                            "id", "V_220800"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\Wdigest",

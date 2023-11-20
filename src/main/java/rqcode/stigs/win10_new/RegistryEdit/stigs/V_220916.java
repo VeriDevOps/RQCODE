@@ -13,7 +13,8 @@ public class V_220916 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "attr", "SignSecureChannel",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220916"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",

@@ -13,7 +13,8 @@ public class V_220919 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "attr", "RequireStrongKey",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220919"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",

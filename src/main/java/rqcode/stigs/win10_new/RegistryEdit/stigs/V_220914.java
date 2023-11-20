@@ -13,7 +13,8 @@ public class V_220914 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "attr", "RequireSignOrSeal",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220914"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",

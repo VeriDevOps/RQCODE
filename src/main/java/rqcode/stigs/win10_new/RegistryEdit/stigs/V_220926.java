@@ -13,7 +13,8 @@ public class V_220926 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters",
                             "attr", "EnablePlainTextPassword",
-                            "result_value", "0"
+                            "result_value", "0",
+                            "id", "V_220926"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters",

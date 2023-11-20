@@ -13,7 +13,8 @@ public class V_220849 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "attr", "fDisableCdm",
-                            "result_value", "1"
+                            "result_value", "1",
+                            "id", "V_220849"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
