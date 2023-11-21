@@ -13,14 +13,20 @@ public class V_220920 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "InactivityTimeoutSecs",
-                            "result_value", "0x00000384 (900)",
+                            "result_value", "900",
                             "id", "V_220920"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "InactivityTimeoutSecs",
-                            "result_value", "0x00000384 (900)"));
+                            "result_value", "900"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control approval mode for the built-in Administrator must be enabled."
+                        )
+                );
 
 
     public V_220920() {

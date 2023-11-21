@@ -13,14 +13,20 @@ public class V_220841 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter",
                             "attr", "PreventOverrideAppRepUnknown",
-                            "result_value", "0x00000001 (1)",
+                            "result_value", "1",
                             "id", "V_220841"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge",
                             "attr", "PreventOverrideAppRepUnknown",
-                            "result_value", "0x00000001 (1)"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Camera access from the lock screen must be disabled."
+                        )
+                );
 
 
     public V_220841() {

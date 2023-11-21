@@ -20,7 +20,13 @@ public class V_220935 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA\\pku2u",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA",
                             "attr", "AllowOnlineID",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 systems must use a BitLocker PIN with a minimum length of 6 digits for pre-boot authentication."
+                        )
+                );
 
 
     public V_220935() {

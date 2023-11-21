@@ -20,7 +20,13 @@ public class V_220821 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings",
                             "attr", "DCSettingIndex",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "PKU2U authentication using online identities must be prevented."
+                        )
+                );
 
 
     public V_220821() {

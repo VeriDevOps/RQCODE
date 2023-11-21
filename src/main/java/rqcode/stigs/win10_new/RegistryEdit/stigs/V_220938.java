@@ -20,7 +20,13 @@ public class V_220938 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "LmCompatibilityLevel",
-                            "result_value", "5"));
+                            "result_value", "5"
+                            
+                        ),
+                    Map.of(
+                            "description", "Anonymous enumeration of shares must be restricted."
+                        )
+                );
 
 
     public V_220938() {

@@ -13,14 +13,20 @@ public class V_220800 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\Wdigest",
                             "attr", "UseLogonCredential",
-                            "result_value", "0x00000000 (0)",
+                            "result_value", "0",
                             "id", "V_220800"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\Wdigest",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders",
                             "attr", "UseLogonCredential",
-                            "result_value", "0x00000000 (0)"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Local drives must be prevented from sharing with Remote Desktop Session Hosts."
+                        )
+                );
 
 
     public V_220800() {

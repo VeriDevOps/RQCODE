@@ -13,14 +13,20 @@ public class V_220781 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog\\System",
                             "attr", "MaxSize",
-                            "result_value", "0x00008000 (32768)",
+                            "result_value", "32768",
                             "id", "V_220781"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog",
                             "attr", "MaxSize",
-                            "result_value", "0x00008000 (32768)"));
+                            "result_value", "32768"
+                            
+                        ),
+                    Map.of(
+                            "description", "The setting to allow Microsoft accounts to be optional for modern style apps must be enabled."
+                        )
+                );
 
 
     public V_220781() {

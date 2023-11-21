@@ -8,12 +8,14 @@ public abstract class STIGScriptPattern {
     private final String enforceScript;
     private final Map<String, String> checkValues;
     private final Map<String, String> enforceValues;
+    private final Map<String, String> additionalInfo;
 
-    public STIGScriptPattern(String checkScript, String enforceScript, Map<String, String> checkValues, Map<String, String> enforceValues) {
+    public STIGScriptPattern(String checkScript, String enforceScript, Map<String, String> checkValues, Map<String, String> enforceValues, Map<String, String> additionalInfo) {
         this.checkScript = checkScript;
         this.enforceScript = enforceScript;
         this.checkValues = checkValues;
         this.enforceValues = enforceValues;
+        this.additionalInfo = additionalInfo;
     }
 
     public String prepareEnforceScript() {
@@ -30,5 +32,9 @@ public abstract class STIGScriptPattern {
 
     public Map<String, String> getCheckValues() {
         return checkValues;
+    }
+
+    public Map<String, String> getAdditionalInfo() {
+        return additionalInfo;
     }
 }

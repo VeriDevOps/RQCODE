@@ -13,14 +13,20 @@ public class V_220840 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter",
                             "attr", "PreventOverride",
-                            "result_value", "0x00000001 (1)",
+                            "result_value", "1",
                             "id", "V_220840"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge",
                             "attr", "PreventOverride",
-                            "result_value", "0x00000001 (1)"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to prevent Internet Control Message Protocol (ICMP) redirects from overriding Open Shortest Path First (OSPF) generated routes."
+                        )
+                );
 
 
     public V_220840() {

@@ -20,7 +20,13 @@ public class V_220948 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "EnableInstallerDetection",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control must run all administrators in Admin Approval Mode, enabling UAC."
+                        )
+                );
 
 
     public V_220948() {

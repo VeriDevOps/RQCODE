@@ -20,7 +20,13 @@ public class V_220947 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "ConsentPromptBehaviorUser",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Virtualization Based Security must be enabled on Windows 10 with the platform security level configured to Secure Boot or Secure Boot with DMA Protection."
+                        )
+                );
 
 
     public V_220947() {

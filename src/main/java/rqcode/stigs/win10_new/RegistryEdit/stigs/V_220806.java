@@ -20,7 +20,13 @@ public class V_220806 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WcmSvc\\GroupPolicy",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WcmSvc",
                             "attr", "fMinimizeConnections",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Early Launch Antimalware, Boot-Start Driver Initialization Policy must prevent boot drivers."
+                        )
+                );
 
 
     public V_220806() {

@@ -20,7 +20,13 @@ public class V_220937 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "NoLMHash",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "If Enhanced diagnostic data is enabled it must be limited to the minimum required to support Windows Analytics."
+                        )
+                );
 
 
     public V_220937() {

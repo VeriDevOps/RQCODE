@@ -20,7 +20,13 @@ public class V_220849 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "fDisableCdm",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to ignore NetBIOS attr release requests except from WINS servers."
+                        )
+                );
 
 
     public V_220849() {

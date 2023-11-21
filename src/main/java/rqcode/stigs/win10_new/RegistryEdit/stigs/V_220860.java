@@ -20,7 +20,13 @@ public class V_220860 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell",
                             "attr", "EnableScriptBlockLogging",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control must virtualize file and registry write failures to per-user locations."
+                        )
+                );
 
 
     public V_220860() {

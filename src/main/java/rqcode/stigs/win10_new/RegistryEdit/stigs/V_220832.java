@@ -20,7 +20,13 @@ public class V_220832 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\CredUI",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "EnumerateAdministrators",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Users must not be allowed to ignore Windows Defender SmartScreen filter warnings for unverified files in Microsoft Edge."
+                        )
+                );
 
 
     public V_220832() {

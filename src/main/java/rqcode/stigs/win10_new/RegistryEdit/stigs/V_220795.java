@@ -20,7 +20,13 @@ public class V_220795 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6",
                             "attr", "DisableIpSourceRouting",
-                            "result_value", "2"));
+                            "result_value", "2"
+                            
+                        ),
+                    Map.of(
+                            "description", "Basic authentication for RSS feeds over HTTP must not be used."
+                        )
+                );
 
 
     public V_220795() {

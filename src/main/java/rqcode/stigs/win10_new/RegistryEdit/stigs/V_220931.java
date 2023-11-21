@@ -20,7 +20,13 @@ public class V_220931 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "EveryoneIncludesAnonymous",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Explorer Data Execution Prevention must be enabled."
+                        )
+                );
 
 
     public V_220931() {

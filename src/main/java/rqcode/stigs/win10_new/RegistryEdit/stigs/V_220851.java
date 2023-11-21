@@ -20,7 +20,13 @@ public class V_220851 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "fEncryptRPCTraffic",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 Kernel (Direct Memory Access) DMA Protection must be enabled."
+                        )
+                );
 
 
     public V_220851() {

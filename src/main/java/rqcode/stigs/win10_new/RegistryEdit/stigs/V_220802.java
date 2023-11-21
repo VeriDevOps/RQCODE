@@ -13,14 +13,20 @@ public class V_220802 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\LanmanWorkstation",
                             "attr", "AllowInsecureGuestAuth",
-                            "result_value", "0x00000000 (0)",
+                            "result_value", "0",
                             "id", "V_220802"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\LanmanWorkstation",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "AllowInsecureGuestAuth",
-                            "result_value", "0x00000000 (0)"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control must automatically deny elevation requests for standard users."
+                        )
+                );
 
 
     public V_220802() {

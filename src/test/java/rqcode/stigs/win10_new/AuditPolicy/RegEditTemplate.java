@@ -6,6 +6,7 @@ public class RegEditTemplate {
     private String path;
     private String path_short;
     private String result_value;
+    private String description;
 
     public String getId() {
         return id;
@@ -45,5 +46,13 @@ public class RegEditTemplate {
 
     public void setResult_value(String result_value) {
         this.result_value = result_value;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

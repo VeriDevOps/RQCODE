@@ -20,7 +20,13 @@ public class V_220820 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "EnumerateLocalUsers",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "NTLM must be prevented from falling back to a Null session."
+                        )
+                );
 
 
     public V_220820() {

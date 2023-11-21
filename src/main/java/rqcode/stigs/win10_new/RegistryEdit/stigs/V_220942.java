@@ -20,7 +20,13 @@ public class V_220942 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\FIPSAlgorithmPolicy",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "Enabled",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Group Policy objects must be reprocessed even if they have not changed."
+                        )
+                );
 
 
     public V_220942() {

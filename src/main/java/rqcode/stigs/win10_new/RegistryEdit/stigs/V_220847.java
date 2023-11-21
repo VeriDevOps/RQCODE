@@ -20,7 +20,13 @@ public class V_220847 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\PassportForWork",
                             "attr", "MinimumPINLength",
-                            "result_value", "6"));
+                            "result_value", "6"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to prevent IP source routing."
+                        )
+                );
 
 
     public V_220847() {

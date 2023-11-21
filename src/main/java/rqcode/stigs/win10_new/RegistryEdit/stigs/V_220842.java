@@ -13,14 +13,20 @@ public class V_220842 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Internet Settings",
                             "attr", "PreventCertErrorOverrides",
-                            "result_value", "0x00000001 (1)",
+                            "result_value", "1",
                             "id", "V_220842"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Internet Settings",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge",
                             "attr", "PreventCertErrorOverrides",
-                            "result_value", "0x00000001 (1)"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Remote Management (WinRM) service must not allow unencrypted traffic."
+                        )
+                );
 
 
     public V_220842() {

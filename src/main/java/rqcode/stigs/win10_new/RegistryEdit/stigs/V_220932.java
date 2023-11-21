@@ -20,7 +20,13 @@ public class V_220932 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanManServer\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanManServer",
                             "attr", "RestrictNullSessAccess",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Defender SmartScreen for Explorer must be enabled."
+                        )
+                );
 
 
     public V_220932() {

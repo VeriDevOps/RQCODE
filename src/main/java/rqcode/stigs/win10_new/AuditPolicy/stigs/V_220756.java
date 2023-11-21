@@ -11,17 +11,22 @@ public class V_220756 extends AuditPolicyPattern {
 private final STIGScriptPattern policyScriptPattern =
 new AuditPolicyScriptPattern(
 AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
-Map.of(
-"id", "V_220756",
-"guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
-"subcat_es", "acierto",
-"subcat_eng", "success"
-),
-Map.of(
-"id", "V_220756",
-"guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
-"parameter", "Success",
-"value", "enable"));
+                    Map.of(
+                        "id", "V_220756",
+                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "subcat_es", "acierto",
+                        "subcat_eng", "success"
+                    ),
+                    Map.of(
+                        "id", "V_220756",
+                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "parameter", "Success",
+                        "value", "enable"
+                        ),
+                    Map.of(
+                        "description", "The system must be configured to audit Logon/Logoff - Group Membership successes."
+                        )
+                );
 
 public V_220756() {
 pattern = this.policyScriptPattern;

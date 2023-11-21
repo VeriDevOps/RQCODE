@@ -20,7 +20,13 @@ public class V_220848 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "DisablePasswordSaving",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Server Message Block (SMB) v1 protocol must be disabled on the SMB client."
+                        )
+                );
 
 
     public V_220848() {

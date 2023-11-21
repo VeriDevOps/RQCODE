@@ -20,7 +20,13 @@ public class V_220945 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "ConsentPromptBehaviorAdmin",
-                            "result_value", "2"));
+                            "result_value", "2"
+                            
+                        ),
+                    Map.of(
+                            "description", "Zone information must be preserved when saving attachments."
+                        )
+                );
 
 
     public V_220945() {

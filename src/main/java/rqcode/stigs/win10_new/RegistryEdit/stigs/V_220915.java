@@ -20,7 +20,13 @@ public class V_220915 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon",
                             "attr", "SealSecureChannel",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Solicited Remote Assistance must not be allowed."
+                        )
+                );
 
 
     public V_220915() {

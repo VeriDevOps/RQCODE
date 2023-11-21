@@ -20,7 +20,13 @@ public class V_220824 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Rpc",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "RestrictRemoteClients",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Kerberos encryption types must be configured to prevent the use of DES and RC4 encryption suites."
+                        )
+                );
 
 
     public V_220824() {

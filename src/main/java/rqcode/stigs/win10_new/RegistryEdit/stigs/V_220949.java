@@ -20,7 +20,13 @@ public class V_220949 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "EnableSecureUIAPaths",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Downloading print driver packages over HTTP must be prevented."
+                        )
+                );
 
 
     public V_220949() {

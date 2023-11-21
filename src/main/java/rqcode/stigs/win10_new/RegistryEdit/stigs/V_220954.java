@@ -20,7 +20,13 @@ public class V_220954 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion",
                             "attr", "NoToastApplicationNotificationOnLockScreen",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "PowerShell Transcription must be enabled on Windows 10."
+                        )
+                );
 
 
     public V_220954() {

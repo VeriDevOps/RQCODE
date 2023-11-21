@@ -20,7 +20,13 @@ public class V_220817 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "DisableHTTPPrinting",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Remote Management (WinRM) service must not use Basic authentication."
+                        )
+                );
 
 
     public V_220817() {

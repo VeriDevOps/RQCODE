@@ -20,7 +20,13 @@ public class V_220815 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "DisableWebPnPDownload",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Remote Management (WinRM) client must not allow unencrypted traffic."
+                        )
+                );
 
 
     public V_220815() {

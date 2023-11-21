@@ -20,7 +20,13 @@ public class V_220814 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy",
                             "attr", "NoGPOListChanges",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Explorer Preview pane must be disabled for Windows 10."
+                        )
+                );
 
 
     public V_220814() {

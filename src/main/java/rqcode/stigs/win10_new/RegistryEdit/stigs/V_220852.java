@@ -20,7 +20,13 @@ public class V_220852 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "MinEncryptionLevel",
-                            "result_value", "3"));
+                            "result_value", "3"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Security event log size must be configured to 1024000 KB or greater."
+                        )
+                );
 
 
     public V_220852() {

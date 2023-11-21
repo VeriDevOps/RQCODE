@@ -50,6 +50,7 @@ public class AuditPolGenerateTest {
             context.put("subcat_es", auditPolTemplate.getSubcat_es());
             context.put("value", auditPolTemplate.getValue());
             context.put("guid", auditPolTemplate.getGuid());
+            context.put("description", auditPolTemplate.getDescription());
 
             // Generate the Java code
             StringWriter writer = new StringWriter();

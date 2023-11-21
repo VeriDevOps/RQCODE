@@ -20,7 +20,13 @@ public class V_220827 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "NoAutoplayfornonVolume",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Toast notifications to the lock screen must be turned off."
+                        )
+                );
 
 
     public V_220827() {

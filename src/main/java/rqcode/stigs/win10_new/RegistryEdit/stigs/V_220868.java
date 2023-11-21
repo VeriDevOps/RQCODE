@@ -20,7 +20,13 @@ public class V_220868 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM",
                             "attr", "AllowDigest",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The computer account password must not be prevented from being reset."
+                        )
+                );
 
 
     public V_220868() {

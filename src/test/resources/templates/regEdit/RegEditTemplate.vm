@@ -20,7 +20,13 @@ public class $id extends RegistryEditPattern {
                             "path", "$path",
                             "path_short", "$path_short",
                             "attr", "$attr",
-                            "result_value", "$result_value"));
+                            "result_value", "$result_value"
+                            
+                        ),
+                    Map.of(
+                            "description", "$description"
+                        )
+                );
 
 
     public $id() {

@@ -20,7 +20,13 @@ public class V_220850 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "fPromptForPassword",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The default autorun behavior must be configured to prevent autorun commands."
+                        )
+                );
 
 
     public V_220850() {

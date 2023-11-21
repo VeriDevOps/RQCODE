@@ -20,7 +20,13 @@ public class V_220951 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "EnableVirtualization",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to meet the minimum session security requirement for NTLM SSP based clients."
+                        )
+                );
 
 
     public V_220951() {

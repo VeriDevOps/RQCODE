@@ -49,6 +49,7 @@ public class RegEditGenerateTest {
             context.put("path_short", regEditTemplate.getPath_short());
             context.put("attr", regEditTemplate.getAttr());
             context.put("result_value", regEditTemplate.getResult_value());
+            context.put("description", regEditTemplate.getDescription());
 
             // Generate the Java code
             StringWriter writer = new StringWriter();

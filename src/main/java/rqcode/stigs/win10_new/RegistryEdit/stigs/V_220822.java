@@ -20,7 +20,13 @@ public class V_220822 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings",
                             "attr", "ACSettingIndex",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The LanMan authentication level must be set to send NTLMv2 response only, and to refuse LM and NTLM."
+                        )
+                );
 
 
     public V_220822() {

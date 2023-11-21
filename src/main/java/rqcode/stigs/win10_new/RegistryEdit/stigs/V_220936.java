@@ -13,14 +13,20 @@ public class V_220936 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",
                             "attr", "SupportedEncryptionTypes",
-                            "result_value", "0x7ffffff8 (2147483640)",
+                            "result_value", "2147483640",
                             "id", "V_220936"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos",
                             "attr", "SupportedEncryptionTypes",
-                            "result_value", "0x7ffffff8 (2147483640)"));
+                            "result_value", "2147483640"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 systems must use a BitLocker PIN for pre-boot authentication."
+                        )
+                );
 
 
     public V_220936() {

@@ -20,7 +20,13 @@ public class V_220917 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon",
                             "attr", "DisablePasswordChange",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Local accounts with blank passwords must be restricted to prevent access from the network."
+                        )
+                );
 
 
     public V_220917() {

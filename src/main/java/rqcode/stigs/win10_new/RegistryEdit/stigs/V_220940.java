@@ -13,14 +13,20 @@ public class V_220940 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0",
                             "attr", "NTLMMinClientSec",
-                            "result_value", "0x20080000 (537395200)",
+                            "result_value", "537395200",
                             "id", "V_220940"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "NTLMMinClientSec",
-                            "result_value", "0x20080000 (537395200)"));
+                            "result_value", "537395200"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 should be configured to prevent users from receiving suggestions for third-party or additional applications."
+                        )
+                );
 
 
     public V_220940() {

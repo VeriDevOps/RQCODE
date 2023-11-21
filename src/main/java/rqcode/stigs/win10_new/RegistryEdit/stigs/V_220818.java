@@ -20,7 +20,13 @@ public class V_220818 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos\\Parameters",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Kerberos",
                             "attr", "DevicePKInitEnabled",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 must be configured to disable Windows Game Recording and Broadcasting."
+                        )
+                );
 
 
     public V_220818() {

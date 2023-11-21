@@ -20,7 +20,13 @@ public class V_220910 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "LimitBlankPasswordUse",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Passwords must not be saved in the Remote Desktop Client."
+                        )
+                );
 
 
     public V_220910() {

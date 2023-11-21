@@ -20,7 +20,13 @@ public class V_220857 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "AlwaysInstallElevated",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Structured Exception Handling Overwrite Protection (SEHOP) must be enabled."
+                        )
+                );
 
 
     public V_220857() {

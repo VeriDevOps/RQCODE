@@ -20,7 +20,13 @@ public class V_220798 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netbt\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netbt",
                             "attr", "NoattrReleaseOnDemand",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Installer Always install with elevated privileges must be disabled."
+                        )
+                );
 
 
     public V_220798() {

@@ -20,7 +20,13 @@ public class V_220809 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Audit",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "attr", "ProcessCreationIncludeCmdLine_Enabled",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Web publishing and online ordering wizards must be prevented from downloading a list of providers."
+                        )
+                );
 
 
     public V_220809() {

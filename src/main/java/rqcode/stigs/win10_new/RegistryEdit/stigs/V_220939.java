@@ -20,7 +20,13 @@ public class V_220939 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LDAP",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services",
                             "attr", "LDAPClientIntegrity",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to prevent anonymous users from having the same rights as the Everyone group."
+                        )
+                );
 
 
     public V_220939() {

@@ -20,7 +20,13 @@ public class V_220926 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation",
                             "attr", "EnablePlainTextPassword",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 must be configured to prevent certificate error overrides in Microsoft Edge."
+                        )
+                );
 
 
     public V_220926() {

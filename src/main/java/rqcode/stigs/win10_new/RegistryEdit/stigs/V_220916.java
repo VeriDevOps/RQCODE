@@ -20,7 +20,13 @@ public class V_220916 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon",
                             "attr", "SignSecureChannel",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows 10 must be configured to enable Remote host allows delegation of non-exportable credentials."
+                        )
+                );
 
 
     public V_220916() {

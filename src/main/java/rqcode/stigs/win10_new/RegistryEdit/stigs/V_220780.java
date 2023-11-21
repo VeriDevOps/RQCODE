@@ -13,14 +13,20 @@ public class V_220780 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog\\Security",
                             "attr", "MaxSize",
-                            "result_value", "0x000fa000 (1024000) ",
+                            "result_value", "1024000)",
                             "id", "V_220780"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog\\Security",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\EventLog",
                             "attr", "MaxSize",
-                            "result_value", "0x000fa000 (1024000) "));
+                            "result_value", "1024000)"
+                            
+                        ),
+                    Map.of(
+                            "description", "Turning off File Explorer heap termination on corruption must be disabled."
+                        )
+                );
 
 
     public V_220780() {

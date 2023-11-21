@@ -20,7 +20,13 @@ public class V_220796 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip",
                             "attr", "DisableIPSourceRouting",
-                            "result_value", "2"));
+                            "result_value", "2"
+                            
+                        ),
+                    Map.of(
+                            "description", "Attachments must be prevented from being downloaded from RSS feeds."
+                        )
+                );
 
 
     public V_220796() {

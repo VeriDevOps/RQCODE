@@ -11,17 +11,22 @@ public class V_220762 extends AuditPolicyPattern {
 private final STIGScriptPattern policyScriptPattern =
 new AuditPolicyScriptPattern(
 AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
-Map.of(
-"id", "V_220762",
-"guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
-"subcat_es", "acierto",
-"subcat_eng", "success"
-),
-Map.of(
-"id", "V_220762",
-"guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
-"parameter", "Success",
-"value", "enable"));
+                    Map.of(
+                        "id", "V_220762",
+                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "subcat_es", "acierto",
+                        "subcat_eng", "success"
+                    ),
+                    Map.of(
+                        "id", "V_220762",
+                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "parameter", "Success",
+                        "value", "enable"
+                        ),
+                    Map.of(
+                        "description", "Windows 10 must be configured to audit Object Access - File Share successes."
+                        )
+                );
 
 public V_220762() {
 pattern = this.policyScriptPattern;

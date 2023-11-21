@@ -20,7 +20,13 @@ public class V_220927 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanManServer\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanManServer",
                             "attr", "RequireSecuritySignature",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Autoplay must be turned off for non-volume devices."
+                        )
+                );
 
 
     public V_220927() {

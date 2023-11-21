@@ -13,14 +13,20 @@ public class V_220808 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\WcmSvc\\wifinetworkmanager\\config",
                             "attr", "AutoConnectAllowedOEM",
-                            "result_value", "0x00000000 (0)",
+                            "result_value", "0",
                             "id", "V_220808"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\WcmSvc\\wifinetworkmanager\\config",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\WcmSvc\\wifinetworkmanager",
                             "attr", "AutoConnectAllowedOEM",
-                            "result_value", "0x00000000 (0)"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Printing over HTTP must be prevented."
+                        )
+                );
 
 
     public V_220808() {

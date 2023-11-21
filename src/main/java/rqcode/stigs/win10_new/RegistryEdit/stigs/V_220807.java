@@ -20,7 +20,13 @@ public class V_220807 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WcmSvc\\GroupPolicy",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WcmSvc",
                             "attr", "fBlockNonDomain",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Credential Guard must be running on Windows 10 domain-joined systems."
+                        )
+                );
 
 
     public V_220807() {

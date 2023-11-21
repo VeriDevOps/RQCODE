@@ -20,7 +20,13 @@ public class V_220819 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "DontDisplayNetworkSelectionUI",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Windows Defender SmartScreen filter for Microsoft Edge must be enabled."
+                        )
+                );
 
 
     public V_220819() {

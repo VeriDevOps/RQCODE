@@ -20,7 +20,13 @@ public class V_220855 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "AllowIndexingEncryptedStoresOrItems",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to require a strong session key."
+                        )
+                );
 
 
     public V_220855() {

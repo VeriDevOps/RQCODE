@@ -20,7 +20,13 @@ public class V_220914 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Netlogon",
                             "attr", "RequireSignOrSeal",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The user must be prompted for a password on resume from sleep (plugged in)."
+                        )
+                );
 
 
     public V_220914() {

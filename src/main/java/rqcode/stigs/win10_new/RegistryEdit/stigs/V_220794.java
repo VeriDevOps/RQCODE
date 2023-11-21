@@ -20,7 +20,13 @@ public class V_220794 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "NoLockScreenSlideshow",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Indexing of encrypted files must be turned off."
+                        )
+                );
 
 
     public V_220794() {

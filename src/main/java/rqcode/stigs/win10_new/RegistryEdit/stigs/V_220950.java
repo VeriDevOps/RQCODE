@@ -20,7 +20,13 @@ public class V_220950 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "EnableLUA",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to meet the minimum session security requirement for NTLM SSP based servers."
+                        )
+                );
 
 
     public V_220950() {

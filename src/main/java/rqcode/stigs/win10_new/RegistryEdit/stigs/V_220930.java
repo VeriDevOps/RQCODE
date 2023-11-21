@@ -20,7 +20,13 @@ public class V_220930 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "RestrictAnonymous",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Windows Telemetry must not be configured to Full."
+                        )
+                );
 
 
     public V_220930() {

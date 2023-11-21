@@ -20,7 +20,13 @@ public class V_220856 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "EnableUserControl",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The maximum age for machine account passwords must be configured to 30 days or less."
+                        )
+                );
 
 
     public V_220856() {

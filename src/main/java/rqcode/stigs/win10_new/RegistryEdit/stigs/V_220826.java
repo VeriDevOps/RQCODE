@@ -20,7 +20,13 @@ public class V_220826 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "DisableInventory",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Server Message Block (SMB) v1 protocol must be disabled on the SMB server."
+                        )
+                );
 
 
     public V_220826() {

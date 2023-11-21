@@ -13,14 +13,20 @@ public class V_220941 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0",
                             "attr", "NTLMMinServerSec",
-                            "result_value", "0x20080000 (537395200)",
+                            "result_value", "537395200",
                             "id", "V_220941"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\MSV1_0",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "attr", "NTLMMinServerSec",
-                            "result_value", "0x20080000 (537395200)"));
+                            "result_value", "537395200"
+                            
+                        ),
+                    Map.of(
+                            "description", "The convenience PIN for Windows 10 must be disabled."
+                        )
+                );
 
 
     public V_220941() {

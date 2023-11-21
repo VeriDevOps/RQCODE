@@ -20,7 +20,13 @@ public class V_220854 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\Feeds",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer",
                             "attr", "AllowBasicAuthInClear",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "File Explorer shell protocol must run in protected mode."
+                        )
+                );
 
 
     public V_220854() {

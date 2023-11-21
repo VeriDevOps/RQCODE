@@ -20,7 +20,13 @@ public class V_250318 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\Transcription",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell",
                             "attr", "EnableTranscripting",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Administrator accounts must not be enumerated during elevation."
+                        )
+                );
 
 
     public V_250318() {

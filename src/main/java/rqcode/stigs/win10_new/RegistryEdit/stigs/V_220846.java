@@ -20,7 +20,13 @@ public class V_220846 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\PassportForWork",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft",
                             "attr", "RequireSecurityDevice",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "IPv6 source routing must be configured to highest protection."
+                        )
+                );
 
 
     public V_220846() {

@@ -20,7 +20,13 @@ public class V_220839 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "PreXPSP2ShellProtocolBehavior",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Unauthenticated RPC clients must be restricted from connecting to the RPC server."
+                        )
+                );
 
 
     public V_220839() {

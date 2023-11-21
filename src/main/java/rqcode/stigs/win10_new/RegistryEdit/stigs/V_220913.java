@@ -20,7 +20,13 @@ public class V_220913 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "SCENoApplyLegacyAuditPolicy",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Unencrypted passwords must not be sent to third-party SMB Servers."
+                        )
+                );
 
 
     public V_220913() {

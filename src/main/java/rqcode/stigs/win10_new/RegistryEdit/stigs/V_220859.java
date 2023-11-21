@@ -20,7 +20,13 @@ public class V_220859 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "DisableAutomaticRestartSignOn",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Outgoing secure channel traffic must be encrypted or signed."
+                        )
+                );
 
 
     public V_220859() {

@@ -20,7 +20,13 @@ public class V_220853 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer\\Feeds",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Internet Explorer",
                             "attr", "DisableEnclosureDownload",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The System event log size must be configured to 32768 KB or greater."
+                        )
+                );
 
 
     public V_220853() {

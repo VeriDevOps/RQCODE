@@ -20,7 +20,13 @@ public class V_220858 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "SafeForScripting",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Outgoing secure channel traffic must be encrypted when possible."
+                        )
+                );
 
 
     public V_220858() {

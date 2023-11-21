@@ -13,14 +13,20 @@ public class V_220829 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer",
                             "attr", "NoDriveTypeAutoRun",
-                            "result_value", "0x000000ff (255)",
+                            "result_value", "255",
                             "id", "V_220829"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies\\Explorer",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\policies",
                             "attr", "NoDriveTypeAutoRun",
-                            "result_value", "0x000000ff (255)"));
+                            "result_value", "255"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control must only elevate UIAccess applications that are installed in secure locations."
+                        )
+                );
 
 
     public V_220829() {

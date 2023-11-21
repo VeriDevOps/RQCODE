@@ -20,7 +20,13 @@ public class V_220866 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM",
                             "attr", "AllowUnencryptedTraffic",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Remote Desktop Services must always prompt a client for passwords upon connection."
+                        )
+                );
 
 
     public V_220866() {

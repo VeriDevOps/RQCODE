@@ -20,7 +20,13 @@ public class V_220792 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "NoLockScreenCamera",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Remote Desktop Session Host must require secure RPC communications."
+                        )
+                );
 
 
     public V_220792() {

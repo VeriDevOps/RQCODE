@@ -20,7 +20,13 @@ public class V_220943 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
                             "attr", "ProtectionMode",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control must be configured to detect application installations and prompt for elevation."
+                        )
+                );
 
 
     public V_220943() {

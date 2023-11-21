@@ -13,14 +13,20 @@ public class V_220831 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent",
                             "attr", "DisableWindowsConsumerFeatures",
-                            "result_value", "0x00000001 (1)",
+                            "result_value", "1",
                             "id", "V_220831"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "DisableWindowsConsumerFeatures",
-                            "result_value", "0x00000001 (1)"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Microsoft consumer experiences must be turned off."
+                        )
+                );
 
 
     public V_220831() {

@@ -20,7 +20,13 @@ public class V_220823 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows NT",
                             "attr", "fAllowToGetHelp",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to the required LDAP client signing level."
+                        )
+                );
 
 
     public V_220823() {

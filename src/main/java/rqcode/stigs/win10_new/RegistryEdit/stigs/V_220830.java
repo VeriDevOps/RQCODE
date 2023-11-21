@@ -13,14 +13,20 @@ public class V_220830 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Biometrics\\FacialFeatures",
                             "attr", "EnhancedAntiSpoofing",
-                            "result_value", "0x00000001 (1)",
+                            "result_value", "1",
                             "id", "V_220830"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Biometrics\\FacialFeatures",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Biometrics",
                             "attr", "EnhancedAntiSpoofing",
-                            "result_value", "0x00000001 (1)"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Enhanced anti-spoofing for facial recognition must be enabled on Window 10."
+                        )
+                );
 
 
     public V_220830() {

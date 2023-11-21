@@ -20,7 +20,13 @@ public class V_220863 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM",
                             "attr", "AllowUnencryptedTraffic",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Systems must at least attempt device authentication using certificates."
+                        )
+                );
 
 
     public V_220863() {

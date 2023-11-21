@@ -13,14 +13,20 @@ public class V_220727 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel",
                             "attr", "DisableExceptionChainValidation",
-                            "result_value", "0x00000000 (0)",
+                            "result_value", "0",
                             "id", "V_220727"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
                             "attr", "DisableExceptionChainValidation",
-                            "result_value", "0x00000000 (0)"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Local users on domain-joined computers must not be enumerated."
+                        )
+                );
 
 
     public V_220727() {

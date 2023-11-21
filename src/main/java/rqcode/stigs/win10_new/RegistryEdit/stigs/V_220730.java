@@ -13,14 +13,20 @@ public class V_220730 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
                             "attr", "SMB1",
-                            "result_value", "0x00000000 (0)",
+                            "result_value", "0",
                             "id", "V_220730"
                     ),
                     Map.of(
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer",
                             "attr", "SMB1",
-                            "result_value", "0x00000000 (0)"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Automatically signing in the last interactive user after a system-initiated restart must be disabled."
+                        )
+                );
 
 
     public V_220730() {

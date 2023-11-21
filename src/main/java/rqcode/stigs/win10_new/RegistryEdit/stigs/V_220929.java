@@ -20,7 +20,13 @@ public class V_220929 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control",
                             "attr", "RestrictAnonymousSAM",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "PowerShell script block logging must be enabled on Windows 10."
+                        )
+                );
 
 
     public V_220929() {

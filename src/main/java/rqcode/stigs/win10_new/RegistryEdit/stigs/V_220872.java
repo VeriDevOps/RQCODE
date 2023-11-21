@@ -13,14 +13,20 @@ public class V_220872 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent",
                             "attr", "DisableThirdPartySuggestions",
-                            "result_value", "0x00000001 (1)",
+                            "result_value", "1",
                             "id", "V_220872"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows",
                             "attr", "DisableThirdPartySuggestions",
-                            "result_value", "0x00000001 (1)"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "Users must not be allowed to ignore Windows Defender SmartScreen filter warnings for malicious websites in Microsoft Edge."
+                        )
+                );
 
 
     public V_220872() {

@@ -20,7 +20,13 @@ public class V_220902 extends RegistryEditPattern {
                             "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protectio",
                             "path_short", "HKLM:\\Software\\Policies\\Microsoft\\Windows",
                             "attr", "DeviceEnumerationPolicy",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The Application event log size must be configured to 32768 KB or greater."
+                        )
+                );
 
 
     public V_220902() {

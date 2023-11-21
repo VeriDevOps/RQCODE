@@ -20,7 +20,13 @@ public class V_220867 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM",
                             "attr", "DisableRunAs",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "The system must be configured to use FIPS-compliant algorithms for encryption, hashing, and signing."
+                        )
+                );
 
 
     public V_220867() {

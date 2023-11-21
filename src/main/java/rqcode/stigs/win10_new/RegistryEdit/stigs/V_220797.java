@@ -20,7 +20,13 @@ public class V_220797 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip",
                             "attr", "EnableICMPRedirect",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Remote Desktop Services must be configured with the client connection encryption set to the required level."
+                        )
+                );
 
 
     public V_220797() {

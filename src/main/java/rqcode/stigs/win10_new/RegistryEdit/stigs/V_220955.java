@@ -13,14 +13,20 @@ public class V_220955 extends RegistryEditPattern {
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments",
                             "attr", "SaveZoneInformation",
-                            "result_value", "0x00000002 (2)",
+                            "result_value", "2",
                             "id", "V_220955"
                     ),
                     Map.of(
                             "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments",
                             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
                             "attr", "SaveZoneInformation",
-                            "result_value", "0x00000002 (2)"));
+                            "result_value", "2"
+                            
+                        ),
+                    Map.of(
+                            "description", "Audit policy using subcategories must be enabled."
+                        )
+                );
 
 
     public V_220955() {

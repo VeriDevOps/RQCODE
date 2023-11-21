@@ -7,6 +7,8 @@ public class AuditPolTemplate {
     private String value;
     private String subcat_es;
     private String subcat_eng;
+    private String description;
+
     public String getId() {
         return id;
     }
@@ -53,6 +55,15 @@ public class AuditPolTemplate {
 
     public void setSubcat_eng(String subcat_eng) {
         this.subcat_eng = subcat_eng;
+    }
+
+    
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
 

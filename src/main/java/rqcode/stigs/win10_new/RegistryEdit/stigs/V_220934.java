@@ -20,7 +20,13 @@ public class V_220934 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA\\MSV1_0",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\LSA",
                             "attr", "allownullsessionfallback",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "Anonymous access to attrd Pipes and Shares must be restricted."
+                        )
+                );
 
 
     public V_220934() {

@@ -20,7 +20,13 @@ public class V_220865 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM",
                             "attr", "AllowBasic",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "WDigest Authentication must be disabled."
+                        )
+                );
 
 
     public V_220865() {

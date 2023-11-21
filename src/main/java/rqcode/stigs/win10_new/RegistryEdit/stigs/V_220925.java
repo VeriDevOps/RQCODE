@@ -20,7 +20,13 @@ public class V_220925 extends RegistryEditPattern {
                             "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters",
                             "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation",
                             "attr", "RequireSecuritySignature",
-                            "result_value", "1"));
+                            "result_value", "1"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control must, at minimum, prompt administrators for consent on the secure desktop."
+                        )
+                );
 
 
     public V_220925() {

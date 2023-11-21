@@ -20,7 +20,13 @@ public class V_220862 extends RegistryEditPattern {
                             "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Client",
                             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM",
                             "attr", "AllowBasic",
-                            "result_value", "0"));
+                            "result_value", "0"
+                            
+                        ),
+                    Map.of(
+                            "description", "The network selection user interface (UI) must not be displayed on the logon screen."
+                        )
+                );
 
 
     public V_220862() {
