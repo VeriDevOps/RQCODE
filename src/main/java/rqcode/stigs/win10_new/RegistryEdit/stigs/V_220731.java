@@ -1,0 +1,37 @@
+package rqcode.stigs.win10_new.RegistryEdit.stigs;
+
+import rqcode.stigs.win10_new.RegistryEdit.RegistryEditConst;
+import rqcode.stigs.win10_new.RegistryEdit.RegistryEditPattern;
+import rqcode.stigs.win10_new.RegistryEdit.RegistryEditScriptPattern;
+
+import java.util.Map;
+
+public class V_220731 extends RegistryEditPattern {
+    private final RegistryEditScriptPattern policyScriptPattern =
+            new RegistryEditScriptPattern(
+                    RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
+                    Map.of(
+                            "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\mrxsmb10",
+                            "attr", "Start",
+                            "result_value", "4",
+                            "id", "V_220731"
+                    ),
+                    Map.of(
+                            "path", "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\mrxsmb10",
+                            "path_short", "HKLM:\\SYSTEM\\CurrentControlSet\\Services",
+                            "attr", "Start",
+                            "result_value", "4"
+                            
+                        ),
+                    Map.of(
+                            "description", "Users must be notified if a web-based program attempts to install software."
+                        )
+                );
+
+
+    public V_220731() {
+        pattern = this.policyScriptPattern;
+    }
+
+
+}

@@ -1,0 +1,37 @@
+package rqcode.stigs.win10_new.RegistryEdit.stigs;
+
+import rqcode.stigs.win10_new.RegistryEdit.RegistryEditConst;
+import rqcode.stigs.win10_new.RegistryEdit.RegistryEditPattern;
+import rqcode.stigs.win10_new.RegistryEdit.RegistryEditScriptPattern;
+
+import java.util.Map;
+
+public class $id extends RegistryEditPattern {
+    private final RegistryEditScriptPattern policyScriptPattern =
+            new RegistryEditScriptPattern(
+                    RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
+                    Map.of(
+                            "path", "$path",
+                            "attr", "$attr",
+                            "result_value", "$result_value",
+                            "id", "$id"
+                    ),
+                    Map.of(
+                            "path", "$path",
+                            "path_short", "$path_short",
+                            "attr", "$attr",
+                            "result_value", "$result_value"
+                            
+                        ),
+                    Map.of(
+                            "description", "$description"
+                        )
+                );
+
+
+    public $id() {
+        pattern = this.policyScriptPattern;
+    }
+
+
+}

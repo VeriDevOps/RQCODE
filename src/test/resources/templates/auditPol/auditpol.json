@@ -1,0 +1,282 @@
+[
+    {
+      "id": "V_220778",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - System Integrity successes."
+    },
+    {
+      "id": "V_220775",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - Security State Change successes."
+    },
+    {
+      "id": "V_220774",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - Other System Events failures."
+    },
+    {
+      "id": "V_220777",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - System Integrity failures."
+    },
+    {
+      "id": "V_220776",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - Security System Extension successes."
+    },
+    {
+      "id": "V_220771",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Privilege Use - Sensitive Privilege Use successes."
+    },
+    {
+      "id": "V_220773",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - Other System Events successes."
+    },
+    {
+      "id": "V_220772",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit System - IPSec Driver failures."
+    },
+    {
+      "id": "V_220755",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Logon/Logoff - Account Lockout failures."
+    },
+    {
+      "id": "V_220748",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Account Logon - Credential Validation failures."
+    },
+    {
+      "id": "V_220749",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Account Logon - Credential Validation successes."
+    },
+    {
+      "id": "V_220757",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Logon/Logoff - Logoff successes."
+    },
+    {
+      "id": "V_220756",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Logon/Logoff - Group Membership successes."
+    },
+    {
+      "id": "V_220753",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Detailed Tracking - PNP Activity successes."
+    },
+    {
+      "id": "V_220752",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Account Management - User Account Management successes."
+    },
+    {
+      "id": "V_220751",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Account Management - User Account Management failures."
+    },
+    {
+      "id": "V_220750",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Account Management - Security Group Management successes."
+    },
+    {
+      "id": "V_220759",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Logon/Logoff - Logon successes."
+    },
+    {
+      "id": "V_220770",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Privilege Use - Sensitive Privilege Use failures."
+    },
+    {
+      "id": "V_220754",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Detailed Tracking - Process Creation successes."
+    },
+    {
+      "id": "V_220758",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Logon/Logoff - Logon failures."
+    },
+    {
+      "id": "V_220768",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Policy Change - Authentication Policy Change successes."
+    },
+    {
+      "id": "V_220769",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Policy Change - Authorization Policy Change successes."
+    },
+    {
+      "id": "V_220762",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "Windows 10 must be configured to audit Object Access - File Share successes."
+    },
+    {
+      "id": "V_220763",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "Windows 10 must be configured to audit Object Access - Other Object Access Events successes."
+    },
+    {
+      "id": "V_220760",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Logon/Logoff - Special Logon successes."
+    },
+    {
+      "id": "V_220761",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "Windows 10 must be configured to audit Object Access - File Share failures."
+    },
+    {
+      "id": "V_220766",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Object Access - Removable Storage successes."
+    },
+    {
+      "id": "V_220767",
+      "parameter": "Success",
+      "subcat_eng": "success",
+      "subcat_es": "acierto",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Policy Change - Audit Policy Change successes."
+    },
+    {
+      "id": "V_220764",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "Windows 10 must be configured to audit Object Access - Other Object Access Events failures."
+    },
+    {
+      "id": "V_220765",
+      "parameter": "Failure",
+      "subcat_eng": "failure",
+      "subcat_es": "errores",
+      "value": "enable",
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
+      "description": "The system must be configured to audit Object Access - Removable Storage failures."
+    }
+  ]
+  

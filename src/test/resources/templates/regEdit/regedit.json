@@ -1,0 +1,850 @@
+[
+  {
+    "id": "V_220830",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Biometrics\\\\FacialFeatures",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Biometrics",
+    "attr": "EnhancedAntiSpoofing",
+    "result_value": "1",
+    "description": "Enhanced anti-spoofing for facial recognition must be enabled on Window 10."
+  },
+  {
+    "id": "V_220831",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CloudContent",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DisableWindowsConsumerFeatures",
+    "result_value": "1",
+    "description": "Microsoft consumer experiences must be turned off."
+  },
+  {
+    "id": "V_220932",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer",
+    "attr": "RestrictNullSessAccess",
+    "result_value": "1",
+    "description": "The Windows Defender SmartScreen for Explorer must be enabled."
+  },
+  {
+    "id": "V_220931",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "EveryoneIncludesAnonymous",
+    "result_value": "0",
+    "description": "Explorer Data Execution Prevention must be enabled."
+  },
+  {
+    "id": "V_220930",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "RestrictAnonymous",
+    "result_value": "1",
+    "description": "Windows Telemetry must not be configured to Full."
+  },
+  {
+    "id": "V_220937",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "NoLMHash",
+    "result_value": "1",
+    "description": "If Enhanced diagnostic data is enabled it must be limited to the minimum required to support Windows Analytics."
+  },
+  {
+    "id": "V_220936",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos\\\\Parameters",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos",
+    "attr": "SupportedEncryptionTypes",
+    "result_value": "2147483640",
+    "description": "Windows 10 systems must use a BitLocker PIN for pre-boot authentication."
+  },
+  {
+    "id": "V_220935",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA\\\\pku2u",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA",
+    "attr": "AllowOnlineID",
+    "result_value": "0",
+    "description": "Windows 10 systems must use a BitLocker PIN with a minimum length of 6 digits for pre-boot authentication."
+  },
+  {
+    "id": "V_220934",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA\\\\MSV1_0",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\LSA",
+    "attr": "allownullsessionfallback",
+    "result_value": "0",
+    "description": "Anonymous access to attrd Pipes and Shares must be restricted."
+  },
+  {
+    "id": "V_220939",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LDAP",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services",
+    "attr": "LDAPClientIntegrity",
+    "result_value": "1",
+    "description": "The system must be configured to prevent anonymous users from having the same rights as the Everyone group."
+  },
+  {
+    "id": "V_220938",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "LmCompatibilityLevel",
+    "result_value": "5",
+    "description": "Anonymous enumeration of shares must be restricted."
+  },
+  {
+    "id": "V_220779",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog\\\\Application",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog",
+    "attr": "MaxSize",
+    "result_value": "32768",
+    "description": "The system must be configured to prevent the storage of the LAN Manager hash of passwords."
+  },
+  {
+    "id": "V_220824",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Rpc",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "RestrictRemoteClients",
+    "result_value": "1",
+    "description": "Kerberos encryption types must be configured to prevent the use of DES and RC4 encryption suites."
+  },
+  {
+    "id": "V_220821",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings\\\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings",
+    "attr": "DCSettingIndex",
+    "result_value": "1",
+    "description": "PKU2U authentication using online identities must be prevented."
+  },
+  {
+    "id": "V_220820",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "EnumerateLocalUsers",
+    "result_value": "0",
+    "description": "NTLM must be prevented from falling back to a Null session."
+  },
+  {
+    "id": "V_220823",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fAllowToGetHelp",
+    "result_value": "0",
+    "description": "The system must be configured to the required LDAP client signing level."
+  },
+  {
+    "id": "V_220822",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings\\\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Power\\\\PowerSettings",
+    "attr": "ACSettingIndex",
+    "result_value": "1",
+    "description": "The LanMan authentication level must be set to send NTLMv2 response only, and to refuse LM and NTLM."
+  },
+  {
+    "id": "V_220828",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "NoAutorun",
+    "result_value": "1",
+    "description": "Windows Update must not obtain updates from other PCs on the Internet."
+  },
+  {
+    "id": "V_220902",
+    "path": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows\\\\Kernel DMA Protectio",
+    "path_short": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DeviceEnumerationPolicy",
+    "result_value": "0",
+    "description": "The Application event log size must be configured to 32768 KB or greater."
+  },
+  {
+    "id": "V_220780",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog\\\\Security",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog",
+    "attr": "MaxSize",
+    "result_value": "1024000)",
+    "description": "Turning off File Explorer heap termination on corruption must be disabled."
+  },
+  {
+    "id": "V_220781",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\EventLog",
+    "attr": "MaxSize",
+    "result_value": "32768",
+    "description": "The setting to allow Microsoft accounts to be optional for modern style apps must be enabled."
+  },
+  {
+    "id": "V_220839",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "PreXPSP2ShellProtocolBehavior",
+    "result_value": "0",
+    "description": "Unauthenticated RPC clients must be restricted from connecting to the RPC server."
+  },
+  {
+    "id": "V_220919",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "RequireStrongKey",
+    "result_value": "1",
+    "description": "Users must be prompted for a password on resume from sleep (on battery)."
+  },
+  {
+    "id": "V_220727",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager\\\\kernel",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager",
+    "attr": "DisableExceptionChainValidation",
+    "result_value": "0",
+    "description": "Local users on domain-joined computers must not be enumerated."
+  },
+  {
+    "id": "V_220915",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "SealSecureChannel",
+    "result_value": "1",
+    "description": "Solicited Remote Assistance must not be allowed."
+  },
+  {
+    "id": "V_220914",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "RequireSignOrSeal",
+    "result_value": "1",
+    "description": "The user must be prompted for a password on resume from sleep (plugged in)."
+  },
+  {
+    "id": "V_220850",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fPromptForPassword",
+    "result_value": "1",
+    "description": "The default autorun behavior must be configured to prevent autorun commands."
+  },
+  {
+    "id": "V_220851",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fEncryptRPCTraffic",
+    "result_value": "1",
+    "description": "Windows 10 Kernel (Direct Memory Access) DMA Protection must be enabled."
+  },
+  {
+    "id": "V_220852",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "MinEncryptionLevel",
+    "result_value": "3",
+    "description": "The Security event log size must be configured to 1024000 KB or greater."
+  },
+  {
+    "id": "V_220853",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer\\\\Feeds",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer",
+    "attr": "DisableEnclosureDownload",
+    "result_value": "1",
+    "description": "The System event log size must be configured to 32768 KB or greater."
+  },
+  {
+    "id": "V_220854",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer\\\\Feeds",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Internet Explorer",
+    "attr": "AllowBasicAuthInClear",
+    "result_value": "0",
+    "description": "File Explorer shell protocol must run in protected mode."
+  },
+  {
+    "id": "V_220855",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Windows Search",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowIndexingEncryptedStoresOrItems",
+    "result_value": "0",
+    "description": "The system must be configured to require a strong session key."
+  },
+  {
+    "id": "V_220856",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Installer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "EnableUserControl",
+    "result_value": "0",
+    "description": "The maximum age for machine account passwords must be configured to 30 days or less."
+  },
+  {
+    "id": "V_220857",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Installer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AlwaysInstallElevated",
+    "result_value": "0",
+    "description": "Structured Exception Handling Overwrite Protection (SEHOP) must be enabled."
+  },
+  {
+    "id": "V_220858",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Installer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "SafeForScripting",
+    "result_value": "0",
+    "description": "Outgoing secure channel traffic must be encrypted when possible."
+  },
+  {
+    "id": "V_220859",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "DisableAutomaticRestartSignOn",
+    "result_value": "1",
+    "description": "Outgoing secure channel traffic must be encrypted or signed."
+  },
+  {
+    "id": "V_220866",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "AllowUnencryptedTraffic",
+    "result_value": "0",
+    "description": "Remote Desktop Services must always prompt a client for passwords upon connection."
+  },
+  {
+    "id": "V_220792",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Personalization",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NoLockScreenCamera",
+    "result_value": "1",
+    "description": "The Remote Desktop Session Host must require secure RPC communications."
+  },
+  {
+    "id": "V_220797",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip",
+    "attr": "EnableICMPRedirect",
+    "result_value": "0",
+    "description": "Remote Desktop Services must be configured with the client connection encryption set to the required level."
+  },
+  {
+    "id": "V_220796",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip",
+    "attr": "DisableIPSourceRouting",
+    "result_value": "2",
+    "description": "Attachments must be prevented from being downloaded from RSS feeds."
+  },
+  {
+    "id": "V_220795",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip6\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Tcpip6",
+    "attr": "DisableIpSourceRouting",
+    "result_value": "2",
+    "description": "Basic authentication for RSS feeds over HTTP must not be used."
+  },
+  {
+    "id": "V_220794",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Personalization",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NoLockScreenSlideshow",
+    "result_value": "1",
+    "description": "Indexing of encrypted files must be turned off."
+  },
+  {
+    "id": "V_220799",
+    "path": "HKLM:SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "LocalAccountTokenFilterPolicy",
+    "result_value": "0",
+    "description": "Users must be prevented from changing installation options."
+  },
+  {
+    "id": "V_220798",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netbt\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netbt",
+    "attr": "NoattrReleaseOnDemand",
+    "result_value": "1",
+    "description": "The Windows Installer Always install with elevated privileges must be disabled."
+  },
+  {
+    "id": "V_220731",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\mrxsmb10",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services",
+    "attr": "Start",
+    "result_value": "4",
+    "description": "Users must be notified if a web-based program attempts to install software."
+  },
+  {
+    "id": "V_220730",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer",
+    "attr": "SMB1",
+    "result_value": "0",
+    "description": "Automatically signing in the last interactive user after a system-initiated restart must be disabled."
+  },
+  {
+    "id": "V_220842",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\Internet Settings",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "PreventCertErrorOverrides",
+    "result_value": "1",
+    "description": "The Windows Remote Management (WinRM) service must not allow unencrypted traffic."
+  },
+  {
+    "id": "V_220841",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "PreventOverrideAppRepUnknown",
+    "result_value": "1",
+    "description": "Camera access from the lock screen must be disabled."
+  },
+  {
+    "id": "V_220840",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "PreventOverride",
+    "result_value": "1",
+    "description": "The system must be configured to prevent Internet Control Message Protocol (ICMP) redirects from overriding Open Shortest Path First (OSPF) generated routes."
+  },
+  {
+    "id": "V_220847",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\PassportForWork\\\\PINComplexity",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\PassportForWork",
+    "attr": "MinimumPINLength",
+    "result_value": "6",
+    "description": "The system must be configured to prevent IP source routing."
+  },
+  {
+    "id": "V_220846",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\PassportForWork",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft",
+    "attr": "RequireSecurityDevice",
+    "result_value": "1",
+    "description": "IPv6 source routing must be configured to highest protection."
+  },
+  {
+    "id": "V_220845",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\GameDVR",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowGameDVR",
+    "result_value": "0",
+    "description": "The display of slide shows on the lock screen must be disabled."
+  },
+  {
+    "id": "V_220844",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge\\\\PhishingFilter",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\MicrosoftEdge",
+    "attr": "EnabledV9",
+    "result_value": "1",
+    "description": "Local administrator accounts must have their privileged token filtered to prevent elevated privileges from being used over the network on domain systems."
+  },
+  {
+    "id": "V_220849",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "fDisableCdm",
+    "result_value": "1",
+    "description": "The system must be configured to ignore NetBIOS attr release requests except from WINS servers."
+  },
+  {
+    "id": "V_220848",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "DisablePasswordSaving",
+    "result_value": "1",
+    "description": "The Server Message Block (SMB) v1 protocol must be disabled on the SMB client."
+  },
+  {
+    "id": "V_220826",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\AppCompat",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DisableInventory",
+    "result_value": "1",
+    "description": "The Server Message Block (SMB) v1 protocol must be disabled on the SMB server."
+  },
+  {
+    "id": "V_220926",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation",
+    "attr": "EnablePlainTextPassword",
+    "result_value": "0",
+    "description": "Windows 10 must be configured to prevent certificate error overrides in Microsoft Edge."
+  },
+  {
+    "id": "V_220832",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\CredUI",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "EnumerateAdministrators",
+    "result_value": "0",
+    "description": "Users must not be allowed to ignore Windows Defender SmartScreen filter warnings for unverified files in Microsoft Edge."
+  },
+  {
+    "id": "V_220872",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CloudContent",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DisableThirdPartySuggestions",
+    "result_value": "1",
+    "description": "Users must not be allowed to ignore Windows Defender SmartScreen filter warnings for malicious websites in Microsoft Edge."
+  },
+  {
+    "id": "V_220870",
+    "path": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows\\\\Syste",
+    "path_short": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowDomainPINLogon",
+    "result_value": "0",
+    "description": "Windows 10 must be configured to require a minimum pin length of six characters or greater."
+  },
+  {
+    "id": "V_220871",
+    "path": "HKLM:\\\\Software\\\\Policies\\\\Microsoft\\\\WindowsInkWorkspac",
+    "path_short": "HKLM:\\\\Software\\\\Policies\\\\Microsoft",
+    "attr": "AllowWindowsInkWorkspace",
+    "result_value": "1",
+    "description": "The use of a hardware security device with Windows Hello for Business must be enabled."
+  },
+  {
+    "id": "V_220818",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos\\\\Parameters",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Kerberos",
+    "attr": "DevicePKInitEnabled",
+    "result_value": "1",
+    "description": "Windows 10 must be configured to disable Windows Game Recording and Broadcasting."
+  },
+  {
+    "id": "V_220819",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "DontDisplayNetworkSelectionUI",
+    "result_value": "1",
+    "description": "The Windows Defender SmartScreen filter for Microsoft Edge must be enabled."
+  },
+  {
+    "id": "V_220800",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\SecurityProviders\\\\Wdigest",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\SecurityProviders",
+    "attr": "UseLogonCredential",
+    "result_value": "0",
+    "description": "Local drives must be prevented from sharing with Remote Desktop Session Hosts."
+  },
+  {
+    "id": "V_220910",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "LimitBlankPasswordUse",
+    "result_value": "1",
+    "description": "Passwords must not be saved in the Remote Desktop Client."
+  },
+  {
+    "id": "V_220810",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CredentialsDelegation",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowProtectedCreds",
+    "result_value": "1",
+    "description": "The Application Compatibility Program Inventory must be prevented from collecting data and sending the information to Microsoft."
+  },
+  {
+    "id": "V_220913",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "SCENoApplyLegacyAuditPolicy",
+    "result_value": "1",
+    "description": "Unencrypted passwords must not be sent to third-party SMB Servers."
+  },
+  {
+    "id": "V_250318",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\Transcription",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell",
+    "attr": "EnableTranscripting",
+    "result_value": "1",
+    "description": "Administrator accounts must not be enumerated during elevation."
+  },
+  {
+    "id": "V_220940",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "attr": "NTLMMinClientSec",
+    "result_value": "537395200",
+    "description": "Windows 10 should be configured to prevent users from receiving suggestions for third-party or additional applications."
+  },
+  {
+    "id": "V_220941",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\MSV1_0",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "attr": "NTLMMinServerSec",
+    "result_value": "537395200",
+    "description": "The convenience PIN for Windows 10 must be disabled."
+  },
+  {
+    "id": "V_220861",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explore",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "NoReadingPane",
+    "result_value": "1",
+    "description": "Windows Ink Workspace must be configured to disallow access above the lock."
+  },
+  {
+    "id": "V_220863",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "AllowUnencryptedTraffic",
+    "result_value": "0",
+    "description": "Systems must at least attempt device authentication using certificates."
+  },
+  {
+    "id": "V_220862",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "AllowBasic",
+    "result_value": "0",
+    "description": "The network selection user interface (UI) must not be displayed on the logon screen."
+  },
+  {
+    "id": "V_220865",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "AllowBasic",
+    "result_value": "0",
+    "description": "WDigest Authentication must be disabled."
+  },
+  {
+    "id": "V_220917",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "DisablePasswordChange",
+    "result_value": "0",
+    "description": "Local accounts with blank passwords must be restricted to prevent access from the network."
+  },
+  {
+    "id": "V_220916",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\Netlogon",
+    "attr": "SignSecureChannel",
+    "result_value": "1",
+    "description": "Windows 10 must be configured to enable Remote host allows delegation of non-exportable credentials."
+  },
+  {
+    "id": "V_220955",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Attachments",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "SaveZoneInformation",
+    "result_value": "2",
+    "description": "Audit policy using subcategories must be enabled."
+  },
+  {
+    "id": "V_220954",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\PushNotifications",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\CurrentVersion",
+    "attr": "NoToastApplicationNotificationOnLockScreen",
+    "result_value": "1",
+    "description": "PowerShell Transcription must be enabled on Windows 10."
+  },
+  {
+    "id": "V_220951",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "EnableVirtualization",
+    "result_value": "1",
+    "description": "The system must be configured to meet the minimum session security requirement for NTLM SSP based clients."
+  },
+  {
+    "id": "V_220950",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "EnableLUA",
+    "result_value": "1",
+    "description": "The system must be configured to meet the minimum session security requirement for NTLM SSP based servers."
+  },
+  {
+    "id": "V_220814",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Group Policy\\\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Group Policy",
+    "attr": "NoGPOListChanges",
+    "result_value": "0",
+    "description": "The Windows Explorer Preview pane must be disabled for Windows 10."
+  },
+  {
+    "id": "V_220815",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "DisableWebPnPDownload",
+    "result_value": "1",
+    "description": "The Windows Remote Management (WinRM) client must not allow unencrypted traffic."
+  },
+  {
+    "id": "V_220816",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "NoWebServices",
+    "result_value": "1",
+    "description": "The Windows Remote Management (WinRM) client must not use Basic authentication."
+  },
+  {
+    "id": "V_220817",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Printers",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows NT",
+    "attr": "DisableHTTPPrinting",
+    "result_value": "1",
+    "description": "The Windows Remote Management (WinRM) service must not use Basic authentication."
+  },
+  {
+    "id": "V_220868",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Client",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "AllowDigest",
+    "result_value": "0",
+    "description": "The computer account password must not be prevented from being reset."
+  },
+  {
+    "id": "V_220947",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "ConsentPromptBehaviorUser",
+    "result_value": "0",
+    "description": "Virtualization Based Security must be enabled on Windows 10 with the platform security level configured to Secure Boot or Secure Boot with DMA Protection."
+  },
+  {
+    "id": "V_220944",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "FilterAdministratorToken",
+    "result_value": "1",
+    "description": "Outgoing secure channel traffic must be signed when possible."
+  },
+  {
+    "id": "V_220945",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "ConsentPromptBehaviorAdmin",
+    "result_value": "2",
+    "description": "Zone information must be preserved when saving attachments."
+  },
+  {
+    "id": "V_220827",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NoAutoplayfornonVolume",
+    "result_value": "1",
+    "description": "Toast notifications to the lock screen must be turned off."
+  },
+  {
+    "id": "V_220860",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell\\\\ScriptBlockLogging",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\PowerShell",
+    "attr": "EnableScriptBlockLogging",
+    "result_value": "1",
+    "description": "User Account Control must virtualize file and registry write failures to per-user locations."
+  },
+  {
+    "id": "V_220948",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "EnableInstallerDetection",
+    "result_value": "1",
+    "description": "User Account Control must run all administrators in Admin Approval Mode, enabling UAC."
+  },
+  {
+    "id": "V_220942",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\FIPSAlgorithmPolicy",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "attr": "Enabled",
+    "result_value": "1",
+    "description": "Group Policy objects must be reprocessed even if they have not changed."
+  },
+  {
+    "id": "V_220949",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "EnableSecureUIAPaths",
+    "result_value": "1",
+    "description": "Downloading print driver packages over HTTP must be prevented."
+  },
+  {
+    "id": "V_220809",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\Audit",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "attr": "ProcessCreationIncludeCmdLine_Enabled",
+    "result_value": "1",
+    "description": "Web publishing and online ordering wizards must be prevented from downloading a list of providers."
+  },
+  {
+    "id": "V_220808",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\WcmSvc\\\\wifinetworkmanager\\\\config",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\WcmSvc\\\\wifinetworkmanager",
+    "attr": "AutoConnectAllowedOEM",
+    "result_value": "0",
+    "description": "Printing over HTTP must be prevented."
+  },
+  {
+    "id": "V_220807",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc\\\\GroupPolicy",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc",
+    "attr": "fBlockNonDomain",
+    "result_value": "1",
+    "description": "Credential Guard must be running on Windows 10 domain-joined systems."
+  },
+  {
+    "id": "V_220806",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc\\\\GroupPolicy",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WcmSvc",
+    "attr": "fMinimizeConnections",
+    "result_value": "1",
+    "description": "Early Launch Antimalware, Boot-Start Driver Initialization Policy must prevent boot drivers."
+  },
+  {
+    "id": "V_220803",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\Network Connections",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "NC_ShowSharedAccessUI",
+    "result_value": "0",
+    "description": "The Windows Remote Management (WinRM) client must not use Digest authentication."
+  },
+  {
+    "id": "V_220802",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\LanmanWorkstation",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows",
+    "attr": "AllowInsecureGuestAuth",
+    "result_value": "0",
+    "description": "User Account Control must automatically deny elevation requests for standard users."
+  },
+  {
+    "id": "V_220920",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies",
+    "attr": "InactivityTimeoutSecs",
+    "result_value": "900",
+    "description": "User Account Control approval mode for the built-in Administrator must be enabled."
+  },
+  {
+    "id": "V_220925",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanWorkstation",
+    "attr": "RequireSecuritySignature",
+    "result_value": "1",
+    "description": "User Account Control must, at minimum, prompt administrators for consent on the secure desktop."
+  },
+  {
+    "id": "V_220927",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer\\\\Parameters",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanManServer",
+    "attr": "RequireSecuritySignature",
+    "result_value": "1",
+    "description": "Autoplay must be turned off for non-volume devices."
+  },
+  {
+    "id": "V_220929",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Lsa",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control",
+    "attr": "RestrictAnonymousSAM",
+    "result_value": "1",
+    "description": "PowerShell script block logging must be enabled on Windows 10."
+  },
+  {
+    "id": "V_220943",
+    "path": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager\\\\",
+    "path_short": "HKLM:\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Session Manager",
+    "attr": "ProtectionMode",
+    "result_value": "1",
+    "description": "User Account Control must be configured to detect application installations and prompt for elevation."
+  },
+  {
+    "id": "V_220867",
+    "path": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM\\\\Service",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WinRM",
+    "attr": "DisableRunAs",
+    "result_value": "1",
+    "description": "The system must be configured to use FIPS-compliant algorithms for encryption, hashing, and signing."
+  },
+  {
+    "id": "V_220829",
+    "path": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\policies\\\\Explorer",
+    "path_short": "HKLM:\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\policies",
+    "attr": "NoDriveTypeAutoRun",
+    "result_value": "255",
+    "description": "User Account Control must only elevate UIAccess applications that are installed in secure locations."
+  }
+]

@@ -11,21 +11,27 @@ public class V_220920 extends RegistryEditPattern {
             new RegistryEditScriptPattern(
                     RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_CHECK, RegistryEditConst.REGISTRY_EDIT_SCRIPT_PATTERN_ENFORCE,
                     Map.of(
-                            "", ""
+                            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
+                            "attr", "InactivityTimeoutSecs",
+                            "result_value", "900",
+                            "id", "V_220920"
                     ),
                     Map.of(
-                            "registryPath", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\",
-                            "name", "InactivityTimeoutSecs",
-                            "type", "DWORD",
-                            "value", "300"));
+                            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
+                            "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
+                            "attr", "InactivityTimeoutSecs",
+                            "result_value", "900"
+                            
+                        ),
+                    Map.of(
+                            "description", "User Account Control approval mode for the built-in Administrator must be enabled."
+                        )
+                );
+
 
     public V_220920() {
         pattern = this.policyScriptPattern;
     }
 
-    public static void main(String[] args) {
-        V_220920 stig = new V_220920();
 
-        System.out.println(stig.check());
-    }
 }
