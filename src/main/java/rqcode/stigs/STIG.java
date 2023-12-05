@@ -57,10 +57,10 @@ public abstract class STIG extends EnforceableRequirement{
         "- Rule ID: " + ruleID() + "\n" +
         "- IA Controls: " + iacontrols() + "\n" +
         "- Severity: " + severity() + "\n" +
-        "- Description:\n" +
-        description() + "\n" +
         "\n" +
         "- STIG: " + title() + "\n" +
+        "- Description:\n" +
+        description() + "\n" +
         "- Date: " + date() + "\n" +
         "\n" +
         "Details:\n" +
