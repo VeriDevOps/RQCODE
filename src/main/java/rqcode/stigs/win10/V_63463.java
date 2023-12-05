@@ -31,7 +31,7 @@ public class V_63463 extends LogonRequirement {
 
     
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-64211r1_chk";
     }
 
@@ -43,19 +43,19 @@ public class V_63463 extends LogonRequirement {
 
     
     @Override
-    public String findingID() {
+    public String id() {
         return "V-63463";
     }
 
     
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-69391r1_fix";
     }
 
     
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -67,7 +67,7 @@ public class V_63463 extends LogonRequirement {
 
     
     @Override
-    public String sTIG() {
+    public String title(){
         return "Windows 10 Security Technical Implementation Guide";
     }
 

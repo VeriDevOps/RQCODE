@@ -13,7 +13,7 @@ import rqcode.stigs.win10.patterns.Win10ExploitProtectionRequirement;
 
 public class V_77103 extends Win10ExploitProtectionRequirement {
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-79587r1_chk";
     }
 
@@ -23,17 +23,17 @@ public class V_77103 extends Win10ExploitProtectionRequirement {
     }
 
     @Override
-    public String findingID() {
+    public String id() {
         return "V-77103";
     }
 
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-86725r2_fix";
     }
 
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -43,7 +43,7 @@ public class V_77103 extends Win10ExploitProtectionRequirement {
     }
 
     @Override
-    public String sTIG() {
+    public String title(){
         return "Windows 10 Security Technical Implementation Guide";
     }
 

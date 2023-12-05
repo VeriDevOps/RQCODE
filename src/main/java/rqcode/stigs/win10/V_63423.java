@@ -10,7 +10,7 @@ import rqcode.stigs.win10.patterns.PasswordPolicy;
 
 public class V_63423 extends PasswordPolicy {
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-64171r1_chk";
     }
 
@@ -20,17 +20,17 @@ public class V_63423 extends PasswordPolicy {
     }
 
     @Override
-    public String findingID() {
+    public String id() {
         return "V-63423";
     }
 
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-69351r1_fix";
     }
 
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -40,7 +40,7 @@ public class V_63423 extends PasswordPolicy {
     }
 
     @Override
-    public String sTIG() {
+    public String title() {
         return "Windows 10 Security Technical Implementation Guide";
     }
 

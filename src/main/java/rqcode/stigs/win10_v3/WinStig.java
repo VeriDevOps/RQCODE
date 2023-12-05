@@ -44,7 +44,7 @@ public abstract class WinStig extends STIG {
 
     @Override
     public String title() {
-        return stigInfo.get("title");
+        return stigInfo.get("title()");
     }
 
     @Override
