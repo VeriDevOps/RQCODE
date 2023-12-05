@@ -1,4 +1,3 @@
-
 package rqcode.stigs.win10_new.AuditPolicy.stigs;
 
 import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyConst;

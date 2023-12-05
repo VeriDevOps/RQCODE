@@ -1,7 +1,5 @@
 $path = "HKLM:\\Software\\Policies\\Microsoft\\WindowsInkWorkspac"
-$attr = "AllowWindowsInkWorkspace
- 
- result_value data"
+$attr = "AllowWindowsInkWorkspace"
 $result_value = "1"
 $result = "ERROR"
 if (Test-Path $path){
