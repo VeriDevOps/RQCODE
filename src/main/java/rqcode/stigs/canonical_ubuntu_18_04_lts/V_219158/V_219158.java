@@ -27,6 +27,4 @@ public class V_219158 extends UbuntuPackagePattern {
     public V_219158() {
         super("rsh-server", false);
     }
-
-    //some add
 }
