@@ -2,12 +2,12 @@ package rqcode.stigs.win10.patterns;
 
 public abstract class SoftwareRegEditRequirement extends RegistryEditRequirement {
     @Override
-    public String checkText() {
+    public String checktext() {
         return getCheckTextAdditional() + getCheckTextBody();
     }
 
     @Override
-    public String fixText() {
+    public String fixtext() {
         return "Configure the policy value for Computer Configuration >> Administrative Templates >> Windows Components >> " + getComponentName() + " >> "
                 + getOption() + " to " + getInclusionSetting();
     }

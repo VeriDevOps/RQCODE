@@ -104,12 +104,12 @@ public abstract class ProcessMitigationRequirement extends STIG {
 
 
     @Override
-    public String checkText() {
+    public String checktext() {
         return CHECK_TEXT_TEMPLATE + getCheckTextAdditional();
     }
 
     @Override
-    public String fixText() {
+    public String fixtext() {
         return getFixTextAdditional() + String.format(FIX_TEXT_TEMPLATE, getOption(), getInclusionSetting());
     }
 

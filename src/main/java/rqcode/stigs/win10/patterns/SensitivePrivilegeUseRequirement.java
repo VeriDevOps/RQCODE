@@ -21,7 +21,7 @@ public abstract class SensitivePrivilegeUseRequirement extends PrivilegeUseRequi
 
     
     @Override
-    public String checkText() {
+    public String checktext() {
         return "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n" +
                 "\n" +
                 "Use the AuditPol tool to review the current Audit Policy configuration:\n" +
@@ -35,7 +35,7 @@ public abstract class SensitivePrivilegeUseRequirement extends PrivilegeUseRequi
 
     
     @Override
-    public String fixText() {
+    public String fixtext() {
         return "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Privilege Use >> \"Audit Sensitive Privilege Use\" with \""
                 + getInclusionSetting() + "\" selected.";
     }

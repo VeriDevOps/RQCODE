@@ -1,16 +1,14 @@
 package rqcode.stigs;
 
-
-import rqcode.concepts.Enforceable;
-import rqcode.concepts.Requirement;
+import rqcode.concepts.EnforceableRequirement;
 
 /**
  * This class is a direct mapping of the structure of STIG findings as presented in stigviewer.com. All the member names are self-explanatory.
  */
 
-public abstract class STIG extends Requirement implements Enforceable{
+public abstract class STIG extends EnforceableRequirement{
     
-    public abstract String findingID();
+    public abstract String id();
 
     
     public abstract String version();
@@ -19,7 +17,7 @@ public abstract class STIG extends Requirement implements Enforceable{
     public abstract String ruleID();
 
     
-    public abstract String iAControls();
+    public abstract String iacontrols();
 
     
     public abstract String severity();
@@ -28,22 +26,22 @@ public abstract class STIG extends Requirement implements Enforceable{
     public abstract String description();
 
     
-    public abstract String sTIG();
+    public abstract String title();
 
     
     public abstract String date();
 
     
-    public abstract String checkTextCode();
+    public abstract String checkid();
 
     
-    public abstract String checkText();
+    public abstract String checktext();
 
     
-    public abstract String fixTextCode();
+    public abstract String fixid();
 
     
-    public abstract String fixText();
+    public abstract String fixtext();
 
     /**
      * A crude parsing of the finding (requirement) specification into a document.
@@ -54,23 +52,27 @@ public abstract class STIG extends Requirement implements Enforceable{
         return
         "Overview:\n" + 
         "=========\n" +
-        "- Finding ID: " + findingID() + "\n" +
+        "- Finding ID: " + id() + "\n" +
         "- Version: " + version() + "\n" +
         "- Rule ID: " + ruleID() + "\n" +
-        "- IA Controls: " + iAControls() + "\n" +
+        "- IA Controls: " + iacontrols() + "\n" +
         "- Severity: " + severity() + "\n" +
         "- Description:\n" +
         description() + "\n" +
         "\n" +
-        "- STIG: " + sTIG() + "\n" +
+        "- STIG: " + title() + "\n" +
         "- Date: " + date() + "\n" +
         "\n" +
         "Details:\n" +
         "========\n" +
-        "- Check Text (" + checkTextCode() + ")" + "\n" +
-        checkText() + "\n" + 
-        "- Fix Text (" + fixTextCode() + ")" + "\n" +
-        fixText() + "\n";
+        "- Check Text (" + checkid() + ")" + "\n" +
+        checktext() + "\n" + 
+        "- Fix Text (" + fixid() + ")" + "\n" +
+        fixtext() + "\n\n" +
+        "Status:\n" +
+        "========\n" +
+        "- Last check status: " + getLastCheckStatus()+ "\n" +
+        "- Last enforce status: " + getLastEnforcementStatus()+ "\n";
     }
 
 }
