@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * V-220748: The system must be configured to audit Account Logon - Credential Validation failures.
  */
-public class V_220748 extends WinStig {
+public class V_220748 extends STIG {
     private final static WinScriptHelper helper = new WinScriptHelper(
             AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
             Map.of(
