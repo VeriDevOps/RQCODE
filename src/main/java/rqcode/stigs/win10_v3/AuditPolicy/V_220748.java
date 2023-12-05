@@ -33,7 +33,7 @@ public class V_220748 extends WinStig {
         Map.entry("id", "V-220748"), 
         Map.entry("ruleID", "SV-220748r569187_rule"), 
         Map.entry("severity", "medium"), 
-        Map.entry("title()", "The system must be configured to audit Account Logon - Credential Validation failures."),
+        Map.entry("title", "The system must be configured to audit Account Logon - Credential Validation failures."),
         Map.entry("version", "WN10-AU-000005")
         );
 
