@@ -6,6 +6,9 @@ import rqcode.stigs.win10_v3.WinStig;
 
 import java.util.Map;
 
+/**
+ * V-220748: The system must be configured to audit Account Logon - Credential Validation failures.
+ */
 public class V_220748 extends WinStig {
     private final static WinScriptHelper helper = new WinScriptHelper(
             AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
