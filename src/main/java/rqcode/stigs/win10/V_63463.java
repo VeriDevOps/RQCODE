@@ -2,6 +2,8 @@ package rqcode.stigs.win10;
 
 
 
+import java.util.Map;
+
 import rqcode.stigs.win10.patterns.LogonRequirement;
 
 /**
@@ -12,6 +14,7 @@ import rqcode.stigs.win10.patterns.LogonRequirement;
 
 public class V_63463 extends LogonRequirement {
     
+
     @Override
     protected String getFailure() {
         return "enable";

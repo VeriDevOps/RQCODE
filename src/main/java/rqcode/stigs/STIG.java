@@ -16,6 +16,14 @@ public abstract class STIG extends EnforceableRequirement {
      */
     private Map<String, String> stigInfo;
 
+    public Map<String, String> getStigInfo() {
+        return stigInfo;
+    }
+
+    public void setStigInfo(Map<String, String> stigInfo) {
+        this.stigInfo = stigInfo;
+    }
+
     /**
      * A crude parsing of the finding (requirement) specification into a document.
      * 
@@ -48,9 +56,9 @@ public abstract class STIG extends EnforceableRequirement {
                 "- Last enforce status: " + getLastEnforcementStatus() + "\n";
     }
 
-    public STIG(Map<String, String> stigInfo) {
-        this.stigInfo = stigInfo;
-    }
+    // public STIG(Map<String, String> stigInfo) {
+    //     this.stigInfo = stigInfo;
+    // }
 
     public String id() {
         return stigInfo.get("id");

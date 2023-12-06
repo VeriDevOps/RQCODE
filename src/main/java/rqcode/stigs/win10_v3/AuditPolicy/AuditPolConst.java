@@ -1,6 +1,6 @@
 package rqcode.stigs.win10_v3.AuditPolicy;
 
-public class AuditPolicyConst {
+public class AuditPolConst {
     public static final String AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE = "auditpol /set /subcategory:\"%(guid)\" /%(parameter):%(value)";
     public static final String AUDIT_POLICY_SCRIPT_PATTERN_CHECK =
             "$subcat_es = \"%(subcat_es)\" \n" +

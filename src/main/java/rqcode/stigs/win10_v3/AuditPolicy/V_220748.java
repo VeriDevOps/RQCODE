@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class V_220748 extends STIG {
     private final static WinScriptHelper helper = new WinScriptHelper(
-            AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
+            AuditPolConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
             Map.of(
                     "id", "V_220748",
                     "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
@@ -37,7 +37,7 @@ public class V_220748 extends STIG {
         );
 
     public V_220748() {
-        super(info);
+        setStigInfo(info);
     }
 
     @Override
