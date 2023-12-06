@@ -8,21 +8,19 @@ import java.util.Map;
 /**
  * V-220748: The system must be configured to audit Account Logon - Credential Validation failures.
  */
-public class V_220748 extends STIG {
-    private final static WinScriptHelper helper = new WinScriptHelper(
-            AuditPolConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
-            Map.of(
+public class V_220748 extends AuditPolStig {
+    private final static Map <String, String> CHECK_VALUES = Map.of(
                     "id", "V_220748",
                     "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
                     "subcat_es", "errores",
-                    "subcat_eng", "failure"),
-            Map.of(
+                    "subcat_eng", "failure");
+    private final static Map <String, String> ENFORCE_VALUES = Map.of(
                     "id", "V_220748",
                     "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
                     "parameter", "Failure",
-                    "value", "enable"));
-    
-    private final static Map <String, String> info = Map.ofEntries(
+                    "value", "enable");
+
+    private final static Map <String, String> INFO = Map.ofEntries(
         Map.entry("checkid", "C-22463r554729_chk"),
         Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\n\nAccount Logon >> Credential Validation - Failure"), 
         Map.entry("description", "Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nCredential validation records events related to validation tests on credentials for a user account logon."), 
@@ -37,22 +35,10 @@ public class V_220748 extends STIG {
         );
 
     public V_220748() {
-        setStigInfo(info);
-    }
-
-    @Override
-    public CheckStatus check() {
-        
-        setLastCheckStatus(helper.check());
-
-        return getLastCheckStatus();
-    }
-
-    @Override
-    public EnforcementStatus enforce() {   
-        
-        setLastEnforcementStatus(helper.enforce());
-        return  getLastEnforcementStatus();
+        setStigInfo(INFO);
+        WinScriptHelper helper = this.getHelper();
+        helper.setCheckValues (CHECK_VALUES);
+        helper.setEnforceValues(ENFORCE_VALUES);
     }
 
     public static void main(String[] args) {
