@@ -28,9 +28,11 @@ public class V_220748 extends AuditPolStig {
             "parameter", "Failure",
             "value", "enable");
     /**
-     * Initiating information defining the security requirements from the STIG database
+     * Initiating information defining the security requirements from the STIG
+     * database
      */
     private final static Map<String, String> INFO = Map.ofEntries(
+            Map.entry("date", "2023-09-29"),
             Map.entry("checkid", "C-22463r554729_chk"),
             Map.entry("checktext",
                     "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\n\nAccount Logon >> Credential Validation - Failure"),
