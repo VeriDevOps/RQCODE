@@ -2,7 +2,9 @@ package rqcode.stigs.win10_v3.AuditPolicy;
 
 import rqcode.stigs.STIG;
 import rqcode.stigs.win10_v3.WinScriptHelper;
-
+/**
+ * Parametrizable class for configuring Windows Audit Policies with the auditpol util.
+ */
 public abstract class AuditPolStig extends STIG {
         public static final String AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE = "auditpol /set /subcategory:\"%(guid)\" /%(parameter):%(value)";
         public static final String AUDIT_POLICY_SCRIPT_PATTERN_CHECK = "$subcat_es = \"%(subcat_es)\" \n" +

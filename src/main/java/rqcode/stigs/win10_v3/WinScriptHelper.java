@@ -8,6 +8,9 @@ import com.profesorfalken.jpowershell.PowerShellNotAvailableException;
 import com.profesorfalken.jpowershell.PowerShellResponse;
 import java.util.Map;
 
+/**
+ * PowerShell script execution helper for Windows 10 STIGs
+ */
 public class WinScriptHelper {
 
     private final String checkScript;
