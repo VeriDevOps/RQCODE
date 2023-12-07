@@ -2,11 +2,20 @@ package rqcode.stigs.win10_v3.AuditPolicy;
 
 import rqcode.stigs.STIG;
 import rqcode.stigs.win10_v3.WinScriptHelper;
+
 /**
- * Parametrizable class for configuring Windows Audit Policies with the auditpol util.
+ * Parametrizable class for configuring Windows Audit Policies with the auditpol
+ * util.
  */
 public abstract class AuditPolStig extends STIG {
+        /**
+         * Check script command template for the AuditPol.
+         */
         public static final String AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE = "auditpol /set /subcategory:\"%(guid)\" /%(parameter):%(value)";
+        
+        /**
+         * Enforce script command template for the AuditPol.
+         */
         public static final String AUDIT_POLICY_SCRIPT_PATTERN_CHECK = "$subcat_es = \"%(subcat_es)\" \n" +
                         "$result = \"ERROR\" \n" +
                         "$subcat_eng = \"%(subcat_eng)\"\n" +
@@ -17,31 +26,33 @@ public abstract class AuditPolStig extends STIG {
                         "}\n" +
                         "$result\n";
 
-        private WinScriptHelper helper = new WinScriptHelper(AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE, AUDIT_POLICY_SCRIPT_PATTERN_CHECK);
-        
-        
+        /**
+         * Helper that exectues PowerSheel scripts
+         */
+        private WinScriptHelper helper = new WinScriptHelper(AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
+                        AUDIT_POLICY_SCRIPT_PATTERN_CHECK);
+
         public WinScriptHelper getHelper() {
-            return helper;
+                return helper;
         }
 
         public void setHelper(WinScriptHelper helper) {
-            this.helper = helper;
+                this.helper = helper;
         }
 
         @Override
         public CheckStatus check() {
-            
-            setLastCheckStatus(helper.check());
-    
-            return getLastCheckStatus();
+
+                setLastCheckStatus(helper.check());
+
+                return getLastCheckStatus();
         }
-    
+
         @Override
-        public EnforcementStatus enforce() {   
-            
-            setLastEnforcementStatus(helper.enforce());
-            return  getLastEnforcementStatus();
+        public EnforcementStatus enforce() {
+
+                setLastEnforcementStatus(helper.enforce());
+                return getLastEnforcementStatus();
         }
-    
 
 }
