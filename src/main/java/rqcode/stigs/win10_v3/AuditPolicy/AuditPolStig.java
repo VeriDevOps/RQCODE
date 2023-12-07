@@ -11,12 +11,12 @@ public abstract class AuditPolStig extends STIG {
         /**
          * Check script command template for the AuditPol.
          */
-        public static final String AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE = "auditpol /set /subcategory:\"%(guid)\" /%(parameter):%(value)";
+        public static final String AUDIT_POLICY_ENFORCE_SCRIPT = "auditpol /set /subcategory:\"%(guid)\" /%(parameter):%(value)";
         
         /**
          * Enforce script command template for the AuditPol.
          */
-        public static final String AUDIT_POLICY_SCRIPT_PATTERN_CHECK = "$subcat_es = \"%(subcat_es)\" \n" +
+        public static final String AUDIT_POLICY_CHECK_SCRIPT = "$subcat_es = \"%(subcat_es)\" \n" +
                         "$result = \"ERROR\" \n" +
                         "$subcat_eng = \"%(subcat_eng)\"\n" +
                         "$var = auditpol /get /subcategory:\"%(guid)\"\n" +
@@ -29,8 +29,7 @@ public abstract class AuditPolStig extends STIG {
         /**
          * Helper that exectues PowerSheel scripts
          */
-        private WinScriptHelper helper = new WinScriptHelper(AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
-                        AUDIT_POLICY_SCRIPT_PATTERN_CHECK);
+        private WinScriptHelper helper = new WinScriptHelper(AUDIT_POLICY_CHECK_SCRIPT, AUDIT_POLICY_ENFORCE_SCRIPT);
 
         public WinScriptHelper getHelper() {
                 return helper;

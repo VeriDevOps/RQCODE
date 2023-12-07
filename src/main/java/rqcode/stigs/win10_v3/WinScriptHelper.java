@@ -6,6 +6,9 @@ import rqcode.concepts.Enforceable.EnforcementStatus;
 import com.profesorfalken.jpowershell.PowerShell;
 import com.profesorfalken.jpowershell.PowerShellNotAvailableException;
 import com.profesorfalken.jpowershell.PowerShellResponse;
+
+import java.io.BufferedReader;
+import java.io.StringReader;
 import java.util.Map;
 
 /**
@@ -37,9 +40,16 @@ public class WinScriptHelper {
         String script = prepareEnforceScript();
 
         try (PowerShell powerShell = PowerShell.openSession()) {
-            PowerShellResponse response = powerShell.executeCommand(script);
-            response.getCommandOutput();
+            System.out.println("RQCODE script :\n" + script);
+
+            BufferedReader reader = new BufferedReader(new StringReader(script));
+            PowerShellResponse response = powerShell.executeScript(reader);
+
+            String result = response.getCommandOutput();
+
+            System.out.println("RQCODE script execution result: " + result);
         } catch (PowerShellNotAvailableException ex) {
+            ex.printStackTrace();
             return EnforcementStatus.FAILURE;
         }
 
@@ -50,29 +60,25 @@ public class WinScriptHelper {
 
         String script = prepareCheckScript();
 
-        boolean checkResult;
-        try {
-            checkResult = checkProcess(script, checkValues);
-        } catch (Exception e) {
-            e.printStackTrace();
+        try (PowerShell powerShell = PowerShell.openSession()) {
+            System.out.println("RQCODE script :\n" + script);
+
+            BufferedReader reader = new BufferedReader(new StringReader(script));
+            PowerShellResponse response = powerShell.executeScript(reader);
+
+            String result = response.getCommandOutput();
+
+            System.out.println("RQCODE script execution result: " + result);
+
+            if (result.contains("OK"))
+                return CheckStatus.PASS;
+            else
+                return CheckStatus.FAIL;
+        } catch (PowerShellNotAvailableException ex) {
+            ex.printStackTrace();
             return CheckStatus.INCOMPLETE;
         }
-
-        if (checkResult)
-            return CheckStatus.PASS;
-        else
-            return CheckStatus.FAIL;
     }
-
-    public boolean checkProcess(String script, Map<String, String> settingValues) throws Exception {
-        try (PowerShell powerShell = PowerShell.openSession()) {
-            PowerShellResponse response = powerShell.executeCommand(script);
-            String result = response.getCommandOutput();
-            return result.contains("OK");
-        } catch (PowerShellNotAvailableException ex) {
-            return false;
-        }
-    };
 
     public static String format(String template, Map<String, String> values) {
         return values.entrySet().stream().reduce(template, (s, e) -> s.replace("%(" + e.getKey() + ")", e.getValue()),
@@ -87,7 +93,7 @@ public class WinScriptHelper {
         return format(checkScript, checkValues);
     }
 
-        public Map<String, String> getCheckValues() {
+    public Map<String, String> getCheckValues() {
         return checkValues;
     }
 
@@ -95,7 +101,6 @@ public class WinScriptHelper {
         this.checkValues = checkValues;
     }
 
-    
     public Map<String, String> getEnforceValues() {
         return enforceValues;
     }
@@ -103,6 +108,5 @@ public class WinScriptHelper {
     public void setEnforceValues(Map<String, String> enforceValues) {
         this.enforceValues = enforceValues;
     }
-
 
 }

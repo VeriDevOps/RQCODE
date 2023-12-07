@@ -67,6 +67,11 @@ public class V_220727 extends RegEditStig {
 
         stig.check();
         System.out.println(stig);
+
+        stig.enforce();
+        stig.check();
+
+        System.out.println(stig);
     }
 
 }
