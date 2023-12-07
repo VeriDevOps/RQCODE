@@ -36,21 +36,14 @@ public abstract class AuditPolStig extends STIG {
                 return helper;
         }
 
-        public void setHelper(WinScriptHelper helper) {
-                this.helper = helper;
-        }
-
         @Override
         public CheckStatus check() {
-
                 setLastCheckStatus(helper.check());
-
                 return getLastCheckStatus();
         }
 
         @Override
         public EnforcementStatus enforce() {
-
                 setLastEnforcementStatus(helper.enforce());
                 return getLastEnforcementStatus();
         }
