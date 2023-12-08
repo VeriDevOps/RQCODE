@@ -70,13 +70,6 @@ public class V_220748 extends AuditPolStig {
 
                 stig.check();
                 System.out.println("1st check:" + stig.getLastCheckStatus());
-
-                stig.enforce();
-                System.out.println("Enforce:" + stig.getLastEnforcementStatus());
-
-                stig.check();
-                System.out.println("2d check:" + stig.getLastCheckStatus());
-
         }
 
 }
