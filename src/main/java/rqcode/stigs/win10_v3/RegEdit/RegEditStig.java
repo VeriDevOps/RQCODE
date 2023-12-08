@@ -10,12 +10,14 @@ public class RegEditStig extends STIG {
         public static final String REGISTRY_EDIT_ENFORCE_SCRIPT = "$path = \"%(path)\"\n" +
                         "$path_short = \"%(path_short)\"\n" +
                         "$attr = \"%(attr)\"\n" +
-                        "$result_value = \"%(result_value)\"\n" +                        
+                        "$result_value = \"%(result_value)\"\n" + 
+                        "if (!(Test-Path $path_short)) {\n" +
+                         "New-Item -Path $path_short \n" +
+                        "}\n"+                      
                         "if (!(Test-Path $path)){\n" +
-                        "New-Item -Path $path_short \n" +
                         "New-Item -Path $path \n" +
-                        "New-ItemProperty -Force -Path $path -Name $attr -Value $result_value \n" +
-                        "}\n";
+                        "}\n"+
+                        "New-ItemProperty -Force -Path $path -Name $attr -Value $result_value \n";
 
         public static final String REGISTRY_EDIT_CHECK_SCRIPT = "$path = \"%(path)\"\n" +
                         "$attr = \"%(attr)\"\n" +
@@ -49,6 +51,16 @@ public class RegEditStig extends STIG {
         public EnforcementStatus enforce() {
                 setLastEnforcementStatus(helper.enforce());
                 return getLastEnforcementStatus();
+        }
+
+        public String getShortPath(){
+                String path = helper.getEnforceValues().get("path");
+                System.out.println(path);
+
+                int l = path.lastIndexOf("\\");
+                String shortPath = path.substring(0, l);
+                System.out.println(shortPath);
+                return shortPath;
         }
 
 }
