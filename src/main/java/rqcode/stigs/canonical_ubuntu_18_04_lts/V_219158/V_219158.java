@@ -3,7 +3,7 @@ package rqcode.stigs.canonical_ubuntu_18_04_lts.V_219158;
 import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
 
 /**
- * The Ubuntu operating system must not have the rsh-server package installed.
+ * V-219158 The Ubuntu operating system must not have the rsh-server package installed.
  * 
  * It is detrimental for Ubuntu operating systems to provide, or install by
  * default, functionality exceeding requirements or mission objectives. These
