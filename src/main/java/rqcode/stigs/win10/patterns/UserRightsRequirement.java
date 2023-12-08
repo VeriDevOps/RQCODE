@@ -41,12 +41,12 @@ public abstract class UserRightsRequirement extends STIG {
     protected abstract String getFixTextAdditional();
 
     @Override
-    public String checkText() {
+    public String checktext() {
         return String.format(CHECK_TEXT_TEMPLATE, getOption()) + getCheckTextAdditional();
     }
 
     @Override
-    public String fixText() {
+    public String fixtext() {
         return String.format(FIX_TEXT_TEMPLATE, getOption()) + getFixTextAdditional();
     }
 

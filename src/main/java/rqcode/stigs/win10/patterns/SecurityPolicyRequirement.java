@@ -102,12 +102,12 @@ public abstract class SecurityPolicyRequirement extends STIG {
 
 
     @Override
-    public String checkText() {
+    public String checktext() {
         return CHECK_TEXT_TEMPLATE + getCategory() + getCheckTextAdditional();
     }
 
     @Override
-    public String fixText() {
+    public String fixtext() {
         return FIX_TEXT_TEMPLATE + getCategory() + " >> " + getOption() + " to " + getInclusionSetting() + getFixTextAdditional();
     }
 

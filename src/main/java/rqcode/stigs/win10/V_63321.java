@@ -10,7 +10,7 @@ import rqcode.stigs.win10.patterns.SoftwareRegEditRequirement;
 
 public class V_63321 extends SoftwareRegEditRequirement {
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-64055r1_chk";
     }
 
@@ -20,17 +20,17 @@ public class V_63321 extends SoftwareRegEditRequirement {
     }
 
     @Override
-    public String findingID() {
+    public String id() {
         return "V-63321";
     }
 
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-69239r1_fix";
     }
 
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -40,7 +40,7 @@ public class V_63321 extends SoftwareRegEditRequirement {
     }
 
     @Override
-    public String sTIG() {
+    public String title() {
         return "Windows 10 Security Technical Implementation Guide";
     }
 

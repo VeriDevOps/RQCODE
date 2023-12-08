@@ -11,7 +11,7 @@ import rqcode.stigs.win10.patterns.AcrobatExploitProtectionRequirement;
 
 public class V_77189 extends AcrobatExploitProtectionRequirement {
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-77241r8_chk";
     }
 
@@ -21,17 +21,17 @@ public class V_77189 extends AcrobatExploitProtectionRequirement {
     }
 
     @Override
-    public String findingID() {
+    public String id() {
         return "V-77189";
     }
 
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-84325r4_fix";
     }
 
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -41,7 +41,7 @@ public class V_77189 extends AcrobatExploitProtectionRequirement {
     }
 
     @Override
-    public String sTIG() {
+    public String title(){
         return "Windows 10 Security Technical Implementation Guide";
     }
 

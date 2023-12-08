@@ -21,7 +21,7 @@ public abstract class LogonRequirement extends LogonLogoffRequirement {
 
     
     @Override
-    public String checkText() {
+    public String checktext() {
         return "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective."
                 + "\n" + "\n" + "Use the AuditPol tool to review the current Audit Policy configuration:" + "\n"
                 + "Open a Command Prompt with elevated privileges (\"Run as Administrator\")." + "\n"
@@ -32,7 +32,7 @@ public abstract class LogonRequirement extends LogonLogoffRequirement {
 
     
     @Override
-    public String fixText() {
+    public String fixtext() {
         return "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \"Audit Logon\" with \""
                 + getInclusionSetting() + "\" selected.";
     }

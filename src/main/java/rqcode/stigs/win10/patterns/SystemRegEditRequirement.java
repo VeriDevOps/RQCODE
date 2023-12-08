@@ -2,12 +2,12 @@ package rqcode.stigs.win10.patterns;
 
 public abstract class SystemRegEditRequirement extends RegistryEditRequirement{
     @Override
-    public String checkText() {
+    public String checktext() {
         return getCheckTextBody();
     }
 
     @Override
-    public String fixText() {
+    public String fixtext() {
         return "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> "
                 + getOption() + " to " + getInclusionSetting();
     }

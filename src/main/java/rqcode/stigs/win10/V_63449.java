@@ -13,7 +13,7 @@ import rqcode.stigs.win10.patterns.UserAccountManagementRequirement;
 public class V_63449 extends UserAccountManagementRequirement {
     
     @Override
-    public String findingID() {
+    public String id() {
         return "V-63449";
     }
 
@@ -31,7 +31,7 @@ public class V_63449 extends UserAccountManagementRequirement {
 
     
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -43,7 +43,7 @@ public class V_63449 extends UserAccountManagementRequirement {
 
     
     @Override
-    public String sTIG() {
+    public String title(){
         return "Windows 10 Security Technical Implementation Guide";
     }
 
@@ -55,13 +55,13 @@ public class V_63449 extends UserAccountManagementRequirement {
 
     
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-64197r1_chk";
     }
 
     
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-69377r1_fix";
     }
 

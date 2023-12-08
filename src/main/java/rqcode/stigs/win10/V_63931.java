@@ -12,7 +12,7 @@ import rqcode.stigs.win10.patterns.AvailableUserRightsAssignRequirement;
 
 public class V_63931 extends AvailableUserRightsAssignRequirement {
     @Override
-    public String checkTextCode() {
+    public String checkid() {
         return "C-64681r1_chk";
     }
 
@@ -22,17 +22,17 @@ public class V_63931 extends AvailableUserRightsAssignRequirement {
     }
 
     @Override
-    public String findingID() {
+    public String id() {
         return "V-63931";
     }
 
     @Override
-    public String fixTextCode() {
+    public String fixid() {
         return "F-69859r1_fix";
     }
 
     @Override
-    public String iAControls() {
+    public String iacontrols() {
         return "";
     }
 
@@ -42,7 +42,7 @@ public class V_63931 extends AvailableUserRightsAssignRequirement {
     }
 
     @Override
-    public String sTIG() {
+    public String title(){
         return "Windows 10 Security Technical Implementation Guide";
     }
 
