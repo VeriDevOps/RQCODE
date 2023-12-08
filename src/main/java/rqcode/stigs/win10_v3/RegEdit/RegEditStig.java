@@ -1,7 +1,5 @@
 package rqcode.stigs.win10_v3.RegEdit;
 
-import com.profesorfalken.jpowershell.PowerShell;
-
 import rqcode.stigs.STIG;
 import rqcode.stigs.win10_v3.WinScriptHelper;
 

@@ -2,7 +2,6 @@ package rqcode.stigs.win10_v3.RegEdit;
 
 import java.util.Map;
 
-import rqcode.stigs.STIG;
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
 /**
