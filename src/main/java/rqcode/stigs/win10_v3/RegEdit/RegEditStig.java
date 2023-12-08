@@ -55,11 +55,8 @@ public class RegEditStig extends STIG {
 
         public String getShortPath(){
                 String path = helper.getEnforceValues().get("path");
-                System.out.println(path);
-
                 int l = path.lastIndexOf("\\");
                 String shortPath = path.substring(0, l);
-                System.out.println(shortPath);
                 return shortPath;
         }
 

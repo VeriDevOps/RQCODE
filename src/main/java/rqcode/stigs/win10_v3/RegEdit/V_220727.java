@@ -65,15 +65,14 @@ public class V_220727 extends RegEditStig {
     public static void main(String[] args) {
         RegEditStig stig = new V_220727();
 
-        // stig.check();
-        // System.out.println(stig);
+        stig.check();
+        System.out.println(stig);
 
         // stig.enforce();
         // stig.check();
 
         //System.out.println(stig);
 
-        System.out.println(stig.getShortPath());
 
 
     }
