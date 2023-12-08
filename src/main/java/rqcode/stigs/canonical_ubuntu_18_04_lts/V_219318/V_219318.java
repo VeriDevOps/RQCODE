@@ -1,8 +1,5 @@
 package rqcode.stigs.canonical_ubuntu_18_04_lts.V_219318;
 
-
-
-import rqcode.concepts.Checkable;
 import rqcode.stigs.canonical_ubuntu_18_04_lts.UbuntuPackagePattern;
 
 /**
