@@ -2,7 +2,10 @@
 
 ### Installation
 
+Open PowerShell as administrator
+
 Check path for the Windows modules:
+
 ```PowerShell
 $env:PSModulePath
 ```
