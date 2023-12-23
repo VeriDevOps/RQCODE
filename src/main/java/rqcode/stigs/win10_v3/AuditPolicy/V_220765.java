@@ -6,14 +6,14 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 import java.util.Map;
 
 /**
- * V_220748: The system must be configured to audit Account Logon - Credential Validation failures.
+ * V_220765: The system must be configured to audit Object Access - Removable Storage failures.
  */
-public class V_220748 extends AuditPolStig {
+public class V_220765 extends AuditPolStig {
         /**
          * Initiating parameters for the check script
         */
         private final static Map<String, String> CHECK_VALUES = Map.of(
-                        "id", "V_220748",
+                        "id", "V_220765",
                         "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
                         "subcat_es", "errores",
                         "subcat_eng", "failure"
@@ -23,7 +23,7 @@ public class V_220748 extends AuditPolStig {
          * Initiating parameters for the enforce script
          */
         private final static Map<String, String> ENFORCE_VALUES = Map.of(
-                        "id", "V_220748",
+                        "id", "V_220765",
                         "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
                         "parameter", "Failure",
                         "value", "enable"
@@ -33,35 +33,37 @@ public class V_220748 extends AuditPolStig {
          * database
          */
         private final static Map<String, String> INFO = Map.ofEntries(
-                        Map.entry("id", "V_220748"),
-                        Map.entry("title", "The system must be configured to audit Account Logon - Credential Validation failures."),
+                        Map.entry("id", "V_220765"),
+                        Map.entry("title", "The system must be configured to audit Object Access - Removable Storage failures."),
                         Map.entry("date", "2021-08-18"),
-                        Map.entry("ruleID", "SV-220748r569187_rule"),
+                        Map.entry("ruleID", "SV-220765r569187_rule"),
                         Map.entry("severity", "medium"),
                         Map.entry("checktext", "Security Option "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" must be set to "Enabled" (WN10-SO-000030) for the detailed auditing subcategories to be effective.
 
 Use the AuditPol tool to review the current Audit Policy configuration:
 Open a Command Prompt with elevated privileges ("Run as Administrator").
-Enter "AuditPol /get /category:*".
+Enter "AuditPol /get /category:*"
 
 Compare the AuditPol settings with the following. If the system does not audit the following, this is a finding:
 
-Account Logon >> Credential Validation - Failure"),
-                        Map.entry("checkid", "C-22493r554819_chk"),
-                        Map.entry("fixtext", "Configure the policy result_value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> System >> "Audit System Integrity" with "Success" selected."),
-                        Map.entry("fixid", "F-22482r554820_fix"),
+Object Access >> Removable Storage - Failure
+
+Some virtual machines may generate excessive audit events for access to the virtual hard disk itself when this setting is enabled. This may be set to Not Configured in such cases and would not be a finding.  This must be documented with the ISSO to include mitigations such as monitoring or restricting any actual removable storage connected to the VM."),
+                        Map.entry("checkid", "C-22474r554762_chk"),
+                        Map.entry("fixtext", "Configure the policy result_value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> "Audit Logon" with "Success" selected."),
+                        Map.entry("fixid", "F-22463r554763_fix"),
                         Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
 
-System Integrity records events related to violations of integrity to the security subsystem."),
+Logon records user logons. If this is an interactive logon, it is recorded on the local system. If it is to a network share, it is recorded on the system accessed."),
                         Map.entry("iacontrols", "None"),
-                        Map.entry("version", "WN10-AU-000005"),
+                        Map.entry("version", "WN10-AU-000085"),
                         );
                     
         /**
          * Setting up STIG information and initializing the windows script helper with
          * the check and enforce parameters
          */
-        public V_220748() {
+        public V_220765() {
                 setStigInfo(INFO);
                 WinScriptHelper helper = this.getHelper();
                 helper.setCheckValues(CHECK_VALUES);
@@ -72,7 +74,7 @@ System Integrity records events related to violations of integrity to the securi
          * Simple test for the STIG check
          */
         public static void main(String[] args) {
-                STIG stig = new V_220748();
+                STIG stig = new V_220765();
 
                 System.out.println(stig);
 

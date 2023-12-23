@@ -107,4 +107,5 @@ public abstract class STIG extends EnforceableRequirement {
     public String fixtext() {
         return stigInfo.get("fixtext");
     }
+    
 }
