@@ -36,25 +36,15 @@ public class V_220757 extends AuditPolStig {
                         Map.entry("id", "V_220757"),
                         Map.entry("title", "The system must be configured to audit Logon/Logoff - Logoff successes."),
                         Map.entry("date", "2021-08-18"),
-                        Map.entry("ruleID", "SV-220757r569187_rule"),
+                        Map.entry("ruleID", "SV_220757r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("checktext", "Security Option "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" must be set to "Enabled" (WN10-SO-000030) for the detailed auditing subcategories to be effective.
-
-Use the AuditPol tool to review the current Audit Policy configuration:
-Open a Command Prompt with elevated privileges ("Run as Administrator").
-Enter "AuditPol /get /category:*".
-
-Compare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:
-
-Logon/Logoff >> Logoff - Success"),
+                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:\n\nLogon/Logoff >> Logoff - Success"),
                         Map.entry("checkid", "C-22463r554729_chk"),
-                        Map.entry("fixtext", "Configure the policy result_value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Account Logon >> "Audit Credential Validation" with "Failure" selected."),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \"Audit Logoff\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22452r554730_fix"),
-                        Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
-
-Credential validation records events related to validation tests on credentials for a user account logon."),
+                        Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Force shutdown from a remote system\" user right can remotely shut down a system which could result in a DoS."),
                         Map.entry("iacontrols", "None"),
-                        Map.entry("version", "WN10-AU-000065"),
+                        Map.entry("version", "WN10-AU-000065")
                         );
                     
         /**

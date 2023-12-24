@@ -44,7 +44,7 @@ public class $id extends AuditPolStig {
                         Map.entry("fixid", "$fixid"),
                         Map.entry("description","$description"),
                         Map.entry("iacontrols", "$iacontrols"),
-                        Map.entry("version", "$version"),
+                        Map.entry("version", "$version")
                         );
                     
         /**

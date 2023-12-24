@@ -24,7 +24,18 @@ public class $id extends RegistryEditPattern {
                             
                         ),
                     Map.of(
-                            "description", "$description"
+                            Map.entry("id", "$id"),
+                            Map.entry("title", "$title"),
+                            Map.entry("date", "$date"),
+                            Map.entry("ruleID", "$ruleID"),
+                            Map.entry("severity", "$severity"),
+                            Map.entry("checktext", "$checktext"),
+                            Map.entry("checkid", "$checkid"),
+                            Map.entry("fixtext", "$fixtext"),
+                            Map.entry("fixid", "$fixid"),
+                            Map.entry("description","$description"),
+                            Map.entry("iacontrols", "$iacontrols"),
+                            Map.entry("version", "$version")
                         )
                 );
 

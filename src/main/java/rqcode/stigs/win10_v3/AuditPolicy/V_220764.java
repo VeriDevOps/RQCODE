@@ -36,29 +36,15 @@ public class V_220764 extends AuditPolStig {
                         Map.entry("id", "V_220764"),
                         Map.entry("title", "Windows 10 must be configured to audit Object Access - Other Object Access Events failures."),
                         Map.entry("date", "2021-08-18"),
-                        Map.entry("ruleID", "SV-220764r569187_rule"),
+                        Map.entry("ruleID", "SV_220764r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("checktext", "Security Option "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" must be set to "Enabled" (WN10-SO-000030) for the detailed auditing subcategories to be effective.
-
-Use the AuditPol tool to review the current Audit Policy configuration:
-
-Open PowerShell or a Command Prompt with elevated privileges ("Run as Administrator").
-
-Enter "AuditPol /get /category:*"
-
-Compare the AuditPol settings with the following:
-
-Object Access >> Other Object Access Events - Failure
-
-If the system does not audit the above, this is a finding."),
+                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\n\nOpen PowerShell or a Command Prompt with elevated privileges (\"Run as Administrator\").\n\nEnter \"AuditPol /get /category:*\"\n\nCompare the AuditPol settings with the following:\n\nObject Access >> Other Object Access Events - Failure\n\nIf the system does not audit the above, this is a finding."),
                         Map.entry("checkid", "C-22465r554735_chk"),
-                        Map.entry("fixtext", "Configure the policy result_value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Account Management >> "Audit Security Group Management" with "Success" selected."),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \"Audit Other Object Access Events\" with \"Failure\" selected."),
                         Map.entry("fixid", "F-22454r554736_fix"),
-                        Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
-
-Security Group Management records events such as creating, deleting or changing of security groups, including changes in group members."),
+                        Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nAuditing for other object access records events related to the management of task scheduler jobs and COM+ objects."),
                         Map.entry("iacontrols", "None"),
-                        Map.entry("version", "WN10-AU-000084"),
+                        Map.entry("version", "WN10-AU-000084")
                         );
                     
         /**

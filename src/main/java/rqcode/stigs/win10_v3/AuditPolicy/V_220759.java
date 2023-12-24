@@ -36,25 +36,15 @@ public class V_220759 extends AuditPolStig {
                         Map.entry("id", "V_220759"),
                         Map.entry("title", "The system must be configured to audit Logon/Logoff - Logon successes."),
                         Map.entry("date", "2021-08-18"),
-                        Map.entry("ruleID", "SV-220759r569187_rule"),
+                        Map.entry("ruleID", "SV_220759r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("checktext", "Security Option "Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings" must be set to "Enabled" (WN10-SO-000030) for the detailed auditing subcategories to be effective.
-
-Use the AuditPol tool to review the current Audit Policy configuration:
-Open a Command Prompt with elevated privileges ("Run as Administrator").
-Enter "AuditPol /get /category:*".
-
-Compare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:
-
-Logon/Logoff >> Logon - Success"),
+                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:\n\nLogon/Logoff >> Logon - Success"),
                         Map.entry("checkid", "C-22472r554756_chk"),
-                        Map.entry("fixtext", "Configure the policy result_value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> "Audit Logoff" with "Success" selected."),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \"Audit Logon\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22461r554757_fix"),
-                        Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
-
-Logoff records user logoffs. If this is an interactive logoff, it is recorded on the local system. If it is to a network share, it is recorded on the system accessed."),
+                        Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nEnabling PowerShell Transcription will record detailed information from the processing of PowerShell commands and scripts. This can provide additional detail when malware has run on a system."),
                         Map.entry("iacontrols", "None"),
-                        Map.entry("version", "WN10-AU-000075"),
+                        Map.entry("version", "WN10-AU-000075")
                         );
                     
         /**
