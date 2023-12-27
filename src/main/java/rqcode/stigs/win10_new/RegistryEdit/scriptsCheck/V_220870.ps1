@@ -1,5 +1,7 @@
 $path = "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Syste"
-$attr = "AllowDomainPINLogon"
+$attr = "AllowDomainPINLogon
+ 
+ result_value data"
 $result_value = "0"
 $result = "ERROR"
 if (Test-Path $path){
