@@ -1,34 +1,73 @@
-package rqcode.stigs.win10_new.AuditPolicy.stigs;
+package rqcode.stigs.win10_v3.AuditPolicy;
 
-import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyConst;
-import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyPattern;
-import rqcode.stigs.win10_new.AuditPolicy.AuditPolicyScriptPattern;
-import rqcode.stigs.win10_new.patterns.STIGScriptPattern;
+import rqcode.stigs.STIG;
+import rqcode.stigs.win10_v3.WinScriptHelper;
 
 import java.util.Map;
 
-public class $id extends AuditPolicyPattern {
-private final STIGScriptPattern policyScriptPattern =
-new AuditPolicyScriptPattern(
-AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_CHECK, AuditPolicyConst.AUDIT_POLICY_SCRIPT_PATTERN_ENFORCE,
-                    Map.of(
+/**
+ * $id: $title
+ */
+public class $id extends AuditPolStig {
+        /**
+         * Initiating parameters for the check script
+        */
+        private final static Map<String, String> CHECK_VALUES = Map.of(
                         "id", "$id",
                         "guid", "$guid",
                         "subcat_es", "$subcat_es",
                         "subcat_eng", "$subcat_eng"
-                    ),
-                    Map.of(
+                        );
+
+        /**
+         * Initiating parameters for the enforce script
+         */
+        private final static Map<String, String> ENFORCE_VALUES = Map.of(
                         "id", "$id",
                         "guid", "$guid",
                         "parameter", "$parameter",
                         "value", "$value"
-                        ),
-                    Map.of(
-                        "description", "$description"
-                        )
-                );
+                        );
+        /**
+         * Initiating information defining the security requirements from the STIG
+         * database
+         */
+        private final static Map<String, String> INFO = Map.ofEntries(
+                        Map.entry("id", "$id"),
+                        Map.entry("title", "$title"),
+                        Map.entry("date", "$date"),
+                        Map.entry("ruleID", "$ruleID"),
+                        Map.entry("severity", "$severity"),
+                        Map.entry("checktext", "$checktext"),
+                        Map.entry("checkid", "$checkid"),
+                        Map.entry("fixtext", "$fixtext"),
+                        Map.entry("fixid", "$fixid"),
+                        Map.entry("description","$description"),
+                        Map.entry("iacontrols", "$iacontrols"),
+                        Map.entry("version", "$version")
+                        );
+                    
+        /**
+         * Setting up STIG information and initializing the windows script helper with
+         * the check and enforce parameters
+         */
+        public $id() {
+                setStigInfo(INFO);
+                WinScriptHelper helper = this.getHelper();
+                helper.setCheckValues(CHECK_VALUES);
+                helper.setEnforceValues(ENFORCE_VALUES);
+        }
 
-public $id() {
-pattern = this.policyScriptPattern;
-}
+        /**
+         * Simple test for the STIG check
+         */
+        public static void main(String[] args) {
+                STIG stig = new $id();
+
+                System.out.println(stig);
+
+                stig.check();
+                System.out.println("1st check:" + stig.getLastCheckStatus());
+        }
+
 }

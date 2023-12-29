@@ -6,18 +6,18 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 import java.util.Map;
 
 /**
- * V-220748: The system must be configured to audit Account Logon - Credential
- * Validation failures.
+ * V_220748: The system must be configured to audit Account Logon - Credential Validation failures.
  */
 public class V_220748 extends AuditPolStig {
         /**
          * Initiating parameters for the check script
-         */
+        */
         private final static Map<String, String> CHECK_VALUES = Map.of(
                         "id", "V_220748",
                         "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
                         "subcat_es", "errores",
-                        "subcat_eng", "failure");
+                        "subcat_eng", "failure"
+                        );
 
         /**
          * Initiating parameters for the enforce script
@@ -26,29 +26,27 @@ public class V_220748 extends AuditPolStig {
                         "id", "V_220748",
                         "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
                         "parameter", "Failure",
-                        "value", "enable");
+                        "value", "enable"
+                        );
         /**
          * Initiating information defining the security requirements from the STIG
          * database
          */
         private final static Map<String, String> INFO = Map.ofEntries(
-                        Map.entry("date", "2023-09-29"),
-                        Map.entry("checkid", "C-22463r554729_chk"),
-                        Map.entry("checktext",
-                                        "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\n\nAccount Logon >> Credential Validation - Failure"),
-                        Map.entry("description",
-                                        "Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nCredential validation records events related to validation tests on credentials for a user account logon."),
-                        Map.entry("fixid", "F-22452r554730_fix"),
-                        Map.entry("fixtext",
-                                        "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Account Logon >> \"Audit Credential Validation\" with \"Failure\" selected."),
-                        Map.entry("iacontrols", "null"),
-                        Map.entry("id", "V-220748"),
-                        Map.entry("ruleID", "SV-220748r569187_rule"),
+                        Map.entry("id", "V_220748"),
+                        Map.entry("title", "The system must be configured to audit Account Logon - Credential Validation failures."),
+                        Map.entry("date", "2021-08-18"),
+                        Map.entry("ruleID", "SV_220748r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("title",
-                                        "The system must be configured to audit Account Logon - Credential Validation failures."),
-                        Map.entry("version", "WN10-AU-000005"));
-
+                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\n\nAccount Logon >> Credential Validation - Failure"),
+                        Map.entry("checkid", "C-22493r554819_chk"),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Account Logon >> \"Audit Credential Validation\" with \"Failure\" selected."),
+                        Map.entry("fixid", "F-22482r554820_fix"),
+                        Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nCredential validation records events related to validation tests on credentials for a user account logon."),
+                        Map.entry("iacontrols", "None"),
+                        Map.entry("version", "WN10-AU-000005")
+                        );
+                    
         /**
          * Setting up STIG information and initializing the windows script helper with
          * the check and enforce parameters
