@@ -14,7 +14,7 @@ public class V_220870 extends RegEditStig {
      */
     private final static Map<String, String> CHECK_VALUES = Map.of(
             "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Syste",
-            "attr", ""AllowDomainPINLogon",
+            "attr", "AllowDomainPINLogon",
             "result_value",  "$result_value",
             "id", "V_220870"
             );

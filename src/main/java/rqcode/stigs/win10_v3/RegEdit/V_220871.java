@@ -14,7 +14,7 @@ public class V_220871 extends RegEditStig {
      */
     private final static Map<String, String> CHECK_VALUES = Map.of(
             "path", "HKLM:\\Software\\Policies\\Microsoft\\WindowsInkWorkspac",
-            "attr", ""AllowWindowsInkWorkspace",
+            "attr", "AllowWindowsInkWorkspace",
             "result_value",  "$result_value",
             "id", "V_220871"
             );
