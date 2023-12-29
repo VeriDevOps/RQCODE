@@ -1,0 +1,78 @@
+package rqcode.stigs.win10_v3.RegEdit;
+
+import java.util.Map;
+
+import rqcode.stigs.win10_v3.WinScriptHelper;
+
+/**
+ * V_220839: Unauthenticated RPC clients must be restricted from connecting to the RPC server.. 
+ */
+public class V_220839 extends RegEditStig {
+
+    /**
+     * Initiating parameters for the check script
+     */
+    private final static Map<String, String> CHECK_VALUES = Map.of(
+            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+            "attr", "PreXPSP2ShellProtocolBehavior",
+            "result_value",  "0",
+            "id", "V_220839"
+            );
+    /**
+     * Initiating parameters for the enforce script
+     */
+    private final static Map<String, String> ENFORCE_VALUES = Map.of(
+            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+            "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
+            "attr", "PreXPSP2ShellProtocolBehavior",
+            "result_value", "0"
+            );
+    /**
+     * Initiating information defining the security requirements from the STIG
+     * database
+     */
+    private final static Map<String, String> INFO = Map.ofEntries(
+            Map.entry("id", "V_220839"),
+            Map.entry("title", "Unauthenticated RPC clients must be restricted from connecting to the RPC server."),
+            Map.entry("date", "2021-08-18"),
+            Map.entry("ruleID", "SV_220699r569187_rule"),
+            Map.entry("severity", "medium"),
+            Map.entry("checktext", "Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\\n\\nAudit Policy Change records events related to changes in audit policy."),
+            Map.entry("checkid", "C-22414r642137_chk"),
+            Map.entry("fixtext", "The default behavior is for shell protected mode to be turned on for file explorer.\\n\\nIf this needs to be corrected, configure the policy value for Computer Configuration >> Administrative Templates >> Windows Components >> File Explorer >> \\Turn off shell protocol protected mode\\ to \\Not Configured\\ or \\Disabled\\."),
+            Map.entry("fixid", "F-22403r554583_fix"),
+            Map.entry("description","The shell protocol will limit the set of folders applications can open when run in protected mode. Restricting files an application can open, to a limited set of folders, increases the security of Windows."),
+            Map.entry("iacontrols", "null"),
+            Map.entry("version", "WN10-CC-000225")
+            );
+
+    /**
+     * Setting up STIG information and initializing the windows script helper with
+     * the check and enforce parameters
+     */
+    public V_220839() {
+        setStigInfo(INFO);
+        WinScriptHelper helper = this.getHelper();
+        helper.setCheckValues(CHECK_VALUES);
+        helper.setEnforceValues(ENFORCE_VALUES);
+    }
+
+    /**
+     * Simple test for the STIG check
+     */
+    public static void main(String[] args) {
+        RegEditStig stig = new V_220839();
+
+        stig.check();
+        System.out.println(stig);
+
+        // stig.enforce();
+        // stig.check();
+
+        //System.out.println(stig);
+
+
+
+    }
+
+}

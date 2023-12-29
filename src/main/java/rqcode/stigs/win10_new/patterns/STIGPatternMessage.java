@@ -5,14 +5,14 @@ import rqcode.concepts.Enforceable.EnforcementStatus;
 import rqcode.stigs.STIG;
 
 public class STIGPatternMessage {
-    public static String shortMessageCheck(STIGPattern pattern, CheckStatus checkStatus){
-        String id = pattern.getPattern().getCheckValues().get("id");
+    public static String shortMessageCheck(STIG stig, CheckStatus checkStatus){
+        String id = stig.id();
 
         return "STIG " + id + "\nCheck status: " + checkStatus + "\n";
     }
 
-    public static String shortMessageEnforce(STIGPattern pattern, EnforcementStatus enforcementStatus){
-        String id = pattern.getPattern().getCheckValues().get("id");
+    public static String shortMessageEnforce(STIG stig, EnforcementStatus enforcementStatus){
+        String id = stig.id();
 
         return "STIG " + id + "\nEnforce status: " + enforcementStatus + "\n";
     }
