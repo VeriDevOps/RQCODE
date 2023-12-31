@@ -5,7 +5,7 @@ The UserRights RQCODE classes use specific PowerShell commands that comes with t
 The author of this module is Tony Pombo. The script was originially distributed at https://gallery.technet.microsoft.com/Grant-Revoke-Query-user-26e259b0
 
 
-### Installation
+## Installation
 
 Open PowerShell as administrator
 
@@ -30,14 +30,18 @@ ModuleType Version    Name                                ExportedCommands
 Script     0.0.5      usrts                               {Revoke-UserRight, Grant-TokenPrivilege, Get-AccountsWith...
 ```
 
-Remove UserRights module:
+## Remove UserRights module
+
 ```PowerShell
 cd "C:\Program Files\WindowsPowerShell\Modules"
 Remove-Module usrts
 rm -r .\usrts\
 Get-Module -ListAvailable
 ```
-### Troubleshooting
+
+You may see that the usrts module disapeared from the available modules
+
+## Troubleshooting
 
 You may need to enable the scripts execution
 ```PowerShell
