@@ -19,15 +19,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-
 /*
  * Generate classes for STIGs:
- * V_220969
- * V_220970
- * V_220971
+ * V_220968
+ * V_220972
  */
 
-public class UserRightsGenerateTest1 {
+public class UserRightsGenerateTest4 {
 
     /**
      * @throws IOException
@@ -46,7 +44,7 @@ public class UserRightsGenerateTest1 {
 
         velocityEngine.init(props);
 
-        String content = Files.readString(Path.of("src/test/resources/templates/userRights/userrights1.json"), StandardCharsets.UTF_8);
+        String content = Files.readString(Path.of("src/test/resources/templates/userRights/userrights4.json"), StandardCharsets.UTF_8);
         List<UserRightsTemplate> userRightTemplates = new ArrayList<>();
 
         userRightTemplates = Arrays.asList(mapper.readValue(content, UserRightsTemplate[].class));
