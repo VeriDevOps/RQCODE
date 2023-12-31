@@ -13,7 +13,7 @@ public class V_220902 extends RegEditStig {
      * Initiating parameters for the check script
      */
     private final static Map<String, String> CHECK_VALUES = Map.of(
-            "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protectio",
+            "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protection",
             "attr", "DeviceEnumerationPolicy",
             "result_value",  "0",
             "id", "V_220902"
@@ -22,7 +22,7 @@ public class V_220902 extends RegEditStig {
      * Initiating parameters for the enforce script
      */
     private final static Map<String, String> ENFORCE_VALUES = Map.of(
-            "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protectio",
+            "path", "HKLM:\\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protection",
             "path_short", "HKLM:\\Software\\Policies\\Microsoft\\Windows",
             "attr", "DeviceEnumerationPolicy",
             "result_value", "0"
@@ -35,13 +35,13 @@ public class V_220902 extends RegEditStig {
             Map.entry("id", "V_220902"),
             Map.entry("title", "The Application event log size must be configured to 32768 KB or greater."),
             Map.entry("date", "2021-08-18"),
-            Map.entry("ruleID", "SV_220699r569187_rule"),
+            Map.entry("ruleID", "SV_220902r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Verify the permissions on the System event log (System.evtx). Standard user accounts or groups must not have access. The default permissions listed below satisfy this requirement.\\n\\nEventlog - Full Control\\nSYSTEM - Full Control\\nAdministrators - Full Control\\n\\nThe default location is the \\%SystemRoot%\\SYSTEM32\\WINEVT\\LOGS\\ directory. They may have been moved to another folder.\\n\\nIf the permissions for these files are not as restrictive as the ACLs listed, this is a finding.\\n\\nNOTE: If \\APPLICATION PACKAGE AUTHORITY\\ALL APPLICATION PACKAGES\\ has Special Permissions, this would not be a finding."),
-            Map.entry("checkid", "C-22414r642137_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Administrative Templates >> System >> Kernel DMA Protection >> \\Enumeration policy for external devices incompatible with Kernel DMA Protection\\ to \\Enabled\\ with \\Enumeration Policy\\ set to \\Block All\\."),
-            Map.entry("fixid", "F-22403r554583_fix"),
-            Map.entry("description","Kernel DMA Protection to protect PCs against drive-by Direct Memory Access (DMA) attacks using PCI hot plug devices connected to Thunderbolt™ 3 ports. Drive-by DMA attacks can lead to disclosure of sensitive information residing on a PC, or even injection of malware that allows attackers to bypass the lock screen or control PCs remotely."),
+            Map.entry("checktext", "This is NA prior to v1803 of Windows 10.\n\nIf the following registry value does not exist or is not configured as specified, this is a finding.\n\nRegistry Hive: HKEY_LOCAL_MACHINE\nRegistry Path: \\Software\\Policies\\Microsoft\\Windows\\Kernel DMA Protection\n\nValue Name: DeviceEnumerationPolicy\nValue Type: REG_DWORD\nValue: 0"),
+            Map.entry("checkid", "C-22617r555191_chk"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Administrative Templates >> System >> Kernel DMA Protection >> \"Enumeration policy for external devices incompatible with Kernel DMA Protection\" to \"Enabled\" with \"Enumeration Policy\" set to \"Block All\"."),
+            Map.entry("fixid", "F-22606r555192_fix"),
+            Map.entry("description","Kernel DMA Protection to protect PCs against drive-by Direct Memory Access (DMA) attacks using PCI hot plug devices connected to Thunderbolt\u2122 3 ports. Drive-by DMA attacks can lead to disclosure of sensitive information residing on a PC, or even injection of malware that allows attackers to bypass the lock screen or control PCs remotely."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-EP-000310")
             );

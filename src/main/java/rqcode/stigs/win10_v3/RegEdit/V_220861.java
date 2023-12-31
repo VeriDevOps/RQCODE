@@ -13,7 +13,7 @@ public class V_220861 extends RegEditStig {
      * Initiating parameters for the check script
      */
     private final static Map<String, String> CHECK_VALUES = Map.of(
-            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explore",
+            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
             "attr", "NoReadingPane",
             "result_value",  "1",
             "id", "V_220861"
@@ -22,7 +22,7 @@ public class V_220861 extends RegEditStig {
      * Initiating parameters for the enforce script
      */
     private final static Map<String, String> ENFORCE_VALUES = Map.of(
-            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explore",
+            "path", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
             "path_short", "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
             "attr", "NoReadingPane",
             "result_value", "1"
@@ -35,13 +35,13 @@ public class V_220861 extends RegEditStig {
             Map.entry("id", "V_220861"),
             Map.entry("title", "Windows Ink Workspace must be configured to disallow access above the lock."),
             Map.entry("date", "2021-08-18"),
-            Map.entry("ruleID", "SV_220699r569187_rule"),
+            Map.entry("ruleID", "SV_220861r569305_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\\n\\nSystem Integrity records events related to violations of integrity to the security subsystem."),
-            Map.entry("checkid", "C-22414r642137_chk"),
-            Map.entry("fixtext", "Ensure the following settings are configured for Windows 10 locally or applied through group policy. \\n\\nConfigure the policy value for User Configuration >> Administrative Templates >> Windows Components >> File Explorer >> Explorer Frame Pane \\Turn off Preview Pane\\ to \\Enabled\\.\\n\\nConfigure the policy value for User Configuration >> Administrative Templates >> Windows Components >> File Explorer >> Explorer Frame Pane \\Turn on or off details pane\\ to \\Enabled\\ and \\Configure details pane\\ to \\Always hide\\."),
-            Map.entry("fixid", "F-22403r554583_fix"),
-            Map.entry("description","A known vulnerability in Windows 10 could allow the execution of malicious code by either opening a compromised document or viewing it in the Windows Preview pane.\\n\\nOrganizations must disable the Windows Preview pane and Windows Detail pane."),
+            Map.entry("checktext", "If the following registry values do not exist or are not configured as specified, this is a finding:\n\nRegistry Hive: HKEY_CURRENT_USER\nRegistry Path: \\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\n\nValue Name: NoPreviewPane\n\nValue Type: REG_DWORD\n\nValue: 1\n\nRegistry Hive: HKEY_CURRENT_USER\nRegistry Path: \\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\n\nValue Name: NoReadingPane\n\nValue Type: REG_DWORD\n\nValue: 1"),
+            Map.entry("checkid", "C-22576r603220_chk"),
+            Map.entry("fixtext", "Ensure the following settings are configured for Windows 10 locally or applied through group policy. \n\nConfigure the policy value for User Configuration >> Administrative Templates >> Windows Components >> File Explorer >> Explorer Frame Pane \"Turn off Preview Pane\" to \"Enabled\".\n\nConfigure the policy value for User Configuration >> Administrative Templates >> Windows Components >> File Explorer >> Explorer Frame Pane \"Turn on or off details pane\" to \"Enabled\" and \"Configure details pane\" to \"Always hide\"."),
+            Map.entry("fixid", "F-22565r603223_fix"),
+            Map.entry("description","A known vulnerability in Windows 10 could allow the execution of malicious code by either opening a compromised document or viewing it in the Windows Preview pane.\n\nOrganizations must disable the Windows Preview pane and Windows Detail pane."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-CC-000328")
             );

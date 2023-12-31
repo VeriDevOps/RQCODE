@@ -13,7 +13,7 @@ public class V_220814 extends RegEditStig {
      * Initiating parameters for the check script
      */
     private final static Map<String, String> CHECK_VALUES = Map.of(
-            "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",
+            "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}",
             "attr", "NoGPOListChanges",
             "result_value",  "0",
             "id", "V_220814"
@@ -22,7 +22,7 @@ public class V_220814 extends RegEditStig {
      * Initiating parameters for the enforce script
      */
     private final static Map<String, String> ENFORCE_VALUES = Map.of(
-            "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2",
+            "path", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}",
             "path_short", "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy",
             "attr", "NoGPOListChanges",
             "result_value", "0"
@@ -35,13 +35,13 @@ public class V_220814 extends RegEditStig {
             Map.entry("id", "V_220814"),
             Map.entry("title", "The Windows Explorer Preview pane must be disabled for Windows 10."),
             Map.entry("date", "2021-08-18"),
-            Map.entry("ruleID", "SV_220699r569187_rule"),
+            Map.entry("ruleID", "SV_220814r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Security Option \\Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\\ must be set to \\Enabled\\ (WN10-SO-000030) for the detailed auditing subcategories to be effective.\\n\\nUse the AuditPol tool to review the current Audit Policy configuration:\\n\\nOpen a Command Prompt with elevated privileges (\\Run as Administrator\\).\\n\\nEnter \\AuditPol /get /category:*\\\\n\\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\\n\\nLogon/Logoff >> Account Lockout - Failure"),
-            Map.entry("checkid", "C-22414r642137_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Administrative Templates >> System >> Group Policy >> \\Configure registry policy processing\\ to \\Enabled\\ and select the option \\Process even if the Group Policy objects have not changed\\."),
-            Map.entry("fixid", "F-22403r554583_fix"),
-            Map.entry("description","Enabling this setting and then selecting the \\Process even if the Group Policy objects have not changed\\ option ensures that the policies will be reprocessed even if null have been changed. This way, any unauthorized changes are forced to match the domain-based group policy settings again."),
+            Map.entry("checktext", "If the following registry value does not exist or is not configured as specified, this is a finding:\n\nRegistry Hive: HKEY_LOCAL_MACHINE\nRegistry Path: \\SOFTWARE\\Policies\\Microsoft\\Windows\\Group Policy\\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}\n\nValue Name: NoGPOListChanges\n\nValue Type: REG_DWORD\nValue: 0"),
+            Map.entry("checkid", "C-22529r554927_chk"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Administrative Templates >> System >> Group Policy >> \"Configure registry policy processing\" to \"Enabled\" and select the option \"Process even if the Group Policy objects have not changed\"."),
+            Map.entry("fixid", "F-22518r554928_fix"),
+            Map.entry("description","Enabling this setting and then selecting the \"Process even if the Group Policy objects have not changed\" option ensures that the policies will be reprocessed even if none have been changed. This way, any unauthorized changes are forced to match the domain-based group policy settings again."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-CC-000090")
             );
