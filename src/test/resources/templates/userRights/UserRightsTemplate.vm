@@ -7,7 +7,7 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 /**
  * $id: $title. 
  */
-public class $id extends UserRightsStig1 {
+public class $id extends $stigtype {
 
     /**
      * Initiating parameters for the check script
