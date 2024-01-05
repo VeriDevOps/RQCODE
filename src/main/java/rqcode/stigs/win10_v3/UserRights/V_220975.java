@@ -7,7 +7,7 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 /**
  * V_220975: The Impersonate a client after authentication user right must only be assigned to Administrators, Service, Local Service, and Network Service.. 
  */
-public class V_220975 extends UserRightsStig1 {
+public class V_220975 extends UserRightsStig3 {
 
     /**
      * Initiating parameters for the check script

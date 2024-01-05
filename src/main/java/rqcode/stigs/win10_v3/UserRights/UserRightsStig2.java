@@ -6,17 +6,17 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 public class UserRightsStig2 extends STIG {
 
         public static final String USER_RIGHTS_ENFORCE_SCRIPT = 
-                        "$administrators = \"%(administrators)\"\n" +
                         "$constantName = \"%(constantName)\"\n" +
                         "$ListAccounts = Get-AccountsWithUserRight $constantName\n" +
                         "Foreach ($account in $ListAccounts)\n" +
                         "{\n" +
                         "Revoke-UserRight $account.SID $constantName\n" +
                         "}\n\n" +
-                        "Grant-UserRight $administrators $constantName";
+                        "Grant-UserRight 'S-1-5-32-544' $constantName";
                  
         public static final String USER_RIGHTS_CHECK_SCRIPT = 
                         "$constantName = \"%(constantName)\"\n" +
+                        "$ListAccounts = Get-AccountsWithUserRight $constantName\n" +
                         "$result = \"ERROR\"\n" + 
                         "$admins = 0\n"  +
                         "$otros = 0\n" +
@@ -30,11 +30,12 @@ public class UserRightsStig2 extends STIG {
                         "}\n" +
                         "if (($admins -eq 1) -And ($otros -eq 0)){\n" +
                             "$result = \"OK\"\n" +
-                        "}"; 
+                        "}\n" +
+                        "$result"; 
                         // +
                         //"Write-Output \"" + PowerShell.END_SCRIPT_STRING + "\"";
-        private WinScriptHelper helper = new WinScriptHelper(USER_RIGHTS_ENFORCE_SCRIPT,
-                        USER_RIGHTS_CHECK_SCRIPT);
+        private WinScriptHelper helper = new WinScriptHelper(USER_RIGHTS_CHECK_SCRIPT,
+                        USER_RIGHTS_ENFORCE_SCRIPT);
 
         public WinScriptHelper getHelper() {
                 return helper;

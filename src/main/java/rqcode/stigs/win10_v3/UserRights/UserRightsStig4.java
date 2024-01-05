@@ -37,9 +37,9 @@ public class UserRightsStig4 extends STIG {
                         "Foreach ($account in $ListAccounts)\n" +
                         "{\n" +
                             "if ($perteneceDominio){\n" +
-                                "if ($account.SID -eq 'S-1-5-root-domain-519'){\n" +
+                                "if ($account.SID -eq 'S-1-5-domain-512'){\n" +
                                     "$EnterpriseAdmins = 1\n" +
-                                "}elseif ($account.SID -eq 'S-1-5-domain-512'){\n" +
+                                "}elseif ($account.SID -eq 'S-1-5-root-domain-519'){\n" +
                                     "$DomainAdmins = 1\n" +
                                 "}elseif ($account.SID -eq 'S-1-2-0'){\n" +
                                     "$Localaccount = 1\n" +
@@ -50,27 +50,22 @@ public class UserRightsStig4 extends STIG {
                                 "}else{\n" +
                                     "$otros = 1\n" +
                                 "}\n" +
-                                "}else{\n" +
-                                "if ($account.SID -eq 'S-1-5-32-546'){\n" +
-                                    "$guest = 1\n" +
-                                "}\n" +
-                                "}else{\n" +
-                                    "$otros = 1\n" +
-                                "}\n" +
                             "}\n" +
-                        "}\n" +
+                        "}\n\n" +
+                        
                         "if ($perteneceDominio){\n" +
-                            "if (($EnterpriseAdmins -eq 1) -And ($DomainAdmins -eq 1) -And ($Localaccount -eq 1) -And ($uno -eq 1) -And ($guest -eq 1) -And ($otros -eq 0)){\n" +
+                            "if(($EnterpriseAdmins -eq 1) -And ($DomainAdmins -eq 1) -And ($Localaccount -eq 1) -And ($guest -eq 1) -And ($uno -eq 1) -And ($otros -eq 0)){\n" +
                             "$result = \"OK\"\n" +
                             "}\n" +
                         "}else{\n" +
                             "$result = \"OK\"\n" +
-                        "}"; 
+                        "}\n" +
+                        "$result"; 
 
                         // +
                         //"Write-Output \"" + PowerShell.END_SCRIPT_STRING + "\"";
-        private WinScriptHelper helper = new WinScriptHelper(USER_RIGHTS_ENFORCE_SCRIPT,
-                        USER_RIGHTS_CHECK_SCRIPT);
+        private WinScriptHelper helper = new WinScriptHelper(USER_RIGHTS_CHECK_SCRIPT,
+                                 USER_RIGHTS_ENFORCE_SCRIPT);
 
         public WinScriptHelper getHelper() {
                 return helper;

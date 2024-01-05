@@ -7,7 +7,7 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 /**
  * V_220972: The Deny log on through Remote Desktop Services user right on Windows 10 workstations must at a minimum be configured to prevent access from highly privileged domain accounts and local accounts on domain systems and unauthenticated access on all systems.. 
  */
-public class V_220972 extends UserRightsStig1 {
+public class V_220972 extends UserRightsStig4 {
 
     /**
      * Initiating parameters for the check script

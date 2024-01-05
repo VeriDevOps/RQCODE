@@ -7,7 +7,7 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 /**
  * V_220964: The Create global objects user right must only be assigned to Administrators, Service, Local Service, and Network Service.. 
  */
-public class V_220964 extends UserRightsStig1 {
+public class V_220964 extends UserRightsStig3 {
 
     /**
      * Initiating parameters for the check script

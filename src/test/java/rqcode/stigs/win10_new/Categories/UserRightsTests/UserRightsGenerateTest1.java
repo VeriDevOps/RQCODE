@@ -70,6 +70,7 @@ public class UserRightsGenerateTest1 {
             context.put("fixid", userRightsTemplate.getFixid());
             context.put("iacontrols", userRightsTemplate.getIacontrols());
             context.put("ruleID", userRightsTemplate.getRuleID());
+            context.put("stigtype","UserRightsStig1");
 
             
             // Generate the Java code

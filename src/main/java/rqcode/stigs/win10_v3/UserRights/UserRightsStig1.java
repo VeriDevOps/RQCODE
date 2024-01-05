@@ -44,12 +44,13 @@ public class UserRightsStig1 extends STIG {
                             "}\n" +
                         "}else{\n" +
                             "$result = \"OK\"\n" +
-                        "}"; 
+                        "}\n" +
+                        "$result"; 
                         // +
                         //"Write-Output \"" + PowerShell.END_SCRIPT_STRING + "\"";
-        private WinScriptHelper helper = new WinScriptHelper(USER_RIGHTS_ENFORCE_SCRIPT,
-                        USER_RIGHTS_CHECK_SCRIPT);
-
+        private WinScriptHelper helper = new WinScriptHelper(USER_RIGHTS_CHECK_SCRIPT,
+                    USER_RIGHTS_ENFORCE_SCRIPT);
+                       
         public WinScriptHelper getHelper() {
                 return helper;
         }

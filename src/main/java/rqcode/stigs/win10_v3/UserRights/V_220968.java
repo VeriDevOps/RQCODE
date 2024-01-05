@@ -7,7 +7,7 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 /**
  * V_220968: The Deny access to this computer from the network user right on workstations must be configured to prevent access from highly privileged domain accounts and local accounts on domain systems and unauthenticated access on all systems.. 
  */
-public class V_220968 extends UserRightsStig1 {
+public class V_220968 extends UserRightsStig4 {
 
     /**
      * Initiating parameters for the check script

@@ -7,7 +7,7 @@ import rqcode.stigs.win10_v3.WinScriptHelper;
 /**
  * V_220974: The Force shutdown from a remote system user right must only be assigned to the Administrators group.. 
  */
-public class V_220974 extends UserRightsStig1 {
+public class V_220974 extends UserRightsStig2 {
 
     /**
      * Initiating parameters for the check script
