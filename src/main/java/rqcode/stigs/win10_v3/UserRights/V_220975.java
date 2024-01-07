@@ -31,11 +31,11 @@ public class V_220975 extends UserRightsStig3 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220975r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "If the following registry value does not exist or is not configured as specified, this is a finding:\\n\\nRegistry Hive: HKEY_LOCAL_MACHINE\\nRegistry Path: \\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51\\\\n\\nValue Name: DCSettingIndex\\n\\nValue Type: REG_DWORD\\nValue: 1"),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Impersonate a client after authentication\" user right, this is a finding:\n\nAdministrators\nLOCAL SERVICE\nNETWORK SERVICE\nSERVICE"),
             Map.entry("checkid", "C-22690r555410_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Impersonate a client after authentication\\ to only include the following groups or accounts:\\n\\nAdministrators\\nLOCAL SERVICE\\nNETWORK SERVICE\\nSERVICE"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Impersonate a client after authentication\" to only include the following groups or accounts:\n\nAdministrators\nLOCAL SERVICE\nNETWORK SERVICE\nSERVICE"),
             Map.entry("fixid", "F-22679r555411_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nThe \\Impersonate a client after authentication\\ user right allows a program to impersonate another user or account to run on their behalf. An attacker could potentially use this to elevate privileges."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nThe \"Impersonate a client after authentication\" user right allows a program to impersonate another user or account to run on their behalf. An attacker could potentially use this to elevate privileges."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000110")
             );

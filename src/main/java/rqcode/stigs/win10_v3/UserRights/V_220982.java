@@ -31,11 +31,11 @@ public class V_220982 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220982r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Configuring RPC to restrict unauthenticated RPC clients from connecting to the RPC server will prevent anonymous connections."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Restore files and directories\" user right, this is a finding:\n\nAdministrators"),
             Map.entry("checkid", "C-22697r555431_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Restore files and directories\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Restore files and directories\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22686r555432_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Restore files and directories\\ user right can circumvent file and directory permissions and could allow access to sensitive data. It could also be used to over-write more current data."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Restore files and directories\" user right can circumvent file and directory permissions and could allow access to sensitive data. It could also be used to over-write more current data."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000160")
             );

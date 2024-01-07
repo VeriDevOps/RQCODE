@@ -31,11 +31,11 @@ public class V_220981 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220981r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "If the following registry value does not exist or is not configured as specified, this is a finding:\\n\\nRegistry Hive: HKEY_LOCAL_MACHINE\\nRegistry Path: \\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Rpc\\\\n\\nValue Name: RestrictRemoteClients\\n\\nValue Type: REG_DWORD\\nValue: 1"),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Profile single process\" user right, this is a finding:\n\nAdministrators"),
             Map.entry("checkid", "C-22696r555428_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Profile single process\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Profile single process\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22685r555429_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Profile single process\\ user right can monitor non-system processes performance. An attacker could potentially use this to identify processes to attack."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Profile single process\" user right can monitor non-system processes performance. An attacker could potentially use this to identify processes to attack."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000150")
             );

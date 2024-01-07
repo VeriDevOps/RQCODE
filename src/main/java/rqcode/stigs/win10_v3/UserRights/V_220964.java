@@ -31,11 +31,11 @@ public class V_220964 extends UserRightsStig3 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220964r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Some features may communicate with the vendor, sending system information or downloading data or components for the feature. Turning off this capability will prevent potentially sensitive information from being sent outside the enterprise and uncontrolled updates to the system. This setting prevents the computer from downloading print driver packages over HTTP."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Create global objects\" user right, this is a finding:\n\nAdministrators\nLOCAL SERVICE\nNETWORK SERVICE\nSERVICE"),
             Map.entry("checkid", "C-22679r555377_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Create global objects\\ to only include the following groups or accounts:\\n\\nAdministrators\\nLOCAL SERVICE\\nNETWORK SERVICE\\nSERVICE"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Create global objects\" to only include the following groups or accounts:\n\nAdministrators\nLOCAL SERVICE\nNETWORK SERVICE\nSERVICE"),
             Map.entry("fixid", "F-22668r555378_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Create global objects\\ user right can create objects that are available to all sessions, which could affect processes in other users' sessions."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Create global objects\" user right can create objects that are available to all sessions, which could affect processes in other users' sessions."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000050")
             );
