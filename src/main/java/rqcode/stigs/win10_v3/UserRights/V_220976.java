@@ -31,11 +31,11 @@ public class V_220976 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220976r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Authentication must always be required when accessing a system. This setting ensures the user is prompted for a password on resume from sleep (on battery)."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Load and unload device drivers\" user right, this is a finding:\n\nAdministrators"),
             Map.entry("checkid", "C-22691r555413_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Load and unload device drivers\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Load and unload device drivers\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22680r555414_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nThe \\Load and unload device drivers\\ user right allows device drivers to dynamically be loaded on a system by a user. This could potentially be used to install malicious code by an attacker."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nThe \"Load and unload device drivers\" user right allows device drivers to dynamically be loaded on a system by a user. This could potentially be used to install malicious code by an attacker."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000120")
             );

@@ -31,11 +31,11 @@ public class V_220974 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220974r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "The username is one part of logon credentials that could be used to gain access to a system. Preventing the enumeration of users limits this information to authorized personnel."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Force shutdown from a remote system\" user right, this is a finding:\n\nAdministrators"),
             Map.entry("checkid", "C-22689r555407_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Force shutdown from a remote system\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Force shutdown from a remote system\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22678r555408_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Force shutdown from a remote system\\ user right can remotely shut down a system which could result in a DoS."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Force shutdown from a remote system\" user right can remotely shut down a system which could result in a DoS."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000100")
             );

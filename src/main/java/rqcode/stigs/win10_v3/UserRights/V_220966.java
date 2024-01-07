@@ -31,11 +31,11 @@ public class V_220966 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220966r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Some features may communicate with the vendor, sending system information or downloading data or components for the feature. Turning off this capability will prevent potentially sensitive information from being sent outside the enterprise and uncontrolled updates to the system. This setting prevents Windows from downloading a list of providers for the Web publishing and online ordering wizards."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Create symbolic links\" user right, this is a finding:\n\nAdministrators\n\nIf the workstation has an approved use of Hyper-V, such as being used as a dedicated admin workstation using Hyper-V to separate administration and standard user functions, \"NT VIRTUAL MACHINES\\VIRTUAL MACHINE\" may be assigned this user right and is not a finding."),
             Map.entry("checkid", "C-22681r555383_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Create symbolic links\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Create symbolic links\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22670r555384_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Create symbolic links\\ user right can create pointers to other objects, which could potentially expose the system to attack."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Create symbolic links\" user right can create pointers to other objects, which could potentially expose the system to attack."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000060")
             );

@@ -31,11 +31,11 @@ public class V_220962 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220962r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Enabling this setting and then selecting the \\Process even if the Group Policy objects have not changed\\ option ensures that the policies will be reprocessed even if null have been changed. This way, any unauthorized changes are forced to match the domain-based group policy settings again."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Create a pagefile\" user right, this is a finding:\n\nAdministrators"),
             Map.entry("checkid", "C-22677r555371_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Create a pagefile\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Create a pagefile\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22666r555372_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Create a pagefile\\ user right can change the size of a pagefile, which could affect system performance."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Create a pagefile\" user right can change the size of a pagefile, which could affect system performance."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000040")
             );

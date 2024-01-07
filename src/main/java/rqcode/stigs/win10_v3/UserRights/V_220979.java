@@ -31,11 +31,11 @@ public class V_220979 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220979r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "If the following registry value does not exist or is not configured as specified, this is a finding:\\n\\nRegistry Hive: HKEY_LOCAL_MACHINE\\nRegistry Path: \\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services\\\\n\\nValue Name: fAllowToGetHelp\\n \\nValue Type: REG_DWORD\\nValue: 0"),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Modify firmware environment values\" user right, this is a finding:\n\nAdministrators"),
             Map.entry("checkid", "C-22694r555422_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Modify firmware environment values\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Modify firmware environment values\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22683r555423_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Modify firmware environment values\\ user right can change hardware configuration environment variables. This could result in hardware failures or a DoS."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Modify firmware environment values\" user right can change hardware configuration environment variables. This could result in hardware failures or a DoS."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000140")
             );

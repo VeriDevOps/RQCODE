@@ -31,11 +31,11 @@ public class V_220978 extends UserRightsStig2 {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220978r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "Authentication must always be required when accessing a system. This setting ensures the user is prompted for a password on resume from sleep (plugged in)."),
+            Map.entry("checktext", "Verify the effective setting in Local Group Policy Editor.\nRun \"gpedit.msc\".\n\nNavigate to Local Computer Policy >> Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment.\n\nIf any groups or accounts other than the following are granted the \"Manage auditing and security log\" user right, this is a finding:\n\nAdministrators\n\nIf the organization has an \"Auditors\" group the assignment of this group to the user right would not be a finding."),
             Map.entry("checkid", "C-22693r555419_chk"),
-            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \\Manage auditing and security log\\ to only include the following groups or accounts:\\n\\nAdministrators"),
+            Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> User Rights Assignment >> \"Manage auditing and security log\" to only include the following groups or accounts:\n\nAdministrators"),
             Map.entry("fixid", "F-22682r555420_fix"),
-            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Manage auditing and security log\\ user right can manage the security log and change auditing configurations. This could be used to clear evidence of tampering."),
+            Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Manage auditing and security log\" user right can manage the security log and change auditing configurations. This could be used to clear evidence of tampering."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-UR-000130")
             );
