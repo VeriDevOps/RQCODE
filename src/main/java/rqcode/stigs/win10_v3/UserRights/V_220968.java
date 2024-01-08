@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220968: The Deny access to this computer from the network user right on workstations must be configured to prevent access from highly privileged domain accounts and local accounts on domain systems and unauthenticated access on all systems.. 
  */
@@ -55,7 +57,7 @@ public class V_220968 extends UserRightsStig4 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220968();
+        STIG stig = new V_220968();
 
         stig.check();
         System.out.println(stig);

@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220969: The Deny log on as a batch job user right on domain-joined workstations must be configured to prevent access from highly privileged domain accounts.. 
  */
@@ -55,7 +57,7 @@ public class V_220969 extends UserRightsStig1 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220969();
+        STIG stig = new V_220969();
 
         stig.check();
         System.out.println(stig);

@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220975: The Impersonate a client after authentication user right must only be assigned to Administrators, Service, Local Service, and Network Service.. 
  */
@@ -55,7 +57,7 @@ public class V_220975 extends UserRightsStig3 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220975();
+        STIG stig = new V_220975();
 
         stig.check();
         System.out.println(stig);

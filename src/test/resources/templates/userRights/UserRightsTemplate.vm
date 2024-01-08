@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * $id: $title. 
  */
@@ -55,7 +57,7 @@ public class $id extends $stigtype {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new $id();
+        STIG stig = new $id();
 
         stig.check();
         System.out.println(stig);

@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220976: The Load and unload device drivers user right must only be assigned to the Administrators group.. 
  */
@@ -55,7 +57,7 @@ public class V_220976 extends UserRightsStig2 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220976();
+        STIG stig = new V_220976();
 
         stig.check();
         System.out.println(stig);

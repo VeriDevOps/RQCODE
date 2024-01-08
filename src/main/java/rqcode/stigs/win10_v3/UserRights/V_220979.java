@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220979: The Modify firmware environment result_values user right must only be assigned to the Administrators group.. 
  */
@@ -55,7 +57,7 @@ public class V_220979 extends UserRightsStig2 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220979();
+        STIG stig = new V_220979();
 
         stig.check();
         System.out.println(stig);
