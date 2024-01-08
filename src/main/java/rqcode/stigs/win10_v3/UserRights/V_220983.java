@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220983: The Take ownership of files or other objects user right must only be assigned to the Administrators group.. 
  */
@@ -55,7 +57,7 @@ public class V_220983 extends UserRightsStig2 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220983();
+        STIG stig = new V_220983();
 
         stig.check();
         System.out.println(stig);

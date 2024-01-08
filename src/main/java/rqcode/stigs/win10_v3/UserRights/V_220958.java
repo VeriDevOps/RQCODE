@@ -4,6 +4,8 @@ import java.util.Map;
 
 import rqcode.stigs.win10_v3.WinScriptHelper;
 
+import rqcode.stigs.STIG;
+
 /**
  * V_220958: The Access Credential Manager as a trusted caller user right must not be assigned to any groups or accounts.. 
  */
@@ -55,7 +57,7 @@ public class V_220958 extends UserRightsStig5 {
      * Simple test for the STIG check
      */
     public static void main(String[] args) {
-        UserRightsStig1 stig = new V_220958();
+        STIG stig = new V_220958();
 
         stig.check();
         System.out.println(stig);
