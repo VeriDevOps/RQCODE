@@ -63,11 +63,8 @@ public class $id extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new $id();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for $id
+                cli(stig, args);
         }
 
 }
