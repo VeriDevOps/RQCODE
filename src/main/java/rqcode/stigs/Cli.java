@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
@@ -45,18 +46,21 @@ public class Cli {
             }
             if (classNames.isEmpty())
                 throw new ClassNotFoundException("Could not locate STIG by id: " + stig_id + " in the current jar");
-            if (classNames.size()>1) throw new Exception("Located more than one STIG by id: " + stig_id + " in the current jar.\n"
-            +"Try adding a more precise name. For example: win10_3."+ stig_id);
+            if (classNames.size() > 1)
+                throw new Exception("Located more than one STIG by id: " + stig_id + " in the current jar.\n"
+                        + "Try adding a more precise name. For example: win10_3." + stig_id);
         }
+
+        // clazz = Class.forName(classNames.iterator().next());
         try (URLClassLoader cl = URLClassLoader.newInstance(
-                new URL[] { new URL("jar:file:" + givenFile + "!/") })) {  
-                clazz = cl.loadClass(classNames.iterator().next()); // Load the class by its name
-            }
-        
+                new URL[] { new URL("jar:file:" + givenFile + "!/") })) {
+            clazz = cl.loadClass(classNames.iterator().next()); // Load the class by its name
+        }
+
         return STIG.class.cast(clazz.getDeclaredConstructor().newInstance());
     }
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         if (args.length == 0) {
             help();
             System.exit(0);
@@ -67,10 +71,19 @@ public class Cli {
         }
 
         String stig_to_locate = args[0];
+        STIG stig;
+        try {
+            stig = locate_stig(stig_to_locate);
+            String[] _args = Arrays.copyOfRange(args, 1, args.length);
+            stig.cli(stig, _args);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
 
         STIG stig;
         try {
