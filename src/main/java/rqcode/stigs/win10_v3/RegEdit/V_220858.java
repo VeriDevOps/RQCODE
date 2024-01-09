@@ -37,18 +37,14 @@ public class V_220858 extends RegEditStig {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220858r569187_rule"),
             Map.entry("severity", "medium"),
-            Map.entry("checktext", "The default behavior is for Internet Explorer to warn users and select whether to allow or refuse installation when a web-based program attempts to install software on the system.\n\nIf the registry value name below does not exist, this is not a finding.\n\nIf it exists and is configured with a value of \"0\", this is not a finding.\n\nIf it exists and is configured with a value of \"1\", this is a finding.\n\nRegistry Hive: HKEY_LOCAL_MACHINE\nRegistry Path: \\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer\\\n\nValue Name: SafeForScripting\n\nValue Type: REG_DWORD\nValue: 0 (or if the Value Name does not exist)"), 
-            Map.entry ("description", "Web-based programs may attempt to install malicious software on a system.  Ensuring users are notified if a web-based program attempts to install software allows them to refuse the installation."),
+            Map.entry("checktext", "The default behavior is for Internet Explorer to warn users and select whether to allow or refuse installation when a web-based program attempts to install software on the system.\n\nIf the registry value name below does not exist, this is not a finding.\n\nIf it exists and is configured with a value of \"0\", this is not a finding.\n\nIf it exists and is configured with a value of \"1\", this is a finding.\n\nRegistry Hive: HKEY_LOCAL_MACHINE\nRegistry Path: \\SOFTWARE\\Policies\\Microsoft\\Windows\\Installer\\\n\nValue Name: SafeForScripting\n\nValue Type: REG_DWORD\nValue: 0 (or if the Value Name does not exist)"),
+            Map.entry("checkid", "C-22573r555059_chk"),
             Map.entry("fixtext", "The default behavior is for Internet Explorer to warn users and select whether to allow or refuse installation when a web-based program attempts to install software on the system.\n\nIf this needs to be corrected, configure the policy value for Computer Configuration >> Administrative Templates >> Windows Components >> Windows Installer >> \"Prevent Internet Explorer security prompt for Windows Installer scripts\" to \"Not Configured\" or \"Disabled\"."),
             Map.entry("fixid", "F-22562r555060_fix"),
             Map.entry("description","Web-based programs may attempt to install malicious software on a system.  Ensuring users are notified if a web-based program attempts to install software allows them to refuse the installation."),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-CC-000320")
             );
-
-    public static Map<String, String> getInfo() {
-        return INFO;
-    }
 
     /**
      * Setting up STIG information and initializing the windows script helper with
