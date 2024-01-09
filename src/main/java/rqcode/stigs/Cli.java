@@ -53,7 +53,7 @@ public class Cli {
                 clazz = cl.loadClass(classNames.iterator().next()); // Load the class by its name
             }
         
-        return STIG.class.cast(clazz);
+        return STIG.class.cast(clazz.getDeclaredConstructor().newInstance());
     }
 
     public static void main1(String[] args) {
