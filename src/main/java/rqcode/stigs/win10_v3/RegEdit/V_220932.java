@@ -37,11 +37,11 @@ public class V_220932 extends RegEditStig {
             Map.entry("date", "2021-08-18"),
             Map.entry("ruleID", "SV_220932r569187_rule"),
             Map.entry("severity", "high"),
-            Map.entry("checktext", "If the following registry value does not exist or is not configured as specified, this is a finding:\n\nRegistry Hive: HKEY_LOCAL_MACHINE\nRegistry Path: \\SYSTEM\\CurrentControlSet\\Services\\LanManServer\\Parameters\\\n\nValue Name: RestrictNullSessAccess\n\nValue Type: REG_DWORD\nValue: 1"),
+            Map.entry("checktext", "Allowing anonymous access to named pipes or shares provides the potential for unauthorized system access.  This setting restricts access to those defined in \"Network access: Named Pipes that can be accessed anonymously\" and \"Network access: Shares that can be accessed anonymously\",  both of which must be blank under other requirements."),
             Map.entry("checkid", "C-22647r555281_chk"),
             Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Local Policies >> Security Options >> \"Network access: Restrict anonymous access to Named Pipes and Shares\" to \"Enabled\"."),
             Map.entry("fixid", "F-22636r555282_fix"),
-            Map.entry("description","Allowing anonymous access to named pipes or shares provides the potential for unauthorized system access.  This setting restricts access to those defined in \"Network access: Named Pipes that can be accessed anonymously\" and \"Network access: Shares that can be accessed anonymously\",  both of which must be blank under other requirements."),
+            Map.entry("description","$description"),
             Map.entry("iacontrols", "null"),
             Map.entry("version", "WN10-SO-000165")
             );
