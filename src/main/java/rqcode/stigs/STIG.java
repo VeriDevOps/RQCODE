@@ -3,7 +3,6 @@ package rqcode.stigs;
 import java.util.Map;
 
 import rqcode.concepts.EnforceableRequirement;
-import rqcode.stigs.win10_v3.UserRights.V_220956;
 
 /**
  * This class is a direct mapping of the structure of STIG findings as presented

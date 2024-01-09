@@ -85,8 +85,8 @@
             </execution>
           </executions>
         </plugin>
-        <plugin>
-          <!-- Build an executable JAR -->
+        <!-- Build an executable JAR  
+        <plugin>          
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.1.0</version>
@@ -99,7 +99,7 @@
               </manifest>
             </archive>
           </configuration>
-        </plugin>
+        </plugin> --> 
         <!--  lifecycle, see
         https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 
