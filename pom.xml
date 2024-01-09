@@ -64,7 +64,7 @@
 -->
 
   <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to
+    <!--<pluginManagement>lock down plugins versions to avoid using Maven defaults (may be moved to
       parent pom) -->
       <plugins>
         <plugin>
@@ -90,24 +90,6 @@
             </execution>
           </executions>
         </plugin>
-        <!-- Build an executable JAR  
-        <plugin>          
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.0</version>
-          <configuration>
-            <archive>
-              <manifest>
-                <addClasspath>true</addClasspath>
-                <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>rqcode.stigs.win10_new.AuditPolicy.AuditPolMain</mainClass>
-              </manifest>
-            </archive>
-          </configuration>
-        </plugin> --> 
-        <!--  lifecycle, see
-        https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
@@ -171,7 +153,7 @@
           </configuration>
         </plugin>
       </plugins>
-    </pluginManagement>
+    <!--</pluginManagement>-->
   </build>
 
   <reporting>
