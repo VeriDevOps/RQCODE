@@ -43,7 +43,7 @@ public class V_220764 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \"Audit Other Object Access Events\" with \"Failure\" selected."),
                         Map.entry("fixid", "F-22454r554736_fix"),
                         Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nAuditing for other object access records events related to the management of task scheduler jobs and COM+ objects."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000084")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220764 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220764();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220764
+                cli(stig, args);
         }
 
 }

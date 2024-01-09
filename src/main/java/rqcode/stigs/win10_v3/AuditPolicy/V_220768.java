@@ -43,7 +43,7 @@ public class V_220768 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Policy Change >> \"Audit Authentication Policy Change\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22462r554760_fix"),
                         Map.entry("description","Anonymous enumeration of SAM accounts allows anonymous log on users (null session connections) to list all accounts names, thus providing a list of potential points to attack the system."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000105")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220768 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220768();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220768
+                cli(stig, args);
         }
 
 }

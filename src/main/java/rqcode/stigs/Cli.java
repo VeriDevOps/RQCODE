@@ -48,6 +48,7 @@ public class Cli {
                 throw new ClassNotFoundException("Could not locate STIG by id: " + stig_id + " in the current jar");
             if (classNames.size() > 1)
                 throw new Exception("Located more than one STIG by id: " + stig_id + " in the current jar.\n"
+                        + "Found: " + String.join(", ", classNames) + "\n\n"
                         + "Try adding a more precise name. For example: win10_3." + stig_id);
         }
 

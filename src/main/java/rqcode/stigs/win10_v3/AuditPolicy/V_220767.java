@@ -43,7 +43,7 @@ public class V_220767 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Policy Change >> \"Audit Audit Policy Change\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22458r554748_fix"),
                         Map.entry("description","Digest authentication is not as strong as other options and may be subject to man-in-the-middle attacks."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000100")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220767 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220767();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220767
+                cli(stig, args);
         }
 
 }

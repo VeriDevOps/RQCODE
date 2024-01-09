@@ -43,7 +43,7 @@ public class V_220754 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Detailed Tracking >> \"Audit Process Creation\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22477r554805_fix"),
                         Map.entry("description","Legacy plug-in applications may continue to function when a File Explorer session has become corrupt.  Disabling this feature will prevent this."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000050")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220754 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220754();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220754
+                cli(stig, args);
         }
 
 }

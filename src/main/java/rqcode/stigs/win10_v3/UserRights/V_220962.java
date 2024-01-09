@@ -59,16 +59,8 @@ public class V_220962 extends UserRightsStig2 {
     public static void main(String[] args) {
         STIG stig = new V_220962();
 
-        stig.check();
-        System.out.println(stig);
-
-        // stig.enforce();
-        // stig.check();
-
-        //System.out.println(stig);
-
-
-
+        //running command line interface for V_220962
+        cli(stig, args);
     }
 
 }

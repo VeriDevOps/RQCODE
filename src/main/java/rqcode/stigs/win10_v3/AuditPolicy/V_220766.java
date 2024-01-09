@@ -43,7 +43,7 @@ public class V_220766 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \"Audit Removable Storage\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22474r554796_fix"),
                         Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Create global objects\" user right can create objects that are available to all sessions, which could affect processes in other users' sessions."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000090")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220766 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220766();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220766
+                cli(stig, args);
         }
 
 }

@@ -43,7 +43,7 @@ public class V_220773 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> System >> \"Audit Other System Events\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22464r554766_fix"),
                         Map.entry("description","Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks.  Audit logs are necessary to provide a trail of evidence in case the system or network is compromised.  Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.\n\nIPSec Driver records events related to the IPSec Driver such as dropped packets."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000130")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220773 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220773();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220773
+                cli(stig, args);
         }
 
 }

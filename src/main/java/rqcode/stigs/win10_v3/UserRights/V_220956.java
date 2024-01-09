@@ -59,6 +59,7 @@ public class V_220956 extends UserRightsStig5 {
     public static void main(String[] args) {
         STIG stig = new V_220956();
 
+        //running command line interface for V_220956
         cli(stig, args);
     }
 

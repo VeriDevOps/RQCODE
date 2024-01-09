@@ -43,7 +43,7 @@ public class V_220769 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Policy Change >> \"Audit Authorization Policy Change\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22472r554790_fix"),
                         Map.entry("description","Allowing autoplay to execute may introduce malicious code to a system.  Autoplay begins reading from a drive as soon as you insert media in the drive.  As a result, the setup file of programs or music on audio media may start.  By default, autoplay is disabled on removable drives, such as the floppy disk drive (but not the CD-ROM drive) and on network drives.  If you enable this policy, you can also disable autoplay on all drives."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000107")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220769 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220769();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220769
+                cli(stig, args);
         }
 
 }

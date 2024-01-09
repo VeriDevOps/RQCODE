@@ -43,7 +43,7 @@ public class V_220761 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \"Audit File Share\" with \"Failure\" selected."),
                         Map.entry("fixid", "F-22457r554745_fix"),
                         Map.entry("description","Microsoft has implemented a variety of security support providers for use with RPC sessions.  All of the options must be enabled to ensure the maximum security level."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000081")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220761 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220761();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220761
+                cli(stig, args);
         }
 
 }

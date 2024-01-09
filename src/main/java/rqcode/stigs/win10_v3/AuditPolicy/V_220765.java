@@ -43,7 +43,7 @@ public class V_220765 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \"Audit Removable Storage\" with \"Failure\" selected."),
                         Map.entry("fixid", "F-22463r554763_fix"),
                         Map.entry("description","Basic authentication uses plain text passwords that could be used to compromise a system."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000085")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220765 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220765();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220765
+                cli(stig, args);
         }
 
 }

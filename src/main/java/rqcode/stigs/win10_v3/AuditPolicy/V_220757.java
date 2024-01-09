@@ -43,7 +43,7 @@ public class V_220757 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \"Audit Logoff\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22452r554730_fix"),
                         Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Force shutdown from a remote system\" user right can remotely shut down a system which could result in a DoS."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000065")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220757 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220757();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220757
+                cli(stig, args);
         }
 
 }

@@ -63,16 +63,8 @@ public class V_220902 extends RegEditStig {
     public static void main(String[] args) {
         RegEditStig stig = new V_220902();
 
-        stig.check();
-        System.out.println(stig);
-
-        // stig.enforce();
-        // stig.check();
-
-        //System.out.println(stig);
-
-
-
+        //running command line interface for V_220902
+        cli(stig, args);
     }
 
 }

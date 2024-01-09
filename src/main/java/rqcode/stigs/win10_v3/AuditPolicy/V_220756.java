@@ -43,7 +43,7 @@ public class V_220756 extends AuditPolStig {
                         Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \"Audit Group Membership\" with \"Success\" selected."),
                         Map.entry("fixid", "F-22459r554751_fix"),
                         Map.entry("description","Windows can be configured to automatically sign the user back in after a Windows Update restart.  Some protections are in place to help ensure this is done in a secure fashion; however, disabling this will prevent the caching of credentials for this purpose and also ensure the user is aware of the restart."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "$iacontrols"),
                         Map.entry("version", "WN10-AU-000060")
                         );
                     
@@ -63,11 +63,8 @@ public class V_220756 extends AuditPolStig {
          */
         public static void main(String[] args) {
                 STIG stig = new V_220756();
-
-                System.out.println(stig);
-
-                stig.check();
-                System.out.println("1st check:" + stig.getLastCheckStatus());
+                //running command line interface for V_220756
+                cli(stig, args);
         }
 
 }
