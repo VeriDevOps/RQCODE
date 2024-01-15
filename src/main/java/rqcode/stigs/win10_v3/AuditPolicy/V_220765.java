@@ -14,7 +14,7 @@ public class V_220765 extends AuditPolStig {
         */
         private final static Map<String, String> CHECK_VALUES = Map.of(
                         "id", "V_220765",
-                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "guid", "{0CCE9245-69AE-11D9-BED3-505054503030}",
                         "subcat_es", "errores",
                         "subcat_eng", "failure"
                         );
@@ -24,7 +24,7 @@ public class V_220765 extends AuditPolStig {
          */
         private final static Map<String, String> ENFORCE_VALUES = Map.of(
                         "id", "V_220765",
-                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "guid", "{0CCE9245-69AE-11D9-BED3-505054503030}",
                         "parameter", "Failure",
                         "value", "enable"
                         );
@@ -38,12 +38,12 @@ public class V_220765 extends AuditPolStig {
                         Map.entry("date", "2021-08-18"),
                         Map.entry("ruleID", "SV_220765r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\"\n\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\n\nObject Access >> Removable Storage - Failure\n\nSome virtual machines may generate excessive audit events for access to the virtual hard disk itself when this setting is enabled. This may be set to Not Configured in such cases and would not be a finding.  This must be documented with the ISSO to include mitigations such as monitoring or restricting any actual removable storage connected to the VM."),
+                        Map.entry("checktext", "Security Option \\Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\\ must be set to \\Enabled\\ (WN10-SO-000030) for the detailed auditing subcategories to be effective.\\n\\nUse the AuditPol tool to review the current Audit Policy configuration:\\nOpen a Command Prompt with elevated privileges (\\Run as Administrator\\).\\nEnter \\AuditPol /get /category:*\\\\n\\nCompare the AuditPol settings with the following. If the system does not audit the following, this is a finding:\\n\\nObject Access >> Removable Storage - Failure\\n\\nSome virtual machines may generate excessive audit events for access to the virtual hard disk itself when this setting is enabled. This may be set to Not Configured in such cases and would not be a finding.  This must be documented with the ISSO to include mitigations such as monitoring or restricting any actual removable storage connected to the VM."),
                         Map.entry("checkid", "C-22474r554762_chk"),
-                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \"Audit Removable Storage\" with \"Failure\" selected."),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Object Access >> \\Audit Removable Storage\\ with \\Failure\\ selected."),
                         Map.entry("fixid", "F-22463r554763_fix"),
                         Map.entry("description","Basic authentication uses plain text passwords that could be used to compromise a system."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "null"),
                         Map.entry("version", "WN10-AU-000085")
                         );
                     

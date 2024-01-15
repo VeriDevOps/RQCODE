@@ -14,7 +14,7 @@ public class V_220767 extends AuditPolStig {
         */
         private final static Map<String, String> CHECK_VALUES = Map.of(
                         "id", "V_220767",
-                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "guid", "{0CCE922F-69AE-11D9-BED3-505054503030}",
                         "subcat_es", "acierto",
                         "subcat_eng", "success"
                         );
@@ -24,7 +24,7 @@ public class V_220767 extends AuditPolStig {
          */
         private final static Map<String, String> ENFORCE_VALUES = Map.of(
                         "id", "V_220767",
-                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "guid", "{0CCE922F-69AE-11D9-BED3-505054503030}",
                         "parameter", "Success",
                         "value", "enable"
                         );
@@ -38,12 +38,12 @@ public class V_220767 extends AuditPolStig {
                         Map.entry("date", "2021-08-18"),
                         Map.entry("ruleID", "SV_220767r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:\n\nPolicy Change >> Audit Policy Change - Success"),
+                        Map.entry("checktext", "Security Option \\Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\\ must be set to \\Enabled\\ (WN10-SO-000030) for the detailed auditing subcategories to be effective.\\n\\nUse the AuditPol tool to review the current Audit Policy configuration:\\nOpen a Command Prompt with elevated privileges (\\Run as Administrator\\).\\nEnter \\AuditPol /get /category:*\\.\\n\\nCompare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:\\n\\nPolicy Change >> Audit Policy Change - Success"),
                         Map.entry("checkid", "C-22469r554747_chk"),
-                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Policy Change >> \"Audit Audit Policy Change\" with \"Success\" selected."),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Policy Change >> \\Audit Audit Policy Change\\ with \\Success\\ selected."),
                         Map.entry("fixid", "F-22458r554748_fix"),
                         Map.entry("description","Digest authentication is not as strong as other options and may be subject to man-in-the-middle attacks."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("iacontrols", "null"),
                         Map.entry("version", "WN10-AU-000100")
                         );
                     

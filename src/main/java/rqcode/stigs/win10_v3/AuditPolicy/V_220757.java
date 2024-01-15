@@ -14,7 +14,7 @@ public class V_220757 extends AuditPolStig {
         */
         private final static Map<String, String> CHECK_VALUES = Map.of(
                         "id", "V_220757",
-                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "guid", "{0CCE9216-69AE-11D9-BED3-505054503030}",
                         "subcat_es", "acierto",
                         "subcat_eng", "success"
                         );
@@ -24,7 +24,7 @@ public class V_220757 extends AuditPolStig {
          */
         private final static Map<String, String> ENFORCE_VALUES = Map.of(
                         "id", "V_220757",
-                        "guid", "{0CCE923F-69AE-11D9-BED3-505054503030}",
+                        "guid", "{0CCE9216-69AE-11D9-BED3-505054503030}",
                         "parameter", "Success",
                         "value", "enable"
                         );
@@ -38,12 +38,12 @@ public class V_220757 extends AuditPolStig {
                         Map.entry("date", "2021-08-18"),
                         Map.entry("ruleID", "SV_220757r569187_rule"),
                         Map.entry("severity", "medium"),
-                        Map.entry("checktext", "Security Option \"Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\" must be set to \"Enabled\" (WN10-SO-000030) for the detailed auditing subcategories to be effective.\n\nUse the AuditPol tool to review the current Audit Policy configuration:\nOpen a Command Prompt with elevated privileges (\"Run as Administrator\").\nEnter \"AuditPol /get /category:*\".\n\nCompare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:\n\nLogon/Logoff >> Logoff - Success"),
+                        Map.entry("checktext", "Security Option \\Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings\\ must be set to \\Enabled\\ (WN10-SO-000030) for the detailed auditing subcategories to be effective.\\n\\nUse the AuditPol tool to review the current Audit Policy configuration:\\nOpen a Command Prompt with elevated privileges (\\Run as Administrator\\).\\nEnter \\AuditPol /get /category:*\\.\\n\\nCompare the AuditPol settings with the following.  If the system does not audit the following, this is a finding:\\n\\nLogon/Logoff >> Logoff - Success"),
                         Map.entry("checkid", "C-22463r554729_chk"),
-                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \"Audit Logoff\" with \"Success\" selected."),
+                        Map.entry("fixtext", "Configure the policy value for Computer Configuration >> Windows Settings >> Security Settings >> Advanced Audit Policy Configuration >> System Audit Policies >> Logon/Logoff >> \\Audit Logoff\\ with \\Success\\ selected."),
                         Map.entry("fixid", "F-22452r554730_fix"),
-                        Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\n\nAccounts with the \"Force shutdown from a remote system\" user right can remotely shut down a system which could result in a DoS."),
-                        Map.entry("iacontrols", "None"),
+                        Map.entry("description","Inappropriate granting of user rights can provide system, administrative, and other high level capabilities.\\n\\nAccounts with the \\Force shutdown from a remote system\\ user right can remotely shut down a system which could result in a DoS."),
+                        Map.entry("iacontrols", "null"),
                         Map.entry("version", "WN10-AU-000065")
                         );
                     
