@@ -107,5 +107,54 @@ public abstract class STIG extends EnforceableRequirement {
     public String fixtext() {
         return stigInfo.get("fixtext");
     }
+
+    
+    public static void cli(STIG stig, String[] args) {
+
+        if (args.length==0) {
+            stig.check();
+            System.out.println(stig);
+            switch (stig.getLastCheckStatus()) {
+                case PASS:
+                    System.exit(0);
+                    break;
+                case FAIL:
+                    System.exit(1);
+                    break;
+                case INCOMPLETE:
+                    System.exit(-1);
+                default:
+                    break;
+            }
+        }
+
+        if (args[0].equals("--enforce")){
+            stig.enforce();
+            stig.check();
+            System.out.println(stig);
+            switch (stig.getLastEnforcementStatus()) {
+                case SUCCESS:
+                    System.exit(0);
+                    break;
+                case FAILURE:
+                    System.exit(1);
+                    break;
+                case INCOMPLETE:
+                    System.exit(-1);
+                default:
+                    break;
+            }
+        }
+
+        if (args[0].equals("--help")){
+            System.out.println("Arguments: \n"
+            +" no args  - checking the STIG\n"
+            +" --enforce - enforcing this STIG\n"
+            +" --help this information and STIG descriptio\n"
+            +"Note: You need administrative rights to run this class.\n\n ");
+            System.out.println(stig);
+        }
+
+    }
     
 }
