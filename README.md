@@ -24,10 +24,10 @@ For a detailed example, please read the corresponding [documentation](https://gi
 
 # STIGs
 
-STIG stands for ``Security Technical Implementation Guid'' (https://www.stigviewer.com/stigs).
-Each STIG is collection of security findings for a given software system (for example, for APACHE Server 2.0 for Unix https://www.stigviewer.com/stig/apache_server_2.0unix/).
+STIG stands for "Security Technical Implementation Guide'' (https://www.stigviewer.com/stigs).
+Each STIG is a collection of security findings for a given software system (for example, for APACHE Server 2.0 for Unix https://www.stigviewer.com/stig/apache_server_2.0unix/).
 Each finding includes:
-- A human-friendly explanation why this finding represents a security problem.
+- A human-friendly explanation of why this finding represents a security problem.
 - Technical steps required to identify the finding.
 - Technical steps required to fix the finding. 
 
@@ -40,11 +40,11 @@ Some finding classes also implement the Enforceable interface, which makes them 
 
 To demonstrate the approach we will illustrate it with an example of specific STIG rules for systems run by the Windows 10 operating system.
 These rules are provided in the Windows 10 Security Technical Implementation Guide.
-For many systems, STIG rules come scripts for verifying the conformance and enforcing the rules.
-For Windows 10, PowerShell scripts exist that check conformance of systems to these rules.
+For many systems, STIG rules come with scripts for verifying the conformance and enforcing the rules.
+For Windows 10, PowerShell scripts exist that check the conformance of systems to these rules.
 For some rules, such checks are complemented with scripts that enforce conformance to the respective rules.
 
-We had analyzed the STIG rules for Windows 10 and found subgroups of rules that look very similar - both in their textual descriptions and in the PowerShell scripts (where applicable) that check and enforce conformance to these rules.
+We analyzed the STIG rules for Windows 10 and found subgroups of rules that look very similar - both in their textual descriptions and in the PowerShell scripts (where applicable) that check and enforce conformance to these rules.
 This is bad, because a decision to modify one rule from such a subgroup would require synchronizing the change with all the similar rules, and this process is prone to errors.
 We decided to apply the object-oriented software construction process to remove the repetition. The below class tree depicts a subset of the resulting collection of classes:
 ![image10](https://user-images.githubusercontent.com/6912490/177565254-151cd3f3-a8bb-415a-833e-bb61a0264177.png)
