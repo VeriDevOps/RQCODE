@@ -2,7 +2,7 @@ name: Snapshot
 on: [push]
       
 jobs:
-    release:
+    snapshot:
         name: Snapshot
         runs-on: ubuntu-latest
         steps:
