@@ -14,11 +14,11 @@ jobs:
                 distribution: 'oracle'
                 java-version: 17                    
                 cache: maven
-            - name: Configure Git user
+            - name: Creat snapshot
               run: |
                 mvn --batch-mode --update-snapshots verify
                 mkdir staging && cp target/*.jar staging
-            - name: Publish JAR
+            - name: Upload JAR package
               uses: actions/upload-artifact@v4
               with:
                 name: Package
