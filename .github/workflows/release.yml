@@ -13,6 +13,7 @@ jobs:
             - name: Setup Java JDK
               uses: actions/setup-java@v4
               with:
+                distribution: 'oracle'
                 java-version: 11                    
                 server-id: github
             - name: Configure Git user
