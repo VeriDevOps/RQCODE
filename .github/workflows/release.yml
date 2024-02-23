@@ -18,7 +18,7 @@ jobs:
                 distribution: 'oracle'
                 java-version: 17                    
                 cache: maven
-            - name: Configure Git user
+            - name: Create Package.zip with JARs
               run: |
                 mvn --batch-mode --update-snapshots verify
                 mkdir staging && cp target/*.jar staging
