@@ -1,0 +1,25 @@
+name: Snapshot
+on: [push]
+      
+jobs:
+    release:
+        name: Snapshot
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout project
+              uses: actions/checkout@v4
+            - name: Setup Java JDK
+              uses: actions/setup-java@v4
+              with:
+                distribution: 'oracle'
+                java-version: 17                    
+                cache: maven
+            - name: Configure Git user
+              run: |
+                mvn --batch-mode --update-snapshots verify
+                mkdir staging && cp target/*.jar staging
+            - name: Publish JAR
+              uses: actions/upload-artifact@v4
+              with:
+                name: Package
+                path: staging
