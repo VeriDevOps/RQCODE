@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * 1. One uppercase letter - If this switch is enabled, the password must contain at least one uppercase letter.
  * 2. One lowercase letter - If this switch is enabled, the password must contain at least one lowercase letter.
  * 3. One digit - If this switch is enabled, the password must contain at least one digit. Digits are 1 2 3 4 5 6 7 8 9 0.
- * 4. One special character: ! @ # $ % ^ & * ( ) - _ = + \ | [ ] { } ; : / ? . > <
+ * 4. One special character: !@#$%^&*
  */
 public class PasswordPolicy extends Requirement {
 
