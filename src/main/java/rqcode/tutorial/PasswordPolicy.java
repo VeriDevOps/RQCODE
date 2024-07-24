@@ -1,14 +1,11 @@
+package rqcode.tutorial;
+
 import rqcode.concepts.Requirement;
-
-
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 /**
  * Password policy that checks if passwords meet specific complexity requirements.
- */
-
-/**
  * Passwords must include at least:
  * 1. One uppercase letter - If this switch is enabled, the password must contain at least one uppercase letter.
  * 2. One lowercase letter - If this switch is enabled, the password must contain at least one lowercase letter.
