@@ -25,18 +25,33 @@ public class PasswordPolicy extends Requirement {
     public CheckStatus check() {
         if (password == null || password.isEmpty()) return CheckStatus.INCOMPLETE;
 
-        if (password.length() < 12) return CheckStatus.FAIL;
+        if (!isLengthValid()) return CheckStatus.FAIL;
+        if (!hasUppercase()) return CheckStatus.FAIL;
+        if (!hasLowercase()) return CheckStatus.FAIL;
+        if (!hasDigit()) return CheckStatus.FAIL;
+        if (!hasSpecialCharacter()) return CheckStatus.FAIL;
 
-        boolean hasUppercase = Pattern.compile("[A-Z]").matcher(password).find();
-        boolean hasLowercase = Pattern.compile("[a-z]").matcher(password).find();
-        boolean hasDigit = Pattern.compile("[0-9]").matcher(password).find();
-        boolean hasSpecial = Pattern.compile("[!@#$%^&*]").matcher(password).find();
+        return CheckStatus.PASS;
+    }
 
-        if (hasUppercase && hasLowercase && hasDigit && hasSpecial) {
-            return CheckStatus.PASS;
-        } else {
-            return CheckStatus.FAIL;
-        }
+    private boolean isLengthValid() {
+        return password.length() >= 12;
+    }
+
+    private boolean hasUppercase() {
+        return Pattern.compile("[A-Z]").matcher(password).find();
+    }
+
+    private boolean hasLowercase() {
+        return Pattern.compile("[a-z]").matcher(password).find();
+    }
+
+    private boolean hasDigit() {
+        return Pattern.compile("[0-9]").matcher(password).find();
+    }
+
+    private boolean hasSpecialCharacter() {
+        return Pattern.compile("[!@#$%^&*]").matcher(password).find();
     }
 
     public static void main(String[] args) {
