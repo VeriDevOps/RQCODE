@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 /**
  * Password policy that checks if passwords meet specific complexity requirements.
- * Passwords must be at least 12 characters long and include at least:
+ * Passwords n=must not be empty and must be at least 12 characters long and include at least:
  * 1. One uppercase letter - If this switch is enabled, the password must contain at least one uppercase letter.
  * 2. One lowercase letter - If this switch is enabled, the password must contain at least one lowercase letter.
  * 3. One digit - If this switch is enabled, the password must contain at least one digit. Digits are 1 2 3 4 5 6 7 8 9 0.
