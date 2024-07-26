@@ -14,7 +14,12 @@ import java.util.regex.Pattern;
  */
 public class PasswordPolicy extends Requirement {
 
-    private String password;
+    private final String password;
+    private static final int MIN_LENGTH = 12;
+    private static final Pattern UPPERCASE_PATTERN = Pattern.compile("[A-Z]");
+    private static final Pattern LOWERCASE_PATTERN = Pattern.compile("[a-z]");
+    private static final Pattern DIGIT_PATTERN = Pattern.compile("[0-9]");
+    private static final Pattern SPECIAL_CHAR_PATTERN = Pattern.compile("[!@#$%^&*]");
 
     public PasswordPolicy(String password) {
         super("Passwords must be at least 12 characters long and include at least: one uppercase letter, one lowercase letter, one digit, and one special character.");
@@ -23,35 +28,35 @@ public class PasswordPolicy extends Requirement {
 
     @Override
     public CheckStatus check() {
-        if (password == null || password.isEmpty()) return CheckStatus.INCOMPLETE;
-
-        if (!isLengthValid()) return CheckStatus.FAIL;
-        if (!hasUppercase()) return CheckStatus.FAIL;
-        if (!hasLowercase()) return CheckStatus.FAIL;
-        if (!hasDigit()) return CheckStatus.FAIL;
-        if (!hasSpecialCharacter()) return CheckStatus.FAIL;
-
+        if (isEmpty()) return CheckStatus.INCOMPLETE;
+        if (!isLengthValid() || !hasUppercase() || !hasLowercase() || !hasDigit() || !hasSpecialCharacter()) {
+            return CheckStatus.FAIL;
+        }
         return CheckStatus.PASS;
     }
 
+    private boolean isEmpty() {
+        return password == null || password.isEmpty();
+    }
+
     private boolean isLengthValid() {
-        return password.length() >= 12;
+        return password.length() >= MIN_LENGTH;
     }
 
     private boolean hasUppercase() {
-        return Pattern.compile("[A-Z]").matcher(password).find();
+        return UPPERCASE_PATTERN.matcher(password).find();
     }
 
     private boolean hasLowercase() {
-        return Pattern.compile("[a-z]").matcher(password).find();
+        return LOWERCASE_PATTERN.matcher(password).find();
     }
 
     private boolean hasDigit() {
-        return Pattern.compile("[0-9]").matcher(password).find();
+        return DIGIT_PATTERN.matcher(password).find();
     }
 
     private boolean hasSpecialCharacter() {
-        return Pattern.compile("[!@#$%^&*]").matcher(password).find();
+        return SPECIAL_CHAR_PATTERN.matcher(password).find();
     }
 
     public static void main(String[] args) {
@@ -80,3 +85,4 @@ public class PasswordPolicy extends Requirement {
         scanner.close();
     }
 }
+
