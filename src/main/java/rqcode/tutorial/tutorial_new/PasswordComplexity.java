@@ -3,46 +3,54 @@ import rqcode.concepts.Requirement;
 
 import java.util.regex.Pattern;
 
-import java.util.regex.Pattern;
+import rqcode.concepts.Checkable;
 
 public class PasswordComplexity extends Requirement {
     private String password;
 
-    private static final Pattern UPPERCASE_PATTERN = Pattern.compile("[A-Z]");
-    private static final Pattern LOWERCASE_PATTERN = Pattern.compile("[a-z]");
-    private static final Pattern DIGIT_PATTERN = Pattern.compile("[0-9]]");
-    private static final Pattern SPECIAL_CHAR_PATTERN = Pattern.compile("[!@#$%^&*]");
-
     public PasswordComplexity(String password) {
-        super("Passwords must include at least one uppercase letter (A-Z), one lowercase letter (a-z), one digit (0-9), and one special character (e.g., !@#$%^&*).");
         this.password = password;
     }
 
-    private boolean hasUppercase() {
-        return UPPERCASE_PATTERN.matcher(password).find();
-    }
-
-    private boolean hasLowercase() {
-        return LOWERCASE_PATTERN.matcher(password).find();
-    }
-
-    private boolean hasDigit() {
-        return DIGIT_PATTERN.matcher(password).find();
-    }
-
-    private boolean hasSpecialCharacter() {
-        return SPECIAL_CHAR_PATTERN.matcher(password).find();
-    }
-
     @Override
-    public CheckStatus check() {
-        if (password == null || password.isEmpty()) {
-            return CheckStatus.INCOMPLETE;
+    public Checkable.CheckStatus check() {
+        if (!containsUppercaseLetter()) {
+            return Checkable.CheckStatus.FAIL;
+        }
+        if (!containsLowercaseLetter()) {
+            return Checkable.CheckStatus.FAIL;
+        }
+        if (!containsDigit()) {
+            return Checkable.CheckStatus.FAIL;
+        }
+        if (!containsSpecialCharacter()) {
+            return Checkable.CheckStatus.FAIL;
         }
 
-        return (hasUppercase() && hasLowercase() && hasDigit() && hasSpecialCharacter()) ? CheckStatus.PASS : CheckStatus.FAIL;
+        return Checkable.CheckStatus.PASS;
+    }
+
+    // Method to check if the password contains at least one uppercase letter (A-Z)
+    private boolean containsUppercaseLetter() {
+        return password.matches(".*[A-Z].*");
+    }
+
+    // Method to check if the password contains at least one lowercase letter (a-z)
+    private boolean containsLowercaseLetter() {
+        return password.matches(".*[a-z].*");
+    }
+
+    // Method to check if the password contains at least one digit (0-9)
+    private boolean containsDigit() {
+        return password.matches(".*\\d.*");
+    }
+
+    // Method to check if the password contains at least one special character (!@#$%^&*)
+    private boolean containsSpecialCharacter() {
+        return password.matches(".*[@#$%^&+=!].*");
     }
 }
+
 
 
 
