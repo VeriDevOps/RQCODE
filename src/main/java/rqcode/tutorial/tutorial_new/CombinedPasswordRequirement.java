@@ -1,54 +1,45 @@
 package rqcode.tutorial.tutorial_new;
 
-import rqcode.concepts.Checkable.CheckStatus;
 import rqcode.concepts.Requirement;
+import rqcode.concepts.Checkable;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.lang.reflect.Field;
 
 public class CombinedPasswordRequirement extends Requirement {
-    private final PasswordMinimumLength passwordMinimumLength;
-    private final PasswordComplexity passwordComplexity;
+    private PasswordMinimumLength minLengthRequirement;
+    private PasswordComplexity complexityRequirement;
+    private List<Checkable> requirements = new ArrayList<>();
 
     public CombinedPasswordRequirement(String password) {
-        this.passwordMinimumLength = new PasswordMinimumLength(password);
-        this.passwordComplexity = new PasswordComplexity(password);
+        this.minLengthRequirement = new PasswordMinimumLength(password);
+        this.complexityRequirement = new PasswordComplexity(password);
+
+        requirements.add(minLengthRequirement);
+        requirements.add(complexityRequirement);
     }
 
     @Override
-    public CheckStatus check() {
-        return aggregateChecks();
+    public Checkable.CheckStatus check() {
+        return aggregateChecks(requirements);
     }
 
-    private CheckStatus aggregateChecks() {
-        CheckStatus finalStatus = CheckStatus.PASS;
+    private Checkable.CheckStatus aggregateChecks(List<Checkable> checks) {
+        boolean allPass = true;
 
-        // Use reflection to get all fields of type Requirement
-        Field[] fields = this.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            if (Requirement.class.isAssignableFrom(field.getType())) {
-                try {
-                    // Make the private fields accessible
-                    field.setAccessible(true);
-                    Requirement requirement = (Requirement) field.get(this);
-                    CheckStatus status = requirement.check();
-
-                    // Print debugging information
-                    System.out.println("Checking: " + field.getName() + " - Status: " + status);
-
-                    // Aggregate the status
-                    if (status == CheckStatus.FAIL) {
-                        finalStatus = CheckStatus.FAIL;
-                    } else if (status == CheckStatus.INCOMPLETE && finalStatus != CheckStatus.FAIL) {
-                        finalStatus = CheckStatus.INCOMPLETE;
-                    }
-
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                    return CheckStatus.INCOMPLETE; // Return INCOMPLETE if reflection fails
-                }
+        for (Checkable checkable : checks) {
+            Checkable.CheckStatus status = checkable.check();
+            if (status != Checkable.CheckStatus.PASS) {
+                allPass = false;
             }
         }
 
-        return finalStatus;
+        return allPass ? Checkable.CheckStatus.PASS : Checkable.CheckStatus.FAIL;
+    }
+
+    @Override
+    public String toString() {
+        return minLengthRequirement.toString() + "\n" + complexityRequirement.toString();
     }
 }
+
