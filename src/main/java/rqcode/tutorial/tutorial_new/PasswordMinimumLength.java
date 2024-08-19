@@ -1,32 +1,32 @@
 package rqcode.tutorial.tutorial_new;
 import rqcode.concepts.Requirement;
+import rqcode.concepts.Checkable;
+
 
 
 public class PasswordMinimumLength extends Requirement {
-    private static final int MIN_LENGTH = 12;
     private String password;
 
     public PasswordMinimumLength(String password) {
-        super("Passwords must be at least 12 characters long and should not be empty.");
         this.password = password;
     }
 
-    private boolean isEmpty() {
-        return password == null || password.isEmpty();
-    }
-
-    private boolean isLengthValid() {
-        return password.length() >= MIN_LENGTH;
+    @Override
+    public Checkable.CheckStatus check() {
+        return (password.length() >= 12) ? Checkable.CheckStatus.PASS : Checkable.CheckStatus.FAIL;
     }
 
     @Override
-    public CheckStatus check() {
-        if (isEmpty()) {
-            return CheckStatus.INCOMPLETE;
-        }
-        return isLengthValid() ? CheckStatus.PASS : CheckStatus.FAIL;
+    public String toString() {
+        Checkable.CheckStatus lengthStatus = (password.length() >= 12) ? Checkable.CheckStatus.PASS : Checkable.CheckStatus.FAIL;
+        Checkable.CheckStatus emptyStatus = (!password.isEmpty()) ? Checkable.CheckStatus.PASS : Checkable.CheckStatus.FAIL;
+
+        return "1.1: Passwords must be at least 12 characters long - " + lengthStatus.name() + "\n" +
+                "1.2: Passwords should not be empty - " + emptyStatus.name();
     }
 }
+
+
 
 
 

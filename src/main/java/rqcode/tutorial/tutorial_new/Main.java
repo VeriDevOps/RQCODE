@@ -1,30 +1,21 @@
 package rqcode.tutorial.tutorial_new;
-
-import rqcode.concepts.Checkable.CheckStatus;
-
 import java.util.Scanner;
+import rqcode.concepts.Checkable;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Password:");
+
+        System.out.print("Enter Password: ");
         String password = scanner.nextLine();
 
-        CombinedPasswordRequirement passwordRequirement = new CombinedPasswordRequirement(password);
-        CheckStatus status = passwordRequirement.check();
+        CombinedPasswordRequirement combinedRequirement = new CombinedPasswordRequirement(password);
+        System.out.println(combinedRequirement.toString());
 
-        switch (status) {
-            case PASS:
-                System.out.println("Password is correct");
-                break;
-            case INCOMPLETE:
-                System.out.println("Password is empty or verification cannot be executed.");
-                break;
-            case FAIL:
-                System.out.println("Password is incorrect");
-                break;
-        }
+        Checkable.CheckStatus finalStatus = combinedRequirement.check();
+        System.out.println("Final Aggregate Status: " + finalStatus.name());
 
         scanner.close();
     }
 }
+

@@ -1,8 +1,6 @@
 package rqcode.tutorial.tutorial_new;
 import rqcode.concepts.Requirement;
 
-import java.util.regex.Pattern;
-
 import rqcode.concepts.Checkable;
 
 public class PasswordComplexity extends Requirement {
@@ -14,42 +12,61 @@ public class PasswordComplexity extends Requirement {
 
     @Override
     public Checkable.CheckStatus check() {
+        boolean allPass = true;
+
         if (!containsUppercaseLetter()) {
-            return Checkable.CheckStatus.FAIL;
-        }
-        if (!containsLowercaseLetter()) {
-            return Checkable.CheckStatus.FAIL;
-        }
-        if (!containsDigit()) {
-            return Checkable.CheckStatus.FAIL;
-        }
-        if (!containsSpecialCharacter()) {
-            return Checkable.CheckStatus.FAIL;
+            System.out.println("Requirement 2.1.1: One uppercase letter (A-Z) - FAIL");
+            allPass = false;
+        } else {
+            System.out.println("Requirement 2.1.1: One uppercase letter (A-Z) - PASS");
         }
 
-        return Checkable.CheckStatus.PASS;
+        if (!containsLowercaseLetter()) {
+            System.out.println("Requirement 2.1.2: One lowercase letter (a-z) - FAIL");
+            allPass = false;
+        } else {
+            System.out.println("Requirement 2.1.2: One lowercase letter (a-z) - PASS");
+        }
+
+        if (!containsDigit()) {
+            System.out.println("Requirement 2.1.3: One digit (0-9) - FAIL");
+            allPass = false;
+        } else {
+            System.out.println("Requirement 2.1.3: One digit (0-9) - PASS");
+        }
+
+        if (!containsSpecialCharacter()) {
+            System.out.println("Requirement 2.1.4: One special character (!@#$%^&*) - FAIL");
+            allPass = false;
+        } else {
+            System.out.println("Requirement 2.1.4: One special character (!@#$%^&*) - PASS");
+        }
+
+        return allPass ? Checkable.CheckStatus.PASS : Checkable.CheckStatus.FAIL;
     }
 
-    // Method to check if the password contains at least one uppercase letter (A-Z)
     private boolean containsUppercaseLetter() {
         return password.matches(".*[A-Z].*");
     }
 
-    // Method to check if the password contains at least one lowercase letter (a-z)
     private boolean containsLowercaseLetter() {
         return password.matches(".*[a-z].*");
     }
 
-    // Method to check if the password contains at least one digit (0-9)
     private boolean containsDigit() {
         return password.matches(".*\\d.*");
     }
 
-    // Method to check if the password contains at least one special character (!@#$%^&*)
     private boolean containsSpecialCharacter() {
         return password.matches(".*[@#$%^&+=!].*");
     }
+
+    @Override
+    public String toString() {
+        return "Requirement 2: Complexity Requirements";
+    }
 }
+
 
 
 
