@@ -1,84 +1,62 @@
 package rqcode.tutorial.tutorial_new;
 import rqcode.concepts.Requirement;
 
-import rqcode.concepts.Checkable;
-
-
-
-
-import java.util.regex.Pattern;
 
 public class PasswordComplexity extends Requirement {
+
     private String password;
-    private static final Pattern UPPERCASE_PATTERN = Pattern.compile("[A-Z]");
-    private static final Pattern LOWERCASE_PATTERN = Pattern.compile("[a-z]");
-    private static final Pattern DIGIT_PATTERN = Pattern.compile("\\d");
-    private static final Pattern SPECIAL_CHAR_PATTERN = Pattern.compile("[@#$%^&+=!]");
 
     public PasswordComplexity(String password) {
+        super("Requirement 2: Complexity Requirements");
         this.password = password;
     }
 
+    // Method to check if the password has at least one uppercase letter
     private boolean hasUppercase() {
-        return UPPERCASE_PATTERN.matcher(password).find();
+        return password.chars().anyMatch(Character::isUpperCase);
     }
 
+    // Method to check if the password has at least one lowercase letter
     private boolean hasLowercase() {
-        return LOWERCASE_PATTERN.matcher(password).find();
+        return password.chars().anyMatch(Character::isLowerCase);
     }
 
+    // Method to check if the password has at least one digit
     private boolean hasDigit() {
-        return DIGIT_PATTERN.matcher(password).find();
+        return password.chars().anyMatch(Character::isDigit);
     }
 
+    // Method to check if the password has at least one special character
     private boolean hasSpecialCharacter() {
-        return SPECIAL_CHAR_PATTERN.matcher(password).find();
+        return password.chars().anyMatch(ch -> "!@#$%^&*".indexOf(ch) >= 0);
     }
 
     @Override
-    public Checkable.CheckStatus check() {
-        boolean allPass = true;
-
-        if (!hasUppercase()) {
-            System.out.println("2.1.1: One uppercase letter (A-Z) - FAIL");
-            allPass = false;
-        } else {
-            System.out.println("2.1.1: One uppercase letter (A-Z) - PASS");
+    public CheckStatus check() {
+        if (password == null) {
+            return CheckStatus.INCOMPLETE; // Return INCOMPLETE if the password is null
         }
 
-        if (!hasLowercase()) {
-            System.out.println("2.1.2: One lowercase letter (a-z) - FAIL");
-            allPass = false;
+        boolean uppercaseCheck = hasUppercase();
+        boolean lowercaseCheck = hasLowercase();
+        boolean digitCheck = hasDigit();
+        boolean specialCharacterCheck = hasSpecialCharacter();
+
+        // Print the results of each check
+        System.out.println("2.1.1: One uppercase letter (A-Z) - " + (uppercaseCheck ? "PASS" : "FAIL"));
+        System.out.println("2.1.2: One lowercase letter (a-z) - " + (lowercaseCheck ? "PASS" : "FAIL"));
+        System.out.println("2.1.3: One digit (0-9) - " + (digitCheck ? "PASS" : "FAIL"));
+        System.out.println("2.1.4: One special character (!@#$%^&*) - " + (specialCharacterCheck ? "PASS" : "FAIL"));
+
+        if (uppercaseCheck && lowercaseCheck && digitCheck && specialCharacterCheck) {
+            return CheckStatus.PASS; // Return PASS if all complexity checks are passed
         } else {
-            System.out.println("2.1.2: One lowercase letter (a-z) - PASS");
+            return CheckStatus.FAIL; // Return FAIL if any complexity check fails
         }
-
-        if (!hasDigit()) {
-            System.out.println("2.1.3: One digit (0-9) - FAIL");
-            allPass = false;
-        } else {
-            System.out.println("2.1.3: One digit (0-9) - PASS");
-        }
-
-        if (!hasSpecialCharacter()) {
-            System.out.println("2.1.4: One special character (!@#$%^&*) - FAIL");
-            allPass = false;
-        } else {
-            System.out.println("2.1.4: One special character (!@#$%^&*) - PASS");
-        }
-
-        return allPass ? Checkable.CheckStatus.PASS : Checkable.CheckStatus.FAIL;
-    }
-
-    @Override
-    public String toString() {
-        return "Requirement 2: Complexity Requirements\n" +
-                "2.1.1: One uppercase letter (A-Z) - " + (hasUppercase() ? "PASS" : "FAIL") + "\n" +
-                "2.1.2: One lowercase letter (a-z) - " + (hasLowercase() ? "PASS" : "FAIL") + "\n" +
-                "2.1.3: One digit (0-9) - " + (hasDigit() ? "PASS" : "FAIL") + "\n" +
-                "2.1.4: One special character (!@#$%^&*) - " + (hasSpecialCharacter() ? "PASS" : "FAIL");
     }
 }
+
+
 
 
 
