@@ -4,9 +4,6 @@ import rqcode.concepts.CombinedRequirements;
 import java.util.Arrays;
 import java.util.List;
 
-import rqcode.concepts.Requirement;
-import java.util.Arrays;
-import java.util.List;
 
 public class MyCombinedReq extends CombinedRequirements {
 
