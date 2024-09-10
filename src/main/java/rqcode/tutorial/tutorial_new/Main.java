@@ -16,8 +16,8 @@ public class Main {
         Requirement R1 = new PasswordMinimumLength(password);
         Requirement R2 = new PasswordComplexity(password);
 
-        // Create an instance of MyCombinedReq that combines the requirements
-        MyCombinedReq myReq = new MyCombinedReq(R1, R2);
+        // Create an instance of PasswordPolicy that combines the requirements
+        PasswordPolicy myReq = new PasswordPolicy(R1, R2);
 
         // Perform the check and print the detailed result
         System.out.println("Requirement 1: Minimum Length");
