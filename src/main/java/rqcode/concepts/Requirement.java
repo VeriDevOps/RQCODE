@@ -52,7 +52,6 @@ public abstract class Requirement implements Checkable{
         return "Requirement [statement=" + statement + "]";
     }
 
-    
 
-    
+    public abstract String getDescription();
 }
