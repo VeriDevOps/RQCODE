@@ -1,8 +1,8 @@
-package rqcode.stigs.win10_v3.RegEdit;
+package rqcode.stigs.win10.RegEdit;
 
 import java.util.Map;
 
-import rqcode.stigs.win10_v3.WinScriptHelper;
+import rqcode.stigs.win10.WinScriptHelper;
 
 /**
  * $id: $title. 

@@ -1,7 +1,7 @@
-package rqcode.stigs.win10_v3.AuditPolicy;
+package rqcode.stigs.win10.AuditPolicy;
 
 import rqcode.stigs.STIG;
-import rqcode.stigs.win10_v3.WinScriptHelper;
+import rqcode.stigs.win10.WinScriptHelper;
 
 import java.util.Map;
 

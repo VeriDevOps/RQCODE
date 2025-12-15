@@ -119,7 +119,7 @@ RQCODE Framework
 ├── rqcode.concepts         # Core interfaces: Checkable, Enforceable, Requirement
 ├── rqcode.temporal_patterns # Temporal specification patterns (LTL-based)
 ├── rqcode.stigs            # Security Technical Implementation Guides
-│   ├── win10_v3/           # Windows 10 STIGs (AuditPolicy, RegEdit, UserRights)
+│   ├── win10/           # Windows 10 STIGs (AuditPolicy, RegEdit, UserRights)
 │   ├── canonical_ubuntu_18_04_lts/
 │   └── unix_srg/
 ├── rqcode.example          # Clock example from the paper
@@ -153,7 +153,7 @@ public class V_219158 extends UbuntuPackagePattern {
 
 ### Windows 10 STIGs
 
-The `win10_v3` package contains 200+ STIG implementations organized by category:
+The `win10` package contains 200+ STIG implementations organized by category:
 - **AuditPolicy**: Audit policy settings (31 rules)
 - **RegEdit**: Registry settings (106 rules)
 - **UserRights**: User rights assignments (25 rules)
