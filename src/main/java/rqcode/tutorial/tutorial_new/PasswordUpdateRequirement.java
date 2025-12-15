@@ -11,6 +11,7 @@ public class PasswordUpdateRequirement extends Requirement {
     public PasswordUpdateRequirement(PasswordStorage passwordStorage, String username) {
         this.passwordStorage = passwordStorage;
         this.username = username;
+        setStatement("Password must be updated every " + PASSWORD_EXPIRATION_DAYS + " days.");
     }
 
     @Override
@@ -27,10 +28,5 @@ public class PasswordUpdateRequirement extends Requirement {
         } else {
             return CheckStatus.FAIL; // Password expired
         }
-    }
-
-    @Override
-    public String getDescription() {
-        return "Password must be updated every " + PASSWORD_EXPIRATION_DAYS + " days.";
     }
 }
