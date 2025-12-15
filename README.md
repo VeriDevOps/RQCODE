@@ -14,31 +14,33 @@ RQCODE is a novel approach for formalising security requirements based on the **
 
 ## Core Concepts
 
-RQCODE is built around three core interfaces:
+RQCODE is built around two core interfaces and two abstract classes:
 
-```
-┌─────────────────┐     ┌─────────────────┐
-│   <<interface>> │     │   <<interface>> │
-│    Checkable    │     │   Enforceable   │
-├─────────────────┤     ├─────────────────┤
-│ check():        │     │ enforce():      │
-│   CheckStatus   │     │ EnforcementStatus│
-└────────┬────────┘     └────────┬────────┘
-         │                       │
-         │    ┌──────────────────┘
-         ▼    ▼
-┌─────────────────────────┐
-│ <<abstract>> Requirement│
-├─────────────────────────┤
-│ - statement: String     │
-│ + getStatement(): String│
-│ + setStatement(): void  │
-└─────────────────────────┘
-         │
-         ▼
-┌─────────────────────────┐
-│ EnforceableRequirement  │
-└─────────────────────────┘
+```mermaid
+classDiagram
+    class Checkable {
+        <<interface>>
+        +check() CheckStatus
+    }
+    class Enforceable {
+        <<interface>>
+        +enforce() EnforcementStatus
+    }
+    class Requirement {
+        <<abstract>>
+        -statement: String
+        +getStatement() String
+        +setStatement(String) void
+        +check() CheckStatus
+    }
+    class EnforceableRequirement {
+        <<abstract>>
+        +enforce() EnforcementStatus
+    }
+
+    Checkable <|.. Requirement : implements
+    Requirement <|-- EnforceableRequirement : extends
+    Enforceable <|.. EnforceableRequirement : implements
 ```
 
 ### CheckStatus
