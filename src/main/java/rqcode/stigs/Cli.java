@@ -83,18 +83,4 @@ public class Cli {
         }
 
     }
-
-    public static void main1(String[] args) {
-
-        STIG stig;
-        try {
-            stig = locate_stig("V_220956");
-            System.out.println(stig);
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-    }
 }

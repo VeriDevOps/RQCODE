@@ -22,19 +22,6 @@ public class Windows10SecurityTechnicalImplementationGuide {
     public static final STIG v_220748 = new V_220748();
     
     public static void main(String[] args) {
-
-        //System.out.println(v_220969.check());
-        //System.out.println(STIGPatternMessage.fullMessageCheck(v_220972, v_220972.check()));
-       // System.out.println(STIGPatternMessage.fullMessageEnforce(v_220975, v_220975.enforce()));
-       // System.out.println(STIGPatternMessage.fullMessageCheck(v_220975, v_220975.check()));
-       /* System.out.println(STIGPatternMessage.fullMessageEnforce(v_220968, v_220968.enforce()));
-        System.out.println(STIGPatternMessage.fullMessageCheck(v_220968, v_220968.check()));
-        System.out.println(STIGPatternMessage.fullMessageEnforce(v_220870, v_220870.enforce()));
-        System.out.println(STIGPatternMessage.fullMessageCheck(v_220870, v_220870.check()));
-        System.out.println(STIGPatternMessage.fullMessageEnforce(v_220871, v_220871.enforce()));
-        System.out.println(STIGPatternMessage.fullMessageCheck(v_220871, v_220871.check()));
-        */
-
-
+        // Entry point for testing - use Cli for production
     }
 }
