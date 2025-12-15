@@ -217,12 +217,12 @@ java -cp target/RQCODE-1.0.2-SNAPSHOT.jar rqcode.example.Main
 If you use RQCODE in your research, please cite:
 
 ```bibtex
-@incollection{sadovykh2024rqcode,
-  title={Security Requirements Formalisation with RQCODE},
-  author={Sadovykh, Andrey and Messe, Nan and Nigmatullin, Ildar and
-          Ebersold, Sophie and Naumcheva, Maria and Bruel, Jean-Michel},
-  booktitle={VeriDevOps Book},
-  year={2024},
+@incollection{sadovykh2023security,
+  title={Security requirements formalization with RQCODE},
+  author={Sadovykh, Andrey and Messe, Nan and Nigmatullin, Ildar and Ebersold, Sophie and Naumcheva, Maria and Bruel, Jean-Michel},
+  booktitle={CyberSecurity in a DevOps Environment: From Requirements to Monitoring},
+  pages={65--92},
+  year={2023},
   publisher={Springer}
 }
 ```
