@@ -1,56 +1,241 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=VeriDevOps_RQCODE&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=VeriDevOps_RQCODE)
 
-# About the repository
+# RQCODE - Requirements as Code
 
-The RQCODE repository contains security requirement idioms represented as Java code.
-The purpose of this is twofold:
-1. Rigorously checking whether a given system meets a given security requirement.
-2. Programmatically enforcing a given requirement on a given system.
+RQCODE is a novel approach for formalising security requirements based on the **Seamless Object-Oriented Requirements (SOOR)** paradigm, implemented in Java. Requirements are represented as classes that combine natural language descriptions with executable verification methods.
 
-RQCODE requirements that can be checked implement the Checkable interface.
-RQCODE requirements that can be enforced implement the Enforceable interface.
+## Key Features
 
-# Temporal patterns
+- **Verifiable Requirements**: Each requirement class incorporates a `check()` method for built-in verification
+- **Enforceable Requirements**: Security requirements can include an `enforce()` method to apply countermeasures
+- **Reusable**: Object-oriented inheritance and composition enable requirement reuse and extension
+- **Traceable**: Direct link between requirements and their verification tests
+- **Developer-Friendly**: Uses standard Java - works with existing IDEs, CI/CD pipelines, and analysis tools
 
-Classes located under the src/main/java/rqcode/patterns/temporal directory implement some of the idiomatic temporal specification patterns (https://matthewbdwyer.github.io/psp/patterns.html), as well as their timed versions.
-These classes only implement the Checkable interface.
-Temporal specification patterns are generic -- for example, the ``always globally P'' pattern does not specify what P is.
-Replacement of P with a meaningful property turns the pattern into a requirement.
-The RQCODE classes representing the temporal patterns have constructors that expect formal arguments implementing the Checkable interface.
-These arguments are objects that encode meaningful properties, such as P in the above example.
-In particular, these objects may be instantiated from other RQCODE temporal patterns, for all these patterns implement the Checkable interface.
+## Core Concepts
 
-For a detailed example, please read the corresponding [documentation](https://github.com/VeriDevOps/RQCODE/blob/master/src/main/java/rqcode/patterns/temporal#readme).
+RQCODE is built around three core interfaces:
 
-# STIGs
+```
+┌─────────────────┐     ┌─────────────────┐
+│   <<interface>> │     │   <<interface>> │
+│    Checkable    │     │   Enforceable   │
+├─────────────────┤     ├─────────────────┤
+│ check():        │     │ enforce():      │
+│   CheckStatus   │     │ EnforcementStatus│
+└────────┬────────┘     └────────┬────────┘
+         │                       │
+         │    ┌──────────────────┘
+         ▼    ▼
+┌─────────────────────────┐
+│ <<abstract>> Requirement│
+├─────────────────────────┤
+│ - statement: String     │
+│ + getStatement(): String│
+│ + setStatement(): void  │
+└─────────────────────────┘
+         │
+         ▼
+┌─────────────────────────┐
+│ EnforceableRequirement  │
+└─────────────────────────┘
+```
 
-STIG stands for "Security Technical Implementation Guide'' (https://www.stigviewer.com/stigs).
-Each STIG is a collection of security findings for a given software system (for example, for APACHE Server 2.0 for Unix https://www.stigviewer.com/stig/apache_server_2.0unix/).
-Each finding includes:
-- A human-friendly explanation of why this finding represents a security problem.
-- Technical steps required to identify the finding.
-- Technical steps required to fix the finding. 
+### CheckStatus
+- `PASS` - Verification successful, requirement satisfied
+- `FAIL` - Verification failed, requirement not satisfied
+- `INCOMPLETE` - Verification could not be performed
 
-The problem with the original collection of STIGs is that the technical steps take the form of non-runnable natural language.
-RQCODE classes under the src/main/java/rqcode/stigs directory implement STIG findings in an executable and reusable form.
-Each RQCODE STIG finding class implements at least the Checkable interface, which makes it usable in combination with the temporal patterns.
-Some finding classes also implement the Enforceable interface, which makes them usable for fixing the identified finding right after the identification.
+### EnforcementStatus
+- `SUCCESS` - Enforcement applied successfully
+- `FAILURE` - Enforcement failed
+- `INCOMPLETE` - Enforcement could not be performed
 
-# Example: Windows 10 STIG Rules as RQCODE style requirements
+## Example: Basic Requirement
 
-To demonstrate the approach we will illustrate it with an example of specific STIG rules for systems run by the Windows 10 operating system.
-These rules are provided in the Windows 10 Security Technical Implementation Guide.
-For many systems, STIG rules come with scripts for verifying the conformance and enforcing the rules.
-For Windows 10, PowerShell scripts exist that check the conformance of systems to these rules.
-For some rules, such checks are complemented with scripts that enforce conformance to the respective rules.
+```java
+public class TickIncrementRequirement extends Requirement {
+    public TickIncrementRequirement() {
+        super("A clock tick increments current second if it is smaller than 59");
+    }
 
-We analyzed the STIG rules for Windows 10 and found subgroups of rules that look very similar - both in their textual descriptions and in the PowerShell scripts (where applicable) that check and enforce conformance to these rules.
-This is bad, because a decision to modify one rule from such a subgroup would require synchronizing the change with all the similar rules, and this process is prone to errors.
-We decided to apply the object-oriented software construction process to remove the repetition. The below class tree depicts a subset of the resulting collection of classes:
-![image10](https://user-images.githubusercontent.com/6912490/177565254-151cd3f3-a8bb-415a-833e-bb61a0264177.png)
-The leaves of the tree correspond to actual STIG rules. The abstract classes encode the commonalities shared by their descendant classes. Each class implementing a STIG rule features up to three public methods:
-- toString(), which prints out the textual representation of the STIG rule;
-- check(), which performs conformance-checking of the target system against the rule;
-- enforce(), which enforces conformance of the target system against the rule.
+    @Override
+    public CheckStatus check() {
+        if (Clock.seconds < 59)
+            return ((Clock.seconds + 1) == Clock.tick()) ?
+                CheckStatus.PASS : CheckStatus.FAIL;
+        return CheckStatus.INCOMPLETE;
+    }
+}
+```
 
-For more details, please read the corresponding [documentation](https://github.com/VeriDevOps/RQCODE/tree/master/src/main/java/rqcode/stigs/win10#readme).
+## Reuse Mechanisms
+
+### Inheritance
+Requirements can extend other requirements:
+
+```java
+public class DerivedTickBoundaryRequirement extends TickIncrementRequirement {
+    public DerivedTickBoundaryRequirement() {
+        super.setStatement(super.getStatement() +
+            "\nIn addition, Clock seconds value must be between 0 and 59.");
+    }
+
+    @Override
+    public CheckStatus check() {
+        if (Clock.seconds > 59) return CheckStatus.FAIL;
+        if (Clock.seconds < 0) return CheckStatus.FAIL;
+        return super.check();
+    }
+}
+```
+
+### Composition
+Multiple requirements can be combined:
+
+```java
+public class CombinedTickRequirement extends Requirement {
+    TickIncrementRequirement tr;
+    TickBoundaryRequirement br;
+
+    public CombinedTickRequirement() {
+        super("The Clock must satisfy tick increment and boundary requirements.");
+        tr = new TickIncrementRequirement();
+        br = new TickBoundaryRequirement();
+    }
+
+    @Override
+    public CheckStatus check() {
+        if (br.check() == CheckStatus.FAIL) return CheckStatus.FAIL;
+        return tr.check();
+    }
+}
+```
+
+## Framework Structure
+
+```
+RQCODE Framework
+├── rqcode.concepts         # Core interfaces: Checkable, Enforceable, Requirement
+├── rqcode.temporal_patterns # Temporal specification patterns (LTL-based)
+├── rqcode.stigs            # Security Technical Implementation Guides
+│   ├── win10_v3/           # Windows 10 STIGs (AuditPolicy, RegEdit, UserRights)
+│   ├── canonical_ubuntu_18_04_lts/
+│   └── unix_srg/
+├── rqcode.example          # Clock example from the paper
+└── rqcode.tutorial         # Tutorial implementations
+```
+
+## Security Technical Implementation Guides (STIGs)
+
+[STIGs](https://www.stigviewer.com/stigs) are security guidelines from the US Department of Defense for securing IT systems. Each STIG finding includes:
+- Human-friendly explanation of the security problem
+- Technical steps to identify the finding (`check()`)
+- Technical steps to fix the finding (`enforce()`)
+
+### STIG Patterns
+
+RQCODE implements STIG patterns that enable reuse. For example, the `UbuntuPackagePattern`:
+
+```java
+public class V_219157 extends UbuntuPackagePattern {
+    public V_219157() {
+        super("nis", false);  // NIS package must NOT be installed
+    }
+}
+
+public class V_219158 extends UbuntuPackagePattern {
+    public V_219158() {
+        super("rsh-server", false);  // rsh-server must NOT be installed
+    }
+}
+```
+
+### Windows 10 STIGs
+
+The `win10_v3` package contains 200+ STIG implementations organized by category:
+- **AuditPolicy**: Audit policy settings (31 rules)
+- **RegEdit**: Registry settings (106 rules)
+- **UserRights**: User rights assignments (25 rules)
+
+Each category has a base pattern class that handles the PowerShell script execution.
+
+### CLI Usage
+
+```bash
+# Check a specific STIG
+java -jar RQCODE.jar V_220956
+
+# Enforce a STIG
+java -jar RQCODE.jar V_220956 --enforce
+```
+
+## Temporal Patterns
+
+RQCODE implements idiomatic temporal specification patterns for requirements that involve time-based properties:
+
+- **GlobalUniversality**: "Globally, it is always the case that P holds"
+- **GlobalUniversalityTimed**: "Globally, P holds for at least T time units"
+- **GlobalResponseTimed**: "If P holds, then S holds within T time units"
+- **AfterUntilUniversality**: "After Q, P holds until R holds"
+- **Eventually**: "P always eventually holds"
+
+For detailed documentation, see the [temporal patterns README](src/main/java/rqcode/temporal_patterns/README.md).
+
+### Example: Temporal STIG Monitoring
+
+```java
+// Create a STIG requirement
+V_220956 stig = new V_220956();
+
+// Monitor it continuously for 10 time units
+GlobalUniversalityTimed timedRequirement = new GlobalUniversalityTimed(stig, 10);
+
+// Check the temporal property
+CheckStatus result = timedRequirement.check();
+```
+
+## Getting Started
+
+### Prerequisites
+- Java 21 or higher
+- Maven 3.x
+
+### Build
+```bash
+mvn clean package
+```
+
+### Run Examples
+```bash
+# Run the clock example
+java -cp target/RQCODE-1.0.2-SNAPSHOT.jar rqcode.example.Main
+```
+
+## Citation
+
+If you use RQCODE in your research, please cite:
+
+```bibtex
+@incollection{sadovykh2024rqcode,
+  title={Security Requirements Formalisation with RQCODE},
+  author={Sadovykh, Andrey and Messe, Nan and Nigmatullin, Ildar and
+          Ebersold, Sophie and Naumcheva, Maria and Bruel, Jean-Michel},
+  booktitle={VeriDevOps Book},
+  year={2024},
+  publisher={Springer}
+}
+```
+
+## Related Publications
+
+- Ismaeel, K., Naumchev, A., Sadovykh, A., et al. "Security Requirements as Code: Example from VeriDevOps Project." IEEE RE Workshops, 2021.
+- Naumchev, A., Meyer, B. "Seamless requirements." Computer Languages, Systems & Structures, 2017.
+
+## Acknowledgments
+
+Supported by the [VeriDevOps project](https://www.veridevops.eu/) (Horizon 2020 No. 957212).
+
+## License
+
+See [LICENSE](LICENSE) file.
