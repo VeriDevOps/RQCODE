@@ -17,7 +17,7 @@ $env:PSModulePath
 
 Install UserRights module:
 ```PowerShell
-cd "path to rqcode/stigs/win10/PS folder"
+cd "path to rqcode/stigs/win10/PS/usrts folder"
 cp -r ./urts "C:\Program Files\WindowsPowerShell\Modules"
 Import-Module usrts -Verbose
 Get-Module -ListAvailable

@@ -150,31 +150,31 @@ In the context of the VeriDevOps project we were given a case study to verify th
 In this section we will see an example of applying the RQCODE patterns.
 The example combines the temporal patterns with STIG patterns to monitor it continuously.
 
-The following line creates an object from the RQCODE class implementing the [V_63449 STIG rule](https://www.stigviewer.com/stig/windows_10/2016-06-08/finding/V-63449):
+The following line creates an object from the RQCODE class implementing the [V_220956 STIG rule](https://www.stigviewer.com/stig/windows_10/2021-08-18/finding/V-220956):
 ```java
-V_63449 v_63449 = new V_63449();
+V_220956 v_220956 = new V_220956();
 ```
-We then can construct a timed global universality RQCODE requirement from `v_63349` since this rule should be permanently enforced:
+We then can construct a timed global universality RQCODE requirement from `v_220956` since this rule should be permanently enforced:
 ```java
-GlobalUniversalityTimed globalUniversality_V_63449 = new GlobalUniversalityTimed(v_63449, Integer.MAX_VALUE);
+GlobalUniversalityTimed globalUniversality_V_220956 = new GlobalUniversalityTimed(v_220956, Integer.MAX_VALUE);
 ```
-Property `V_63449` is expected to globally hold for at least `Integer.MAX_VALUE` time units.
+Property `V_220956` is expected to globally hold for at least `Integer.MAX_VALUE` time units.
 
-Let us now create another object from another STIG rule’s RQCODE implementation:
+Let us now create another object from another STIG rule's RQCODE implementation:
 ```java
-V_63467 v_63467 = new V_63467();
+V_220957 v_220957 = new V_220957();
 ```
-Now we have `v_63449` and `v_63467` at our disposal and can construct an RQCODE requirement from the timed global response pattern:
+Now we have `v_220956` and `v_220957` at our disposal and can construct an RQCODE requirement from the timed global response pattern:
 ```java
-GlobalResponseTimed globalResponseTimed_V_63449_V_63447 = new GlobalResponseTimed(v_63449, v_63467, Integer.MAX_VALUE);
+GlobalResponseTimed globalResponseTimed = new GlobalResponseTimed(v_220956, v_220957, Integer.MAX_VALUE);
 ```
-The resulting requirement expresses the following: *"globally, whenever v_63449 holds, v_63467 should hold within Integer.MAX_VALUE time units"*.
+The resulting requirement expresses the following: *"globally, whenever v_220956 holds, v_220957 should hold within Integer.MAX_VALUE time units"*.
 
-But it is not only possible to construct pattern-based RQCODE requirements from "primitive" implementers of the `Checkable` interface – the "building blocks" may by other pattern-based requirements:
+But it is not only possible to construct pattern-based RQCODE requirements from "primitive" implementers of the `Checkable` interface – the "building blocks" may be other pattern-based requirements:
 ```java
 GlobalResponseTimed globalResponseTimedComposite =
-    	new GlobalResponseTimed(globalUniversality_V_63449,
-           	globalResponseTimed_V_63449_V_63447, Integer.MAX_VALUE);
+    	new GlobalResponseTimed(globalUniversality_V_220956,
+           	globalResponseTimed, Integer.MAX_VALUE);
 ```
 We can print out textual representations of the constructed objects:
 ```java
@@ -186,7 +186,7 @@ System.out.println(globalResponseTimedComposite.TCTL());
 ```
 The previous line will produce the following output:
 ```
-AG((AG >=2147483647 (V_63449)) ==> (AF <= 2147483647 (AG((V_63449) ==> (AF <= 2147483647 (V_63467))))))
+AG((AG >=2147483647 (V_220956)) ==> (AF <= 2147483647 (AG((V_220956) ==> (AF <= 2147483647 (V_220957))))))
 ```
 Finally, it is possible to monitor RQCODE requirements by calling `check()`:
 ```java
