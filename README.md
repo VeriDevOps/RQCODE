@@ -125,8 +125,24 @@ RQCODE Framework
 │   ├── canonical_ubuntu_18_04_lts/
 │   └── unix_srg/
 ├── rqcode.example          # Clock example from the paper
-└── rqcode.tutorial         # Tutorial implementations
+└── rqcode.tutorial         # Password Policy Tutorial (see below)
 ```
+
+## Tutorial
+
+The **[Password Policy Tutorial](src/main/java/rqcode/tutorial/README.md)** demonstrates how to apply RQCODE to real-world security requirements. It covers:
+
+- Password length and complexity requirements
+- Account lockout after failed login attempts
+- Password expiration policies
+- Combining multiple requirements with `CombinedRequirements`
+
+```bash
+# Run the password policy demo
+java -cp target/RQCODE-1.0.2-SNAPSHOT.jar rqcode.tutorial.MainFull
+```
+
+See the [tutorial README](src/main/java/rqcode/tutorial/README.md) for detailed documentation.
 
 ## Security Technical Implementation Guides (STIGs)
 

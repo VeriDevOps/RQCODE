@@ -1,4 +1,4 @@
-package rqcode.tutorial.tutorial_new;
+package rqcode.tutorial;
 import rqcode.concepts.Requirement;
 
 

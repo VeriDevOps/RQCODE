@@ -1,4 +1,4 @@
-package rqcode.tutorial.tutorial_new;
+package rqcode.tutorial;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
