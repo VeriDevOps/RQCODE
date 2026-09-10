@@ -74,15 +74,30 @@ public abstract class STIG extends EnforceableRequirement {
 
 ### Windows 10 (`win10/`)
 
-200+ STIG rules organized by category:
+190/257 findings (74%) of the DISA Windows 10 STIG (V2R2, 2021-08-18), organized by category:
 
 | Category | Pattern Class | Count | Description |
 |----------|--------------|-------|-------------|
-| **AuditPolicy** | `AuditPolStig` | 31 | Windows audit policy settings |
-| **RegEdit** | `RegEditStig` | 106 | Windows registry configurations |
-| **UserRights** | `UserRightsStig*` | 25 | User rights assignments |
+| **AuditPolicy** | `AuditPolStig` | 38 | Windows audit policy settings |
+| **RegEdit** | `RegEditStig`, `MultiPathRegEditStig` | 124 | Windows registry configurations |
+| **UserRights** | `UserRightsStig*` | 28 | User rights assignments |
 
 Each category uses PowerShell scripts for verification and enforcement.
+`MultiPathRegEditStig` extends the RegEdit pattern to findings that require
+several `{path, attribute, value}` triples to hold jointly (e.g. the same
+value mirrored across multiple registry paths, or several values under one
+key) before the finding is considered satisfied.
+
+The remaining 67 findings need verification mechanisms this package does not
+yet implement (local security policy via `secedit`, certificate store
+inspection, ACL/permission checks, optional-feature/service presence,
+hardware/firmware state such as TPM, UEFI, Secure Boot or BitLocker), or are
+not meaningfully machine-checkable at all (e.g. "camera must be physically
+covered when not in use", "Bluetooth use must be approved by the
+organization"). Several of the newly added findings also encode a
+deliberate simplification where the source STIG accepts a *range or set* of
+compliant values but this pattern checks equality against one representative
+value -- see the per-class Javadoc notes.
 
 ### Ubuntu 18.04 LTS (`canonical_ubuntu_18_04_lts/`)
 
